@@ -35,7 +35,7 @@ exports.render = function(data) {
 	<br>
 	<h2>Links</h2>
 	<ul class="links">
-		<li><a target="_blank" href="/resume.html">Resume</a></li>
+		<li><a target="_blank" href="/resume-en.html">Resume</a></li>
 		<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
 	</ul>
 	<br>

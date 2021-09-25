@@ -1,5 +1,4 @@
 exports.render = function(data) {
-	console.log(data.class)
 	return `<!doctype html>
 <html lang="en">
 	<head>
