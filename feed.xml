@@ -137,7 +137,7 @@ If you decide to exit the editor, what you wrote will be saved an available next
 		</entry><entry>
 			<title>Creating a Github action for a Node.js 14+ project</title>
 			<link href="https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/"/>
-			<updated>Sat Sep 25 2021 01:47:33 GMT+0000 (Coordinated Universal Time)</updated>
+			<updated>Sat Sep 25 2021 02:14:37 GMT+0000 (Coordinated Universal Time)</updated>
 			<id>https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/</id>
 			<content type="html">&lt;p&gt;Currently it is &lt;a href="https://github.com/actions/runner/issues/772"&gt;not possible&lt;/a&gt; to create a &lt;a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action"&gt;JavaScript action&lt;/a&gt; with a version of nodejs other than 12.
 &lt;br&gt;&lt;br&gt;
