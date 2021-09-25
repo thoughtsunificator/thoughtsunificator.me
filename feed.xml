@@ -74,7 +74,8 @@ Stay tuned!&lt;/p&gt;
 &lt;img alt="preview" src="/image/preview.gif"&gt;
 ${EXCERPT_SEPARATOR}&lt;/p&gt;
 &lt;div class="excerpt_separator"&gt;&lt;/div&gt;
-Features:
+&lt;p&gt;domodel-diary is a password protected diary.&lt;/p&gt;
+&lt;p&gt;It offers the following features:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Calendar&lt;/li&gt;
 &lt;li&gt;Daily notes encrypted using AES&lt;/li&gt;
@@ -137,7 +138,7 @@ If you decide to exit the editor, what you wrote will be saved an available next
 		</entry><entry>
 			<title>Creating a Github action for a Node.js 14+ project</title>
 			<link href="https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/"/>
-			<updated>Sat Sep 25 2021 02:35:51 GMT+0000 (Coordinated Universal Time)</updated>
+			<updated>Sat Sep 25 2021 02:37:48 GMT+0000 (Coordinated Universal Time)</updated>
 			<id>https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/</id>
 			<content type="html">&lt;p&gt;Currently it is &lt;a href="https://github.com/actions/runner/issues/772"&gt;not possible&lt;/a&gt; to create a &lt;a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action"&gt;JavaScript action&lt;/a&gt; with a version of nodejs other than 12.
 &lt;br&gt;&lt;br&gt;
