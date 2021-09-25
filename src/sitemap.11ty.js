@@ -14,6 +14,9 @@ exports.render = function(data) {
 	${[...data.collections.all.filter(page => !page.data.sitemap || !page.data.sitemap.ignore), {
 		url: "/resume.html",
 		date: new Date()
+	},{
+		url: "/resume-en.html",
+		date: new Date()
 	}].map(page => `<url>
 			<loc>${data.site.url}${page.url}</loc>
 			<lastmod>${page.date.toISOString()}</lastmod>
