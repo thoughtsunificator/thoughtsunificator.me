@@ -12,7 +12,10 @@ domodel-diary is a simple and easy-to-use diary application.
 <img alt="preview" src="/image/preview.gif">
 <!--more--> ${EXCERPT_SEPARATOR}
 <div class="excerpt_separator"></div>
-Features:
+
+domodel-diary is a password protected diary.
+
+It offers the following features:
 
 - Calendar
 - Daily notes encrypted using AES
