@@ -5,7 +5,11 @@ exports.data = {
 	description: "404: Page not found",
 	robots: {
 		ignore: true
-	}
+	},
+	sitemap: {
+		ignore: true
+	},
+	head: `<meta name="robots" content="noindex">`
 }
 
 exports.render = function(data) {

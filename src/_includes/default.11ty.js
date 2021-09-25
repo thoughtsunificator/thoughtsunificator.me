@@ -36,6 +36,7 @@ exports.render = function(data) {
 		` : ``}
 		${data.categories ? `<meta content="${ data.categories[0] }" property="article:section">`: ""}
 		${data.tags ? data.tags.map(tag => `<meta content="${ tag }" property="article:tag">`).join("") : ""}
+		${data.head || ""}
 	</head>
 	<body class="wrap padding${data.class ? ` page-${data.class}` : ""}">
 		<button id="toggle-header">Navigation</button>
