@@ -1,0 +1,40 @@
+{
+	"name": "thoughtsunificator.me",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
+		"build:11ty": "eleventy --quiet",
+		"build:rollup": "rollup --config rollup.config.prod.js",
+		"start": "npm run dev",
+		"clean": "rimraf dist",
+		"dev": "npm-run-all clean build:* -p dev:*",
+		"dev:11ty": "eleventy --watch",
+		"dev:rollup": "rollup --config rollup.config.dev.js --watch"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-plugin-rss": "^1.1.1",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
+		"@rollup/plugin-replace": "^3.0.0",
+		"cross-env": "^7.0.3",
+		"css-generics": "^1.0.0",
+		"eleventy-plugin-nesting-toc": "^1.3.0",
+		"generate-robotstxt": "^8.0.3",
+		"humans-generator": "^2.1.1",
+		"jsdom": "^17.0.0",
+		"markdown-it": "^12.2.0",
+		"markdown-it-anchor": "^8.1.2",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.3.6",
+		"postcss-import": "^14.0.2",
+		"prismjs": "^1.25.0",
+		"rimraf": "^3.0.2",
+		"rollup": "^2.55.1",
+		"rollup-plugin-livereload": "^2.0.5",
+		"rollup-plugin-postcss": "^4.0.0",
+		"rollup-plugin-serve": "^1.1.0",
+		"rollup-plugin-svg": "^2.0.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"xml": "^1.0.1"
+	}
+}
