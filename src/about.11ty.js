@@ -22,6 +22,7 @@ exports.render = function(data) {
 		<li>Chrome Extensions</li>
 		<li>Code Reviews</li>
 		<li>Code fixes</li>
+		<li>Mockup to Template/CMS</li>
 		<li>Electron Applications</li>
 		<li>Android WebView</li>
 		<li>Node.js Applications</li>
