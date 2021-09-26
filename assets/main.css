@@ -57,6 +57,10 @@ textarea {
 	resize: vertical;
 }
 
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+	background: #1d253e;
+}
+
 #toggle-header {
 	display: none;
 }
