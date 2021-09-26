@@ -292,33 +292,6 @@ textarea {
 	margin-bottom: 10px;
 }
 
-.comments {
-	border: 2px solid #0d0d0d9e;
-	padding: 20px;
-	border-bottom: 20px solid #0009;
-	border-radius: 5px 5px 0 0;
-	border-top: 1px solid #292727;
-}
-
-.comments.disabled {
-	position: relative;
-	cursor: pointer;
-}
-
-.comments.disabled::after {
-	position: absolute;
-	width: 100%;
-	content: "Click to load Disqus comments";
-	text-align: center;
-	height: 100%;
-	background-color: #ffffff17;
-	top: 0;
-	left: 0;
-	display: grid;
-	justify-content: center;
-	align-items: center;
-}
-
 #tags h3:target,
 #categories  h3:target,
 #archive h3:target {
@@ -385,6 +358,8 @@ textarea {
 		padding: 0 !important;
 	}
 
+	#posts,
+	.post.full,
 	.page,
 	#header {
 		margin: var(--SIZE_XS);
@@ -402,10 +377,6 @@ textarea {
 		grid-template-columns: auto;
 	}
 
-	.post.full {
-		margin: var(--SIZE_XXL);
-	}
-
 	.post .title {
 		font-size: 1.2em;
 	}
@@ -414,14 +385,9 @@ textarea {
 		font-size: 0.85em;
 	}
 
-	.page {
-		padding: var(--SIZE_XXL);
-	}
-
 	#posts {
-		padding: var(--SIZE_MEDIUM) !important;
+		grid-gap: var(--SIZE_MEDIUM);
 	}
-
 
 }
 
@@ -439,7 +405,7 @@ textarea {
 	}
 
 	.intro {
-		grid-template-columns: initial;
+		grid-template-columns: initial !important;
 	}
 
 	.intro img {
