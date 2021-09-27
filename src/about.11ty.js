@@ -1,6 +1,6 @@
 exports.data = {
 	layout: "page",
-	title: "Who am I you said?",
+	title: "About me",
 	permalink: "/about-me/",
 	description: "About me",
 	class: "about"

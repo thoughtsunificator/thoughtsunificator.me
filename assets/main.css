@@ -393,6 +393,16 @@ textarea {
 
 @media screen and (max-width: 481px) {
 
+	.post .metas,
+	.post .excerpt,
+	.post.full .excerpt {
+		padding: var(--SIZE_MEDIUM);
+	}
+
+	.post #content {
+		padding: 0 var(--SIZE_MEDIUM);
+	}
+
 	#footer {
 		display: grid;
 		grid-auto-flow: row;
