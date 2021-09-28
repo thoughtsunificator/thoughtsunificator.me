@@ -5,7 +5,7 @@
 	tags: ["library", "javascript"],
 	categories: ["Software"],
 	redirect_to: "https://github.com/thoughtsunificator/bbcode-parser",
-	date: "Created"
+	date: "2021-09-28"
 }
 ---
 

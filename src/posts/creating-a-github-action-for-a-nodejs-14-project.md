@@ -3,7 +3,7 @@
 	title: "Creating a Github action for a Node.js 14+ project",
 	tags: ["github", "github-action"],
 	categories: ["Guides"],
-	date: "Created",
+	date: "2021-09-25",
 	description: "Creating a Github action for a Node.js 14+ project"
 }
 ---
