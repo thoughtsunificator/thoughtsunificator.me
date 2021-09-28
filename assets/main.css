@@ -350,8 +350,15 @@ textarea {
 }
 
 .page-about .intro ul {
-	padding: 10px 20px;
+	padding: 10px 5px;
+		list-style-type: none;
 }
+
+.page-about .intro ul > li:before {
+	content: "-";
+	padding: 0 5px;
+}
+
 
 @media screen and (max-width: 768px) {
 	body {

@@ -6,7 +6,6 @@ exports.data = {
 	class: "about"
 }
 
-
 exports.render = function(data) {
 	return `<div class="intro">
 
@@ -42,6 +41,7 @@ exports.render = function(data) {
 		<li><a target="_blank" href="https://play.google.com/store/apps/developer?id=thoughtsunificator">Play Store</a></li>
 		<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
 		<li><a target="_blank" href="https://snapstats.org/publishers/thoughtsunificator">Snap</a></li>
+		<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter	</a></li>
 	</ul>
 	<h2>Contact</h2>
 		I am currently available for hire.
