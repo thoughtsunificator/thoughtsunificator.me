@@ -38,8 +38,14 @@ exports.render = function(data) {
 	<ul class="links">
 		<li><a target="_blank" href="/resume-en.html">Resume</a></li>
 		<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
+		<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
+		<li><a target="_blank" href="https://play.google.com/store/apps/developer?id=thoughtsunificator">Play Store</a></li>
+		<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
+		<li><a target="_blank" href="https://snapstats.org/publishers/thoughtsunificator">Snap</a></li>
 	</ul>
 	<h2>Contact</h2>
-	<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
+		I am currently available for hire.
+		<br>
+		<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
 	</div>`
 }
