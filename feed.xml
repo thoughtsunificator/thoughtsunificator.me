@@ -136,22 +136,9 @@ If you decide to exit the editor, what you wrote will be saved an available next
 &lt;h1&gt;Redirecting…&lt;/h1&gt;
 &lt;a href="https://github.com/thoughtsunificator/userinterface.js" target="_blank" rel="noopener noreferrer"&gt;Click here if you are not redirected.&lt;/a&gt;</content>
 		</entry><entry>
-			<title>bbcode-parser - A JavaScript BBCode implementation</title>
-			<link href="https://thoughtsunificator.me//bbcode-parser-a-javascript-bbcode-implementation/"/>
-			<updated>Tue Sep 28 2021 09:57:58 GMT+0000 (Coordinated Universal Time)</updated>
-			<id>https://thoughtsunificator.me//bbcode-parser-a-javascript-bbcode-implementation/</id>
-			<content type="html">&lt;meta charset="utf-8"&gt;
-&lt;title&gt;Redirecting…&lt;/title&gt;
-&lt;link rel="canonical" href="https://github.com/thoughtsunificator/bbcode-parser"&gt;
-&lt;script&gt;location="https://github.com/thoughtsunificator/bbcode-parser"&lt;/script&gt;
-&lt;meta http-equiv="refresh" content="0; url=https://github.com/thoughtsunificator/bbcode-parser"&gt;
-&lt;meta name="robots" content="noindex"&gt;
-&lt;h1&gt;Redirecting…&lt;/h1&gt;
-&lt;a href="https://github.com/thoughtsunificator/bbcode-parser" target="_blank" rel="noopener noreferrer"&gt;Click here if you are not redirected.&lt;/a&gt;</content>
-		</entry><entry>
 			<title>Creating a Github action for a Node.js 14+ project</title>
 			<link href="https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/"/>
-			<updated>Tue Sep 28 2021 09:57:58 GMT+0000 (Coordinated Universal Time)</updated>
+			<updated>Sat Sep 25 2021 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
 			<id>https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/</id>
 			<content type="html">&lt;p&gt;Currently it is &lt;a href="https://github.com/actions/runner/issues/772"&gt;not possible&lt;/a&gt; to create a &lt;a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action"&gt;JavaScript action&lt;/a&gt; with a version of nodejs other than 12.
 &lt;br&gt;&lt;br&gt;
@@ -168,5 +155,18 @@ If it’s not possible through JavaScript actions than maybe should we turn ours
 &lt;pre class="language-yaml"&gt;&lt;code class="language-yaml"&gt;&lt;span class="token comment"&gt;#!/bin/sh -l&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class="token comment"&gt;# let's create a specific folder for the source files of our github action&lt;/span&gt;&lt;br&gt;&lt;br&gt;mkdir github&lt;span class="token punctuation"&gt;-&lt;/span&gt;action&lt;span class="token punctuation"&gt;-&lt;/span&gt;src &lt;span class="token comment"&gt;# "github/github-action-src" is the folder we put our Github Action source files into using our Dockerfile&lt;/span&gt;&lt;br&gt;cp &lt;span class="token punctuation"&gt;-&lt;/span&gt;r /github/github&lt;span class="token punctuation"&gt;-&lt;/span&gt;action&lt;span class="token punctuation"&gt;-&lt;/span&gt;src . &lt;span class="token comment"&gt;# now let's copy that folder into the folder for the entire repository "/github/workspace"&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class="token comment"&gt;# as we are currently inside the github workspace (/github/workspace) containing the source files of the entire repository&lt;/span&gt;&lt;br&gt;&lt;span class="token comment"&gt;# we will need to cd into the folder we previously created "github-action-src"&lt;/span&gt;&lt;br&gt;&lt;span class="token comment"&gt;# you could also copy build files and such to "github-action-src" if you need to&lt;/span&gt;&lt;br&gt;cd github&lt;span class="token punctuation"&gt;-&lt;/span&gt;action&lt;span class="token punctuation"&gt;-&lt;/span&gt;src&lt;br&gt;&lt;br&gt;npm install&lt;br&gt;node index.js&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you have any question please send me a mail at &lt;a href="mailto:oss@thoughtsunificator.me"&gt;oss@thoughtsunificator.me&lt;/a&gt;.&lt;/p&gt;
 </content>
+		</entry><entry>
+			<title>bbcode-parser - A JavaScript BBCode implementation</title>
+			<link href="https://thoughtsunificator.me//bbcode-parser-a-javascript-bbcode-implementation/"/>
+			<updated>Tue Sep 28 2021 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
+			<id>https://thoughtsunificator.me//bbcode-parser-a-javascript-bbcode-implementation/</id>
+			<content type="html">&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Redirecting…&lt;/title&gt;
+&lt;link rel="canonical" href="https://github.com/thoughtsunificator/bbcode-parser"&gt;
+&lt;script&gt;location="https://github.com/thoughtsunificator/bbcode-parser"&lt;/script&gt;
+&lt;meta http-equiv="refresh" content="0; url=https://github.com/thoughtsunificator/bbcode-parser"&gt;
+&lt;meta name="robots" content="noindex"&gt;
+&lt;h1&gt;Redirecting…&lt;/h1&gt;
+&lt;a href="https://github.com/thoughtsunificator/bbcode-parser" target="_blank" rel="noopener noreferrer"&gt;Click here if you are not redirected.&lt;/a&gt;</content>
 		</entry>
 </feed>
