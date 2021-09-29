@@ -33,5 +33,15 @@ exports.render = function(data) {
 			`).join("<br>")}
 		</div>
 	`).join("")}
-</div>`;
+</div>
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"itemListElement": ${JSON.stringify(keys)},
+	"itemListOrder": "https://schema.org/ItemListOrderDescending",
+	"name": "List of categories"
+}
+</script>
+`;
 };
