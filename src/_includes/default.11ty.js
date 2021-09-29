@@ -19,7 +19,6 @@ exports.render = function(data) {
 		<link rel="mask-icon" href="/image/safari-pinned-tab.svg" color="#141a2d">
 		<link rel="alternate" type="application/rss+xml" title="${ data.site.name }" href="/feed.xml" />
 		<link rel="alternate" type="application/json" title="${ data.site.name }" href="/feed.json" />
-		<link rel="search" type="application/opensearchdescription+xml" title="Search ${ data.site.name }" href="/search.xml"/>
 		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
 		<link type="text/plain" rel="author" href="/humans.txt"/>
 		<meta name="msapplication-TileColor" content="#141a2d">
