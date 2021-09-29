@@ -15,7 +15,7 @@ exports.data = {
 
 exports.render = function(data) {
 	return `<article id="posts">
-	<h1>Recent articles</h1>
+	<h2>Recent articles</h2>
 	${data.pagination.items.map(post => `
 		<article class="post${post.data.redirect_to ? " link" : ""}">
 			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags, categories: post.data.categories })}
