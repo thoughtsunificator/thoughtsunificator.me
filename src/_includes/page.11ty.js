@@ -5,7 +5,7 @@ exports.data = {
 exports.render = function(data) {
 	return `
 <div class="page">
-	<h1 class="page-title">${data.title}</h1>
+	<h2 class="page-title">${data.title}</h2>
 	${ data.content }
 </div>
 `
