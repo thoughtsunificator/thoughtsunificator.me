@@ -47,7 +47,7 @@ exports.render = async function(data) {
 				"url": "${ data.site.url }"
 			},
 			"publisher": {
-				"@id": "${ data.site.name }",
+				"@id": "${ data.site.name }"
 			}
 		}
 	</script>
