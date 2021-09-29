@@ -4,12 +4,13 @@
 	tags: ["productivity", "diary"],
 	categories: ["Software", "Browser Extension"],
 	date: "2020-05-30",
-	description: "domodel-diary: A modest password protected diary application"
+	description: "domodel-diary: A modest password protected diary application",
+	cover: {
+		filename: "preview.webp"
+	},
 }
 ---
 domodel-diary is a simple and easy-to-use diary application.
-<br><br>
-<img alt="preview" src="/image/preview.gif">
 <!--more--> ${EXCERPT_SEPARATOR}
 <div class="excerpt_separator"></div>
 
@@ -27,7 +28,7 @@ It offers the following features:
 
 Pick a password and hit enter. It will be used to encrypt your notes and will be asked whenever the application launches.
 
-<img alt="authentication screenshot" src="/image/screenshot-auth.png">
+![authentication screenshot](/image/screenshot-auth.png)
 
 ### Calendar
 
@@ -36,24 +37,24 @@ You can add any note for any days of any years. It does not have to be in the pr
 Clicking the left and right arrow icon will cycle the month forward and backward.
 You can also change the year to any number you would like.
 
-<img alt="calendar screenshot" src="/image/screenshot-calendar.png">
+![calendar screenshot](/image/screenshot-calendar.png)
 
 ### Editor
 
 You can post your note by clicking the disk icon or exit by clicking the red cross icon.
 If you decide to exit the editor, what you wrote will be saved an available next time your re-open the editor.
 
-<img alt="editor screenshot" src="/image/screenshot-editor.png">
+![editor screenshot](/image/screenshot-editor.png)
 
 Your note will then appear just below the calendar.
 
-<img alt="notes screenshot" src="/image/screenshot-notes.png">
+![notes screenshot](/image/screenshot-notes.png)
 
 ### Settings
 
 You can logout, export or import your list using the settings menu:
 
-<img alt="settings screenshot" src="/image/screenshot-settings.png">
+![settings screenshot](/image/screenshot-settings.png)
 
 ## Install it
 
@@ -64,9 +65,8 @@ You can logout, export or import your list using the settings menu:
 
 Also available on:
 
-[<img width="200" src='/image/English_get.png' alt='English badge'/>](//www.microsoft.com/store/apps/9NHLT1HFB4T7?cid=storebadge&ocid=badge)
-
-[<img width="200" alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg">](https://snapcraft.io/domodel-diary-electron)
+<img src="/image/English_get.png" alt="English badge" width="200">
+<img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200">
 
 ~~It will soon be available on F-Droid.~~ Please download the APK from the [release page](https://github.com/thoughtsunificator/domodel-diary-android/releases/) of the Github repository.
 
@@ -81,6 +81,6 @@ So...
 
 Don't snuff it out, yet!
 
-<img alt="passionate" src="/image/tumblr_mx6tljofLI1suvynno1_500.gif">
+![passionate](/image/tumblr_mx6tljofLI1suvynno1_500.webp)
 
 See you then!

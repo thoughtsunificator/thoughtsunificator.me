@@ -18,7 +18,7 @@ exports.render = function(data) {
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>${ data.site.name }</title>
 	<subtitle>${ data.site.description }</subtitle>
-	<link href="${data.site.url}/feed/feed.xml" rel="self"/>
+	<link href="${data.site.url}/feed.xml" rel="self"/>
 	<link href="${data.site.url}"/>
 	<id>${data.site.feed.id}</id>
 	<author>
@@ -29,9 +29,9 @@ exports.render = function(data) {
 		div.textContent = post.data.redirect_to ? render(post.data) : post.templateContent
 		return `<entry>
 			<title>${ post.data.title }</title>
-			<link href="${data.site.url}/${post.url}"/>
+			<link href="${data.site.url}${post.url}"/>
 			<updated>${post.date}</updated>
-			<id>${data.site.url}/${post.url}</id>
+			<id>${data.site.url}${post.url}</id>
 			<content type="html">${div.innerHTML}</content>
 		</entry>`
 	}).join("")}

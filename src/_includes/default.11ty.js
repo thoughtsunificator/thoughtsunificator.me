@@ -8,6 +8,7 @@ exports.render = function(data) {
 		<link rel="icon" type="image/jpeg" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
 		<link rel="canonical" href="${data.site.url}${data.page.url}">
+		<link rel="manifest" href="/manifest.webmanifest">
 		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-iphone-60x60.png">
 		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/image/apple-touch-icon-ipad-76x76.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/image/apple-touch-icon-iphone-retina-120x120.png">
@@ -15,7 +16,6 @@ exports.render = function(data) {
 		<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
-		<link rel="manifest" href="/data.site.webmanifest">
 		<link rel="mask-icon" href="/image/safari-pinned-tab.svg" color="#141a2d">
 		<link rel="alternate" type="application/rss+xml" title="${ data.site.name }" href="/feed.xml" />
 		<link rel="alternate" type="application/json" title="${ data.site.name }" href="/feed.json" />
@@ -39,7 +39,6 @@ exports.render = function(data) {
 		${data.head || ""}
 	</head>
 	<body class="wrap padding${data.class ? ` page-${data.class}` : ""}">
-		<button id="toggle-header">Navigation</button>
 		<header id="header">
 			<h1>
 				${ data.site.tagline }
@@ -53,7 +52,7 @@ exports.render = function(data) {
 		</main>
 		<footer id="footer">
 			<small style="grid-row: 1;grid-column: 1;justify-self: start;">Built using <a href="https://www.11ty.dev/">Eleventy</a></small>
-			<small class="copyright">© Romain Lebesle</small>
+			<small class="copyright">© <a target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a> (thoughtsunificator)</small>
 			<div class="icons">
 				<a title="View source code on Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator/thoughtsunificator.me"><img alt="View source code on Github" width="32" src="/image/github.svg"></a>
 			</div>

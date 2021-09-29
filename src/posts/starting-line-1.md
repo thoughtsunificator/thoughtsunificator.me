@@ -4,12 +4,16 @@
 	tags: ["welcome"],
 	categories: ["Uncategorized"],
 	date: "2020-05-16",
-	description: "Welcome post"
+	description: "Welcome post",
+	cover: {
+		filename: "terra.webp",
+		attributes: {
+			width: 200
+		}
+	},
 }
 ---
 Salutations web traveler!
-<br><br>
-<img style="border: 0" width="124" alt="bunny" src="/image/terra.gif">
 <!--more--> ${EXCERPT_SEPARATOR}
 Here goes my first blog entry!
 
@@ -19,6 +23,6 @@ Anyway! I might not be selling recipes for success but there sure will be entert
 
 So...
 
-<img width="480" alt="bunny" src="/image/bunny.webp">
+![bunny](/image/bunny.webp)
 
 Keep your spirits high!

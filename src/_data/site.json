@@ -10,14 +10,7 @@
 	},
 	"baseUrl": "/",
 	"feed": {
-		"filename": "feed.xml",
-		"path": "/feed/feed.xml",
 		"id": "https://thoughtsunificator.me/"
-	},
-	"jsonfeed": {
-		"filename": "feed.json",
-		"path": "/feed/feed.json",
-		"url": "https://thoughtsunificator.me/feed/feed.json"
 	},
 	"menu": [
 		{
