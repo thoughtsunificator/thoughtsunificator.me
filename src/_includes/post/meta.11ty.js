@@ -1,6 +1,6 @@
 module.exports = data => `
 <div class="metas">
-	<time class="meta post-date" datetime="${data.date}">📅 ${new Intl.DateTimeFormat('en-GB', { month: "long", day: 'numeric' , year: 'numeric',}).format(data.date)}</time>
+	<time class="meta post-date" datetime="${new Date(data.post.date).toISOString()}">📅 ${new Intl.DateTimeFormat('en-GB', { month: "long", day: 'numeric' , year: 'numeric',}).format(data.post.date)}</time>
 	<div class="tags">
 		Categories:
 		<div class="list">
