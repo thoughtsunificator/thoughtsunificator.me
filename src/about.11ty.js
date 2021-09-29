@@ -47,5 +47,17 @@ exports.render = function(data) {
 		I am currently available for hire.
 		<br>
 		<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
-	</div>`
+	</div>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"email": "oss@thoughtsunificator.me",
+		"image": "${data.site.url}/image/me.jpg",
+		"jobTitle": "Web Developer",
+		"name": "Romain Lebesle",
+		"url": "https://romain-lebesle.fr"
+	}
+	</script>
+	`
 }

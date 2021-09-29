@@ -14,22 +14,23 @@ exports.data = {
 };
 
 exports.render = function(data) {
-	return `<div id="posts">
+	return `<article id="posts">
+	<h1>Recent articles</h1>
 	${data.pagination.items.map(post => `
-		<div class="post${post.data.redirect_to ? " link" : ""}">
+		<article class="post${post.data.redirect_to ? " link" : ""}">
 			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags, categories: post.data.categories })}
 			<h2 class="title">${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h2>
 			${!post.data.redirect_to ? `
 			${PostExcerpt.bind(this)({ site: data.site, post, excerpt: post.data.page.excerpt, cover: post.data.cover })}
-			<p class="keep-reading"><a href="${post.url}#content">Continue Reading →</a></p>
+			<a class="keep-reading" href="${post.url}#content">Continue Reading →</a>
 			` : ""}
-		</div>
+		</article>
 	`).join("")}
 	<div class="pagination">
 		${data.pagination.href.next ? `<a class="next" href="${data.pagination.href.next}">← Older</a>` : ""}
 		${data.pagination.href.previous ? `<a class="prev" href="${ data.pagination.href.previous}">Newer →</a>` : ""}
 	</div>
-</div>
+</article>
 <script type="application/ld+json">
 		{
 				"@context": "http://schema.org",
@@ -70,7 +71,7 @@ exports.render = function(data) {
 								"url": "${ data.site.url }"
 							},
 							"publisher": {
-								"@id": "${ data.site.name }",
+								"@id": "${ data.site.name }"
 							}
 						}
 					`)}
@@ -78,5 +79,30 @@ exports.render = function(data) {
 
 		}
 </script>
+<script type="application/ld+json" id="website-json-ld">
+{
+		"@context":"http://schema.org",
+		"@type":"WebSite",
+		"name":"thoughtsunificator.me",
+		"url":"https://thoughtsunificator.me"
+}
+</script>
+<script type="application/ld+json" id="social-json-ld">
+{
+		"@context":"http://schema.org",
+		"@type":"Organization",
+		"name":"thoughtsunificator.me",
+		"url":"https://thoughtsunificator.me",
+		"sameAs":[
+				"https://github.com/thoughtsunificator",
+				"https://www.npmjs.com/~thoughtsunificator",
+				"https://play.google.com/store/apps/developer?id=thoughtsunificator",
+				"https://addons.mozilla.org/en-US/firefox/user/15968837",
+				"https://twitter.com/thoughtsunifier",
+				"https://romain-lebesle.fr"
+		]
+}
+</script>
+
 `;
 };
