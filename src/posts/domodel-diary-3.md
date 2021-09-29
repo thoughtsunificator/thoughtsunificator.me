@@ -2,7 +2,7 @@
 {
 	title: "domodel-diary: A modest password protected diary application",
 	tags: ["productivity", "diary"],
-	categories: ["Software", "Browser Extension"],
+	categories: ["Software", "Browser-Extension"],
 	date: "2020-05-30",
 	description: "domodel-diary: A modest password protected diary application",
 	cover: {

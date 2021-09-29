@@ -9,11 +9,11 @@ exports.data = {
 
 exports.render = async function(data) {
 	return `
-	<div class="post full">
+	<article class="post full">
 		${PostMeta.bind(this)({ site: data.site, post: data.page, tags: data.tags, categories: data.categories })}
 		<h2 class="title">${ data.title }</h2>
 		${PostExcerpt.bind(this)({ site: data.site, excerpt: data.page.excerpt, cover: data.cover })}
-	<div id="content">${ data.content.slice(data.content.indexOf('${EXCERPT_SEPARATOR}') + '${EXCERPT_SEPARATOR}'.length) }</div>
+	<article id="content">${ data.content.slice(data.content.indexOf('${EXCERPT_SEPARATOR}') + '${EXCERPT_SEPARATOR}'.length) }</div>
 	<script type="application/ld+json">
 		{
 			"@context": "http://schema.org",

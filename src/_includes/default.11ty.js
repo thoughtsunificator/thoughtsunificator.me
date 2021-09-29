@@ -57,7 +57,7 @@ exports.render = function(data) {
 				${ data.site.tagline }
 			</h1>
 			<nav>
-				${data.site.menu.map(item => `<a class="${ item.url === data.page.url ? "active" : ""}" href="${ item.url }">${ item.title }</a>`).join("")}
+				${data.site.menu.map(item => `<a ${ item.url === data.page.url ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
 			</nav>
 		</header>
 		<main id="main">

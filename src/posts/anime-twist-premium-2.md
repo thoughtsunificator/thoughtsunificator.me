@@ -2,7 +2,7 @@
 {
 	title: "Anime Twist Premium (ATP)",
 	tags: ["twist.moe"],
-	categories: ["Anime", "Browser Extension"],
+	categories: ["Anime", "Browser-Extension"],
 	date: "2020-05-27",
 	description: "Browser Extension Anime Twist Premium (ATP)",
 	cover: {

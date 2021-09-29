@@ -271,12 +271,10 @@ textarea {
 .post .keep-reading {
 	padding: var(--SIZE_XXS) var(--SIZE_XL);
 	justify-self: end;
-}
-
-.post .keep-reading a {
 	border: 1px solid #364367;
 	padding: 6px 15px;
 	color: #e0e4f0;
+	margin: var(--SIZE_XXS) var(--SIZE_XL);
 }
 
 #content {
