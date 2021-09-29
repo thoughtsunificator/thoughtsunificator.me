@@ -98,7 +98,8 @@ If it’s not possible through JavaScript actions than maybe should we turn ours
 <h3 id="entrypoint.sh" tabindex="-1">entrypoint.sh</h3>
 <pre class="language-yaml"><code class="language-yaml"><span class="token comment">#!/bin/sh -l</span><br><br><span class="token comment"># let's create a specific folder for the source files of our github action</span><br><br>mkdir github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src <span class="token comment"># "github/github-action-src" is the folder we put our Github Action source files into using our Dockerfile</span><br>cp <span class="token punctuation">-</span>r /github/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src . <span class="token comment"># now let's copy that folder into the folder for the entire repository "/github/workspace"</span><br><br><span class="token comment"># as we are currently inside the github workspace (/github/workspace) containing the source files of the entire repository</span><br><span class="token comment"># we will need to cd into the folder we previously created "github-action-src"</span><br><span class="token comment"># you could also copy build files and such to "github-action-src" if you need to</span><br>cd github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src<br><br>npm install<br>node index.js</code></pre>
 <p>If you have any question please send me a mail at <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</p>
-</div>
+</article>
+	</article>
 	<script type="application/ld+json">
 		{
 			"@context": "http://schema.org",
@@ -133,7 +134,6 @@ If it’s not possible through JavaScript actions than maybe should we turn ours
 			}
 		}
 	</script>
-
 		</main>
 		<footer id="footer">
 			<small style="grid-row: 1;grid-column: 1;justify-self: start;">Built using <a href="https://www.11ty.dev/">Eleventy</a></small>
