@@ -102,7 +102,5 @@ exports.render = function(data) {
 				"https://romain-lebesle.fr"
 		]
 }
-</script>
-
-`;
+</script>`;
 };
