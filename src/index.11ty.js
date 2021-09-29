@@ -1,5 +1,5 @@
-const PostMeta  = require("./_includes/post-metas.11ty.js")
-const markdownIt = require("markdown-it")
+const PostMeta  = require("./_includes/post/meta.11ty.js")
+const PostExcerpt  = require("./_includes/post/excerpt.11ty.js")
 
 exports.data = {
 	layout: "default",
@@ -17,12 +17,10 @@ exports.render = function(data) {
 	return `<div id="posts">
 	${data.pagination.items.map(post => `
 		<div class="post${post.data.redirect_to ? " link" : ""}">
-			${PostMeta({ site: data.site, post, tags: post.data.tags, categories: post.data.categories })}
+			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags, categories: post.data.categories })}
 			<h2 class="title">${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h2>
 			${!post.data.redirect_to ? `
-			<div class="excerpt">
-			${markdownIt({ html: true }).render(post.data.page.excerpt)}
-			</div>
+			${PostExcerpt.bind(this)({ site: data.site, post, excerpt: post.data.page.excerpt, cover: post.data.cover })}
 			<p class="keep-reading"><a href="${post.url}#content">Continue Reading →</a></p>
 			` : ""}
 		</div>
