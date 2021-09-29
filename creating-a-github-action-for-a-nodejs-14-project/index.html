@@ -7,6 +7,7 @@
 		<link rel="icon" type="image/jpeg" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
 		<link rel="canonical" href="https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/">
+		<link rel="manifest" href="/manifest.webmanifest">
 		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-iphone-60x60.png">
 		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/image/apple-touch-icon-ipad-76x76.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/image/apple-touch-icon-iphone-retina-120x120.png">
@@ -14,7 +15,6 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
-		<link rel="manifest" href="/data.site.webmanifest">
 		<link rel="mask-icon" href="/image/safari-pinned-tab.svg" color="#141a2d">
 		<link rel="alternate" type="application/rss+xml" title="thoughtsunificator.me" href="/feed.xml" />
 		<link rel="alternate" type="application/json" title="thoughtsunificator.me" href="/feed.json" />
@@ -38,7 +38,6 @@
 		
 	</head>
 	<body class="wrap padding page-post">
-		<button id="toggle-header">Navigation</button>
 		<header id="header">
 			<h1>
 				a boundless expression of thoughts
@@ -52,7 +51,7 @@
 	<div class="post full">
 		
 <div class="metas">
-	<time class="meta post-date" datetime="Sat Sep 25 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">📅 25 September 2021</time>
+	<time class="meta post-date" datetime="undefined">📅 29 September 2021</time>
 	<div class="tags">
 		Categories:
 		<div class="list">
@@ -65,16 +64,17 @@
 	</div>
 </div>
 
-		<div>
-			<h2 class="title">Creating a Github action for a Node.js 14+ project</h2>
-			<div class="excerpt">
-			<p>Currently it is <a href="https://github.com/actions/runner/issues/772">not possible</a> to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action">JavaScript action</a> with a version of nodejs other than 12.
+		<h2 class="title">Creating a Github action for a Node.js 14+ project</h2>
+		
+	<div class="excerpt">
+		<p>Currently it is <a href="https://github.com/actions/runner/issues/772">not possible</a> to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action">JavaScript action</a> with a version of nodejs other than 12.
 <br><br>
 Let's see if we can work this out.</p>
 
-			</div>
-		</div>
-		<div id="content">
+	</div>
+	
+
+	<div id="content">
 If it’s not possible through JavaScript actions than maybe should we turn ourselves to a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">Docker container action</a>?</p>
 <p>Obviously the answer is yes and I am going to work you through the process of doing it.</p>
 <p>First if you don’t know the basics of Github Actions I recommend you go read the <a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions">Starting Guide</a>.</p>
@@ -86,12 +86,54 @@ If it’s not possible through JavaScript actions than maybe should we turn ours
 <pre class="language-yaml"><code class="language-yaml"><span class="token comment">#!/bin/sh -l</span><br><br><span class="token comment"># let's create a specific folder for the source files of our github action</span><br><br>mkdir github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src <span class="token comment"># "github/github-action-src" is the folder we put our Github Action source files into using our Dockerfile</span><br>cp <span class="token punctuation">-</span>r /github/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src . <span class="token comment"># now let's copy that folder into the folder for the entire repository "/github/workspace"</span><br><br><span class="token comment"># as we are currently inside the github workspace (/github/workspace) containing the source files of the entire repository</span><br><span class="token comment"># we will need to cd into the folder we previously created "github-action-src"</span><br><span class="token comment"># you could also copy build files and such to "github-action-src" if you need to</span><br>cd github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src<br><br>npm install<br>node index.js</code></pre>
 <p>If you have any question please send me a mail at <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</p>
 </div>
-	</div>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Article",
+			"@id": "https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/",
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/"
+			},
+			"url": "https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/",
+			"headline": "Creating a Github action for a Node.js 14+ project",
+			"description": "Creating a Github action for a Node.js 14+ project",
+			"audience": "web developers and front-end developers",
+			
+			"dateCreated": "2021-09-25",
+			"datePublished": "2021-09-25",
+			"dateModified": "2021-09-25",
+			"articleSection": "Blog",
+			"author": {
+				"@type": "Person",
+				"name": "Romain Lebesle (thoughtsunificator)",
+				"image": {
+					"@type": "ImageObject",
+					"url": "https://thoughtsunificator.me/image/me.jpg",
+					"height": 656,
+					"width": 1121
+				},
+				"url": "https://thoughtsunificator.me"
+			},
+			"publisher": {
+					"@type": "Organization",
+					"@id": "https://thoughtsunificator.me",
+					"name": "thoughtsunificator.me",
+					"url": "https://thoughtsunificator.me",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://thoughtsunificator.me/image/me.jpg",
+						"height": 656,
+						"width": 1121
+					}
+			}
+		}
+	</script>
 
 		</main>
 		<footer id="footer">
 			<small style="grid-row: 1;grid-column: 1;justify-self: start;">Built using <a href="https://www.11ty.dev/">Eleventy</a></small>
-			<small class="copyright">© Romain Lebesle</small>
+			<small class="copyright">© <a target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a> (thoughtsunificator)</small>
 			<div class="icons">
 				<a title="View source code on Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator/thoughtsunificator.me"><img alt="View source code on Github" width="32" src="/image/github.svg"></a>
 			</div>

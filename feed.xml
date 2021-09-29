@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>thoughtsunificator.me</title>
 	<subtitle>thoughtsunificator's blog mostly talking about JavaScript and coding</subtitle>
-	<link href="https://thoughtsunificator.me/feed/feed.xml" rel="self"/>
+	<link href="https://thoughtsunificator.me/feed.xml" rel="self"/>
 	<link href="https://thoughtsunificator.me"/>
 	<id>https://thoughtsunificator.me/</id>
 	<author>
@@ -10,45 +10,41 @@
 	</author>
 	<entry>
 			<title>The starting line</title>
-			<link href="https://thoughtsunificator.me//starting-line-1/"/>
+			<link href="https://thoughtsunificator.me/starting-line-1/"/>
 			<updated>Sat May 16 2020 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
-			<id>https://thoughtsunificator.me//starting-line-1/</id>
+			<id>https://thoughtsunificator.me/starting-line-1/</id>
 			<content type="html">&lt;p&gt;Salutations web traveler!
-&lt;br&gt;&lt;br&gt;
-&lt;img style="border: 0" width="124" alt="bunny" src="/image/terra.gif"&gt;
 ${EXCERPT_SEPARATOR}
 Here goes my first blog entry!&lt;/p&gt;
 &lt;p&gt;This blog will be a beacon for the libraries I maintain and at the same time a laboratory for some of my mad experiments.&lt;/p&gt;
 &lt;p&gt;Anyway! I might not be selling recipes for success but there sure will be entertainment.&lt;/p&gt;
 &lt;p&gt;So…&lt;/p&gt;
-&lt;img width="480" alt="bunny" src="/image/bunny.webp"&gt;
+&lt;p&gt;&lt;img src="/image/bunny.webp" alt="bunny"&gt;&lt;/p&gt;
 &lt;p&gt;Keep your spirits high!&lt;/p&gt;
 </content>
 		</entry><entry>
 			<title>Anime Twist Premium (ATP)</title>
-			<link href="https://thoughtsunificator.me//anime-twist-premium-2/"/>
+			<link href="https://thoughtsunificator.me/anime-twist-premium-2/"/>
 			<updated>Wed May 27 2020 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
-			<id>https://thoughtsunificator.me//anime-twist-premium-2/</id>
+			<id>https://thoughtsunificator.me/anime-twist-premium-2/</id>
 			<content type="html">&lt;p&gt;A convenient browser extension for twist.moe.
-&lt;br&gt;&lt;br&gt;
-&lt;img alt="atp-review" src="/image/atp-review.gif"&gt;
 ${EXCERPT_SEPARATOR}
 Anime Twist Premium is a browser extension that adds a watch list to twist.moe making it possible to track the shows you’re currently watching.&lt;/p&gt;
 &lt;h2 id="how-it-works" tabindex="-1"&gt;How it works&lt;/h2&gt;
 &lt;h3 id="adding-an-anime-to-your-watchlist" tabindex="-1"&gt;Adding an anime to your watchlist&lt;/h3&gt;
 &lt;p&gt;Navigate to the page of the anime of your choice.&lt;/p&gt;
 &lt;p&gt;There you will be able to see that a new “+” button appeared below the video player:&lt;/p&gt;
-&lt;img width="720" alt="atp-anime" src="/image/atp-anime.jpg"&gt;
+&lt;p&gt;&lt;img src="/image/atp-anime.jpg" alt="atp-anime"&gt;&lt;/p&gt;
 &lt;h3 id="acessing-your-watch-list" tabindex="-1"&gt;Acessing your watch list&lt;/h3&gt;
 &lt;p&gt;Next to the settings button or chat button you will see a new button:&lt;/p&gt;
-&lt;img width="720" alt="atp-watchlist-menu" src="/image/atp-watchlist-menu.jpg"&gt;
+&lt;p&gt;&lt;img src="/image/atp-watchlist-menu.jpg" alt="atp-watchlist-menu"&gt;&lt;/p&gt;
 &lt;p&gt;When clicked, a popup will appear:&lt;/p&gt;
-&lt;img width="720" alt="atp-watchlist" src="/image/atp-watchlist.jpg"&gt;
+&lt;p&gt;&lt;img src="/image/atp-watchlist.jpg" alt="atp-watchlist"&gt;&lt;/p&gt;
 &lt;p&gt;You can also look up your entries:&lt;/p&gt;
-&lt;img alt="atp-lookup" src="/image/atp-lookup.png"&gt;
+&lt;p&gt;&lt;img src="/image/atp-lookup.png" alt="atp-lookup"&gt;&lt;/p&gt;
 &lt;p&gt;That’s it, you now have easy access to the shows you’re watching and can look them up.&lt;/p&gt;
 &lt;h3 id="bonus-(v1.4)" tabindex="-1"&gt;Bonus (v1.4)&lt;/h3&gt;
-&lt;img width="720" alt="atp-random" src="/image/atp-random.gif"&gt;
+&lt;p&gt;&lt;img src="/image/atp-random.webp" alt="atp-random"&gt;&lt;/p&gt;
 &lt;h2 id="install-it" tabindex="-1"&gt;Install it&lt;/h2&gt;
 &lt;p&gt;It’s available on Chrome and Firefox:&lt;/p&gt;
 &lt;ul&gt;
@@ -61,17 +57,15 @@ Anime Twist Premium is a browser extension that adds a watch list to twist.moe m
 &lt;li&gt;&lt;a href="https://github.com/thoughtsunificator/anime-twist-premium"&gt;thoughtsunificator/anime-twist-premium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I might be adding more crazy features in the near future so…&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=8ClfuCqHgvs"&gt;&lt;img width="480" alt="akihito-san" src="/image/akihito-san.jpg"&gt;&lt;/a&gt;
-Stay tuned!&lt;/p&gt;
+&lt;img alt="akihito-san" src="/image/akihito-san.jpg" width="300"&gt;
+&lt;p&gt;Stay tuned!&lt;/p&gt;
 </content>
 		</entry><entry>
 			<title>domodel-diary: A modest password protected diary application</title>
-			<link href="https://thoughtsunificator.me//domodel-diary-3/"/>
+			<link href="https://thoughtsunificator.me/domodel-diary-3/"/>
 			<updated>Sat May 30 2020 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
-			<id>https://thoughtsunificator.me//domodel-diary-3/</id>
+			<id>https://thoughtsunificator.me/domodel-diary-3/</id>
 			<content type="html">&lt;p&gt;domodel-diary is a simple and easy-to-use diary application.
-&lt;br&gt;&lt;br&gt;
-&lt;img alt="preview" src="/image/preview.gif"&gt;
 ${EXCERPT_SEPARATOR}&lt;/p&gt;
 &lt;div class="excerpt_separator"&gt;&lt;/div&gt;
 &lt;p&gt;domodel-diary is a password protected diary.&lt;/p&gt;
@@ -84,21 +78,21 @@ ${EXCERPT_SEPARATOR}&lt;/p&gt;
 &lt;h2 id="how-it-works" tabindex="-1"&gt;How it works&lt;/h2&gt;
 &lt;h3 id="login-page" tabindex="-1"&gt;Login page&lt;/h3&gt;
 &lt;p&gt;Pick a password and hit enter. It will be used to encrypt your notes and will be asked whenever the application launches.&lt;/p&gt;
-&lt;img alt="authentication screenshot" src="/image/screenshot-auth.png"&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-auth.png" alt="authentication screenshot"&gt;&lt;/p&gt;
 &lt;h3 id="calendar" tabindex="-1"&gt;Calendar&lt;/h3&gt;
 &lt;p&gt;You can add any note for any days of any years. It does not have to be in the present, they can be added both in the past, present and future.&lt;/p&gt;
 &lt;p&gt;Clicking the left and right arrow icon will cycle the month forward and backward.
 You can also change the year to any number you would like.&lt;/p&gt;
-&lt;img alt="calendar screenshot" src="/image/screenshot-calendar.png"&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-calendar.png" alt="calendar screenshot"&gt;&lt;/p&gt;
 &lt;h3 id="editor" tabindex="-1"&gt;Editor&lt;/h3&gt;
 &lt;p&gt;You can post your note by clicking the disk icon or exit by clicking the red cross icon.
 If you decide to exit the editor, what you wrote will be saved an available next time your re-open the editor.&lt;/p&gt;
-&lt;img alt="editor screenshot" src="/image/screenshot-editor.png"&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-editor.png" alt="editor screenshot"&gt;&lt;/p&gt;
 &lt;p&gt;Your note will then appear just below the calendar.&lt;/p&gt;
-&lt;img alt="notes screenshot" src="/image/screenshot-notes.png"&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-notes.png" alt="notes screenshot"&gt;&lt;/p&gt;
 &lt;h3 id="settings" tabindex="-1"&gt;Settings&lt;/h3&gt;
 &lt;p&gt;You can logout, export or import your list using the settings menu:&lt;/p&gt;
-&lt;img alt="settings screenshot" src="/image/screenshot-settings.png"&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-settings.png" alt="settings screenshot"&gt;&lt;/p&gt;
 &lt;h2 id="install-it" tabindex="-1"&gt;Install it&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://chrome.google.com/webstore/detail/domodel-diary/hncoaagegcdnajffjpkldhfceipfgnnf?hl=en"&gt;Chrome&lt;/a&gt;&lt;/li&gt;
@@ -107,8 +101,8 @@ If you decide to exit the editor, what you wrote will be saved an available next
 &lt;li&gt;&lt;a href="https://www.electronjs.org/apps/domodel-diary"&gt;Windows/Linux/MacOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Also available on:&lt;/p&gt;
-&lt;p&gt;&lt;a href="//www.microsoft.com/store/apps/9NHLT1HFB4T7?cid=storebadge&amp;amp;ocid=badge"&gt;&lt;img width="200" src='/image/English_get.png' alt='English badge'/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://snapcraft.io/domodel-diary-electron"&gt;&lt;img width="200" alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;img src="/image/English_get.png" alt="English badge" width="200"&gt;
+&lt;img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"&gt;
 &lt;p&gt;&lt;s&gt;It will soon be available on F-Droid.&lt;/s&gt; Please download the APK from the &lt;a href="https://github.com/thoughtsunificator/domodel-diary-android/releases/"&gt;release page&lt;/a&gt; of the Github repository.&lt;/p&gt;
 &lt;h2 id="source-code" tabindex="-1"&gt;Source code&lt;/h2&gt;
 &lt;ul&gt;
@@ -119,14 +113,14 @@ If you decide to exit the editor, what you wrote will be saved an available next
 &lt;/ul&gt;
 &lt;p&gt;So…&lt;/p&gt;
 &lt;p&gt;Don’t snuff it out, yet!&lt;/p&gt;
-&lt;img alt="passionate" src="/image/tumblr_mx6tljofLI1suvynno1_500.gif"&gt;
+&lt;p&gt;&lt;img src="/image/tumblr_mx6tljofLI1suvynno1_500.webp" alt="passionate"&gt;&lt;/p&gt;
 &lt;p&gt;See you then!&lt;/p&gt;
 </content>
 		</entry><entry>
 			<title>Userinterface.js – A small library to build front-end JavaScript applications</title>
-			<link href="https://thoughtsunificator.me//userinterfacejs-a-small-library-to-build-front-end-javascript-applications/"/>
+			<link href="https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/"/>
 			<updated>Sun Nov 01 2020 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
-			<id>https://thoughtsunificator.me//userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</id>
+			<id>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</id>
 			<content type="html">&lt;meta charset="utf-8"&gt;
 &lt;title&gt;Redirecting…&lt;/title&gt;
 &lt;link rel="canonical" href="https://github.com/thoughtsunificator/userinterface.js"&gt;
@@ -137,9 +131,9 @@ If you decide to exit the editor, what you wrote will be saved an available next
 &lt;a href="https://github.com/thoughtsunificator/userinterface.js" target="_blank" rel="noopener noreferrer"&gt;Click here if you are not redirected.&lt;/a&gt;</content>
 		</entry><entry>
 			<title>Creating a Github action for a Node.js 14+ project</title>
-			<link href="https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/"/>
+			<link href="https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/"/>
 			<updated>Sat Sep 25 2021 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
-			<id>https://thoughtsunificator.me//creating-a-github-action-for-a-nodejs-14-project/</id>
+			<id>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</id>
 			<content type="html">&lt;p&gt;Currently it is &lt;a href="https://github.com/actions/runner/issues/772"&gt;not possible&lt;/a&gt; to create a &lt;a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action"&gt;JavaScript action&lt;/a&gt; with a version of nodejs other than 12.
 &lt;br&gt;&lt;br&gt;
 Let’s see if we can work this out.
@@ -157,9 +151,9 @@ If it’s not possible through JavaScript actions than maybe should we turn ours
 </content>
 		</entry><entry>
 			<title>bbcode-parser - A JavaScript BBCode implementation</title>
-			<link href="https://thoughtsunificator.me//bbcode-parser-a-javascript-bbcode-implementation/"/>
+			<link href="https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/"/>
 			<updated>Tue Sep 28 2021 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
-			<id>https://thoughtsunificator.me//bbcode-parser-a-javascript-bbcode-implementation/</id>
+			<id>https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/</id>
 			<content type="html">&lt;meta charset="utf-8"&gt;
 &lt;title&gt;Redirecting…&lt;/title&gt;
 &lt;link rel="canonical" href="https://github.com/thoughtsunificator/bbcode-parser"&gt;
