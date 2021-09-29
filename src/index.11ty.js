@@ -43,7 +43,7 @@ exports.render = function(data) {
 						{
 							"@type": "Article",
 							"@id": "${data.site.url}${ post.url }",
-							"name": "${post.data.title}"
+							"name": "${post.data.title}",
 							"mainEntityOfPage": {
 								"@type": "WebPage",
 								"@id": "${data.site.url}${ post.url }"
