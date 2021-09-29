@@ -35,6 +35,20 @@ exports.render = function(data) {
 		` : ``}
 		${data.categories ? `<meta content="${ data.categories[0] }" property="article:section">`: ""}
 		${data.tags ? data.tags.map(tag => `<meta content="${ tag }" property="article:tag">`).join("") : ""}
+		<script type="application/ld+json">
+		{
+			"@type": "Organization",
+			"@id": "${ data.site.name }",
+			"name": "${ data.site.name }",
+			"url": "${ data.site.url }",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "${data.site.url}/image/me.jpg",
+				"height": 656,
+				"width": 1121
+			}
+		}
+		</script>
 		${data.head || ""}
 	</head>
 	<body class="wrap padding${data.class ? ` page-${data.class}` : ""}">

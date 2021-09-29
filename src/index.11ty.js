@@ -30,6 +30,53 @@ exports.render = function(data) {
 		${data.pagination.href.previous ? `<a class="prev" href="${ data.pagination.href.previous}">Newer →</a>` : ""}
 	</div>
 </div>
+<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "ItemList",
+				"name": "Recent Articles",
+				"numberOfItems": ${data.pagination.items.length},
+				"itemListOrder": "Descending",
+				"itemListElement": [
+					${data.pagination.items.map(post => `
+						{
+							"@type": "Article",
+							"@id": "${data.site.url}${ post.url }",
+							"mainEntityOfPage": {
+								"@type": "WebPage",
+								"@id": "${data.site.url}${ post.url }"
+							},
+							"url": "${data.site.url}${ post.url }",
+							"headline": "${ post.data.description }",
+							"description": "${ post.data.description }",
+							"audience": "web developers and front-end developers",
+							${post.data.cover ? `"image": {
+								"@type": "ImageObject",
+								"url": "${ data.site.url }/image/cover/${ post.data.cover.filename }"
+							},` : ""}
+							"dateCreated": "${ post.date.toISOString() }",
+							"datePublished": "${ post.date.toISOString() }",
+							"dateModified": "${ post.date.toISOString() }",
+							"articleSection": "Blog",
+							"author": {
+								"@type": "Person",
+								"name": "Romain Lebesle (thoughtsunificator)",
+								"image": {
+									"@type": "ImageObject",
+									"url": "${data.site.url}/image/me.jpg",
+									"height": 656,
+									"width": 1121
+								},
+								"url": "${ data.site.url }"
+							},
+							"publisher": {
+								"@id": "${ data.site.name }",
+							}
+						}
+					`)}
+				]
 
+		}
+</script>
 `;
 };

@@ -27,15 +27,13 @@ exports.render = async function(data) {
 			"headline": "${ data.description }",
 			"description": "${ data.title }",
 			"audience": "web developers and front-end developers",
-			${data.cover ? `
-				"image": {
-					"@type": "ImageObject",
-					"url": "${ data.site.url }/image/cover/${ data.cover.filename }"
-				},
-			` : ""}
-			"dateCreated": "${ data.date }",
-			"datePublished": "${ data.date }",
-			"dateModified": "${ data.date }",
+			${data.cover ? `"image": {
+				"@type": "ImageObject",
+				"url": "${ data.site.url }/image/cover/${ data.cover.filename }"
+			},` : ""}
+			"dateCreated": "${ data.page.date.toISOString() }",
+			"datePublished": "${ data.page.date.toISOString() }",
+			"dateModified": "${ data.page.date.toISOString() }",
 			"articleSection": "Blog",
 			"author": {
 				"@type": "Person",
@@ -49,16 +47,7 @@ exports.render = async function(data) {
 				"url": "${ data.site.url }"
 			},
 			"publisher": {
-					"@type": "Organization",
-					"@id": "${ data.site.url }",
-					"name": "${ data.site.name }",
-					"url": "${ data.site.url }",
-					"logo": {
-						"@type": "ImageObject",
-						"url": "${data.site.url}/image/me.jpg",
-						"height": 656,
-						"width": 1121
-					}
+				"@id": "${ data.site.name }",
 			}
 		}
 	</script>
