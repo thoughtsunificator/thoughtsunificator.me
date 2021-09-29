@@ -13,7 +13,8 @@ exports.render = async function(data) {
 		${PostMeta.bind(this)({ site: data.site, post: data.page, tags: data.tags, categories: data.categories })}
 		<h2 class="title">${ data.title }</h2>
 		${PostExcerpt.bind(this)({ site: data.site, excerpt: data.page.excerpt, cover: data.cover })}
-	<article id="content">${ data.content.slice(data.content.indexOf('${EXCERPT_SEPARATOR}') + '${EXCERPT_SEPARATOR}'.length) }</div>
+	<article id="content">${ data.content.slice(data.content.indexOf('${EXCERPT_SEPARATOR}') + '${EXCERPT_SEPARATOR}'.length) }</article>
+	</article>
 	<script type="application/ld+json">
 		{
 			"@context": "http://schema.org",
@@ -50,6 +51,5 @@ exports.render = async function(data) {
 				"@id": "${ data.site.name }"
 			}
 		}
-	</script>
-`
+	</script>`
 }
