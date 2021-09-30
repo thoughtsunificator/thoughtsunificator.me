@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Timeline (EN)</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+
+		#timeline {
+			display: grid;
+			grid-auto-columns: max-content;
+		}
+
+		#timeline > li:not(.separator) {
+			display: grid;
+			grid-gap: 5px;
+			position: relative;
+			grid-auto-columns: max-content;
+			list-style-type: none;
+		}
+
+		#timeline > li:not(.separator):before {
+			content: "";
+			position: absolute;
+			width: 2px;
+			left: 0;
+			height: 100%;
+			background-color: black;
+		}
+
+		#timeline > li:not(.separator)::after {
+			content: "";
+			position: absolute;
+			left: -10px;
+			width: 20px;
+			height: 20px;
+			background-color: gray;
+			border: 1px solid black;
+		}
+
+		#timeline .event-name,
+		#timeline .event-date,
+		#timeline .event-description,
+		#timeline .event-objectives {
+			margin-left: 15px;
+			align-self: flex-start;
+		}
+
+		#timeline .event-description,
+		#timeline .event-objectives {
+			font-size: 0.95em;
+		}
+
+		#timeline .event-objectives {
+			margin-bottom: 25px;
+		}
+
+		#timeline .event-date {
+			font-weight: bold;
+		}
+
+		.separator {
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: 1fr auto 1fr;
+			align-items: center;
+			justify-self: center;
+			grid-gap: 30px;
+		}
+
+		.separator:before,
+		.separator:after {
+			width: 200px;
+			content: "";
+			height: 1px;
+			background-color: #3c486b;
+		}
+
+		#lang {
+			padding: 10px;
+			display: flex;
+			column-gap: 10px;
+		}
+
+		.back {
+			padding: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<a class="back" target="_blank" href="/">Homepage</a>
+	<nav id="lang">
+		<b>EN</b>
+		|
+		<a href="timeline.html">FR</a>
+	</nav>
+	<h2>Timeline</h2>
+	<p>Timeline of my life as a programmer</p>
+	<p>For my resume it's over <a href="resume-en.html">there</a></p>
+	<ol id="timeline">
+		<li>
+			<div class="event-date">2011</div>
+			<div class="event-name"><u>Private Game Server</u></div>
+			<div class="event-description">
+				Techs: HTML, CSS, Java, PHP, ActionScript<br>
+				Sujets: Emulator, CMS, Video Games.
+			</div>
+			<ul class="event-objectives">
+				<li>Understanding of packet architectures (client-server)</li>
+				<li>Improvements and fixes for emulators (server)</li>
+				<li>Client improvements (ActionScript)</li>
+				<li>Automated shop via micropayments for in-game items and services</li>
+				<li>Managing and promoting of a top 10 private game server with +100 simultaneous players</li>
+			</ul>
+		</li>
+		<li>
+			<div class="event-date">2012</div>
+			<div class="event-name"><u>Trials and errors</u></div>
+			<div class="event-description">
+				Techs: HTML, CSS, Java, Java Swing, PHP<br>
+				Sujets: Desktop application, OSI model, UX
+			</div>
+			<ul class="event-objectives">
+				<li>Made a tiny implementation of the HTTP protocol for a small web server</li>
+				<li>Built a desktop application that reconnects automatically to public wifi using given credentials (Java Swing)</li>
+				<li>Deepened understanding of various Java APIs</li>
+			</ul>
+		</li>
+		<li>
+			<div class="event-date">2013</div>
+			<div class="event-name"><u>PHP</u></div>
+			<div class="event-description">
+				Techs: HTML, CSS, PHP<br>
+				Sujets: Frameworks and CMS
+			</div>
+			<ul class="event-objectives">
+				<li>Webite anime database</li>
+				<li>Built a forum with Laravel</li>
+				<li>Deepened understanding of various protocol stacks</li>
+			</ul>
+		</li>
+		<li>
+			<div class="event-date">2014</div>
+			<div class="event-name"><u>Web & Browser Extensions</u></div>
+			<div class="event-description">
+				Techs: HTML, CSS, JavaScript, grunt, gulp<br>
+				Sujets: Browser extension, Chrome Extension API, Firefox Addon API, Userscripts, UX
+			</div>
+			<ul class="event-objectives">
+				<li>Built various userscripts for myanimelist.net</li>
+				<li>Published initial release of BetterHorribleSubs, a browser extension that adds many features to horriblesubs.info</li>
+				<li>Published initial release of BetterMyAnimeList, a browser extension that adds many features to myanimelist.net</li>
+				<li>Deepen understanding of various DOM APIs</li>
+			</ul>
+		</li>
+		<li>
+			<div class="event-date">2015</div>
+			<div class="event-name"><u>Libraries</u></div>
+			<div class="event-description">
+				Techs: JavaScript, DOM<br>
+				Sujets: JavaScript libraries and front-end tools
+			</div>
+			<ul class="event-objectives">
+				<li>Published initial release of bbcode-parser, a zero dependencies BBCode parser with an API similitar to the DOM</li>
+				<li>Published initial release of userinterface.js, a front-end librarie</li>
+			</ul>
+		</li>
+		<li>
+			<div class="event-date">2016</div>
+			<div class="event-name"><u>Freelance</u></div>
+			<div class="event-description">
+			Techs: JavaScript, HTML, React, WordPress, PHP..<br>
+			Working on web projects for freelancers platforms such as <u>upwork.com</u> et <u>freelancer.com</u></div>
+			<ul class="event-objectives">
+				<li>Plug-ins WordPress pour divers clients sur upwork.com</li>
+				<li>Bot & Scraper IMDB for a client on freelancer.com</li>
+				<li>Code reviews for various clients on upwork.com and freelance.com</li>
+				<li>5000 installs on the Chrome Web Store for the browser extension BetterMyAnimeList</li>
+				<li>Published initial release of domodel, a front-end librarie</li>
+			</ul>
+		</li>
+		<li class="separator">Hiatus (worked in other fields)</li>
+		<li>
+			<div class="event-date">2019</div>
+			<div class="event-name"><u>Epitech (Web@cademie)</u></div>
+			<div class="event-description">
+				Techs: JavaScript, HTML, React, React Native, Java, Spring Framework, API Platform, Node.js...<br>
+				24 months of government certified web training program. 12 months within the Epitech campus and the next 12 months working for a business 3 weeks a month.
+			</div>
+			<ul class="event-objectives">
+				<li>Space themed eshop (react, redux/context, three.js, react-three, JWT)</li>
+				<li>Twitter clone (Express.js)</li>
+				<li>Arithmetic expressions evaluator (JavaScript)</li>
+			</ul>
+		</li>
+		<li>
+			<div class="event-date">2020</div>
+			<div class="event-name"><u>Etude SEGUR</u></div>
+			<div class="event-description">
+				Techs: JavaScript, Node.js, Network Infrastructure, Linux, Proxmox, FreePBX..<br>
+				Development of a web application for genealogists and setup/improved an IT infrastructure
+			</div>
+			<ul class="event-objectives">
+				<li>Developed of a web application allowing genealogists to create and manipulate family trees dedicated to notaries</li>
+				<li>Planned and documented the transition of the IT infrastructure</li>
+				<li>Closed external access to the IT infrastructure and setup strict routing rules.</li>
+				<li>Installed a server rack</li>
+				<li>Set up of a network infrastructure with a remote access</li>
+				<li>Built a gedcom parser for the web application</li>
+				<li>Wrote technical documentation and improved existing documentation of internal processes</li>
+			</ul>
+		</li>
+		<li>
+			<div class="event-date">2021</div>
+			<div class="event-name"><u>Freelance</u></div>
+			<div class="event-description">
+				Techs: JavaScript, HTML, React, WordPress, PHP, rollup, mocha..<br>
+				Working on web projects for freelancers platforms such as upwork.com et freelancer.com.
+			</div>
+		</li>
+	</ol>
+</body>
+</html>
