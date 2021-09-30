@@ -28,7 +28,7 @@ exports.render = function(data) {
 	return `<div id="tags">
 	${keys.map(key => `
 		<div>
-			<h3 id="${key}"><small>#${key}</small></h3>
+			<h3 id="${key.replace(" ", "-").toLowerCase()}"><small>#${key}</small></h3>
 			${groups[key].map(post => `
 				${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a>
 			`).join("<br>")}
