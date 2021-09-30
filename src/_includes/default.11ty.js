@@ -49,6 +49,34 @@ exports.render = function(data) {
 			}
 		}
 		</script>
+		<script type="application/ld+json" id="website-json-ld">
+		{
+				"@context":"http://schema.org",
+				"@type":"WebSite",
+				"name":"thoughtsunificator.me",
+				"url":"https://thoughtsunificator.me"
+		}
+		</script>
+		<script type="application/ld+json" id="social-json-ld">
+		{
+				"@context":"http://schema.org",
+				"@type":"Organization",
+				"name":"thoughtsunificator.me",
+				"url":"https://thoughtsunificator.me",
+				"sameAs":[
+					"https://github.com/thoughtsunificator",
+					"https://www.npmjs.com/~thoughtsunificator",
+					"https://play.google.com/store/apps/developer?id=thoughtsunificator",
+					"https://addons.mozilla.org/en-US/firefox/user/15968837",
+					"https://twitter.com/thoughtsunifier",
+					"https://romain-lebesle.fr",
+					"https://openuserjs.org/users/thoughtsunificator",
+					"https://www.youtube.com/channel/UCpLQLDuSOwx74AdwPE5CGDA",
+					"https://userstyles.org/users/1256582",
+					"https://greasyfork.org/en/users/257151-thoughtsunificator"
+				]
+		}
+		</script>
 		${data.head || ""}
 	</head>
 	<body class="wrap padding${data.class ? ` page-${data.class}` : ""}">
