@@ -56,9 +56,11 @@
 		}
 
 		#lang {
+			position: absolute;
 			padding: 10px;
 			display: flex;
 			column-gap: 10px;
+			top: 25px;
 		}
 
 		.vcard {
@@ -171,6 +173,13 @@
 		}
 
 		@media screen and (max-width: 600px) {
+
+			#lang,
+			.back {
+				justify-self: center;
+				position: initial !important;
+			}
+
 			.records {
 				display: grid;
 			}
@@ -206,6 +215,7 @@
 		}
 
 		.back {
+			position: absolute;
 			padding: 10px;
 		}
 	</style>
