@@ -9,7 +9,7 @@ exports.data = {
 exports.render = function(data) {
 	return `<div class="intro">
 
-	<img src="/image/me.jpg">
+	<img alt="me" src="/image/me.jpg">
 	<div>
 	<p>Well, hello there!<br>My name is <b>Romain Lebesle</b>.</p>
 	<br>
@@ -47,6 +47,7 @@ exports.render = function(data) {
 		I am currently available for hire.
 		<br>
 		<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
+	</div>
 	</div>
 	<script type="application/ld+json">
 	{
