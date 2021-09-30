@@ -4,7 +4,7 @@ const Image = require("@11ty/eleventy-img")
 
 exports.data = {
 	layout: "default",
-	class: "post"
+	class: "post",
 };
 
 exports.render = async function(data) {

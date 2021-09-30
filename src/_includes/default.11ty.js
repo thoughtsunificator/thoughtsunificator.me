@@ -9,10 +9,6 @@ exports.render = function(data) {
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
 		<link rel="canonical" href="${data.site.url}${data.page.url}">
 		<link rel="manifest" href="/manifest.webmanifest">
-		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-iphone-60x60.png">
-		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/image/apple-touch-icon-ipad-76x76.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/image/apple-touch-icon-iphone-retina-120x120.png">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/image/apple-touch-icon-ipad-retina-152x152.png">
 		<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
@@ -25,16 +21,17 @@ exports.render = function(data) {
 		<meta name="theme-color" content="#353f5b">
 		${data.description ? `<meta content="${ data.description }" property="description">` : `<meta content="${ data.site.description }" property="description">`}
 		<meta content="${ [...(data.tags || []), ...data.site.keywords].join(", ") }" property="keywords">
+		<meta property="og:image" content="${data.cover ? `/image/cover/${data.cover.filename}` : "/image/cover.jpg"}" />
 		<meta content="${ data.site.name }" property="og:site_name">
 		<meta content="${ data.page.name === "Home" ? data.site.name : `${data.title} &middot; ${data.site.name}` }" property="og:title">
-		${data.page.title ? `<meta content="article" property="og:type">` : `<meta content="website" property="og:type">`}
+		${data.page.excerpt ? `<meta content="article" property="og:type">` : `<meta content="website" property="og:type">`}
 		${data.description ? `<meta content="${ data.description }" property="og:description">` : `<meta content="${ data.site.description }" property="og:description">`}
 		${data.page.url ? `<meta content="${ data.site.url }${ data.page.url }" property="og:url">` : ``}
-		${data.page.date ? `
-			<meta content="${ data.page.date }" property="article:published_time">
+		${data.page.excerpt ? `
+			<meta content="${ data.page.date.toISOString() }" property="article:published_time">
+			${data.categories ? `<meta content="${ data.categories[0] }" property="article:section">`: ""}
+			${data.tags ? data.tags.map(tag => `<meta content="${ tag }" property="article:tag">`).join("") : ""}
 		` : ``}
-		${data.categories ? `<meta content="${ data.categories[0] }" property="article:section">`: ""}
-		${data.tags ? data.tags.map(tag => `<meta content="${ tag }" property="article:tag">`).join("") : ""}
 		<script type="application/ld+json">
 		{
 			"@type": "Organization",
