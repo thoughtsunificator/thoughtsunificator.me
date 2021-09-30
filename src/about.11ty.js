@@ -42,6 +42,7 @@ exports.render = function(data) {
 		<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
 		<li><a target="_blank" href="https://snapstats.org/publishers/thoughtsunificator">Snapcraft</a></li>
 		<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter	</a></li>
+		<li><a target="_blank" href="/timeline-en.html">Timeline of my life as a programmer</a></li>
 	</ul>
 	<h2>Contact</h2>
 		I am currently available for hire.
