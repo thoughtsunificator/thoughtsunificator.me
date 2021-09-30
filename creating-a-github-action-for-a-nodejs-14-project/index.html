@@ -112,7 +112,7 @@ Let's see if we can work this out.</p>
 	</div>
 	
 
-		<article id="content"><p>
+		<div id="content"><p>
 If it’s not possible through JavaScript actions than maybe should we turn ourselves to a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">Docker container action</a>.</p>
 <p>Obviously the answer is yes and I am going to work you through the process of doing it.</p>
 <p>First if you don’t know the basics of Github Actions I recommend you go read the <a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions">Starting Guide</a>.</p>
@@ -123,7 +123,7 @@ If it’s not possible through JavaScript actions than maybe should we turn ours
 <h3 id="entrypoint.sh" tabindex="-1">entrypoint.sh</h3>
 <pre class="language-yaml"><code class="language-yaml"><span class="token comment">#!/bin/sh -l</span><br><br><span class="token comment"># let's create a specific folder for the source files of our github action</span><br><br>mkdir github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src <span class="token comment"># "github/github-action-src" is the folder we put our Github Action source files into using our Dockerfile</span><br>cp <span class="token punctuation">-</span>r /github/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src . <span class="token comment"># now let's copy that folder into the folder for the entire repository "/github/workspace"</span><br><br><span class="token comment"># as we are currently inside the github workspace (/github/workspace) containing the source files of the entire repository</span><br><span class="token comment"># we will need to cd into the folder we previously created "github-action-src"</span><br><span class="token comment"># you could also copy build files and such to "github-action-src" if you need to</span><br>cd github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src<br><br>npm install<br>node index.js</code></pre>
 <p>If you have any question please send me a mail at <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</p>
-</article>
+</div>
 	</article>
 	<script type="application/ld+json">
 		{
