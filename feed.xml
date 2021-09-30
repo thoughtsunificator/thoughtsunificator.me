@@ -101,8 +101,8 @@ If you decide to exit the editor, what you wrote will be saved an available next
 &lt;li&gt;&lt;a href="https://www.electronjs.org/apps/domodel-diary"&gt;Windows/Linux/MacOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Also available on:&lt;/p&gt;
-&lt;img src="/image/English_get.png" alt="English badge" width="200"&gt;
-&lt;img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"&gt;
+&lt;p&gt;&lt;a target="_blank" href="https://www.microsoft.com/en-US/p/domodel-diary/9nhlt1hfb4t7"&gt;&lt;img src="/image/English_get.png" alt="English badge" width="200"&gt;&lt;/a&gt;
+&lt;a target="_blank" href="https://snapcraft.io/domodel-diary-electron"&gt;&lt;img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;s&gt;It will soon be available on F-Droid.&lt;/s&gt; Please download the APK from the &lt;a href="https://github.com/thoughtsunificator/domodel-diary-android/releases/"&gt;release page&lt;/a&gt; of the Github repository.&lt;/p&gt;
 &lt;h2 id="source-code" tabindex="-1"&gt;Source code&lt;/h2&gt;
 &lt;ul&gt;
