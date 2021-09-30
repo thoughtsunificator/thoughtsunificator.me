@@ -47,7 +47,7 @@ exports.render = function(data) {
 	<h2>Contact</h2>
 		I am currently available for hire.
 		<br>
-		<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
+		<a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
 	</div>
 	</div>
 	<script type="application/ld+json">
