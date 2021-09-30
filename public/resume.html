@@ -56,8 +56,10 @@
 		}
 
 		#lang {
+			position: absolute;
 			padding: 10px;
 			display: flex;
+			top: 25px;
 			column-gap: 10px;
 		}
 
@@ -106,6 +108,13 @@
 		}
 
 		@media screen and (max-width: 600px) {
+
+			#lang,
+			.back {
+				justify-self: center;
+				position: initial !important;
+			}
+
 			header {
 				grid-gap: 20px;
 			}
@@ -206,6 +215,7 @@
 		}
 
 		.back {
+			position: absolute;
 			padding: 10px;
 		}
 	</style>
