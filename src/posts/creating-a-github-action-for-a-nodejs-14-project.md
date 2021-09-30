@@ -11,7 +11,7 @@ Currently it is [not possible](https://github.com/actions/runner/issues/772) to 
 <br><br>
 Let's see if we can work this out.
 <!--more--> ${EXCERPT_SEPARATOR}
-If it's not possible through JavaScript actions than maybe should we turn ourselves to a [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action)?
+If it's not possible through JavaScript actions than maybe should we turn ourselves to a [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action).
 
 Obviously the answer is yes and I am going to work you through the process of doing it.
 
