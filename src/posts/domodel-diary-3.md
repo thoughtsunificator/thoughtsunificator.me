@@ -10,7 +10,7 @@
 	},
 }
 ---
-domodel-diary is a simple and easy-to-use diary application.
+An universal diary for everyone to use.
 <!--more--> ${EXCERPT_SEPARATOR}
 <div class="excerpt_separator"></div>
 

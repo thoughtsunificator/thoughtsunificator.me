@@ -8,14 +8,10 @@
 }
 ---
 Currently it is [not possible](https://github.com/actions/runner/issues/772) to create a [JavaScript action](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action) with a version of nodejs other than 12.
-<br><br>
-Let's see if we can work this out.
 <!--more--> ${EXCERPT_SEPARATOR}
-If it's not possible through JavaScript actions than maybe should we turn ourselves to a [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action).
-
-Obviously the answer is yes and I am going to work you through the process of doing it.
-
 First if you don't know the basics of Github Actions I recommend you go read the [Starting Guide](https://docs.github.com/en/actions/creating-actions/about-custom-actions).
+
+A workaround to have a version of nodejs > 12 is to create a [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action) with the [node:16-alpine](https://hub.docker.com/_/node) image.
 
 ### action.yml
 ```yaml
