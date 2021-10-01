@@ -4,7 +4,7 @@ exports.render = function(data) {
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>${ data.page.name === "Home" ? data.site.name : `${data.title} &middot; ${data.site.name}` }</title>
+		<title>${ data.page.name === "Home" ? data.site.name : `${data.headTitle || data.title} &middot; ${data.site.name}` }</title>
 		<link rel="icon" type="image/jpeg" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
 		<link rel="canonical" href="${data.site.url}${data.page.url}">
@@ -78,9 +78,12 @@ exports.render = function(data) {
 	</head>
 	<body class="wrap padding${data.class ? ` page-${data.class}` : ""}">
 		<header id="header">
+			<div class="header-title">
 			<h1>
 				${ data.site.tagline }
 			</h1>
+			<small>It's also blog.</small>
+			</div>
 			<nav>
 				${data.site.menu.map(item => `<a ${ item.url === data.page.url ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
 			</nav>
