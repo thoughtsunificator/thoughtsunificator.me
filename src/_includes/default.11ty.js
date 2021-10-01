@@ -78,12 +78,7 @@ exports.render = function(data) {
 	</head>
 	<body class="wrap padding${data.class ? ` page-${data.class}` : ""}">
 		<header id="header">
-			<div class="header-title">
-			<h1>
-				${ data.site.tagline }
-			</h1>
-			<small>It's also blog.</small>
-			</div>
+			<h1>${ data.site.tagline }</h1>
 			<nav>
 				${data.site.menu.map(item => `<a ${ item.url === data.page.url ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
 			</nav>
