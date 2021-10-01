@@ -4,7 +4,7 @@ exports.render = function(data) {
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>${ data.page.name === "Home" ? data.site.name : `${data.headTitle || data.title} &middot; ${data.site.name}` }</title>
+		<title>${ data.title === "Home" ? data.site.name : `${data.headTitle || data.title} | ${data.site.name}` }</title>
 		<link rel="icon" type="image/jpeg" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
 		<link rel="canonical" href="${data.site.url}${data.page.url}">
