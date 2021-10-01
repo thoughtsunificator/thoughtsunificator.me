@@ -6,7 +6,7 @@
 		<title>thoughtsunificator.me</title>
 		<link rel="icon" type="image/jpeg" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
-		<link rel="canonical" href="https://thoughtsunificator.me/">
+		<link rel="canonical" href="https://thoughtsunificator.me/posts/2">
 		<link rel="manifest" href="/manifest.webmanifest">
 		<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
@@ -25,7 +25,7 @@
 		<meta content="Home &middot; thoughtsunificator.me" property="og:title">
 		<meta content="website" property="og:type">
 		<meta content="thoughtsunificator's blog mostly talking about JavaScript and coding" property="og:description">
-		<meta content="https://thoughtsunificator.me/" property="og:url">
+		<meta content="https://thoughtsunificator.me/posts/2" property="og:url">
 		
 		<script type="application/ld+json">
 		{
@@ -75,7 +75,7 @@
 		<header id="header">
 			<h1>a boundless expression of thoughts</h1>
 			<nav>
-				<a class="active" href="/">Home</a><a href="/archive/">Archive</a><a href="/tags/">Tags</a><a href="/categories/">Categories</a><a href="/about/">About</a>
+				<a href="/">Home</a><a href="/archive/">Archive</a><a href="/tags/">Tags</a><a href="/categories/">Categories</a><a href="/about/">About</a>
 			</nav>
 		</header>
 		<main id="main">
@@ -83,79 +83,103 @@
 	<h2>Recent articles</h2>
 	<article id="posts">
 	
-		<article id="post-0" class="post link">
+		<article id="post-0" class="post">
 			
 <div class="metas">
-	<time class="meta post-date" datetime="2021-09-28T00:00:00.000Z">📅 28 September 2021</time>
+	<time class="meta post-date" datetime="2020-05-30T00:00:00.000Z">📅 30 May 2020</time>
 	<div class="tags">
 		Categories:
 		<div class="list">
-			<a class="category" href="/categories/#software">Software</a>
+			<a class="category" href="/categories/#software">Software</a>,<a class="category" href="/categories/#browser-extension">Browser-Extension</a>
 		</div>
 		Tags:
 		<div class="list">
-			<a class="tag" href="/tags/#library">#library</a><a class="tag" href="/tags/#javascript">#javascript</a>
+			<a class="tag" href="/tags/#productivity">#productivity</a><a class="tag" href="/tags/#diary">#diary</a>
 		</div>
 	</div>
 </div>
 
-			<h2 class="title">🔗 <a target="_blank" rel="noopener" href="/bbcode-parser-a-javascript-bbcode-implementation/">bbcode-parser - A JavaScript BBCode implementation</a></h2>
+			<h2 class="title"><a href="/domodel-diary-3/">domodel-diary: A modest password protected diary application</a></h2>
+			
+			
+	<div class="excerpt">
+		<p>An universal diary for everyone to use.</p>
+
+	</div>
+	<div class="cover">
+		<img src="/image/cover/domodel-diary-preview.webp" alt="cover">
+		</div>
+
+			<a class="keep-reading" href="/domodel-diary-3/#content">Continue Reading →</a>
 			
 		</article>
 	
 		<article id="post-1" class="post">
 			
 <div class="metas">
-	<time class="meta post-date" datetime="2021-09-25T00:00:00.000Z">📅 25 September 2021</time>
+	<time class="meta post-date" datetime="2020-05-27T00:00:00.000Z">📅 27 May 2020</time>
 	<div class="tags">
 		Categories:
 		<div class="list">
-			<a class="category" href="/categories/#guides">Guides</a>
+			<a class="category" href="/categories/#anime">Anime</a>,<a class="category" href="/categories/#browser-extension">Browser-Extension</a>
 		</div>
 		Tags:
 		<div class="list">
-			<a class="tag" href="/tags/#github">#github</a><a class="tag" href="/tags/#github-action">#github-action</a>
+			<a class="tag" href="/tags/#twist.moe">#twist.moe</a>
 		</div>
 	</div>
 </div>
 
-			<h2 class="title"><a href="/creating-a-github-action-for-a-nodejs-14-project/">Creating a Github action for a Node.js 14+ project</a></h2>
+			<h2 class="title"><a href="/anime-twist-premium-2/">Anime Twist Premium (ATP)</a></h2>
 			
 			
 	<div class="excerpt">
-		<p>Currently it is <a href="https://github.com/actions/runner/issues/772">not possible</a> to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action">JavaScript action</a> with a version of nodejs other than 12.</p>
+		<p>A convenient browser extension for twist.moe.</p>
 
 	</div>
-	
+	<div class="cover">
+		<img src="/image/cover/atp-preview.webp" alt="cover">
+		</div>
 
-			<a class="keep-reading" href="/creating-a-github-action-for-a-nodejs-14-project/#content">Continue Reading →</a>
+			<a class="keep-reading" href="/anime-twist-premium-2/#content">Continue Reading →</a>
 			
 		</article>
 	
-		<article id="post-2" class="post link">
+		<article id="post-2" class="post">
 			
 <div class="metas">
-	<time class="meta post-date" datetime="2020-11-01T00:00:00.000Z">📅 1 November 2020</time>
+	<time class="meta post-date" datetime="2020-05-16T00:00:00.000Z">📅 16 May 2020</time>
 	<div class="tags">
 		Categories:
 		<div class="list">
-			<a class="category" href="/categories/#software">Software</a>
+			<a class="category" href="/categories/#uncategorized">Uncategorized</a>
 		</div>
 		Tags:
 		<div class="list">
-			<a class="tag" href="/tags/#library">#library</a><a class="tag" href="/tags/#javascript">#javascript</a>
+			<a class="tag" href="/tags/#welcome">#welcome</a>
 		</div>
 	</div>
 </div>
 
-			<h2 class="title">🔗 <a target="_blank" rel="noopener" href="/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/">Userinterface.js – A small library to build front-end JavaScript applications</a></h2>
+			<h2 class="title"><a href="/starting-line-1/">The starting line</a></h2>
+			
+			
+	<div class="excerpt">
+		<p>Salutations web traveler!</p>
+
+	</div>
+	<div class="cover">
+		<img src="/image/cover/terra.webp" alt="cover">
+		</div>
+
+			<a class="keep-reading" href="/starting-line-1/#content">Continue Reading →</a>
 			
 		</article>
 	
 	<div class="pagination">
+		<a class="previous" href="/">← Previous</a>
+		<div class="indicator">2</div>
 		
-		<div class="indicator">1</div>
-		<a class="next" href="/posts/2">Next →</a>
 	</div>
 </article>
 <script type="application/ld+json">
@@ -169,20 +193,23 @@
 					
 						{
 							"@type": "Article",
-							"@id": "https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/",
-							"name": "bbcode-parser - A JavaScript BBCode implementation",
+							"@id": "https://thoughtsunificator.me/domodel-diary-3/",
+							"name": "domodel-diary: A modest password protected diary application",
 							"mainEntityOfPage": {
 								"@type": "WebPage",
-								"@id": "https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/"
+								"@id": "https://thoughtsunificator.me/domodel-diary-3/"
 							},
-							"url": "https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/",
-							"headline": "bbcode-parser - A JavaScript BBCode implementation",
-							"description": "bbcode-parser - A JavaScript BBCode implementation",
+							"url": "https://thoughtsunificator.me/domodel-diary-3/",
+							"headline": "domodel-diary: A modest password protected diary application",
+							"description": "domodel-diary: A modest password protected diary application",
 							"audience": "web developers and front-end developers",
-							
-							"dateCreated": "2021-09-28T00:00:00.000Z",
-							"datePublished": "2021-09-28T00:00:00.000Z",
-							"dateModified": "2021-09-28T00:00:00.000Z",
+							"image": {
+								"@type": "ImageObject",
+								"url": "https://thoughtsunificator.me/image/cover/domodel-diary-preview.webp"
+							},
+							"dateCreated": "2020-05-30T00:00:00.000Z",
+							"datePublished": "2020-05-30T00:00:00.000Z",
+							"dateModified": "2020-05-30T00:00:00.000Z",
 							"articleSection": "Blog",
 							"author": {
 								"@type": "Person",
@@ -202,20 +229,23 @@
 					,
 						{
 							"@type": "Article",
-							"@id": "https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/",
-							"name": "Creating a Github action for a Node.js 14+ project",
+							"@id": "https://thoughtsunificator.me/anime-twist-premium-2/",
+							"name": "Anime Twist Premium (ATP)",
 							"mainEntityOfPage": {
 								"@type": "WebPage",
-								"@id": "https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/"
+								"@id": "https://thoughtsunificator.me/anime-twist-premium-2/"
 							},
-							"url": "https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/",
-							"headline": "Creating a Github action for a Node.js 14+ project",
-							"description": "Creating a Github action for a Node.js 14+ project",
+							"url": "https://thoughtsunificator.me/anime-twist-premium-2/",
+							"headline": "Browser Extension Anime Twist Premium (ATP)",
+							"description": "Browser Extension Anime Twist Premium (ATP)",
 							"audience": "web developers and front-end developers",
-							
-							"dateCreated": "2021-09-25T00:00:00.000Z",
-							"datePublished": "2021-09-25T00:00:00.000Z",
-							"dateModified": "2021-09-25T00:00:00.000Z",
+							"image": {
+								"@type": "ImageObject",
+								"url": "https://thoughtsunificator.me/image/cover/atp-preview.webp"
+							},
+							"dateCreated": "2020-05-27T00:00:00.000Z",
+							"datePublished": "2020-05-27T00:00:00.000Z",
+							"dateModified": "2020-05-27T00:00:00.000Z",
 							"articleSection": "Blog",
 							"author": {
 								"@type": "Person",
@@ -235,20 +265,23 @@
 					,
 						{
 							"@type": "Article",
-							"@id": "https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/",
-							"name": "Userinterface.js – A small library to build front-end JavaScript applications",
+							"@id": "https://thoughtsunificator.me/starting-line-1/",
+							"name": "The starting line",
 							"mainEntityOfPage": {
 								"@type": "WebPage",
-								"@id": "https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/"
+								"@id": "https://thoughtsunificator.me/starting-line-1/"
 							},
-							"url": "https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/",
-							"headline": "Userinterface.js – A small library to build front-end JavaScript applications",
-							"description": "Userinterface.js – A small library to build front-end JavaScript applications",
+							"url": "https://thoughtsunificator.me/starting-line-1/",
+							"headline": "Welcome post",
+							"description": "Welcome post",
 							"audience": "web developers and front-end developers",
-							
-							"dateCreated": "2020-11-01T00:00:00.000Z",
-							"datePublished": "2020-11-01T00:00:00.000Z",
-							"dateModified": "2020-11-01T00:00:00.000Z",
+							"image": {
+								"@type": "ImageObject",
+								"url": "https://thoughtsunificator.me/image/cover/terra.webp"
+							},
+							"dateCreated": "2020-05-16T00:00:00.000Z",
+							"datePublished": "2020-05-16T00:00:00.000Z",
+							"dateModified": "2020-05-16T00:00:00.000Z",
 							"articleSection": "Blog",
 							"author": {
 								"@type": "Person",
