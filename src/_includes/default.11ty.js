@@ -76,7 +76,7 @@ exports.render = function(data) {
 		</script>
 		${data.head || ""}
 	</head>
-	<body class="wrap padding${data.class ? ` page-${data.class}` : ""}">
+	<body class="wrap${data.class ? ` page-${data.class}` : ""}">
 		<header id="header">
 			<h1>${ data.site.tagline }</h1>
 			<nav>
