@@ -6,7 +6,7 @@
 	date: "2020-05-27",
 	description: "Browser Extension Anime Twist Premium (ATP)",
 	cover: {
-		filename: "atp-review.webp"
+		filename: "atp-preview.webp"
 	},
 }
 ---

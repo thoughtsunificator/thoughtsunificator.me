@@ -6,10 +6,7 @@
 	date: "2020-05-16",
 	description: "Welcome post",
 	cover: {
-		filename: "terra.webp",
-		attributes: {
-			width: 200
-		}
+		filename: "terra.webp"
 	},
 }
 ---

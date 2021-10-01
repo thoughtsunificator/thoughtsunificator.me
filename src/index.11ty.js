@@ -4,10 +4,10 @@ const PostExcerpt  = require("./_includes/post/excerpt.11ty.js")
 exports.data = {
 	layout: "default",
 	title: "Home",
-	permalink: "index.html",
+	permalink: data => data.pagination.pageNumber === 0 ? "index.html" : `posts/${ data.pagination.pageNumber + 1 }`,
 	pagination: {
 		data: "collections.posts",
-		size: 10,
+		size: 3,
 		reverse: true,
 		alias: "posts"
 	}
@@ -28,8 +28,9 @@ exports.render = function(data) {
 		</article>
 	`).join("")}
 	<div class="pagination">
-		${data.pagination.href.next ? `<a class="next" href="${data.pagination.href.next}">← Older</a>` : ""}
-		${data.pagination.href.previous ? `<a class="prev" href="${ data.pagination.href.previous}">Newer →</a>` : ""}
+		${data.pagination.href.previous ? `<a class="previous" href="${ data.pagination.href.previous}">← Previous</a>` : ""}
+		<div class="indicator">${data.pagination.pageNumber + 1}</div>
+		${data.pagination.href.next ? `<a class="next" href="${data.pagination.href.next}">Next →</a>` : ""}
 	</div>
 </article>
 <script type="application/ld+json">

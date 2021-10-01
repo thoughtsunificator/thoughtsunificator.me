@@ -6,7 +6,7 @@
 	date: "2020-05-30",
 	description: "domodel-diary: A modest password protected diary application",
 	cover: {
-		filename: "preview.webp"
+		filename: "domodel-diary-preview.webp"
 	},
 }
 ---

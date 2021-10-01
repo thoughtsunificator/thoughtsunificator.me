@@ -221,7 +221,6 @@ textarea {
 	padding-bottom: var(--SIZE_XXL);
 	background-color: #303a5b;
 	border-bottom: 1px solid #384160;
-	margin-bottom: var(--SIZE_MEDIUM);
 }
 
 .post #content {
@@ -383,6 +382,30 @@ textarea {
 .page-about .links {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
+}
+
+.pagination {
+	display: grid;
+	align-items: center;
+	margin-bottom: var(--SIZE_MEDIUM);
+}
+
+.pagination .previous {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: start;
+}
+
+.pagination .indicator {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: center;
+}
+
+.pagination .next {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: end;
 }
 
 
