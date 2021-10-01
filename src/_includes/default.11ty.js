@@ -88,7 +88,7 @@ exports.render = function(data) {
 		</main>
 		<footer id="footer">
 			<small style="grid-row: 1;grid-column: 1;justify-self: start;">Built using <a href="https://www.11ty.dev/">Eleventy</a></small>
-			<small class="copyright">© <a target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a> (thoughtsunificator)</small>
+			<small class="copyright">© <a target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
 			<div class="icons">
 				<a title="View source code on Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator/thoughtsunificator.me"><img alt="View source code on Github" width="32" src="/image/github.svg"></a>
 			</div>
