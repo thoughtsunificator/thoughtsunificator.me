@@ -27,6 +27,7 @@ body {
 	display: grid;
 	grid-gap: var(--SIZE_MEDIUM);
 	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5 {
