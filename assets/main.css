@@ -69,11 +69,17 @@ textarea {
 	display: grid;
 }
 
+#header .header-title {
+	display: grid;
+	place-items: center;
+}
+
 #header h1 {
 	transform: rotate(3deg);
 	position: relative;
 	letter-spacing: 2px;
 	justify-self: center;
+	margin-bottom: var(--SIZE_XXS);
 }
 
 #header h1:before {
@@ -87,7 +93,6 @@ textarea {
 }
 
 #header nav {
-	margin-top: var(--SIZE_MEDIUM);
 	grid-gap: var(--SIZE_MEDIUM);
 	place-content: center;
 	display: grid;
@@ -141,7 +146,6 @@ textarea {
 #posts {
 	display: grid;
 	grid-gap: var(--SIZE_XXL);
-	margin-top: var(--SIZE_MEDIUM);
 }
 
 .post {
@@ -336,12 +340,12 @@ textarea {
 
 #footer > .copyright {
 	grid-column: 1;
-	justify-self: center;
 	grid-row: 1;
 	place-self: center;
 }
 
 #footer > .icons {
+	grid-column: 1;
 	grid-row: 1;
 	justify-self: end;
 }
@@ -357,14 +361,32 @@ textarea {
 	border-radius: 15px;
 }
 
+.page-about .intro > div {
+	display: grid;
+	grid-gap: 10px;
+}
+
 .page-about .intro ul {
-	padding: 10px 5px;
-		list-style-type: none;
+	list-style-type: none;
 }
 
 .page-about .intro ul > li:before {
 	content: "-";
 	padding: 0 5px;
+}
+
+.page-about p {
+	margin: var(--SIZE_MEDIUM) 0;
+}
+
+.page-about .areas-expertise {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
+}
+
+.page-about .links {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
 }
 
 
