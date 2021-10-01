@@ -47,9 +47,9 @@ exports.render = function(data) {
 	<section>
 	<h3>Contact</h3>
 	<div>
-		For work-related inquiries: <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>.
+		<u>Work</u> inquiries:<br> <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
 		<br>
-		For oss-related inquiries: <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.
+		<u>OSS</u> inquiries:<br> <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
 	</div>
 	</section>
 	</div>
