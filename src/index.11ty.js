@@ -15,7 +15,7 @@ exports.data = {
 
 exports.render = function(data) {
 	return `
-	<h2>Recent articles</h2>
+	<h2>${data.pagination.pageNumber === 0 ? "Recent posts" : `Page ${data.pagination.pageNumber + 1}`}</h2>
 	<article id="posts">
 	${data.pagination.items.map((post, index) => `
 		<article id="post-${index}" class="post${post.data.redirect_to ? " link" : ""}">

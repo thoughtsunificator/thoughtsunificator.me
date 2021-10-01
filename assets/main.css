@@ -394,18 +394,24 @@ textarea {
 	grid-column: 1;
 	grid-row: 1;
 	justify-self: start;
+	border: 1px solid #93c9ff61;
+	padding: 5px 15px;
 }
 
 .pagination .indicator {
 	grid-column: 1;
 	grid-row: 1;
 	justify-self: center;
+	border: 1px solid #ffffff5e;
+	padding: 5px 15px;
 }
 
 .pagination .next {
 	grid-column: 1;
 	grid-row: 1;
 	justify-self: end;
+	border: 1px solid #93c9ff61;
+	padding: 5px 15px;
 }
 
 
