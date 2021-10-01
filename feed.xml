@@ -65,7 +65,7 @@ Anime Twist Premium is a browser extension that adds a watch list to twist.moe m
 			<link href="https://thoughtsunificator.me/domodel-diary-3/"/>
 			<updated>Sat May 30 2020 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
 			<id>https://thoughtsunificator.me/domodel-diary-3/</id>
-			<content type="html">&lt;p&gt;domodel-diary is a simple and easy-to-use diary application.
+			<content type="html">&lt;p&gt;An universal diary for everyone to use.
 ${EXCERPT_SEPARATOR}&lt;/p&gt;
 &lt;div class="excerpt_separator"&gt;&lt;/div&gt;
 &lt;p&gt;domodel-diary is a password protected diary.&lt;/p&gt;
@@ -135,12 +135,9 @@ If you decide to exit the editor, what you wrote will be saved an available next
 			<updated>Sat Sep 25 2021 00:00:00 GMT+0000 (Coordinated Universal Time)</updated>
 			<id>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</id>
 			<content type="html">&lt;p&gt;Currently it is &lt;a href="https://github.com/actions/runner/issues/772"&gt;not possible&lt;/a&gt; to create a &lt;a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action"&gt;JavaScript action&lt;/a&gt; with a version of nodejs other than 12.
-&lt;br&gt;&lt;br&gt;
-Let’s see if we can work this out.
 ${EXCERPT_SEPARATOR}
-If it’s not possible through JavaScript actions than maybe should we turn ourselves to a &lt;a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action"&gt;Docker container action&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Obviously the answer is yes and I am going to work you through the process of doing it.&lt;/p&gt;
-&lt;p&gt;First if you don’t know the basics of Github Actions I recommend you go read the &lt;a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions"&gt;Starting Guide&lt;/a&gt;.&lt;/p&gt;
+First if you don’t know the basics of Github Actions I recommend you go read the &lt;a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions"&gt;Starting Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A workaround to have a version of nodejs &amp;gt; 12 is to create a &lt;a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action"&gt;Docker container action&lt;/a&gt; with the &lt;a href="https://hub.docker.com/_/node"&gt;node:16-alpine&lt;/a&gt; image.&lt;/p&gt;
 &lt;h3 id="action.yml" tabindex="-1"&gt;action.yml&lt;/h3&gt;
 &lt;pre class="language-yaml"&gt;&lt;code class="language-yaml"&gt;&lt;span class="token comment"&gt;# See https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions for more information about the action.yml syntax&lt;/span&gt;&lt;br&gt;&lt;span class="token punctuation"&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class="token key atrule"&gt;name&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; &lt;span class="token string"&gt;'My Action'&lt;/span&gt;&lt;br&gt;&lt;span class="token key atrule"&gt;description&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; &lt;span class="token string"&gt;'What it does..'&lt;/span&gt;&lt;br&gt;&lt;span class="token key atrule"&gt;inputs&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt;&lt;br&gt;	&lt;span class="token key atrule"&gt;your-name&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt;&lt;br&gt;		&lt;span class="token key atrule"&gt;description&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; &lt;span class="token string"&gt;'Your name'&lt;/span&gt;&lt;br&gt;		&lt;span class="token key atrule"&gt;required&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; &lt;span class="token boolean important"&gt;true&lt;/span&gt;&lt;br&gt;&lt;span class="token key atrule"&gt;runs&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt;&lt;br&gt;	&lt;span class="token key atrule"&gt;using&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; &lt;span class="token string"&gt;'docker'&lt;/span&gt;&lt;br&gt;	&lt;span class="token key atrule"&gt;image&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; &lt;span class="token string"&gt;'Dockerfile'&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id="dockerfile" tabindex="-1"&gt;Dockerfile&lt;/h3&gt;

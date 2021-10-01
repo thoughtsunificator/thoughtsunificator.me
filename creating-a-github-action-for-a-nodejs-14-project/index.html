@@ -84,6 +84,7 @@
 		</header>
 		<main id="main">
 			
+	<h2 class="title">Creating a Github action for a Node.js 14+ project</h2>
 	<article class="post full">
 		
 <div class="metas">
@@ -100,20 +101,16 @@
 	</div>
 </div>
 
-		<h2 class="title">Creating a Github action for a Node.js 14+ project</h2>
 		
 	<div class="excerpt">
-		<p>Currently it is <a href="https://github.com/actions/runner/issues/772">not possible</a> to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action">JavaScript action</a> with a version of nodejs other than 12.
-<br><br>
-Let's see if we can work this out.</p>
+		<p>Currently it is <a href="https://github.com/actions/runner/issues/772">not possible</a> to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action">JavaScript action</a> with a version of nodejs other than 12.</p>
 
 	</div>
 	
 
 		<div id="content"><p>
-If it’s not possible through JavaScript actions than maybe should we turn ourselves to a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">Docker container action</a>.</p>
-<p>Obviously the answer is yes and I am going to work you through the process of doing it.</p>
-<p>First if you don’t know the basics of Github Actions I recommend you go read the <a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions">Starting Guide</a>.</p>
+First if you don’t know the basics of Github Actions I recommend you go read the <a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions">Starting Guide</a>.</p>
+<p>A workaround to have a version of nodejs &gt; 12 is to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">Docker container action</a> with the <a href="https://hub.docker.com/_/node">node:16-alpine</a> image.</p>
 <h3 id="action.yml" tabindex="-1">action.yml</h3>
 <pre class="language-yaml"><code class="language-yaml"><span class="token comment"># See https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions for more information about the action.yml syntax</span><br><span class="token punctuation">---</span><br><span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'My Action'</span><br><span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'What it does..'</span><br><span class="token key atrule">inputs</span><span class="token punctuation">:</span><br>	<span class="token key atrule">your-name</span><span class="token punctuation">:</span><br>		<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'Your name'</span><br>		<span class="token key atrule">required</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">runs</span><span class="token punctuation">:</span><br>	<span class="token key atrule">using</span><span class="token punctuation">:</span> <span class="token string">'docker'</span><br>	<span class="token key atrule">image</span><span class="token punctuation">:</span> <span class="token string">'Dockerfile'</span><br></code></pre>
 <h3 id="dockerfile" tabindex="-1">Dockerfile</h3>
