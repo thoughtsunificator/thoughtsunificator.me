@@ -141,6 +141,7 @@ textarea {
 #posts {
 	display: grid;
 	grid-gap: var(--SIZE_XXL);
+	margin-top: var(--SIZE_MEDIUM);
 }
 
 .post {
