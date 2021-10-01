@@ -4,7 +4,7 @@ const PostExcerpt  = require("./_includes/post/excerpt.11ty.js")
 exports.data = {
 	layout: "default",
 	title: "Home",
-	permalink: data => data.pagination.pageNumber === 0 ? "index.html" : `posts/${ data.pagination.pageNumber + 1 }`,
+	permalink: data => data.pagination.pageNumber === 0 ? "index.html" : `/${ data.pagination.pageNumber + 1 }/index.html`,
 	pagination: {
 		data: "collections.posts",
 		size: 3,
