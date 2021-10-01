@@ -391,6 +391,8 @@ textarea {
 		padding: 0 !important;
 	}
 
+
+	main > h2,
 	#posts,
 	.post.full,
 	.page,
@@ -422,8 +424,6 @@ textarea {
 		grid-gap: var(--SIZE_MEDIUM);
 	}
 
-
-
 	#footer {
 		display: grid;
 		grid-auto-flow: row;
@@ -433,6 +433,14 @@ textarea {
 	#footer > * {
 		place-self: center !important;
 		grid-area: initial !important;
+	}
+
+	.intro {
+		grid-template-columns: initial !important;
+	}
+
+	.intro img {
+		justify-self: center;
 	}
 
 }
@@ -447,14 +455,6 @@ textarea {
 
 	.post #content {
 		padding: 0 var(--SIZE_MEDIUM);
-	}
-
-	.intro {
-		grid-template-columns: initial !important;
-	}
-
-	.intro img {
-		justify-self: center;
 	}
 
 }
