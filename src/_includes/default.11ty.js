@@ -80,7 +80,7 @@ exports.render = function(data) {
 		<header id="header">
 			<h1>${ data.site.tagline }</h1>
 			<nav>
-				${data.site.menu.map(item => `<a ${ item.url === data.page.url ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
+				${data.site.menu.map(item => `<a ${ (item.url === data.page.url || item.title === "Home" && data.title === "Home") ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
 			</nav>
 		</header>
 		<main id="main">
