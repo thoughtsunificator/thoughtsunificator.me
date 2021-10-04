@@ -36,5 +36,20 @@ exports.render = function(data) {
 			`).join("<br>")}
 		</div>
 	`).join("")}
-</div>`;
+</div>
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"name": "List of categories",
+	"itemListOrder": "https://schema.org/ItemListOrderDescending",
+	"itemListElement": ${JSON.stringify(keys.map((key, index) => ({
+		"@id": key,
+		"@type": "ListItem",
+		"position": index + 1,
+		"url": `${data.site.url}/archive/${key.replace(" ", "-").toLowerCase()}`
+	})), null, "\t")}
+}
+</script>
+`;
 };
