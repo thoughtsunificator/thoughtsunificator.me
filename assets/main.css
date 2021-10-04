@@ -414,6 +414,12 @@ textarea {
 	padding: 5px 15px;
 }
 
+.page-archive h3 a,
+.page-tags h3 a,
+.page-categories h3 a {
+	color: #85add9;
+}
+
 
 @media screen and (max-width: 768px) {
 	body {
