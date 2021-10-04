@@ -3,21 +3,20 @@ const PostExcerpt  = require("./_includes/post/excerpt.11ty.js")
 
 exports.data = {
 	layout: "default",
-	title: "Home",
-	permalink: data => data.pagination.pageNumber === 0 ? "index.html" : `/${ data.pagination.pageNumber + 1 }/index.html`,
 	pagination: {
-		data: "collections.posts",
-		size: 3,
-		reverse: true,
-		alias: "posts"
-	}
+		data: "collections.categoriesList",
+		size: 1,
+		alias: "category"
+	},
+	permalink: data => `/categories/${data.category}/index.html`,
 };
 
 exports.render = function(data) {
+	const posts = data.collections.posts.filter(post => post.data.categories.includes(data.category))
 	return `
-	<h2>${data.pagination.pageNumber === 0 ? "Recent posts" : `Page ${data.pagination.pageNumber + 1}`}</h2>
+	<h2>Category "<u>${data.category}</u>"</h2>
 	<article id="posts">
-	${data.pagination.items.map((post, index) => `
+	${posts.map((post, index) => `
 		<article id="post-${index}" class="post${post.data.redirect_to ? " link" : ""}">
 			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags, categories: post.data.categories })}
 			<h2 class="title">${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h2>
@@ -27,21 +26,16 @@ exports.render = function(data) {
 			` : ""}
 		</article>
 	`).join("")}
-	<div class="pagination">
-		${data.pagination.href.previous ? `<a class="previous" href="${ data.pagination.href.previous}">← Previous</a>` : ""}
-		<div class="indicator">${data.pagination.pageNumber + 1}</div>
-		${data.pagination.href.next ? `<a class="next" href="${data.pagination.href.next}">Next →</a>` : ""}
-	</div>
 </article>
 <script type="application/ld+json">
 		{
 				"@context": "http://schema.org",
 				"@type": "ItemList",
-				"name": "Recent Articles",
-				"numberOfItems": ${data.pagination.items.length},
+				"name": "Category ${data.category}",
+				"numberOfItems": ${posts.length},
 				"itemListOrder": "Descending",
 				"itemListElement": [
-					${data.pagination.items.map((post, index) => `
+					${posts.map((post, index) => `
 						{
 							"@type": "Article",
 							"@id": "${data.site.url}${ post.url }",

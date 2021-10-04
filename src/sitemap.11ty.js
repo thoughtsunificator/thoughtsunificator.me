@@ -1,4 +1,4 @@
-// C/P from https://thefrugaldeveloper.life/posts/building-an-eleventy-boilerplate-pt-2
+// Source: https://thefrugaldeveloper.life/posts/building-an-eleventy-boilerplate-pt-2
 
 exports.data = {
 	permalink: "/sitemap.xml",

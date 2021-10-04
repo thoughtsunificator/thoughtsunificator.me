@@ -1,5 +1,6 @@
 exports.data = {
 	layout: "page",
+	class: "archive",
 	title: "Archive",
 	permalink: "/archive/",
 	description: "Post archives"
@@ -29,7 +30,7 @@ exports.render = function(data) {
 	return `<div id="archive" style="display: grid; grid-gap: 20px;">
 	${keys.map(key => `
 		<div>
-			<h3 id="${key.replace(" ", "-").toLowerCase()}"><small>${key}</small></h3>
+			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h3>
 			${groups[key].map(post => `
 				${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a>
 			`).join("<br>")}
