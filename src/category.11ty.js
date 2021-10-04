@@ -8,7 +8,7 @@ exports.data = {
 		size: 1,
 		alias: "category"
 	},
-	permalink: data => `/categories/${data.category}/index.html`,
+	permalink: data => `/categories/${data.category.replace(" ", "-").toLowerCase()}/index.html`,
 };
 
 exports.render = function(data) {

@@ -8,7 +8,7 @@ exports.data = {
 		size: 1,
 		alias: "tag"
 	},
-	permalink: data => `/tags/${data.tag}/index.html`,
+	permalink: data => `/tags/${data.tag.replace(" ", "-").toLowerCase()}/index.html`,
 };
 
 exports.render = function(data) {
