@@ -124,18 +124,12 @@ textarea {
 	border-bottom: 2px solid #5ac46078;
 }
 
-.page {
+#main > div {
 	background-color: var(--COLOR_CLOUDBURST3);
 	margin-top: var(--SIZE_MEDIUM);
 	padding: var(--SIZE_MEDIUM);
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-}
-
-.page-title {
-	border-bottom: 1px solid #ffffff1f;
-	padding-bottom: var(--SIZE_XS);
-	margin-bottom: var(--SIZE_MEDIUM);
 }
 
 #posts {
