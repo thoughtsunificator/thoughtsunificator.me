@@ -27,12 +27,14 @@ exports.render = function(data) {
 
 	return `<div id="categories">
 	${keys.map(key => `
-		<div>
+		<section class="category">
 			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/categories/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h3>
+			<div class="posts">
 			${groups[key].map(post => `
-				${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a>
-			`).join("<br>")}
-		</div>
+				<div>${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></div>
+			`).join("")}
+			</div>
+		</section>
 	`).join("")}
 </div>
 <script type="application/ld+json">
