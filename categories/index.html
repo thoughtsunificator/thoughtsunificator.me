@@ -71,7 +71,7 @@
 		</script>
 		
 	</head>
-	<body class="wrap">
+	<body class="wrap page-categories">
 		<header id="header">
 			<h1>a boundless expression of thoughts</h1>
 			<nav>
@@ -85,14 +85,14 @@
 	<div id="categories">
 	
 		<div>
-			<h3 id="anime"><small>Anime</small></h3>
+			<h3 id="anime"><a href="/categories/anime/">Anime</a></h3>
 			
 				<a href="/anime-twist-premium-2/">Anime Twist Premium (ATP)</a>
 			
 		</div>
 	
 		<div>
-			<h3 id="browser-extension"><small>Browser-Extension</small></h3>
+			<h3 id="browser-extension"><a href="/categories/browser-extension/">Browser-Extension</a></h3>
 			
 				<a href="/domodel-diary-3/">domodel-diary: A modest password protected diary application</a>
 			<br>
@@ -101,14 +101,14 @@
 		</div>
 	
 		<div>
-			<h3 id="guides"><small>Guides</small></h3>
+			<h3 id="guides"><a href="/categories/guides/">Guides</a></h3>
 			
 				<a href="/creating-a-github-action-for-a-nodejs-14-project/">Creating a Github action for a Node.js 14+ project</a>
 			
 		</div>
 	
 		<div>
-			<h3 id="software"><small>Software</small></h3>
+			<h3 id="software"><a href="/categories/software/">Software</a></h3>
 			
 				🔗 <a target="_blank" rel="noopener" href="/bbcode-parser-a-javascript-bbcode-implementation/">bbcode-parser - A JavaScript BBCode implementation</a>
 			<br>
@@ -119,7 +119,7 @@
 		</div>
 	
 		<div>
-			<h3 id="uncategorized"><small>Uncategorized</small></h3>
+			<h3 id="uncategorized"><a href="/categories/uncategorized/">Uncategorized</a></h3>
 			
 				<a href="/starting-line-1/">The starting line</a>
 			
@@ -130,9 +130,40 @@
 {
 	"@context": "https://schema.org",
 	"@type": "ItemList",
-	"itemListElement": ["Anime","Browser-Extension","Guides","Software","Uncategorized"],
+	"name": "List of categories",
 	"itemListOrder": "https://schema.org/ItemListOrderDescending",
-	"name": "List of categories"
+	"itemListElement": [
+	{
+		"@id": "Anime",
+		"@type": "ListItem",
+		"position": 1,
+		"url": "https://thoughtsunificator.me/categories#anime"
+	},
+	{
+		"@id": "Browser-Extension",
+		"@type": "ListItem",
+		"position": 2,
+		"url": "https://thoughtsunificator.me/categories#browser-extension"
+	},
+	{
+		"@id": "Guides",
+		"@type": "ListItem",
+		"position": 3,
+		"url": "https://thoughtsunificator.me/categories#guides"
+	},
+	{
+		"@id": "Software",
+		"@type": "ListItem",
+		"position": 4,
+		"url": "https://thoughtsunificator.me/categories#software"
+	},
+	{
+		"@id": "Uncategorized",
+		"@type": "ListItem",
+		"position": 5,
+		"url": "https://thoughtsunificator.me/categories#uncategorized"
+	}
+]
 }
 </script>
 
