@@ -41,7 +41,7 @@ exports.render = function(data) {
 {
 	"@context": "https://schema.org",
 	"@type": "ItemList",
-	"name": "List of categories",
+	"name": "Archive",
 	"itemListOrder": "https://schema.org/ItemListOrderDescending",
 	"itemListElement": ${JSON.stringify(keys.map((key, index) => ({
 		"@id": key,
