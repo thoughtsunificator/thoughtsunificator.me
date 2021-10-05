@@ -360,7 +360,7 @@ textarea {
 }
 
 .page-about .intro ul > li:before {
-	content: "-";
+	content: "*";
 	padding: 0 5px;
 }
 
