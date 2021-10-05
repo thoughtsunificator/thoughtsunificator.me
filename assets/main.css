@@ -237,6 +237,7 @@ textarea {
 
 .post .metas {
 	column-gap: 20px;
+	color: #8c98bb;
 	text-transform: uppercase;
 	display: flex;
 	flex-wrap: wrap;
@@ -249,10 +250,10 @@ textarea {
 }
 
 .post .tags {
-	display: flex;
-	place-items: center;
-	column-gap: 20px;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: auto auto;
+	place-items: start;
+	grid-column-gap: 20px;
 }
 
 .post .tags .list {
@@ -443,6 +444,7 @@ textarea {
 	}
 
 	.post .metas {
+		grid-row-gap: 10px;
 		font-size: 0.85em;
 	}
 
@@ -468,10 +470,10 @@ textarea {
 	.intro img {
 		justify-self: center;
 	}
-
 }
 
 @media screen and (max-width: 481px) {
+
 
 	.post .metas,
 	.post .excerpt,
