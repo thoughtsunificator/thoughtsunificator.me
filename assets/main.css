@@ -368,16 +368,6 @@ textarea {
 	margin: var(--SIZE_MEDIUM) 0;
 }
 
-.page-about .areas-expertise {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
-}
-
-.page-about .links {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
-}
-
 .pagination {
 	display: grid;
 	align-items: center;
