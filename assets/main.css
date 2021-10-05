@@ -248,14 +248,14 @@ textarea {
 	border-top-right-radius: 10px;
 }
 
-.post .tags {
+.post .metas > div {
 	display: grid;
 	grid-template-columns: auto auto;
 	place-items: start;
 	grid-column-gap: 20px;
 }
 
-.post .tags .list {
+.post .metas > div .list {
 	display: flex;
 	column-gap: 10px;
 	place-items: center;
