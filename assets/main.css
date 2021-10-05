@@ -360,12 +360,19 @@ textarea {
 }
 
 .page-about .intro ul > li:before {
-	content: "-";
+	content: "*";
 	padding: 0 5px;
 }
 
 .page-about p {
 	margin: var(--SIZE_MEDIUM) 0;
+}
+
+.page-about .links,
+.page-about .areas-expertise {
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+	align-items: center;
 }
 
 .pagination {
