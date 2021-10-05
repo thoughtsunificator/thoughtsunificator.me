@@ -4,7 +4,7 @@ module.exports = data => `
 	<div class="tags">
 		Categories:
 		<div class="list">
-			${data.categories ? data.categories.map(category => `<a class="category" href="/categories/${category.replace(" ", "-").toLowerCase()}/">${category}</a>`).join(",") : ""}
+			${data.categories ? data.categories.map(category => `<a class="category" href="/categories/${category.replace(" ", "-").toLowerCase()}/">${category}</a>`).join("") : ""}
 		</div>
 		Tags:
 		<div class="list">
