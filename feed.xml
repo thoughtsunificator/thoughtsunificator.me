@@ -34,14 +34,14 @@ Anime Twist Premium is a browser extension that adds a watch list to twist.moe m
 &lt;h3 id="adding-an-anime-to-your-watchlist" tabindex="-1"&gt;Adding an anime to your watchlist&lt;/h3&gt;
 &lt;p&gt;Navigate to the page of the anime of your choice.&lt;/p&gt;
 &lt;p&gt;There you will be able to see that a new “+” button appeared below the video player:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/atp-anime.jpg" alt="atp-anime"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/atp-anime.webp" alt="atp-anime"&gt;&lt;/p&gt;
 &lt;h3 id="acessing-your-watch-list" tabindex="-1"&gt;Acessing your watch list&lt;/h3&gt;
 &lt;p&gt;Next to the settings button or chat button you will see a new button:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/atp-watchlist-menu.jpg" alt="atp-watchlist-menu"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/atp-watchlist-menu.webp" alt="atp-watchlist-menu"&gt;&lt;/p&gt;
 &lt;p&gt;When clicked, a popup will appear:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/atp-watchlist.jpg" alt="atp-watchlist"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/atp-watchlist.webp" alt="atp-watchlist"&gt;&lt;/p&gt;
 &lt;p&gt;You can also look up your entries:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/atp-lookup.png" alt="atp-lookup"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/atp-lookup.webp" alt="atp-lookup"&gt;&lt;/p&gt;
 &lt;p&gt;That’s it, you now have easy access to the shows you’re watching and can look them up.&lt;/p&gt;
 &lt;h3 id="bonus-(v1.4)" tabindex="-1"&gt;Bonus (v1.4)&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/image/atp-random.webp" alt="atp-random"&gt;&lt;/p&gt;
@@ -57,7 +57,7 @@ Anime Twist Premium is a browser extension that adds a watch list to twist.moe m
 &lt;li&gt;&lt;a href="https://github.com/thoughtsunificator/anime-twist-premium"&gt;thoughtsunificator/anime-twist-premium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I might be adding more crazy features in the near future so…&lt;/p&gt;
-&lt;img alt="akihito-san" src="/image/akihito-san.jpg" width="300"&gt;
+&lt;img alt="akihito-san" src="/image/akihito-san.webp" width="300"&gt;
 &lt;p&gt;Stay tuned!&lt;/p&gt;
 </content>
 		</entry><entry>
@@ -78,21 +78,21 @@ ${EXCERPT_SEPARATOR}&lt;/p&gt;
 &lt;h2 id="how-it-works" tabindex="-1"&gt;How it works&lt;/h2&gt;
 &lt;h3 id="login-page" tabindex="-1"&gt;Login page&lt;/h3&gt;
 &lt;p&gt;Pick a password and hit enter. It will be used to encrypt your notes and will be asked whenever the application launches.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/screenshot-auth.png" alt="authentication screenshot"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-auth.webp" alt="authentication screenshot"&gt;&lt;/p&gt;
 &lt;h3 id="calendar" tabindex="-1"&gt;Calendar&lt;/h3&gt;
 &lt;p&gt;You can add any note for any days of any years. It does not have to be in the present, they can be added both in the past, present and future.&lt;/p&gt;
 &lt;p&gt;Clicking the left and right arrow icon will cycle the month forward and backward.
 You can also change the year to any number you would like.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/screenshot-calendar.png" alt="calendar screenshot"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-calendar.webp" alt="calendar screenshot"&gt;&lt;/p&gt;
 &lt;h3 id="editor" tabindex="-1"&gt;Editor&lt;/h3&gt;
 &lt;p&gt;You can post your note by clicking the disk icon or exit by clicking the red cross icon.
 If you decide to exit the editor, what you wrote will be saved an available next time your re-open the editor.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/screenshot-editor.png" alt="editor screenshot"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-editor.webp" alt="editor screenshot"&gt;&lt;/p&gt;
 &lt;p&gt;Your note will then appear just below the calendar.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/screenshot-notes.png" alt="notes screenshot"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-notes.webp" alt="notes screenshot"&gt;&lt;/p&gt;
 &lt;h3 id="settings" tabindex="-1"&gt;Settings&lt;/h3&gt;
 &lt;p&gt;You can logout, export or import your list using the settings menu:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/image/screenshot-settings.png" alt="settings screenshot"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image/screenshot-settings.webp" alt="settings screenshot"&gt;&lt;/p&gt;
 &lt;h2 id="install-it" tabindex="-1"&gt;Install it&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://chrome.google.com/webstore/detail/domodel-diary/hncoaagegcdnajffjpkldhfceipfgnnf?hl=en"&gt;Chrome&lt;/a&gt;&lt;/li&gt;
@@ -101,7 +101,7 @@ If you decide to exit the editor, what you wrote will be saved an available next
 &lt;li&gt;&lt;a href="https://www.electronjs.org/apps/domodel-diary"&gt;Windows/Linux/MacOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Also available on:&lt;/p&gt;
-&lt;p&gt;&lt;a target="_blank" href="https://www.microsoft.com/en-US/p/domodel-diary/9nhlt1hfb4t7"&gt;&lt;img src="/image/English_get.png" alt="English badge" width="200"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a target="_blank" href="https://www.microsoft.com/en-US/p/domodel-diary/9nhlt1hfb4t7"&gt;&lt;img src="/image/English_get.webp" alt="English badge" width="200"&gt;&lt;/a&gt;
 &lt;a target="_blank" href="https://snapcraft.io/domodel-diary-electron"&gt;&lt;img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;s&gt;It will soon be available on F-Droid.&lt;/s&gt; Please download the APK from the &lt;a href="https://github.com/thoughtsunificator/domodel-diary-android/releases/"&gt;release page&lt;/a&gt; of the Github repository.&lt;/p&gt;
 &lt;h2 id="source-code" tabindex="-1"&gt;Source code&lt;/h2&gt;
