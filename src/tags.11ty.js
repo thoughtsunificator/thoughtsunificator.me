@@ -27,8 +27,8 @@ exports.render = function(data) {
 	keys.sort()
 
 	return `<div id="tags">
-	${keys.map(key => `
-		<section class="tag">
+	${keys.map((key, index) => `
+		<section id="tag-${index}" class="tag">
 			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/tags/${key.replace(" ", "-").toLowerCase()}/">#${key}</a></h3>
 			<div class="posts">
 			${groups[key].map(post => `

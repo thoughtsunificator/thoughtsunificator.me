@@ -21,19 +21,15 @@ exports.render = function(data) {
 		<meta name="theme-color" content="#353f5b">
 		${data.description ? `<meta content="${ data.description }" property="description">` : `<meta content="${ data.site.description }" property="description">`}
 		<meta content="${ [...(data.tags || []), ...data.site.keywords].join(", ") }" property="keywords">
-		<meta property="og:image" content="${data.cover ? `/image/cover/${data.cover.filename}` : "/image/cover.jpg"}" />
-		<meta content="${ data.site.name }" property="og:site_name">
-		<meta content="${ data.page.name === "Home" ? data.site.name : `${data.title} &middot; ${data.site.name}` }" property="og:title">
-		${data.page.excerpt ? `<meta content="article" property="og:type">` : `<meta content="website" property="og:type">`}
-		${data.description ? `<meta content="${ data.description }" property="og:description">` : `<meta content="${ data.site.description }" property="og:description">`}
-		${data.page.url ? `<meta content="${ data.site.url }${ data.page.url }" property="og:url">` : ``}
 		${data.page.excerpt ? `
+			<meta content="Article" property="article:section">
+			<meta content="https://thoughtsunificator.me" property="article:author">
 			<meta content="${ data.page.date.toISOString() }" property="article:published_time">
-			${data.categories ? `<meta content="${ data.categories[0] }" property="article:section">`: ""}
 			${data.tags ? data.tags.map(tag => `<meta content="${ tag }" property="article:tag">`).join("") : ""}
 		` : ``}
 		<script type="application/ld+json">
 		{
+			"@context":"http://schema.org",
 			"@type": "Organization",
 			"@id": "${ data.site.name }",
 			"name": "${ data.site.name }",
@@ -71,10 +67,17 @@ exports.render = function(data) {
 					"https://openuserjs.org/users/thoughtsunificator",
 					"https://www.youtube.com/channel/UCpLQLDuSOwx74AdwPE5CGDA",
 					"https://userstyles.org/users/1256582",
-					"https://greasyfork.org/en/users/257151-thoughtsunificator"
+					"https://greasyfork.org/en/users/257151-thoughtsunificator",
+					"https://www.linkedin.com/in/romain-lebesle"
 				]
 		}
 		</script>
+		<meta content="${ data.site.name }" property="og:site_name">
+		<meta property="og:image" content="${data.cover ? `/image/cover/${data.cover.filename}` : "/image/cover.jpg"}" />
+		${data.page.excerpt ? `<meta content="article" property="og:type">` : `<meta content="website" property="og:type">`}
+		<meta content="${ data.page.name === "Home" ? data.site.name : `${data.title} &middot; ${data.site.name}` }" property="og:title">
+		${data.description ? `<meta content="${ data.description }" property="og:description">` : `<meta content="${ data.site.description }" property="og:description">`}
+		${data.page.url ? `<meta content="${ data.site.url }${ data.page.url }" property="og:url">` : ``}
 		${data.head || ""}
 	</head>
 	<body class="wrap${data.class ? ` page-${data.class}` : ""}">
@@ -88,8 +91,8 @@ exports.render = function(data) {
 			${ data.content }
 		</main>
 		<footer id="footer">
-			<small style="grid-row: 1;grid-column: 1;justify-self: start;">Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
-			<small class="copyright">© <a target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
+			<small>Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
+			<small class="copyright">© <a rel="author" target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
 			<div class="icons">
 				<a title="View source code on Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator/thoughtsunificator.me"><img alt="View source code on Github" width="32" src="/image/github.svg"></a>
 			</div>

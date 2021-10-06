@@ -305,6 +305,7 @@ textarea {
 	grid-gap: 20px;
 }
 
+#archive,
 #categories {
 	display: grid; grid-gap: 20px;
 }
@@ -325,6 +326,12 @@ textarea {
 
 #footer img:hover {
 	opacity: 1;
+}
+
+#footer > small {
+	grid-row: 1;
+	grid-column: 1;
+	justify-self: start;
 }
 
 #footer > .copyright {
@@ -357,6 +364,7 @@ textarea {
 
 .page-about .intro ul {
 	list-style-type: none;
+	margin: var(--SIZE_MEDIUM) 0;
 }
 
 .page-about .intro ul > li:before {

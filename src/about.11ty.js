@@ -11,11 +11,12 @@ exports.render = function(data) {
 	return `<div class="intro">
 	<img alt="me" src="/image/me.jpg">
 	<div>
-	<div>
+	<section>
+	<h3>Profile</h3>
 	<p>I am a self taught web developer with <b>5+ years experiences</b>.</p>
 	<p>I have a deep knowledge of JavaScript and Web APIs and know how to make best use of them so that what I deliver is fast and scales.</p>
 	<p>My current focus is on making crystal clear and lightweight JavaScript libraries and tools for front-end developers to use.</p>
-	</div>
+	</section>
 	<section>
 		<h3>Areas of expertise</h3>
 		<ul class="areas-expertise">
@@ -46,11 +47,11 @@ exports.render = function(data) {
 	</section>
 	<section>
 	<h3>Contact</h3>
-	<div>
-		<u>Work</u> inquiries:<br> <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
+	<p>
+		Job Inquiries: <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
 		<br>
-		<u>OSS</u> inquiries:<br> <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
-	</div>
+		OSS Inquiries: <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
+	</p>
 	</section>
 	</div>
 	</div>
