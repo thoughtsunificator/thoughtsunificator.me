@@ -2,12 +2,12 @@
 	"name": "thoughtsunificator.me",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "cross-env NODE_ENV=production concurrently npm:clean npm:build:*",
+		"build": "cross-env NODE_ENV=production npm run clean && npm run build",
 		"build:11ty": "eleventy --quiet",
 		"build:rollup": "rollup --config rollup.config.prod.js",
 		"start": "npm run dev",
 		"clean": "rimraf dist",
-		"dev": "concurrently npm:clean npm:build:* npm:dev:*",
+		"dev": "npm run clean && concurrently --kill-others-on-fail npm:build:* npm:dev:*",
 		"dev:11ty": "eleventy --watch",
 		"dev:rollup": "rollup --config rollup.config.dev.js --watch"
 	},
