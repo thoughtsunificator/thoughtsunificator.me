@@ -2,7 +2,7 @@
 	"name": "thoughtsunificator.me",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "cross-env NODE_ENV=production npm-run-all clean npm:build:*",
+		"build": "cross-env NODE_ENV=production concurrently npm:clean npm:build:*",
 		"build:11ty": "eleventy --quiet",
 		"build:rollup": "rollup --config rollup.config.prod.js",
 		"start": "npm run dev",
