@@ -9,9 +9,9 @@ exports.render = function(data) {
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
 		<link rel="canonical" href="${data.site.url}${data.page.url}">
 		<link rel="manifest" href="/manifest.webmanifest">
-		<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.webp">
+		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.webp">
+		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.webp">
 		<link rel="mask-icon" href="/image/safari-pinned-tab.svg" color="#141a2d">
 		<link rel="alternate" type="application/rss+xml" title="${ data.site.name }" href="/feed.xml" />
 		<link rel="alternate" type="application/json" title="${ data.site.name }" href="/feed.json" />
@@ -36,7 +36,7 @@ exports.render = function(data) {
 			"url": "${ data.site.url }",
 			"logo": {
 				"@type": "ImageObject",
-				"url": "${data.site.url}/image/me.jpg",
+				"url": "${data.site.url}/image/me.webp",
 				"height": 656,
 				"width": 1121
 			}
@@ -73,7 +73,7 @@ exports.render = function(data) {
 		}
 		</script>
 		<meta content="${ data.site.name }" property="og:site_name">
-		<meta property="og:image" content="${data.cover ? `/image/cover/${data.cover.filename}` : "/image/cover.jpg"}" />
+		<meta property="og:image" content="${data.cover ? `/image/cover/${data.cover.filename}` : "/image/cover.webp"}" />
 		${data.page.excerpt ? `<meta content="article" property="og:type">` : `<meta content="website" property="og:type">`}
 		<meta content="${ data.page.name === "Home" ? data.site.name : `${data.title} &middot; ${data.site.name}` }" property="og:title">
 		${data.description ? `<meta content="${ data.description }" property="og:description">` : `<meta content="${ data.site.description }" property="og:description">`}

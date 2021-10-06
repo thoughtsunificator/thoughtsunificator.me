@@ -22,21 +22,21 @@ Navigate to the page of the anime of your choice.
 
 There you will be able to see that a new "+" button appeared below the video player:
 
-![atp-anime](/image/atp-anime.jpg)
+![atp-anime](/image/atp-anime.webp)
 
 ### Acessing your watch list
 
 Next to the settings button or chat button you will see a new button:
 
-![atp-watchlist-menu](/image/atp-watchlist-menu.jpg)
+![atp-watchlist-menu](/image/atp-watchlist-menu.webp)
 
 When clicked, a popup will appear:
 
-![atp-watchlist](/image/atp-watchlist.jpg)
+![atp-watchlist](/image/atp-watchlist.webp)
 
 You can also look up your entries:
 
-![atp-lookup](/image/atp-lookup.png)
+![atp-lookup](/image/atp-lookup.webp)
 
 That's it, you now have easy access to the shows you're watching and can look them up.
 
@@ -56,6 +56,6 @@ Source code is available at:
 
 I might be adding more crazy features in the near future so...
 
-<img alt="akihito-san" src="/image/akihito-san.jpg" width="300">
+<img alt="akihito-san" src="/image/akihito-san.webp" width="300">
 
 Stay tuned!
