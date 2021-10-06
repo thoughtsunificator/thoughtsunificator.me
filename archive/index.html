@@ -20,15 +20,10 @@
 		<meta name="theme-color" content="#353f5b">
 		<meta content="Post archives" property="description">
 		<meta content="romain lebesle, freelanceur rennes, javascript blog, freelanceur romain lebesle, coding blog, thoughtsunificator, thoughtsunificator blog, thoughtsunificator.me" property="keywords">
-		<meta property="og:image" content="/image/cover.jpg" />
-		<meta content="thoughtsunificator.me" property="og:site_name">
-		<meta content="Archive &middot; thoughtsunificator.me" property="og:title">
-		<meta content="website" property="og:type">
-		<meta content="Post archives" property="og:description">
-		<meta content="https://thoughtsunificator.me/archive/" property="og:url">
 		
 		<script type="application/ld+json">
 		{
+			"@context":"http://schema.org",
 			"@type": "Organization",
 			"@id": "thoughtsunificator.me",
 			"name": "thoughtsunificator.me",
@@ -66,10 +61,17 @@
 					"https://openuserjs.org/users/thoughtsunificator",
 					"https://www.youtube.com/channel/UCpLQLDuSOwx74AdwPE5CGDA",
 					"https://userstyles.org/users/1256582",
-					"https://greasyfork.org/en/users/257151-thoughtsunificator"
+					"https://greasyfork.org/en/users/257151-thoughtsunificator",
+					"https://www.linkedin.com/in/romain-lebesle"
 				]
 		}
 		</script>
+		<meta content="thoughtsunificator.me" property="og:site_name">
+		<meta property="og:image" content="/image/cover.jpg" />
+		<meta content="website" property="og:type">
+		<meta content="Archive &middot; thoughtsunificator.me" property="og:title">
+		<meta content="Post archives" property="og:description">
+		<meta content="https://thoughtsunificator.me/archive/" property="og:url">
 		
 	</head>
 	<body class="wrap page-archive">
@@ -83,9 +85,9 @@
 			
 <h2>Archive</h2>
 <div>
-	<div id="archive" style="display: grid; grid-gap: 20px;">
+	<div id="archive">
 	
-		<section class="archive">
+		<section id="archive-0" class="archive">
 			<h3 id="september-2021"><a href="/archive/september-2021/">September 2021</a></h3>
 			<div class="posts">
 			
@@ -96,7 +98,7 @@
 			</div>
 		</section>
 	
-		<section class="archive">
+		<section id="archive-1" class="archive">
 			<h3 id="november-2020"><a href="/archive/november-2020/">November 2020</a></h3>
 			<div class="posts">
 			
@@ -105,7 +107,7 @@
 			</div>
 		</section>
 	
-		<section class="archive">
+		<section id="archive-2" class="archive">
 			<h3 id="may-2020"><a href="/archive/may-2020/">May 2020</a></h3>
 			<div class="posts">
 			
@@ -152,8 +154,8 @@
 
 		</main>
 		<footer id="footer">
-			<small style="grid-row: 1;grid-column: 1;justify-self: start;">Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
-			<small class="copyright">© <a target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
+			<small>Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
+			<small class="copyright">© <a rel="author" target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
 			<div class="icons">
 				<a title="View source code on Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator/thoughtsunificator.me"><img alt="View source code on Github" width="32" src="/image/github.svg"></a>
 			</div>

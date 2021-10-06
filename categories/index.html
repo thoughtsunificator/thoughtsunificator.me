@@ -20,15 +20,10 @@
 		<meta name="theme-color" content="#353f5b">
 		<meta content="Posts categories" property="description">
 		<meta content="romain lebesle, freelanceur rennes, javascript blog, freelanceur romain lebesle, coding blog, thoughtsunificator, thoughtsunificator blog, thoughtsunificator.me" property="keywords">
-		<meta property="og:image" content="/image/cover.jpg" />
-		<meta content="thoughtsunificator.me" property="og:site_name">
-		<meta content="Categories &middot; thoughtsunificator.me" property="og:title">
-		<meta content="website" property="og:type">
-		<meta content="Posts categories" property="og:description">
-		<meta content="https://thoughtsunificator.me/categories/" property="og:url">
 		
 		<script type="application/ld+json">
 		{
+			"@context":"http://schema.org",
 			"@type": "Organization",
 			"@id": "thoughtsunificator.me",
 			"name": "thoughtsunificator.me",
@@ -66,10 +61,17 @@
 					"https://openuserjs.org/users/thoughtsunificator",
 					"https://www.youtube.com/channel/UCpLQLDuSOwx74AdwPE5CGDA",
 					"https://userstyles.org/users/1256582",
-					"https://greasyfork.org/en/users/257151-thoughtsunificator"
+					"https://greasyfork.org/en/users/257151-thoughtsunificator",
+					"https://www.linkedin.com/in/romain-lebesle"
 				]
 		}
 		</script>
+		<meta content="thoughtsunificator.me" property="og:site_name">
+		<meta property="og:image" content="/image/cover.jpg" />
+		<meta content="website" property="og:type">
+		<meta content="Categories &middot; thoughtsunificator.me" property="og:title">
+		<meta content="Posts categories" property="og:description">
+		<meta content="https://thoughtsunificator.me/categories/" property="og:url">
 		
 	</head>
 	<body class="wrap page-categories">
@@ -85,7 +87,7 @@
 <div>
 	<div id="categories">
 	
-		<section class="category">
+		<section id="category-0" class="category">
 			<h3 id="anime"><a href="/categories/anime/">Anime</a></h3>
 			<div class="posts">
 			
@@ -94,7 +96,7 @@
 			</div>
 		</section>
 	
-		<section class="category">
+		<section id="category-1" class="category">
 			<h3 id="browser-extension"><a href="/categories/browser-extension/">Browser-Extension</a></h3>
 			<div class="posts">
 			
@@ -105,7 +107,7 @@
 			</div>
 		</section>
 	
-		<section class="category">
+		<section id="category-2" class="category">
 			<h3 id="guides"><a href="/categories/guides/">Guides</a></h3>
 			<div class="posts">
 			
@@ -114,7 +116,7 @@
 			</div>
 		</section>
 	
-		<section class="category">
+		<section id="category-3" class="category">
 			<h3 id="software"><a href="/categories/software/">Software</a></h3>
 			<div class="posts">
 			
@@ -127,7 +129,7 @@
 			</div>
 		</section>
 	
-		<section class="category">
+		<section id="category-4" class="category">
 			<h3 id="uncategorized"><a href="/categories/uncategorized/">Uncategorized</a></h3>
 			<div class="posts">
 			
@@ -182,8 +184,8 @@
 
 		</main>
 		<footer id="footer">
-			<small style="grid-row: 1;grid-column: 1;justify-self: start;">Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
-			<small class="copyright">© <a target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
+			<small>Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
+			<small class="copyright">© <a rel="author" target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
 			<div class="icons">
 				<a title="View source code on Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator/thoughtsunificator.me"><img alt="View source code on Github" width="32" src="/image/github.svg"></a>
 			</div>
