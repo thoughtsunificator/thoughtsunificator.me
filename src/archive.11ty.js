@@ -27,9 +27,9 @@ exports.render = function(data) {
 	})
 	keys.reverse()
 
-	return `<div id="archive" style="display: grid; grid-gap: 20px;">
-	${keys.map(key => `
-		<section class="archive">
+	return `<div id="archive">
+	${keys.map((key, index) => `
+		<section id="archive-${index}" class="archive">
 			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h3>
 			<div class="posts">
 			${groups[key].map(post => `
