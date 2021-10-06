@@ -41,7 +41,7 @@ exports.render = async function(data) {
 				"name": "Romain Lebesle (thoughtsunificator)",
 				"image": {
 					"@type": "ImageObject",
-					"url": "${data.site.url}/image/me.jpg",
+					"url": "${data.site.url}/image/me.webp",
 					"height": 656,
 					"width": 1121
 				},

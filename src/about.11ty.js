@@ -9,7 +9,7 @@ exports.data = {
 
 exports.render = function(data) {
 	return `<div class="intro">
-	<img alt="me" src="/image/me.jpg">
+	<img alt="me" src="/image/me.webp">
 	<div>
 	<section>
 	<h3>Profile</h3>
@@ -60,7 +60,7 @@ exports.render = function(data) {
 		"@context": "https://schema.org",
 		"@type": "Person",
 		"email": "oss@thoughtsunificator.me",
-		"image": "${data.site.url}/image/me.jpg",
+		"image": "${data.site.url}/image/me.webp",
 		"jobTitle": "Web Developer",
 		"name": "Romain Lebesle",
 		"url": "https://romain-lebesle.fr"
