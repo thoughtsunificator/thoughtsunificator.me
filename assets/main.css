@@ -124,7 +124,7 @@ textarea {
 	border-bottom: 2px solid #5ac46078;
 }
 
-#main > div {
+#main > div:not(#posts) {
 	background-color: var(--COLOR_CLOUDBURST3);
 	margin-top: var(--SIZE_MEDIUM);
 	padding: var(--SIZE_MEDIUM);
@@ -182,6 +182,10 @@ textarea {
 
 .post > p {
 	padding-left: var(--SIZE_MEDIUM);
+}
+
+.post:not(.full) .title {
+	grid-row: 2;
 }
 
 .post .title {
@@ -423,6 +427,11 @@ textarea {
 	color: #85add9;
 }
 
+@media (max-width: 992px) {
+	body {
+		padding: var(--SIZE_MEDIUM);
+	}
+}
 
 @media screen and (max-width: 768px) {
 	body {

@@ -50,7 +50,7 @@ exports.render = function(data) {
 		"@type": "ListItem",
 		"position": index + 1,
 		"url": `${data.site.url}/archive/${key.replace(" ", "-").toLowerCase()}`
-	})), null, "\t")}
+	})))}
 }
 </script>
 `;

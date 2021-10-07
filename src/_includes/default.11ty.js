@@ -5,18 +5,17 @@ exports.render = function(data) {
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>${ data.title === "Home" ? data.site.name : `${data.headTitle || data.title} | ${data.site.name}` }</title>
-		<link rel="icon" type="image/jpeg" href="/favicon.ico">
+		<link rel="icon" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
-		<link rel="canonical" href="${data.site.url}${data.page.url}">
 		<link rel="manifest" href="/manifest.webmanifest">
 		<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.webp">
-		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.webp">
-		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.webp">
+		<link rel="icon" type="image/webp" sizes="32x32" href="/image/favicon-32x32.webp">
+		<link rel="icon" type="image/webp" sizes="16x16" href="/image/favicon-16x16.webp">
 		<link rel="mask-icon" href="/image/safari-pinned-tab.svg" color="#141a2d">
-		<link rel="alternate" type="application/rss+xml" title="${ data.site.name }" href="/feed.xml" />
-		<link rel="alternate" type="application/json" title="${ data.site.name }" href="/feed.json" />
-		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
-		<link type="text/plain" rel="author" href="/humans.txt"/>
+		<link rel="alternate" type="application/rss+xml" title="${ data.site.name }" href="/feed.xml">
+		<link rel="alternate" type="application/json" title="${ data.site.name }" href="/feed.json">
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+		<link type="text/plain" rel="author" href="/humans.txt">
 		<meta name="msapplication-TileColor" content="#141a2d">
 		<meta name="theme-color" content="#353f5b">
 		${data.description ? `<meta content="${ data.description }" property="description">` : `<meta content="${ data.site.description }" property="description">`}
@@ -94,9 +93,9 @@ exports.render = function(data) {
 			<small>Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
 			<small class="copyright">© <a rel="author" target="_blank" href="https://romain-lebesle.fr">Romain Lebesle</a></small>
 			<div class="icons">
-				<a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/thoughtsunifier"><img width="32" alt="Twitter Profile" width="32" src="/image/twitter.svg"></a>
-				<a title="Youtube" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCpLQLDuSOwx74AdwPE5CGDA"><img width="32" alt="YouTube Channel" width="32" src="/image/youtube.svg"></a>
-				<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator"><img width="32" alt="View source code on Github" width="32" src="/image/github.svg"></a>
+				<a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/thoughtsunifier"><img width="32" alt="Twitter Profile" src="/image/twitter.svg"></a>
+				<a title="Youtube" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCpLQLDuSOwx74AdwPE5CGDA"><img width="32" alt="YouTube Channel" src="/image/youtube.svg"></a>
+				<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator"><img width="32" alt="View source code on Github" src="/image/github.svg"></a>
 			</div>
 		</footer>
 	</body>

@@ -28,11 +28,10 @@ exports.render = function(data) {
 		let div = document.createElement("div")
 		div.textContent = post.data.redirect_to ? render(post.data) : post.templateContent
 		return `<entry>
-			<title>${ post.data.title }</title>
-			<link href="${data.site.url}${post.url}"/>
-			<updated>${post.date}</updated>
 			<id>${data.site.url}${post.url}</id>
-			<content type="html">${div.innerHTML}</content>
+			<link href="${data.site.url}${post.url}"/>
+			<title>${ post.data.title }</title>
+			<updated>${post.date}</updated>
 		</entry>`
 	}).join("")}
 </feed>`
