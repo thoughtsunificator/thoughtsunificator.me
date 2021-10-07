@@ -448,18 +448,6 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
-	body {
-		padding: 0 !important;
-	}
-
-
-	main > h2,
-	#posts,
-	.post.full,
-	.page,
-	#header {
-		margin: var(--SIZE_XS);
-	}
 
 	#header nav {
 		place-content: initial;
@@ -508,6 +496,10 @@ textarea {
 
 @media screen and (max-width: 481px) {
 
+
+	body {
+		padding: var(--SIZE_XS);
+	}
 
 	.post .metas,
 	.post .excerpt,
