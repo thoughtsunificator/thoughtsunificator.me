@@ -1,6 +1,9 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const htmlmin = require("html-minifier")
+const xmlmin = require("minify-xml")
 
 module.exports = config => {
+
 
 	config.addPlugin(syntaxHighlight)
 
@@ -31,6 +34,33 @@ module.exports = config => {
 	config.addPlugin(require("@11ty/eleventy-plugin-rss"))
 
 	config.addPassthroughCopy({ public: './' })
+
+	config.addTransform("minifier", function(content, outputPath) {
+		 // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+		if( outputPath && outputPath.endsWith(".html") ) {
+			const config = {
+				collapseBooleanAttributes: true,
+				collapseWhitespace: true,
+				decodeEntities: true,
+				html5: true,
+				minifyCSS: true,
+				minifyJS: true,
+				removeComments: true,
+				removeEmptyAttributes: true,
+				removeEmptyElements: false,
+				sortAttributes: true,
+				sortClassName: true,
+				useShortDoctype: true,
+				processScripts: ["application/ld+json"]
+			}
+			return htmlmin.minify(content, config)
+		} else if (outputPath.endsWith(".json")) {
+			return JSON.stringify(JSON.parse(content))
+		} else if (outputPath && outputPath.endsWith(".xml")) {
+			return xmlmin.minify(content)
+		}
+		return content
+ })
 
 	config.addCollection('tagsList', (collectionApi) => {
 		const tagsSet = new Set()
@@ -89,5 +119,5 @@ module.exports = config => {
 			input: 'src',
 			output: 'dist',
 		},
-	};
-};
+	}
+}

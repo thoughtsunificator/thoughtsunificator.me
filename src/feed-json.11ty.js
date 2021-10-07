@@ -1,3 +1,10 @@
+const { JSDOM } = require("jsdom")
+const { render } = require("./_includes/redirect.11ty.js")
+
+const virtualDOM = new JSDOM()
+const window = virtualDOM.window
+const { document } = window
+
 exports.data = {
 	eleventyExcludeFromCollections: true,
 	permalink: "/feed.json",
@@ -17,12 +24,13 @@ exports.render = function(data) {
 			"name": data.site.author.name,
 			"url": data.site.url
 		},
-		"items": data.collections.posts.map(post => ({
-			"id": post.id,
-			"url": `${data.site.url}${post.url}`,
-			"title": post.data.title,
-			"content_html": post.templateContent,
-			"date_published": post.date
-		}))
+		"items": data.collections.posts.map(post => {
+			return {
+				"id": post.id,
+				"url": `${data.site.url}${post.url}`,
+				"title": post.data.title,
+				"updated": post.date
+			}
+		})
 	})
 }

@@ -16,11 +16,11 @@ exports.data = {
 exports.render = function(data) {
 	return `
 	<h2>${data.pagination.pageNumber === 0 ? "Recent posts" : `Page ${data.pagination.pageNumber + 1}`}</h2>
-	<article id="posts">
+	<div id="posts">
 	${data.pagination.items.map((post, index) => `
 		<article id="post-${index}" class="post${post.data.redirect_to ? " link" : ""}">
+			<h3 class="title">${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h3>
 			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags, categories: post.data.categories })}
-			<h2 class="title">${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h2>
 			${!post.data.redirect_to ? `
 			${PostExcerpt.bind(this)({ site: data.site, post, excerpt: post.data.page.excerpt, cover: post.data.cover })}
 			<a class="keep-reading" href="${post.url}#content">Continue Reading →</a>
@@ -32,7 +32,7 @@ exports.render = function(data) {
 		<div class="indicator">${data.pagination.pageNumber + 1}</div>
 		${data.pagination.href.next ? `<a class="next" href="${data.pagination.href.next}">Next →</a>` : ""}
 	</div>
-</article>
+</div>
 <script type="application/ld+json">
 		{
 				"@context": "http://schema.org",
