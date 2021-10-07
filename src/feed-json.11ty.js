@@ -1,9 +1,4 @@
-const { JSDOM } = require("jsdom")
-const { render } = require("./_includes/redirect.11ty.js")
-
-const virtualDOM = new JSDOM()
-const window = virtualDOM.window
-const { document } = window
+const removeMarkdown = require("markdown-to-text").default
 
 exports.data = {
 	eleventyExcludeFromCollections: true,
@@ -25,12 +20,14 @@ exports.render = function(data) {
 			"url": data.site.url
 		},
 		"items": data.collections.posts.map(post => {
-			return {
+			const item = {
 				"id": post.id,
 				"url": `${data.site.url}${post.url}`,
 				"title": post.data.title,
-				"updated": post.date
+				"description": post.data.redirect_to || removeMarkdown(post.data.page.excerpt),
+				"updated": post.date.toISOString()
 			}
+			return
 		})
 	})
 }
