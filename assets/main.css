@@ -183,6 +183,13 @@ textarea {
 	border-color: #94a6ca;
 }
 
+#post-content h1, #post-content h2, #post-content h3, #post-content h4, #post-content h5,
+#post-content p,
+#post-content ul,
+#post-content figure {
+	margin: var(--SIZE_MEDIUM) 0;
+}
+
 .post > p {
 	padding-left: var(--SIZE_MEDIUM);
 }
