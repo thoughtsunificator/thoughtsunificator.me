@@ -71,6 +71,14 @@ exports.render = function(data) {
 				]
 		}
 		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-209470882-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-209470882-1');
+		</script>
 		<meta content="${ data.site.name }" property="og:site_name">
 		<meta property="og:image" content="${data.cover ? `/image/cover/${data.cover.filename}` : "/image/cover.webp"}" />
 		${data.page.excerpt ? `<meta content="article" property="og:type">` : `<meta content="website" property="og:type">`}
