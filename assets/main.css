@@ -262,10 +262,6 @@ textarea {
 	border-top-right-radius: 10px;
 }
 
-.post:not(.full) .metas {
-	font-size: .85em;
-}
-
 .post .metas > div {
 	display: grid;
 	grid-template-columns: auto auto;
