@@ -152,12 +152,15 @@ textarea {
 	justify-self: center;
 }
 
+#post-content {
+	margin-top: var(--SIZE_MEDIUM);
+}
+
 #post-content ul {
 	padding: 10px;
 }
 
 #post-content h3 {
-	padding-bottom: 10px;
 	border-bottom: 1px solid #3b476a;
 }
 
@@ -178,6 +181,13 @@ textarea {
 
 #post-content hr {
 	border-color: #94a6ca;
+}
+
+#post-content h1, #post-content h2, #post-content h3, #post-content h4, #post-content h5,
+#post-content p,
+#post-content ul,
+#post-content figure {
+	margin: var(--SIZE_MEDIUM) 0;
 }
 
 .post > p {
@@ -250,6 +260,10 @@ textarea {
 	padding: 10px 25px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+}
+
+.post:not(.full) .metas {
+	font-size: .85em;
 }
 
 .post .metas > div {
