@@ -117,11 +117,6 @@ textarea {
 	background-color: var(--COLOR_CLOUDBURST2);
 }
 
-#main img {
-	border: 1px solid #4a9dbd69;
-	border-bottom: 2px solid #5ac46078;
-}
-
 #main > div:not(#posts) {
 	background-color: var(--COLOR_CLOUDBURST3);
 	margin-top: var(--SIZE_MEDIUM);
@@ -139,7 +134,6 @@ textarea {
 }
 
 .post:not(.full) {
-	border: 1px solid var(--COLOR_PICKLEDBLUEWOOD);
 	background-color: var(--COLOR_CLOUDBURST3);
 	padding-bottom: var(--SIZE_MEDIUM);
 }
