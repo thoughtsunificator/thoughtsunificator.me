@@ -138,6 +138,17 @@ textarea {
 	padding-bottom: var(--SIZE_MEDIUM);
 }
 
+#post-content {
+	margin-top: var(--SIZE_MEDIUM);
+	color: #c9d7e3;
+}
+
+#post-content ul {
+	display: grid;
+	grid-gap: var(--SIZE_XS);
+}
+
+
 #post-content ul {
 	padding: var(--SIZE_XS);
 }
@@ -222,16 +233,6 @@ textarea {
 	column-gap: var(--SIZE_XS);
 	place-items: center;
 	flex-wrap: wrap;
-}
-
-#post-content {
-	margin-top: var(--SIZE_MEDIUM);
-	color: #b0cae3;
-}
-
-#post-content ul {
-	display: grid;
-	grid-gap: var(--SIZE_XS);
 }
 
 .post li {
