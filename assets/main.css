@@ -181,6 +181,9 @@ textarea {
 }
 
 .post.full {
+	background-color: var(--COLOR_CLOUDBURST3);
+	margin-top: var(--SIZE_MEDIUM);
+	padding: var(--SIZE_MEDIUM);
 	font-size: 1.10em;
 }
 
@@ -202,16 +205,12 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: var(--SIZE_XS) var(--SIZE_MEDIUM);
 	text-transform: uppercase;
 }
 
 .post:not(.full) .metas {
 	font-size: 0.85em;
-}
-
-.post.full .metas {
-	grid-row: 2;
+	padding: var(--SIZE_XS) var(--SIZE_MEDIUM);
 }
 
 .post .metas {
@@ -223,6 +222,11 @@ textarea {
 	column-gap: var(--SIZE_XS);
 	place-items: center;
 	flex-wrap: wrap;
+}
+
+#post-content {
+	margin-top: var(--SIZE_MEDIUM);
+	color: #b0cae3;
 }
 
 #post-content ul {
