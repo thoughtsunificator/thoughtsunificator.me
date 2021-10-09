@@ -15,7 +15,7 @@ exports.render = function(data) {
 	${posts.map((post, index) => `
 		<article id="post-${index}" class="post">
 			<h3 class="title"><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h3>
-			${!post.data.redirect_to ? PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags }) : ""}
+			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags, redirect_to: post.data.redirect_to })}
 		</article>
 	`).join("")}
 </div>`;
