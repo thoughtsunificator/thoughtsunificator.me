@@ -17,7 +17,10 @@ module.exports = config => {
 
 	const markdownItAnchor = require('markdown-it-anchor')
 	markdownIt.use(markdownItAnchor)
-
+	markdownIt.use(require("markdown-it-external-anchor"), {
+			domain: "thoughtsunificator.me",
+			class: "external"
+	});
 	config.setLibrary('md', markdownIt)
 
 	config.addPlugin(require('eleventy-plugin-nesting-toc'), {
