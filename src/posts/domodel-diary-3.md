@@ -59,12 +59,12 @@ Also available on:
 <a target="_blank" href="https://www.microsoft.com/en-US/p/domodel-diary/9nhlt1hfb4t7"><img src="/image/English_get.webp" alt="English badge" width="200"></a>
 <a target="_blank" href="https://snapcraft.io/domodel-diary-electron"><img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"></a>
 
-~~It will soon be available on F-Droid.~~ Please download the APK from the [release page](https://github.com/thoughtsunificator/domodel-diary-android/releases/) of the Github repository.
+~~It will soon be available on F-Droid.~~ Please download the APK from the [release page](https://github.com/thoughtsunificator/domodel-diary-cordova/releases/) of the Github repository.
 
 ## Source code
 
 - [thoughtsunificator/domodel-diary](https://github.com/thoughtsunificator/domodel-diary)
-- [thoughtsunificator/domodel-diary-android](https://github.com/thoughtsunificator/domodel-diary-android)
+- [thoughtsunificator/domodel-diary-cordova](https://github.com/thoughtsunificator/domodel-diary-cordova)
 - [thoughtsunificator/domodel-diary-electron](https://github.com/thoughtsunificator/domodel-diary-electron)
 - [thoughtsunificator/domodel-diary-extension](https://github.com/thoughtsunificator/domodel-diary-extension)
 
