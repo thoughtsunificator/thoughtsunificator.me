@@ -426,12 +426,4 @@ textarea {
 		padding: var(--SIZE_XS);
 	}
 
-	.post .metas {
-		padding: var(--SIZE_MEDIUM);
-	}
-
-	#post-content {
-		padding: 0 var(--SIZE_MEDIUM);
-	}
-
 }
