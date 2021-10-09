@@ -59,7 +59,7 @@ textarea {
 }
 
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
-	background: #1d253e;
+	background: #0000001f;
 }
 
 #header {
