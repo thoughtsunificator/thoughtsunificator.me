@@ -24,7 +24,6 @@ exports.render = function(data) {
 			<id>${data.site.url}${post.url}</id>
 			<link href="${data.site.url}${post.url}"/>
 			<title>${ post.data.title }</title>
-			<description>${ post.data.redirect_to || removeMarkdown(post.content) }</description>
 			<updated>${post.date.toISOString()}</updated>
 		</entry>`
 	}).join("")}
