@@ -11,7 +11,6 @@ exports.data = {
 exports.render = function(data) {
 	let all = data.collections.all.filter(page => !page.data.sitemap || !page.data.sitemap.ignore)
 	all = all.concat(data.collections.tagsList.filter(tag => !all.find(page => page.url === `/tags/${tag.replace(" ", "-").toLowerCase()}/`)).map(tag => ({ date: new Date(), url: `/tags/${tag.replace(" ", "-").toLowerCase()}` })))
-	all = all.concat(data.collections.categoriesList.filter(category => !all.find(page => page.url === `/categories/${category.replace(" ", "-").toLowerCase()}/`)).map(category => ({ date: new Date(), url: `/tags/${category.replace(" ", "-").toLowerCase()}` })))
 	all = all.concat(data.collections.archiveList.filter(archive => !all.find(page => page.url === `/archive/${archive.replace(" ", "-").toLowerCase()}/`)).map(archive => ({ date: new Date(), url: `/archive/${archive.replace(" ", "-").toLowerCase()}` })))
 	return `<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

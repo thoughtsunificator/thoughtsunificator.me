@@ -1,14 +1,12 @@
 ---js
 {
 	title: "Creating a Github action for a Node.js 14+ project",
-	tags: ["github", "github-action"],
-	categories: ["Guides"],
-	date: "2021-09-25",
-	description: "Creating a Github action for a Node.js 14+ project"
+	tags: ["github", "guide", "github-action"],
+	date: "2021-09-25"
 }
 ---
 Currently it is [not possible](https://github.com/actions/runner/issues/772) to create a [JavaScript action](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action) with a version of nodejs other than 12.
-<!--more--> ${EXCERPT_SEPARATOR}
+
 First if you don't know the basics of Github Actions I recommend you go read the [Starting Guide](https://docs.github.com/en/actions/creating-actions/about-custom-actions).
 
 A workaround to have a version of nodejs > 12 is to create a [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action) with the [node:16-alpine](https://hub.docker.com/_/node) image.

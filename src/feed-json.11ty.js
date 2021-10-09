@@ -24,7 +24,7 @@ exports.render = function(data) {
 				"id": post.id,
 				"url": `${data.site.url}${post.url}`,
 				"title": post.data.title,
-				"description": post.data.redirect_to || removeMarkdown(post.data.page.excerpt),
+				"content": post.data.redirect_to || removeMarkdown(post.content),
 				"updated": post.date.toISOString()
 			}
 			return

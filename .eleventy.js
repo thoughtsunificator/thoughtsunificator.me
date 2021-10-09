@@ -7,11 +7,6 @@ module.exports = config => {
 
 	config.addPlugin(syntaxHighlight)
 
-	config.setFrontMatterParsingOptions({
-		excerpt: true,
-		excerpt_separator: "<!--more-->"
-	})
-
 	const markdownIt = new require('markdown-it')({
 		typographer: true,
 		linkify: true,
@@ -36,7 +31,6 @@ module.exports = config => {
 	config.addPassthroughCopy({ public: './' })
 
 	config.addTransform("minifier", function(content, outputPath) {
-		 // Eleventy 1.0+: use this.inputPath and this.outputPath instead
 		if( outputPath && outputPath.endsWith(".html") ) {
 			const config = {
 				collapseBooleanAttributes: true,
@@ -50,8 +44,7 @@ module.exports = config => {
 				removeEmptyElements: false,
 				sortAttributes: true,
 				sortClassName: true,
-				useShortDoctype: true,
-				processScripts: ["application/ld+json"]
+				useShortDoctype: true
 			}
 			return htmlmin.minify(content, config)
 		} else if (outputPath.endsWith(".json")) {
@@ -72,18 +65,8 @@ module.exports = config => {
 		return [...tagsSet].sort((a, b) => b.localeCompare(a))
 	})
 
-	config.addCollection('categoriesList', (collectionApi) => {
-		const tagsSet = new Set()
-		collectionApi.getAll().forEach((item) => {
-			if (!item.data.categories) return
-			item.data.categories
-				.forEach((tag) => tagsSet.add(tag))
-		})
-		return [...tagsSet].sort((a, b) => b.localeCompare(a))
-	})
-
 	config.addCollection('archiveList', (collectionApi) => {
-		const posts = collectionApi.getAll().filter(data => data.filePathStem.startsWith("/posts/"))
+		const posts = collectionApi.getAll().filter(data => data.filePathStem.startsWith("/posts/")).filter(data => data.tags)
 		const groups = {}
 
 		for(const post of posts) {

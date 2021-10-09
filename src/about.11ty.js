@@ -3,8 +3,7 @@ exports.data = {
 	title: "About Romain Lebesle",
 	headTitle: "About",
 	permalink: "/about/",
-	description: "About",
-	class: "about"
+	description: "About"
 }
 
 exports.render = function(data) {
@@ -55,16 +54,5 @@ exports.render = function(data) {
 	</section>
 	</div>
 	</div>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"email": "oss@thoughtsunificator.me",
-		"image": "${data.site.url}/image/me.webp",
-		"jobTitle": "Web Developer",
-		"name": "Romain Lebesle",
-		"url": "https://romain-lebesle.fr"
-	}
-	</script>
 	`
 }

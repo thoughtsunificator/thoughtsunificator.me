@@ -8,8 +8,7 @@ exports.data = {
 	},
 	sitemap: {
 		ignore: true
-	},
-	head: `<meta name="robots" content="noindex">`
+	}
 }
 
 exports.render = function(data) {
