@@ -139,10 +139,6 @@ textarea {
 	grid-gap: var(--SIZE_MEDIUM);
 }
 
-.post .title a {
-	color: #96b1dd;
-}
-
 .post:not(.full) {
 	border: 1px solid var(--COLOR_PICKLEDBLUEWOOD);
 	background-color: var(--COLOR_CLOUDBURST3);
