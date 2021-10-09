@@ -66,7 +66,7 @@ module.exports = config => {
 	})
 
 	config.addCollection('archiveList', (collectionApi) => {
-		const posts = collectionApi.getAll().filter(data => data.filePathStem.startsWith("/posts/")).filter(data => !data.redirect_to)
+		const posts = collectionApi.getAll().filter(data => data.filePathStem.startsWith("/posts/") && !data.redirect_to)
 		const groups = {}
 
 		for(const post of posts) {
