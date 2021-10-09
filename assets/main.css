@@ -136,7 +136,6 @@ textarea {
 
 .post {
 	display: grid;
-	grid-gap: var(--SIZE_MEDIUM);
 }
 
 .post:not(.full) {
@@ -214,7 +213,6 @@ textarea {
 }
 
 .post:not(.full) .metas {
-	border-bottom: 1px solid #4c879929;
 	font-size: 0.85em;
 }
 
@@ -222,7 +220,7 @@ textarea {
 	grid-row: 2;
 }
 
-.post .metas time {
+.post .metas {
 	color: #bdd8f0;
 }
 
