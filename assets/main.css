@@ -226,6 +226,7 @@ textarea {
 
 #post-content {
 	margin-top: var(--SIZE_MEDIUM);
+	color: #b0cae3;
 }
 
 #post-content ul {
