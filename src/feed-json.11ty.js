@@ -24,10 +24,9 @@ exports.render = function(data) {
 				"id": post.id,
 				"url": `${data.site.url}${post.url}`,
 				"title": post.data.title,
-				"description": post.data.redirect_to || removeMarkdown(post.data.page.excerpt),
 				"updated": post.date.toISOString()
 			}
-			return
+			return item
 		})
 	})
 }

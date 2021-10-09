@@ -1,17 +1,10 @@
 ---js
 {
 	title: "Anime Twist Premium (ATP)",
-	tags: ["twist.moe"],
-	categories: ["Anime", "Browser-Extension"],
-	date: "2020-05-27",
-	description: "Browser Extension Anime Twist Premium (ATP)",
-	cover: {
-		filename: "atp-preview.webp"
-	},
+	tags: ["twist.moe", "browser-extension"],
+	date: "2020-05-27"
 }
 ---
-A convenient browser extension for twist.moe.
-<!--more--> ${EXCERPT_SEPARATOR}
 Anime Twist Premium is a browser extension that adds a watch list to twist.moe making it possible to track the shows you're currently watching.
 
 ## How it works

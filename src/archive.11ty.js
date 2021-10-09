@@ -1,6 +1,5 @@
 exports.data = {
 	layout: "page",
-	class: "archive",
 	title: "Archive",
 	permalink: "/archive/",
 	description: "Post archives"
@@ -10,7 +9,9 @@ exports.render = function(data) {
 
 	const groups = {}
 
-	for(const post of data.collections.posts) {
+	const posts = data.collections.posts.filter(post => post.data.tags)
+
+	for(const post of posts) {
 		const date = new Intl.DateTimeFormat('en-GB', { month: "long", year: 'numeric',}).format(post.date)
 		if(!groups[date]) {
 			groups[date] = []
@@ -33,25 +34,11 @@ exports.render = function(data) {
 			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h3>
 			<div class="posts">
 			${groups[key].map(post => `
-				<div>${post.data.redirect_to ? "🔗 " : ""}<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></div>
+				<div><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></div>
 			`).join("")}
 			</div>
 		</section>
 	`).join("")}
 </div>
-<script type="application/ld+json">
-{
-	"@context": "https://schema.org",
-	"@type": "ItemList",
-	"name": "Archive",
-	"itemListOrder": "https://schema.org/ItemListOrderDescending",
-	"itemListElement": ${JSON.stringify(keys.map((key, index) => ({
-		"@id": key,
-		"@type": "ListItem",
-		"position": index + 1,
-		"url": `${data.site.url}/archive/${key.replace(" ", "-").toLowerCase()}`
-	})))}
-}
-</script>
 `;
 };

@@ -1,19 +1,10 @@
 ---js
 {
 	title: "domodel-diary: A modest password protected diary application",
-	tags: ["productivity", "diary"],
-	categories: ["Software", "Browser-Extension"],
-	date: "2020-05-30",
-	description: "domodel-diary: A modest password protected diary application",
-	cover: {
-		filename: "domodel-diary-preview.webp"
-	},
+	tags: ["productivity", "diary", "browser-extension"],
+	date: "2020-05-30"
 }
 ---
-An universal diary for everyone to use.
-<!--more--> ${EXCERPT_SEPARATOR}
-<div class="excerpt_separator"></div>
-
 domodel-diary is a password protected diary.
 
 It offers the following features:
