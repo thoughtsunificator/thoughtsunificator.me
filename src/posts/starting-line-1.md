@@ -1,7 +1,6 @@
 ---js
 {
 	title: "The starting line",
-	tags: ["welcome"],
 	date: "2020-05-16"
 }
 ---
