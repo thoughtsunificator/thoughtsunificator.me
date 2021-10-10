@@ -1,6 +1,6 @@
 ---js
 {
-	title: "Anime Twist Premium (ATP)",
+	title: "Anime Twist Premium",
 	tags: ["browser-extension"],
 	date: "2020-05-27"
 }
