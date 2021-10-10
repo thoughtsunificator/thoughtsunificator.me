@@ -1,7 +1,7 @@
 ---js
 {
 	title: "domodel-diary: A modest password protected diary application",
-	tags: ["productivity", "diary", "browser-extension"],
+	tags: ["browser-extension"],
 	date: "2020-05-30"
 }
 ---
