@@ -11,7 +11,7 @@ That's what I'm sharing with you today.
 
 So first, let's go through the basics, exactly how can we define a grid system?
 
-We could say that a grid is made of cells that are organized into columns and/or columns.
+We could say that a grid is made of cells that are organized into columns.
 
 ## Grid
 
