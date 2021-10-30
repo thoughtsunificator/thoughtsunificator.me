@@ -27,7 +27,7 @@ class Grid {
 
   /**
    * @readonly
-   * @type {Column[]}
+   * @type {object}
    */
   get columns() {
     return this._columns
@@ -56,7 +56,7 @@ class Column {
 
   /**
    * @readonly
-   * @type {Cell[]}
+   * @type {object}
    */
   get cells() {
     return this._cells
