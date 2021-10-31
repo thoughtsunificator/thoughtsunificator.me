@@ -49,7 +49,7 @@ Now that we have our grid class ready, let's create a ``Column`` class:
 class Column {
 
   /**
-   * @param {integer} x
+   * @param {number} x
    */
   constructor(x) {
     this._x = x
@@ -66,7 +66,7 @@ class Column {
 
   /**
    * @readonly
-   * @type {integer}
+   * @type {number}
    */
   get x() {
     return this._x
