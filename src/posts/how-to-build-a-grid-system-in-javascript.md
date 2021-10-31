@@ -5,6 +5,8 @@
   date: "2021-10-29"
 }
 ---
+
+
 While making my [connect four](https://github.com/thoughtsunificator/userinterface.js-puissance4) in JavaScript I thought it would be great to build a reusable and scalable grid system.
 
 That's what I'm sharing with you today.
@@ -73,7 +75,7 @@ class Column {
 }
 ```
 
-As you can see ``Column`` is in fact an abstraction of ``x`` in our grid. Just like ``Grid`` class holds columns our ``Column`` class holds cells.
+As you can see ``Column`` is in fact an abstraction of ``x`` in our grid. Just like the ``Grid`` class holds columns our ``Column`` class holds cells.
 
 From here the next step would be to add cells to the grid, so let's create a method inside our ``Grid`` class that'll do just that.
 
@@ -82,9 +84,12 @@ From here the next step would be to add cells to the grid, so let's create a met
 ``grid.js``
 ```javascript
 /**
- * @param {Cell} cell
+ * @param {number} x
+ * @param {number} y
+ * @returns {Cell}
  */
-addCell(cell) {
+addCell(x, y) {
+  const cell = new Cell(x, y)
   if(!this.columns[cell.x]) {
     this.columns[cell.x] = new Column(cell.x)
   }
@@ -97,7 +102,7 @@ Now we can do something like:
 ``demo.js``
 ```javascript
 const grid = new Grid()
-grid.addCell(new Cell(0, 0))
+grid.addCell(0, 0)
 ```
 
 Now that we're good with the column part let's dive into the cell part.
@@ -139,12 +144,10 @@ class Cell {
 ``demo.js``
 ```javascript
 const grid = new Grid()
-const column = new Column(0)
-column.addCell(new Cell(0, 0))
-grid.addColumn(column)
+grid.addCell(0, 0)
 ```
 
-Let's make it more dynamic.
+Let's build a 4x4 grid then.
 
 ## 4x4 grid
 
@@ -154,8 +157,7 @@ const size = 4
 const grid = new Grid()
 for(let x = 0; x < size; x++) {
   for(let y = 0; y < size; y++) {
-    const cell = new Cell(x, y)
-    grid.addCell(cell)
+    grid.addCell(x, y)
   }
 }
 ```
