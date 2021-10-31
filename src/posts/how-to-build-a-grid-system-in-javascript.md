@@ -73,7 +73,7 @@ class Column {
 }
 ```
 
-As you can see ``Column`` is in fact an abstraction of ``x`` in our grid. Unlike Just like ``Grid`` holds columns our ``Column`` class holds cells hence the ``cells`` getter.
+As you can see ``Column`` is in fact an abstraction of ``x`` in our grid. Just like ``Grid`` class holds columns our ``Column`` class holds cells.
 
 From here the next step would be to add cells to the grid, so let's create a method inside our ``Grid`` class that'll do just that.
 
