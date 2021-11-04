@@ -13,40 +13,40 @@ That's what I'm sharing with you today.
 
 So first, let's go through the basics, exactly how can we define a grid system?
 
-We could say that a grid is made of cells that are organized into rows.
+We could say that a grid is made of cells that are organized into columns.
 
 ## Grid
 
-So let's start from here and make a ``Grid`` class that will hold our rows:
+So let's start from here and make a ``Grid`` class that will hold our columns:
 
 ``grid.js``
 ```javascript
 class Grid {
 
   constructor() {
-    this._rows = {}
+    this._columns = {}
   }
 
   /**
    * @readonly
    * @type {object}
    */
-  get rows() {
-    return this._rows
+  get columns() {
+    return this._columns
   }
 
 }
 ```
 
-Here, my ``rows`` variable type is an ``object`` but you could also use an ``array``.
+Here, my ``columns`` variable type is an ``object`` but you could also use an ``array``.
 
-## Row
+## Column
 
-Now that we have our grid class ready, let's create a ``Row`` class:
+Now that we have our grid class ready, let's create a ``Column`` class:
 
-``row.js``
+``column.js``
 ```javascript
-class Row {
+class Column {
 
   /**
    * @param {number} x
@@ -75,7 +75,7 @@ class Row {
 }
 ```
 
-As you can see ``Row`` is in fact an abstraction of ``x`` in our grid. Just like the ``Grid`` class holds rows our ``Row`` class holds cells.
+As you can see ``Column`` is in fact an abstraction of ``x`` in our grid. Just like the ``Grid`` class holds columns our ``Column`` class holds cells.
 
 From here the next step would be to add cells to the grid, so let's create a method inside our ``Grid`` class that'll do just that.
 
@@ -90,11 +90,11 @@ From here the next step would be to add cells to the grid, so let's create a met
  */
 addCell(x, y) {
   const cell = new Cell(x, y)
-  if(!this.rows[cell.x]) {
-    this.rows[cell.x] = new Row(cell.x)
+  if(!this.columns[cell.x]) {
+    this.columns[cell.x] = new Column(cell.x)
   }
-  cell._row = this.rows[cell.x]
-  this.rows[cell.x].cells[cell.y] = cell
+  cell._column = this.columns[cell.x]
+  this.columns[cell.x].cells[cell.y] = cell
 }
 ```
 
@@ -105,7 +105,7 @@ const grid = new Grid()
 grid.addCell(0, 0)
 ```
 
-Now that we're good with the row part let's dive into the cell part.
+Now that we're good with the column part let's dive into the cell part.
 
 ## Cell
 
