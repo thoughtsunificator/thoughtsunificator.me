@@ -309,7 +309,13 @@ textarea {
 }
 
 .intro > img {
-	width: 120px;
+	grid-row: 1;
+	grid-column: 1;
+	justify-self: end;
+	width: 150px;
+	object-fit: cover;
+	height: 150px;
+	border-radius: 100%;
 }
 
 .intro > div {
