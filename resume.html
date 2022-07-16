@@ -4,13 +4,208 @@
 	<title>Resume</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="/resume.css">
+	<style>
+		html {
+			background-color: rgba(42, 42, 46, 1);
+		}
+
+		body {
+			background-color: white;
+			margin: auto;
+			font-size: 13px;
+			max-width: 25cm;
+		}
+
+		p, ul {
+			margin: 8px;
+		}
+
+		p:first-child, ul:first-child {
+			margin-top: 0;
+		}
+
+		body {
+			display: grid;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		header {
+			margin-top: 10px;
+			margin-right: 10px;
+			display: grid;
+			grid-template-columns: 1fr auto;
+			place-items: center;
+		}
+
+		body > section {
+			display: grid;
+		}
+
+		.vcard {
+			grid-row: 1;
+			grid-column: 1;
+			justify-self: center;
+		}
+
+		.vcard h1, .vcard h3 {
+			padding: 0;
+			margin: 0;
+		}
+
+		.vcard h1 {
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+		}
+
+		.vcard h3 {
+			font-size: 1.3em;
+			font-weight: normal;
+			margin-top: 5px;
+		}
+
+		.vcard .contact {
+			font-family: Noto;
+			display: grid;
+			justify-items: flex-start;
+			grid-gap: 2px;
+			margin-top: 15px;
+		}
+
+		.vcard .contact > div {
+			display: grid;
+			justify-items: flex-start;
+			grid-template-columns: 120px auto;
+		}
+
+		.photo {
+			grid-row: 1;
+			grid-column: 1;
+			justify-self: end;
+			width: 150px;
+			object-fit: cover;
+			height: 150px;
+			border-radius: 100%;
+		}
+
+		.skills {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			grid-gap: 10px;
+		}
+
+		.skills h3 {
+			margin: 0;
+		}
+
+		.skills .groups {
+			margin-top: 10px;
+			display: grid;
+			grid-gap: 10px;
+			grid-template-columns: auto auto auto;
+		}
+
+		section h2 {
+			letter-spacing: 0.1em;
+			font-family: Noto;
+			padding: 2px;
+			text-indent: 50px;
+			border-bottom: 1px solid black;
+		}
+
+		.records {
+			justify-self: center;
+			width: 85%;
+		}
+
+		.record + .record {
+			margin-top: 20px;
+		}
+
+		.record.columns {
+			display: grid;
+			grid-auto-flow: column;
+			justify-content: flex-start;
+		}
+
+		.record.columns > div:first-child {
+			max-width: 250px;
+			min-width: 250px;
+		}
+
+		.note {
+			margin-top: 20px;
+		}
+
+		.hobbies {
+			display: grid;
+			grid-auto-flow: column;
+			grid-auto-columns: max-content;
+			grid-gap: 10px;
+		}
+
+		#lang {
+			position:absolute;
+			padding:10px;
+			display:flex;
+			column-gap:10px;
+			top:25px
+		}
+
+		.back {
+			position:absolute;
+			padding:10px
+		}
+
+		@media (max-width: 600px) {
+			html {
+				background-color: initial;
+			}
+			#lang,
+			.back {
+				justify-self: center;
+				position: initial!important;
+			}
+		}
+
+		@media screen and (max-width: 650px) {
+			header {
+				grid-gap: 20px;
+			}
+			.photo {
+				justify-self: center;
+				grid-row: 2;
+			}
+
+			.records {
+				display: grid;
+			}
+
+			.record.columns {
+				grid-auto-flow: row;
+			}
+
+			.record ul {
+				padding-left: 0;
+			}
+
+			.record li {
+				list-style: none;
+			}
+		}
+
+		@media print {
+			body {
+				margin: 0;
+				font-size: 12.5px;
+			}
+			.skills .group > div:not(:first-child) {
+				margin-left: 5px;
+			}
+		}
+	</style>
 </head>
-<body>
-	<a class="back" target="_blank" href="/">Page d'accueil</a>
-	<nav id="lang">
-		<a href="resume-en.html">EN</a>|<b>FR</b>
-	</nav>
+<body><a class="back" target="_blank" href="/">Page daccueil</a><nav id="lang"><a href="resume-en.html">EN</a>|<b>FR</b></nav>
 	<header>
 		<div class="vcard">
 			<h1>Romain Lebesle</h1>
@@ -37,7 +232,7 @@
 			</div>
 			<div class="record">
 				<p><b>domodel-diary</b> – Application JavaScript</p>
-				<p>Application très légère permettant de tenir un journal de notes encryptées qui sont protégées par un mot de passe.</p>
+				<p>Application très légère permettant de tenir un journal de notes chifrées, protégées par un mot de passe.</p>
 			</div>
 			<div class="record">
 				<small>* Liste non exhaustive n'incluant que mes mes projets open-source et principalement ceux en JavaScript.</small>
@@ -51,69 +246,53 @@
 			<section>
 				<h3>Front-end</h3>
 				<div class="groups">
-					<div class="group">
-						<div>JavaScript</div>
-						<div>HTML</div>
-						<div>CSS</div>
-						<div>React</div>
-						<div>JSDoc</div>
-						<div>Electron</div>
-					</div>
-					<div class="group">
-						<div>Browser Extension</div>
-					</div>
-					<div class="group">
-						<div>rollup</div>
-						<div>webpack</div>
-						<div>gulp.js</div>
-						<div>Grunt</div>
-					</div>
-					<div class="group">
-						<div>Java Swing</div>
-						<div>Android WebView</div>
-					</div>
+					<div>JavaScript</div>
+					<div>HTML</div>
+					<div>CSS</div>
+					<div>React</div>
+					<div>JSDoc</div>
+					<div>Electron</div>
+					<div>Browser Extension</div>
+					<div>rollup</div>
+					<div>webpack</div>
+					<div>gulp.js</div>
+					<div>Grunt</div>
+					<div>Java Swing</div>
+					<div>Android WebView</div>
 				</div>
 			</section>
 			<section>
 				<h3>Back-end</h3>
 				<div class="groups">
-					<div class="group">
-						<div>Node.js</div>
-						<div>Express.js</div>
-					</div>
-					<div class="group">
-						<div>MySQL</div>
-						<div>PostgreSQL</div>
-						<div>MongoDB</div>
-						<div>MariaDB</div>
-					</div>
-					<div class="group">
-						<div>sequelize</div>
-						<div>Mongoose</div>
-					</div>
-					<div class="group">
-						<div>Java</div>
-					</div>
-					<div class="group">
-						<div>PHP</div>
-						<div>Laravel</div>
-						<div>Symfony</div>
-					</div>
+					<div>Node.js</div>
+					<div>Express.js</div>
+					<div>MySQL</div>
+					<div>PostgreSQL</div>
+					<div>MongoDB</div>
+					<div>MariaDB</div>
+					<div>sequelize</div>
+					<div>Mongoose</div>
+					<div>Java</div>
+					<div>PHP</div>
+					<div>Laravel</div>
+					<div>Symfony</div>
 				</div>
 			</section>
 			<section>
 				<h3>Other</h3>
 				<div class="groups">
-					<div class="group">
-						<div>WordPress</div>
-						<div>git</div>
-						<div>nodeunit</div>
-						<div>JSDom</div>
-						<div>Linux</div>
-						<div>Docker</div>
-						<div>Travis CI</div>
-						<div>Github Actions</div>
-					</div>
+					<div>git</div>
+					<div>nodeunit</div>
+					<div>JSDom</div>
+					<div>Linux</div>
+					<div>Docker</div>
+					<div>Travis CI</div>
+					<div>GitLab CI</div>
+					<div>DevOps</div>
+					<div>Agile</div>
+					<div>TDD</div>
+					<div>Github Actions</div>
+					<div>WordPress</div>
 				</div>
 			</section>
 		</div>
@@ -138,13 +317,28 @@
 		<div class="records">
 			<div class="record columns">
 				<div>
-					<div>Mar. 2021 – Présent</div>
+					<div>Nov. 2021 – Présent</div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>ICODIA</b></div>
+					<div>Lead Developer</div>
+					<ul><li>Architecture, design et développement d'interfaces utilisateur et APIs dans le context d'un data center.</li></ul>
+				</div>
+			</div>
+			<div class="record columns">
+				<div>
+					<div>Mar. 2021 – Nov. 2021</div>
 					<small>Rennes, France</small>
 				</div>
 				<div>
 					<div><b>Freelance</b></div>
 					<div>Développeur Full Stack</div>
-					<ul><li>Réalisation et publication de projets web.</li></ul>
+					<ul>
+						<li>Réalisation de projets web notamment sur upwork.com et freelancer.com.</li>
+				    <li>Code reviews pour divers clients sur upwork.com et freelancer.com</li>
+				    <li>Développement et maintenance de librairies open-source.</li>
+					</ul>
 				</div>
 			</div>
 			<div class="record columns">
@@ -159,17 +353,6 @@
 						<li>Développement d'une application web permettant aux généalogistes de réaliser et manipuler des arbres généalogiques dédiés aux notaires.</li>
 						<li>Mise en place d'une infrastructure réseau avec accès distant.</li>
 					</ul>
-				</div>
-			</div>
-			<div class="record columns">
-				<div>
-					<div>Fev. 2016 – Jul. 2016</div>
-					<small>Rennes, France</small>
-				</div>
-				<div>
-					<div><b>Freelance</b></div>
-					<div>Développeur Full Stack</div>
-					<ul><li>Réalisation de projets web notamment sur <u>upwork.com</u> et <u>freelancer.com</u>.</li></ul>
 				</div>
 			</div>
 		</div>
