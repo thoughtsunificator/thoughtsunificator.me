@@ -12,7 +12,7 @@ exports.render = function(data) {
 	<div>
 	<section>
 	<h3>Profile</h3>
-	<p>Self taught web developer with <b>5+ years experiences</b>.</p>
+	<p>Self taught full stack developer with <b>5+ years experiences</b>.</p>
 	<p>With a deep knowledge of JavaScript and Web APIs I know how to make best use of them so that what I deliver is fast and scales.</p>
 	<p>My current focus is on making crystal clear and lightweight JavaScript libraries and tools for front-end developers to use.</p>
 	</section>
