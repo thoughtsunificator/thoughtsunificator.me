@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<title>Resume</title>
 	<meta charset="UTF-8">
@@ -10,10 +10,13 @@
 		}
 
 		body {
+			display: grid;
+			font-family: baskerville, bask, serif;
 			background-color: white;
 			margin: auto;
-			font-size: 13px;
-			max-width: 25cm;
+			font-size: 14px;
+			max-width: 27cm;
+			padding-bottom: 15px;
 		}
 
 		p, ul {
@@ -24,16 +27,10 @@
 			margin-top: 0;
 		}
 
-		body {
-			display: grid;
-			font-family: Arial, Helvetica, sans-serif;
-		}
-
 		header {
 			margin-top: 10px;
 			margin-right: 10px;
 			display: grid;
-			grid-template-columns: 1fr auto;
 			place-items: center;
 		}
 
@@ -66,15 +63,9 @@
 		.vcard .contact {
 			font-family: Noto;
 			display: grid;
-			justify-items: flex-start;
+			grid-template-columns: auto auto;
 			grid-gap: 2px;
 			margin-top: 15px;
-		}
-
-		.vcard .contact > div {
-			display: grid;
-			justify-items: flex-start;
-			grid-template-columns: 120px auto;
 		}
 
 		.photo {
@@ -85,24 +76,6 @@
 			object-fit: cover;
 			height: 150px;
 			border-radius: 100%;
-		}
-
-		.skills {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			grid-gap: 10px;
-		}
-
-		.skills h3 {
-			margin: 0;
-		}
-
-		.skills .groups {
-			margin-top: 10px;
-			display: grid;
-			grid-gap: 10px;
-			grid-template-columns: auto auto auto;
 		}
 
 		section h2 {
@@ -124,8 +97,6 @@
 
 		.record.columns {
 			display: grid;
-			grid-auto-flow: column;
-			justify-content: flex-start;
 		}
 
 		.record.columns > div:first-child {
@@ -152,9 +123,26 @@
 			top:25px
 		}
 
+		.links {
+			text-align: center;
+		}
+
 		.back {
 			position:absolute;
 			padding:10px
+		}
+
+		.skills {
+			display: flex;
+			place-items: center;
+			flex-wrap: wrap;
+		}
+
+		.skills > div {
+			border: 1px solid #17141447;
+			padding: 1px 3px;
+			margin: 2px 6px;
+			border-radius: 5px;
 		}
 
 		@media (max-width: 600px) {
@@ -207,116 +195,60 @@
 </head>
 <body><a class="back" target="_blank" href="/">Homepage</a><nav id="lang"><b>EN</b>|<a href="resume.html">FR</a></nav>
 	<header>
-		<div class="vcard">
+		<nav class="links">
+			<a href="https://github.com/thoughtsunificator" target="_blank">Github</a>
+			|
+			<a href="https://www.npmjs.com/~thoughtsunificator" target="_blank">npmjs</a>
+			|
+			<a href="https://www.linkedin.com/in/romain-lebesle" target="_blank">Linkedin</a>
+			|
+			<a href="https://twitter.com/thoughtsunifier" target="_blank">Twitter</a>
+			|
+			<a href="https://addons.mozilla.org/en-US/firefox/user/15968837" target="_blank">AMO</a>
+			|
+			<a href="https://play.google.com/store/apps/developer?id=thoughtsunificator&amp;hl=en&amp;gl=US" target="_blank">Google Play</a>
+			|
+			<a href="https://snapstats.org/publishers/thoughtsunificator" target="_blank">Snapcraft</a>
+			|
+			<a href="https://openuserjs.org/users/thoughtsunificator" target="_blank">OpenUserJS</a>
+			|
+			<a href="https://www.codewars.com/users/romain_lebesle" target="_blank">codewars</a>
+		</nav>
+		<address class="vcard">
 			<h1>Romain Lebesle</h1>
-			<h3>Software Engineer</h3>
-			<div class="contact">
-				<div><b>Mail:</b><a href="mailto:job@thoughtsunificator.me" style="">job@thoughtsunificator.me</a></div>
-				<div><b>Location:</b>Rennes, France</div>
-				<div><b>Homepage:</b><a target="_blank" href="https://thoughtsunificator.me">thoughtsunificator.me</a></div>
-			</div>
-		</div>
+			<h3>Full stack Developer</h3>
+			<dl class="contact">
+				<dt>Mail:</dt>
+				<dd><a href="mailto:job@thoughtsunificator.me" style="">job@thoughtsunificator.me</a></dd>
+				<dt>Homepage:</dt>
+				<dd><a target="_blank" href="https://thoughtsunificator.me">thoughtsunificator.me</a></dd>
+			</dl>
+		</address>
 		<img class="photo" src="https://en.gravatar.com/userimage/185825515/7a1fc08866f02fb2203473a3fe1a728a.jpg?size=1000" alt="My photo" />
 	</header>
 	<section>
-		<h2>Experience</h2>
+		<h2>Publications</h2>
 		<div class="records">
 			<div class="record">
 				<p><b>domodel</b> – JavaScript Library</p>
-				<p>Front-end library to organize the user interface in models (appearance) and binding (behavior), it also integrates observable programming patterns. </p>
+				<p>LibrairieFront-end library to organize the user interface in models (appearance) and binding (behavior), it also integrates observable programming patterns. </p>
 			</div>
 			<div class="record">
 				<p><b>bbcode-parser</b> – JavaScript Library</p>
 				<p>Zero dependencoies BBCode parser.</p>
 			</div>
 			<div class="record">
-				<p><b>domodel-diary</b> – JavaScript Application</p>
+				<p><b>domodel-diary</b> – Application JavaScript</p>
 				<p>Lightweight password protected diary application.</p>
 			</div>
-			<div class="record">
-				<small>* This list is partial as it only includes my open-source projects and mainly those in JavaScript .</small>
-				<p>These projects are open-source and are available on my Github: <a target="_blank" href="https://github.com/thoughtsunificator">https://github.com/thoughtsunificator</a></p>
-			</div>
 		</div>
 	</section>
 	<section>
-		<h2>Skill set</h2>
-		<div class="records skills">
-			<section>
-				<h3>Front-end</h3>
-				<div class="groups">
-					<div>JavaScript</div>
-					<div>HTML</div>
-					<div>CSS</div>
-					<div>React</div>
-					<div>JSDoc</div>
-					<div>Electron</div>
-					<div>Browser Extension</div>
-					<div>rollup</div>
-					<div>webpack</div>
-					<div>gulp.js</div>
-					<div>Grunt</div>
-					<div>Java Swing</div>
-					<div>Android WebView</div>
-				</div>
-			</section>
-			<section>
-				<h3>Back-end</h3>
-				<div class="groups">
-					<div>Node.js</div>
-					<div>Express.js</div>
-					<div>MySQL</div>
-					<div>PostgreSQL</div>
-					<div>MongoDB</div>
-					<div>MariaDB</div>
-					<div>sequelize</div>
-					<div>Mongoose</div>
-					<div>Java</div>
-					<div>PHP</div>
-					<div>Laravel</div>
-					<div>Symfony</div>
-				</div>
-			</section>
-			<section>
-				<h3>Other</h3>
-				<div class="groups">
-					<div>git</div>
-					<div>nodeunit</div>
-					<div>JSDom</div>
-					<div>Linux</div>
-					<div>Docker</div>
-					<div>Travis CI</div>
-					<div>GitLab CI</div>
-					<div>DevOps</div>
-					<div>Agile</div>
-					<div>TDD</div>
-					<div>Github Actions</div>
-					<div>WordPress</div>
-				</div>
-			</section>
-		</div>
-	</section>
-	<section>
-		<h2>Education</h2>
+		<h2>Expériences</h2>
 		<div class="records">
 			<div class="record columns">
 				<div>
-					<div>2019 – 2021</div>
-					<small>Rennes, France</small>
-				</div>
-				<div>
-					<div><b>Bac + 2 Web Developer / Integrator</b></div>
-					<div style="margin-top: 5px"><i><u>Web@cademie</u> by <u>Epitech</u></i></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<h2>Work Experience</h2>
-		<div class="records">
-			<div class="record columns">
-				<div>
-					<div>Nov. 2021 – Present</div>
+					<div class="period"><time>Nov. 2021</time> – <time>Présent</time></div>
 					<small>Rennes, France</small>
 				</div>
 				<div>
@@ -324,34 +256,189 @@
 					<div>Lead Developer</div>
 					<ul><li>Architecture, design and development of user interfaces and APIs in a data center environment.</li></ul>
 				</div>
+				<div class ="skills">
+					<div>JavaScript</div>
+					<div>HTML</div>
+					<div>PHP</div>
+					<div>rollup</div>
+					<div>mocha</div>
+					<div>Linux</div>
+					<div>Node.js</div>
+					<div>Architecture design</div>
+					<div>Spec Writing</div>
+					<div>Full Stack</div>
+					<div>Network Infrastructure</div>
+					<div>TDD</div>
+					<div>Express</div>
+					<div>koa</div>
+					<div>microservices</div>
+				</div>
 			</div>
 			<div class="record columns">
 				<div>
-					<div>Mar. 2021 – Present</div>
+					<div class="period"><time>Mar. 2021</time> – <time>Nov. 2021</time></div>
 					<small>Rennes, France</small>
 				</div>
 				<div>
 					<div><b>Freelance</b></div>
-					<div>Software Engineer</div>
+					<div>Full stack Developer</div>
 					<ul>
 						<li>Working on web projects for freelancers platforms such as upwork.com et freelancer.com.</li>
-						<li>Code reviews for various clients on upwork.com and freelancer.com</li>
+						<li>Code reviews for various clients on upwork.com and freelance.com</li>
 						<li>Development and maintenance of open-source libraries.</li>
 					</ul>
+				</div>
+				<div class="skills">
+					<div>JavaScript</div> <div>HTML</div> <div>CSS</div> <div>React</div> <div>PHP</div> <div>MySQL</div> <div>Android</div> <div>WebView</div> <div>Symfony</div> <div>Code Review</div> <div>Full Stack</div> <div>Electron.JS</div> <div>JSDoc</div> <div>Open Source</div> <div>CI-CD</div> <div>TDD</div> <div>Express</div> <div>microservices</div>
 				</div>
 			</div>
 			<div class="record columns">
 				<div>
-					<div>Mar. 2020 – Mar. 2021</div>
+					<div class="period"><time>Mar. 2020</time> – <time>Mar. 2021</time></div>
 					<small>Rennes, France</small>
 				</div>
 				<div>
 					<div><b>Etude SEGUR</b></div>
-					<div>Software Engineer</div>
+					<div>Full stack Developer</div>
 					<ul>
-						<li>Development of a web application allowing genealogists to create and manipulate family trees dedicated to notaries.</li>
-						<li>Setting up of a network infrastructure with a remote access .</li>
+						<li>Developed of a web application allowing genealogists to create and manipulate family trees dedicated to notaries</li>
+						<li>Planned and documented the transition of the IT infrastructure</li>
+						<li>Closed external access to the IT infrastructure and setup strict routing rules.</li>
+						<li>Installed a server rack</li>
+						<li>Set up of a network infrastructure with a remote access</li>
+						<li>Built a gedcom parser for the web application</li>
+						<li>Wrote technical documentation and improved existing documentation of internal processes</li>
 					</ul>
+				</div>
+				<div class="skills">
+					<div>JavaScript</div> <div>Node.js</div> <div>Full Stack</div> <div>Network</div> <div>Infrastructure</div> <div>SysAdmin</div> <div>Linux</div> <div>Proxmox</div> <div>FreePBX</div> <div>Architecture design</div> <div>Spec Writing</div> <div>CI-CD</div> <div>TDD</div> <div>Express</div><br>
+				</div>
+			</div>
+			<div class="record columns">
+				<div>
+					<div class="period"><time>Feb. 2016</time> – <time>Mar. 2019</time></div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>Romain Lebesle</b></div>
+					<div>Full stack Developer</div>
+					<ul>
+						<li>Plug-ins WordPress pour divers clients sur upwork.com</li>
+						<li>Bot & Scraper IMDB for a client on freelancer.com</li>
+						<li>Code reviews for various clients on upwork.com and freelance.com</li>
+						<li>5000 installs on the Chrome Web Store for the browser extension BetterMyAnimeList</li>
+						<li>Published initial release of domodel, a front-end librarie</li>
+					</ul>
+				</div>
+				<div class="skills">
+					<div>JavaScript</div> <div>HTML</div> <div>React</div> <div>WordPress</div> <div>PHP</div> <div>Scraping</div> <div>Mongoose</div> <div>MongoDB</div> <div>Android</div> <div>Node.js</div> <div>PostgreSQL</div> <div>Symfony</div> <div>Code Review</div> <div>sequelize</div> <div>React</div> <div>JSDoc</div> <div>Open Source</div> <div>CI-CD</div> <div>TDD</div> <div>Express</div><br>
+				</div>
+			</div>
+			<div class="record columns">
+				<div>
+					<div class="period"><time>Janv. 2015</time> – <time>Feb. 2016</time></div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>Personal Project</b></div>
+					<div>Full stack Developer</div>
+					<ul>
+						<li>Published initial release of bbcode-parser, a zero dependencies BBCode parser with an API similitar to the DOM</li>
+						<li>Published initial release of userinterface.js, a front-end librarie</li>
+					</ul>
+				</div>
+				<div class="skills">
+					<div>JavaScript</div> <div>DOM</div> <div>Node.js</div> <div>React</div> <div>JS</div> <div>Design Patterns</div> <div>JSDoc</div> <div>Open Source</div> <div>CI-CD</div> <div>TDD</div> <div>Express</div><br>
+				</div>
+			</div>
+			<div class="record columns">
+				<div>
+					<div class="period"><time>Janv. 2014</time> – <time>Janv. 2015</time></div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>Personal Project</b></div>
+					<div>Full stack Developer</div>
+					<ul>
+						<li>Built various userscripts for myanimelist.net</li>
+						<li>Published initial release of BetterHorribleSubs, a browser extension that adds many features to horriblesubs.info</li>
+						<li>Published initial release of BetterMyAnimeList, a browser extension that adds many features to myanimelist.net</li>
+						<li>Deepen understanding of various DOM APIs</li>
+					</ul>
+				</div>
+				<div class="skills">
+					<div>HTML</div> <div>CSS</div> <div>JavaScript</div> <div>grunt</div> <div>gulp</div> <div>DOM</div> <div>UX Design</div> <div>UserScripts</div> <div>Node.js</div> <div>Express</div><br>
+				</div>
+			</div>
+			<div class="record columns">
+				<div>
+					<div class="period"><time>Janv. 2013</time> – <time>Janv. 2014</time></div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>Personal Project</b></div>
+					<div>Full stack Developer</div>
+					<ul>
+						<li>Webite anime database</li>
+						<li>Built a forum with Laravel</li>
+						<li>Deepened understanding of various protocol stacks</li>
+					</ul>
+				</div>
+				<div class="skills">
+					<div>HTML</div> <div>CSS</div> <div>PHP</div> <div>MVC</div> <div>Laravel</div> <div>OOP</div><br>
+				</div>
+			</div>
+			<div class="record columns">
+				<div>
+					<div class="period"><time>Janv. 2012</time> – <time>Janv. 2013</time></div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>Personal Project</b></div>
+					<div>Full stack Developer</div>
+					<ul>
+						<li>Made a tiny implementation of the HTTP protocol for a small web server</li>
+						<li>Built a desktop application that reconnects automatically to public wifi using given credentials (Java Swing)</li>
+						<li>Deepened understanding of various Java APIs</li>
+					</ul>
+				</div>
+				<div class="skills">
+					<div>HTML</div> <div>CSS</div> <div>Java</div> <div>Java Swing</div> <div>PHP</div> <div>OOP</div><br>
+				</div>
+			</div>
+			<div class="record columns">
+				<div>
+					<div class="period"><time>Janv. 2011</time> – <time>Janv. 2012</time></div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>Personal Project</b></div>
+					<div>Full stack Developer</div>
+					<ul>
+						<li>Understanding of packet architectures (client-server)</li>
+						<li>Improvements and fixes for emulators (server)</li>
+						<li>Client improvements (ActionScript)</li>
+						<li>Automated shop via micropayments for in-game items and services</li>
+						<li>Managing and promoting of a top 10 private game server with +100 simultaneous players</li>
+					</ul>
+				</div>
+				<div class="skills">
+					<div>Actionscript</div> <div>CSS</div> <div>Développement</div> <div>Full stack</div> <div>Java</div> <div>MySQL</div> <div>PHP</div> <div>Symfony</div> <div>Reverse Engineering</div><br>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>Education</h2>
+		<div class="records">
+			<div class="record columns">
+				<div>
+					<div class="period"><time>2019</time> – <time>2021</time></div>
+					<small>Rennes, France</small>
+				</div>
+				<div>
+					<div><b>Bac + 2 Web Developer / Integrator</b></div>
+					<div style="margin-top: 5px"><i><u>Web@cademie</u> by <u>Epitech</u></i></div>
 				</div>
 			</div>
 		</div>
