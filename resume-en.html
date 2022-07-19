@@ -5,193 +5,202 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+	html {
+		background-color: rgba(42, 42, 46, 1);
+	}
+
+	body {
+		display: grid;
+		font-family: baskerville, bask, serif;
+		background-color: white;
+		margin: auto;
+		font-size: 14px;
+		max-width: 27cm;
+		padding-bottom: 15px;
+	}
+
+	p, ul {
+		margin: 8px;
+	}
+
+	p:first-child, ul:first-child {
+		margin-top: 0;
+	}
+
+	header {
+		margin-top: 10px;
+		margin-right: 10px;
+		display: grid;
+		place-items: center;
+	}
+
+	body > section {
+		display: grid;
+	}
+
+	.vcard {
+		grid-row: 1;
+		grid-column: 1;
+		justify-self: center;
+	}
+
+	.vcard h1, .vcard h3 {
+		padding: 0;
+		margin: 0;
+	}
+
+	.vcard h1 {
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+	}
+
+	.vcard h3 {
+		font-size: 1.3em;
+		font-weight: normal;
+		margin-top: 5px;
+	}
+
+	.vcard .contact {
+		font-family: Noto;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 2px;
+		margin-top: 15px;
+	}
+
+	.photo {
+		grid-row: 1;
+		grid-column: 1;
+		justify-self: end;
+		width: 150px;
+		object-fit: cover;
+		height: 150px;
+		border-radius: 100%;
+	}
+
+	section h2 {
+		letter-spacing: 0.1em;
+		font-family: Noto;
+		padding: 2px;
+		text-indent: 50px;
+		border-bottom: 1px solid black;
+	}
+
+	.records {
+		justify-self: center;
+		width: 85%;
+	}
+
+	body > section:nth-of-type(1) > .records {
+		display: grid;
+		grid-template-columns: auto auto;
+		place-items: baseline;
+	}
+
+	.record + .record {
+		margin-top: 20px;
+	}
+
+	.record.columns {
+		display: grid;
+	  grid-row-gap: 10px;
+		grid-template-columns: auto 1fr;
+	}
+
+	.record.columns > div:first-child {
+		max-width: 250px;
+		min-width: 250px;
+	}
+
+	.note {
+		margin-top: 20px;
+	}
+
+	.hobbies {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: max-content;
+		grid-gap: 10px;
+	}
+
+	#lang {
+		position:absolute;
+		padding:10px;
+		display:flex;
+		column-gap:10px;
+		top:25px
+	}
+
+	.links {
+		text-align: center;
+	}
+
+	.back {
+		position:absolute;
+		padding:10px
+	}
+
+	.skills {
+		display: flex;
+		place-items: center;
+		grid-column: span 2;
+		flex-wrap: wrap;
+		opacity: 0.8;
+	}
+
+	.skills > div {
+		border: 1px solid black;
+		padding: 1px 3px;
+		margin: 2px 6px;
+	}
+
+	@media (max-width: 600px) {
 		html {
-			background-color: rgba(42, 42, 46, 1);
+			background-color: initial;
 		}
-
-		body {
-			display: grid;
-			font-family: baskerville, bask, serif;
-			background-color: white;
-			margin: auto;
-			font-size: 14px;
-			max-width: 27cm;
-			padding-bottom: 15px;
-		}
-
-		p, ul {
-			margin: 8px;
-		}
-
-		p:first-child, ul:first-child {
-			margin-top: 0;
-		}
-
-		header {
-			margin-top: 10px;
-			margin-right: 10px;
-			display: grid;
-			place-items: center;
-		}
-
-		body > section {
-			display: grid;
-		}
-
-		.vcard {
-			grid-row: 1;
-			grid-column: 1;
+		#lang,
+		.back {
 			justify-self: center;
+			position: initial!important;
 		}
+	}
 
-		.vcard h1, .vcard h3 {
-			padding: 0;
-			margin: 0;
+	@media screen and (max-width: 650px) {
+		header {
+			grid-gap: 20px;
 		}
-
-		.vcard h1 {
-			text-transform: uppercase;
-			letter-spacing: 0.2em;
-		}
-
-		.vcard h3 {
-			font-size: 1.3em;
-			font-weight: normal;
-			margin-top: 5px;
-		}
-
-		.vcard .contact {
-			font-family: Noto;
-			display: grid;
-			grid-template-columns: auto auto;
-			grid-gap: 2px;
-			margin-top: 15px;
-		}
-
 		.photo {
-			grid-row: 1;
-			grid-column: 1;
-			justify-self: end;
-			width: 150px;
-			object-fit: cover;
-			height: 150px;
-			border-radius: 100%;
-		}
-
-		section h2 {
-			letter-spacing: 0.1em;
-			font-family: Noto;
-			padding: 2px;
-			text-indent: 50px;
-			border-bottom: 1px solid black;
+			justify-self: center;
+			grid-row: 2;
 		}
 
 		.records {
-			justify-self: center;
-			width: 85%;
-		}
-
-		.record + .record {
-			margin-top: 20px;
+			display: grid;
 		}
 
 		.record.columns {
-			display: grid;
+			grid-auto-flow: row;
 		}
 
-		.record.columns > div:first-child {
-			max-width: 250px;
-			min-width: 250px;
+		.record ul {
+			padding-left: 0;
 		}
 
-		.note {
-			margin-top: 20px;
+		.record li {
+			list-style: none;
 		}
+	}
 
-		.hobbies {
-			display: grid;
-			grid-auto-flow: column;
-			grid-auto-columns: max-content;
-			grid-gap: 10px;
+	@media print {
+		body {
+			margin: 0;
+			font-size: 12.5px;
 		}
-
-		#lang {
-			position:absolute;
-			padding:10px;
-			display:flex;
-			column-gap:10px;
-			top:25px
+		.skills .group > div:not(:first-child) {
+			margin-left: 5px;
 		}
-
-		.links {
-			text-align: center;
-		}
-
-		.back {
-			position:absolute;
-			padding:10px
-		}
-
-		.skills {
-			display: flex;
-			place-items: center;
-			flex-wrap: wrap;
-		}
-
-		.skills > div {
-			border: 1px solid #17141447;
-			padding: 1px 3px;
-			margin: 2px 6px;
-			border-radius: 5px;
-		}
-
-		@media (max-width: 600px) {
-			html {
-				background-color: initial;
-			}
-			#lang,
-			.back {
-				justify-self: center;
-				position: initial!important;
-			}
-		}
-
-		@media screen and (max-width: 650px) {
-			header {
-				grid-gap: 20px;
-			}
-			.photo {
-				justify-self: center;
-				grid-row: 2;
-			}
-
-			.records {
-				display: grid;
-			}
-
-			.record.columns {
-				grid-auto-flow: row;
-			}
-
-			.record ul {
-				padding-left: 0;
-			}
-
-			.record li {
-				list-style: none;
-			}
-		}
-
-		@media print {
-			body {
-				margin: 0;
-				font-size: 12.5px;
-			}
-			.skills .group > div:not(:first-child) {
-				margin-left: 5px;
-			}
-		}
-	</style>
+	}
+</style>
 </head>
 <body><a class="back" target="_blank" href="/">Homepage</a><nav id="lang"><b>EN</b>|<a href="resume.html">FR</a></nav>
 	<header>
@@ -234,12 +243,24 @@
 				<p>Front-end library to organize the user interface in models (appearance) and binding (behavior), it also integrates observable programming patterns. </p>
 			</div>
 			<div class="record">
-				<p><b>bbcode-parser</b> – JavaScript Library</p>
-				<p>Zero dependencies BBCode parser.</p>
+				<p><b>dev.to</b> – Web Article</p>
+				<p><a target="_blank" href="https://dev.to/thoughtsunificator/userinterfacejs-small-front-end-library-2b8k">userinterface.js - Small front-end library </a></p>
 			</div>
 			<div class="record">
 				<p><b>domodel-diary</b> – JavaScript Application</p>
 				<p>Lightweight password protected diary application.</p>
+			</div>
+			<div class="record">
+				<p><b>dev.to</b> – Web Article</p>
+				<p><a target="_blank" href="https://dev.to/thoughtsunificator/how-to-build-a-grid-system-in-javascript-m5n">How to build a Grid system in JavaScript</a></p>
+			</div>
+			<div class="record">
+				<p><b>bbcode-parser</b> – JavaScript Library</p>
+				<p>Zero dependencies BBCode parser.</p>
+			</div>
+			<div class="record">
+				<p><b>dev.to</b> – Web Article</p>
+				<p><a target="_blank" href="https://dev.to/thoughtsunificator/domodel-es6-modules-based-front-end-library-13dg">domodel - ES6 Modules based front-end library </a></p>
 			</div>
 		</div>
 	</section>
@@ -250,12 +271,12 @@
 				<div>
 					<div class="period"><time>Nov. 2021</time> – <time>Présent</time></div>
 					<small>Rennes, France</small>
+					<div><b>ICODIA</b></div>
+					<u>Lead Developer</u>
 				</div>
 				<div>
-					<div><b>ICODIA</b></div>
-					<div>Lead Developer</div>
+					<div>Architecture, design and development of user interfaces and APIs in a data center environment.</div>
 					<ul>
-						<li>Architecture, design and development of user interfaces and APIs in a data center environment.</li>
 						<li>Analysis of customer needs.</li>
 						<li>Writing of specifications.</li>
 						<li>Writing of technical documentation.</li>
@@ -285,13 +306,16 @@
 				<div>
 					<div class="period"><time>Mar. 2021</time> – <time>Nov. 2021</time></div>
 					<small>Rennes, France</small>
+					<div><b>Freelance</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Freelance</b></div>
-					<div>Full stack Developer</div>
+					<div>Full stack development for several clients on upwork.com and freelancer.com.</div>
 					<ul>
-						<li>Working on web projects for freelancers platforms such as upwork.com et freelancer.com.</li>
-						<li>Code reviews for various clients on upwork.com and freelance.com</li>
+						<li>Code reviews.</li>
+						<li>Bot & Scraping</li>
+						<li>IPB Modules</li>
+						<li>Development and publishing of Browser Extensions</li>
 						<li>Development and maintenance of open-source libraries.</li>
 					</ul>
 				</div>
@@ -303,12 +327,12 @@
 				<div>
 					<div class="period"><time>Mar. 2020</time> – <time>Mar. 2021</time></div>
 					<small>Rennes, France</small>
+					<div><b>Etude SEGUR</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Etude SEGUR</b></div>
-					<div>Full stack Developer</div>
+					<div>Developed of a web application allowing genealogists to create and manipulate family trees dedicated to notaries</div>
 					<ul>
-						<li>Developed of a web application allowing genealogists to create and manipulate family trees dedicated to notaries</li>
 						<li>Planned and documented the transition of the IT infrastructure</li>
 						<li>Closed external access to the IT infrastructure and setup strict routing rules.</li>
 						<li>Installed a server rack</li>
@@ -325,14 +349,15 @@
 				<div>
 					<div class="period"><time>Feb. 2016</time> – <time>Mar. 2019</time></div>
 					<small>Rennes, France</small>
+					<div><b>Romain Lebesle</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Romain Lebesle</b></div>
-					<div>Full stack Developer</div>
+					<div>Full stack development for several clients on upwork.com and freelancer.com.</div>
 					<ul>
-						<li>Plug-ins WordPress pour divers clients sur upwork.com</li>
-						<li>Bot & Scraper IMDB for a client on freelancer.com</li>
-						<li>Code reviews for various clients on upwork.com and freelance.com</li>
+						<li>Plug-ins WordPres</li>
+						<li>Bot & Scraper IMDB</li>
+						<li>Code reviews</li>
 						<li>5000 installs on the Chrome Web Store for the browser extension BetterMyAnimeList</li>
 						<li>Published initial release of domodel, a front-end librarie</li>
 					</ul>
@@ -345,10 +370,11 @@
 				<div>
 					<div class="period"><time>Janv. 2015</time> – <time>Feb. 2016</time></div>
 					<small>Rennes, France</small>
+					<div><b>Personal Project</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Personal Project</b></div>
-					<div>Full stack Developer</div>
+					<div>Development and maintenance of seval open-source projets.</div>
 					<ul>
 						<li>Published initial release of bbcode-parser, a zero dependencies BBCode parser with an API similitar to the DOM</li>
 						<li>Published initial release of userinterface.js, a front-end librarie</li>
@@ -362,12 +388,12 @@
 				<div>
 					<div class="period"><time>Janv. 2014</time> – <time>Janv. 2015</time></div>
 					<small>Rennes, France</small>
+					<div><b>Personal Project</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Personal Project</b></div>
-					<div>Full stack Developer</div>
+					<div>Development and publishing of several userscripts and browser extensions</div>
 					<ul>
-						<li>Built various userscripts for myanimelist.net</li>
 						<li>Published initial release of BetterHorribleSubs, a browser extension that adds many features to horriblesubs.info</li>
 						<li>Published initial release of BetterMyAnimeList, a browser extension that adds many features to myanimelist.net</li>
 						<li>Deepen understanding of various DOM APIs</li>
@@ -381,12 +407,12 @@
 				<div>
 					<div class="period"><time>Janv. 2013</time> – <time>Janv. 2014</time></div>
 					<small>Rennes, France</small>
+					<div><b>Personal Project</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Personal Project</b></div>
-					<div>Full stack Developer</div>
+					<div>Development and maintenance of an anime database webite</div>
 					<ul>
-						<li>Webite anime database</li>
 						<li>Built a forum with Laravel</li>
 						<li>Deepened understanding of various protocol stacks</li>
 					</ul>
@@ -399,10 +425,11 @@
 				<div>
 					<div class="period"><time>Janv. 2012</time> – <time>Janv. 2013</time></div>
 					<small>Rennes, France</small>
+					<div><b>Personal Project</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Personal Project</b></div>
-					<div>Full stack Developer</div>
+					<div>Various developments around the Java and PHP ecosystems.</div>
 					<ul>
 						<li>Made a tiny implementation of the HTTP protocol for a small web server</li>
 						<li>Built a desktop application that reconnects automatically to public wifi using given credentials (Java Swing)</li>
@@ -417,10 +444,11 @@
 				<div>
 					<div class="period"><time>Janv. 2011</time> – <time>Janv. 2012</time></div>
 					<small>Rennes, France</small>
+					<div><b>Personal Project</b></div>
+					<u>Full stack Developer</u>
 				</div>
 				<div>
-					<div><b>Personal Project</b></div>
-					<div>Full stack Developer</div>
+					<div>Development and management of a private game server.</div>
 					<ul>
 						<li>Understanding of packet architectures (client-server)</li>
 						<li>Improvements and fixes for emulators (server)</li>

@@ -5,193 +5,202 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+	html {
+		background-color: rgba(42, 42, 46, 1);
+	}
+
+	body {
+		display: grid;
+		font-family: baskerville, bask, serif;
+		background-color: white;
+		margin: auto;
+		font-size: 14px;
+		max-width: 27cm;
+		padding-bottom: 15px;
+	}
+
+	p, ul {
+		margin: 8px;
+	}
+
+	p:first-child, ul:first-child {
+		margin-top: 0;
+	}
+
+	header {
+		margin-top: 10px;
+		margin-right: 10px;
+		display: grid;
+		place-items: center;
+	}
+
+	body > section {
+		display: grid;
+	}
+
+	.vcard {
+		grid-row: 1;
+		grid-column: 1;
+		justify-self: center;
+	}
+
+	.vcard h1, .vcard h3 {
+		padding: 0;
+		margin: 0;
+	}
+
+	.vcard h1 {
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+	}
+
+	.vcard h3 {
+		font-size: 1.3em;
+		font-weight: normal;
+		margin-top: 5px;
+	}
+
+	.vcard .contact {
+		font-family: Noto;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 2px;
+		margin-top: 15px;
+	}
+
+	.photo {
+		grid-row: 1;
+		grid-column: 1;
+		justify-self: end;
+		width: 150px;
+		object-fit: cover;
+		height: 150px;
+		border-radius: 100%;
+	}
+
+	section h2 {
+		letter-spacing: 0.1em;
+		font-family: Noto;
+		padding: 2px;
+		text-indent: 50px;
+		border-bottom: 1px solid black;
+	}
+
+	.records {
+		justify-self: center;
+		width: 85%;
+	}
+
+	body > section:nth-of-type(1) > .records {
+		display: grid;
+		grid-template-columns: auto auto;
+		place-items: baseline;
+	}
+
+	.record + .record {
+		margin-top: 20px;
+	}
+
+	.record.columns {
+		display: grid;
+	  grid-row-gap: 10px;
+		grid-template-columns: auto 1fr;
+	}
+
+	.record.columns > div:first-child {
+		max-width: 250px;
+		min-width: 250px;
+	}
+
+	.note {
+		margin-top: 20px;
+	}
+
+	.hobbies {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: max-content;
+		grid-gap: 10px;
+	}
+
+	#lang {
+		position:absolute;
+		padding:10px;
+		display:flex;
+		column-gap:10px;
+		top:25px
+	}
+
+	.links {
+		text-align: center;
+	}
+
+	.back {
+		position:absolute;
+		padding:10px
+	}
+
+	.skills {
+		display: flex;
+		place-items: center;
+		grid-column: span 2;
+		flex-wrap: wrap;
+		opacity: 0.8;
+	}
+
+	.skills > div {
+		border: 1px solid black;
+		padding: 1px 3px;
+		margin: 2px 6px;
+	}
+
+	@media (max-width: 600px) {
 		html {
-			background-color: rgba(42, 42, 46, 1);
+			background-color: initial;
 		}
-
-		body {
-			display: grid;
-			font-family: baskerville, bask, serif;
-			background-color: white;
-			margin: auto;
-			font-size: 14px;
-			max-width: 27cm;
-			padding-bottom: 15px;
-		}
-
-		p, ul {
-			margin: 8px;
-		}
-
-		p:first-child, ul:first-child {
-			margin-top: 0;
-		}
-
-		header {
-			margin-top: 10px;
-			margin-right: 10px;
-			display: grid;
-			place-items: center;
-		}
-
-		body > section {
-			display: grid;
-		}
-
-		.vcard {
-			grid-row: 1;
-			grid-column: 1;
+		#lang,
+		.back {
 			justify-self: center;
+			position: initial!important;
 		}
+	}
 
-		.vcard h1, .vcard h3 {
-			padding: 0;
-			margin: 0;
+	@media screen and (max-width: 650px) {
+		header {
+			grid-gap: 20px;
 		}
-
-		.vcard h1 {
-			text-transform: uppercase;
-			letter-spacing: 0.2em;
-		}
-
-		.vcard h3 {
-			font-size: 1.3em;
-			font-weight: normal;
-			margin-top: 5px;
-		}
-
-		.vcard .contact {
-			font-family: Noto;
-			display: grid;
-			grid-template-columns: auto auto;
-			grid-gap: 2px;
-			margin-top: 15px;
-		}
-
 		.photo {
-			grid-row: 1;
-			grid-column: 1;
-			justify-self: end;
-			width: 150px;
-			object-fit: cover;
-			height: 150px;
-			border-radius: 100%;
-		}
-
-		section h2 {
-			letter-spacing: 0.1em;
-			font-family: Noto;
-			padding: 2px;
-			text-indent: 50px;
-			border-bottom: 1px solid black;
+			justify-self: center;
+			grid-row: 2;
 		}
 
 		.records {
-			justify-self: center;
-			width: 85%;
-		}
-
-		.record + .record {
-			margin-top: 20px;
+			display: grid;
 		}
 
 		.record.columns {
-			display: grid;
+			grid-auto-flow: row;
 		}
 
-		.record.columns > div:first-child {
-			max-width: 250px;
-			min-width: 250px;
+		.record ul {
+			padding-left: 0;
 		}
 
-		.note {
-			margin-top: 20px;
+		.record li {
+			list-style: none;
 		}
+	}
 
-		.hobbies {
-			display: grid;
-			grid-auto-flow: column;
-			grid-auto-columns: max-content;
-			grid-gap: 10px;
+	@media print {
+		body {
+			margin: 0;
+			font-size: 12.5px;
 		}
-
-		#lang {
-			position:absolute;
-			padding:10px;
-			display:flex;
-			column-gap:10px;
-			top:25px
+		.skills .group > div:not(:first-child) {
+			margin-left: 5px;
 		}
-
-		.links {
-			text-align: center;
-		}
-
-		.back {
-			position:absolute;
-			padding:10px
-		}
-
-		.skills {
-			display: flex;
-			place-items: center;
-			flex-wrap: wrap;
-		}
-
-		.skills > div {
-			border: 1px solid #17141447;
-			padding: 1px 3px;
-			margin: 2px 6px;
-			border-radius: 5px;
-		}
-
-		@media (max-width: 600px) {
-			html {
-				background-color: initial;
-			}
-			#lang,
-			.back {
-				justify-self: center;
-				position: initial!important;
-			}
-		}
-
-		@media screen and (max-width: 650px) {
-			header {
-				grid-gap: 20px;
-			}
-			.photo {
-				justify-self: center;
-				grid-row: 2;
-			}
-
-			.records {
-				display: grid;
-			}
-
-			.record.columns {
-				grid-auto-flow: row;
-			}
-
-			.record ul {
-				padding-left: 0;
-			}
-
-			.record li {
-				list-style: none;
-			}
-		}
-
-		@media print {
-			body {
-				margin: 0;
-				font-size: 12.5px;
-			}
-			.skills .group > div:not(:first-child) {
-				margin-left: 5px;
-			}
-		}
-	</style>
+	}
+</style>
 </head>
 <body><a class="back" target="_blank" href="/">Page daccueil</a><nav id="lang"><a href="resume-en.html">EN</a>|<b>FR</b></nav>
 	<header>
@@ -238,12 +247,24 @@
 				<p>Librairie front-end permettant d'organiser l'interface utilisateur en modèles (apparence) et binding (comportement), elle intègre également des patterns de la programmation observable.</p>
 			</div>
 			<div class="record">
-				<p><b>bbcode-parser</b> – Librairie JavaScript</p>
-				<p>Parser bbcode avec comme particularité un modèle de données basé sur le DOM.</p>
+				<p><b>dev.to</b> – Web Article</p>
+				<p><a target="_blank" href="https://dev.to/thoughtsunificator/userinterfacejs-small-front-end-library-2b8k">userinterface.js - Small front-end library </a></p>
 			</div>
 			<div class="record">
 				<p><b>domodel-diary</b> – Application JavaScript</p>
 				<p>Application très légère permettant de tenir un journal de notes chifrées, protégées par un mot de passe.</p>
+			</div>
+			<div class="record">
+				<p><b>dev.to</b> – Web Article</p>
+				<p><a target="_blank" href="https://dev.to/thoughtsunificator/how-to-build-a-grid-system-in-javascript-m5n">How to build a Grid system in JavaScript</a></p>
+			</div>
+			<div class="record">
+				<p><b>bbcode-parser</b> – Librairie JavaScript</p>
+				<p>Parser bbcode avec comme particularité un modèle de données basé sur le DOM.</p>
+			</div>
+			<div class="record">
+				<p><b>dev.to</b> – Web Article</p>
+				<p><a target="_blank" href="https://dev.to/thoughtsunificator/domodel-es6-modules-based-front-end-library-13dg">domodel - ES6 Modules based front-end library </a></p>
 			</div>
 		</div>
 	</section>
@@ -254,12 +275,12 @@
 				<div>
 					<div class="period"><time>Nov. 2021</time> – <time>Présent</time></div>
 					<small>Rennes, France</small>
+					<div><b>ICODIA</b></div>
+					<u>Lead Developer</u>
 				</div>
 				<div>
-					<div><b>ICODIA</b></div>
-					<div>Lead Developer</div>
+					<div>Architecture, design et développement d'interfaces utilisateur et APIs dans le context d'un data center.</div>
 					<ul>
-						<li>Architecture, design et développement d'interfaces utilisateur et APIs dans le context d'un data center.</li>
 						<li>Analyse des besoins clients.</li>
 						<li>Rédactions de specifications.</li>
 						<li>Rédactions de documentation technique.</li>
@@ -289,14 +310,17 @@
 				<div>
 					<div class="period"><time>Mar. 2021</time> – <time>Nov. 2021</time></div>
 					<small>Rennes, France</small>
+					<div><b>Freelance</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Freelance</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Développement full stack pour divers clients sur les sites upwork.com et freelancer.com.</div>
 					<ul>
-						<li>Réalisation de projets web notamment sur upwork.com et freelancer.com.</li>
-				    <li>Code reviews pour divers clients sur upwork.com et freelancer.com</li>
-				    <li>Développement et maintenance de librairies open-source.</li>
+						<li>Code reviews.</li>
+						<li>Bot & Scraping</li>
+						<li>Développement de modules IPB</li>
+						<li>Développement et publication de Browser Extension</li>
+						<li>Développement et maintenance de librairies open-source.</li>
 					</ul>
 				</div>
 				<div class="skills">
@@ -307,13 +331,19 @@
 				<div>
 					<div class="period"><time>Mar. 2020</time> – <time>Mar. 2021</time></div>
 					<small>Rennes, France</small>
+					<div><b>Etude SEGUR</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Etude SEGUR</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Développement d'une application web pour généalogistes et création et gestion d'un parc informatique</div>
 					<ul>
-						<li>Développement d'une application web permettant aux généalogistes de réaliser et manipuler des arbres généalogiques dédiés aux notaires.</li>
-						<li>Mise en place d'une infrastructure réseau avec accès distant.</li>
+						<li>Développement d'une application web permettant aux généalogistes de réaliser et manipuler des arbres généalogiques dédiés aux notaires</li>
+						<li>Planification, documentation et transition du parc informatique</li>
+						<li>Fermeture de l'accès extérieur au parc informatique et mise en place de règle de routage strict</li>
+						<li>Installation d'une baie de brassage</li>
+						<li>Mise en place d'une infrastructure réseau avec accès distant (VPN)</li>
+						<li>Développement d'un parser Gedcom pour l'application web</li>
+						<li>Documentation technique et documentation des process internes</li>
 					</ul>
 				</div>
 				<div class="skills">
@@ -324,10 +354,11 @@
 				<div>
 					<div class="period"><time>Feb. 2016</time> – <time>Mar. 2019</time></div>
 					<small>Rennes, France</small>
+					<div><b>Romain Lebesle</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Romain Lebesle</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Développement full stack pour divers clients sur les sites upwork.com et freelancer.com.</div>
 					<ul>
 						<li>Plug-ins WordPress pour divers clients sur upwork.com</li>
 						<li>Bot & Scraper IMDB pour un client freelancer.com</li>
@@ -344,12 +375,13 @@
 				<div>
 					<div class="period"><time>Janv. 2015</time> – <time>Feb. 2016</time></div>
 					<small>Rennes, France</small>
+					<div><b>Projet Personnel</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Projet Personnel</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Développement et maintenance de plusieurs projets open-source.</div>
 					<ul>
-						<li>Publié la version initiale de bbcode-parser, un parser BBCode avec comme particularité une API proche de celle du DOM</li>
+						<li>Publié la version initiale de bbcode-parser, un parser BBCode avec comme particularité une API inspirée de l'API Element du DOM.</li>
 						<li>Publié la version initiale de userinterface.js, une librairie front-end</li>
 					</ul>
 				</div>
@@ -361,12 +393,12 @@
 				<div>
 					<div class="period"><time>Janv. 2014</time> – <time>Janv. 2015</time></div>
 					<small>Rennes, France</small>
+					<div><b>Projet Personnel</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Projet Personnel</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Développement d'userscripts et extension de navigateur pour divers sites web.</div>
 					<ul>
-						<li>Userscripts pour myanimelist.net</li>
 						<li>BetterHorribleSubs, une extension de navigateur permettant de d'améliorer horriblesubs.info</li>
 						<li>BetterMyAnimeList, une extension de navigateur permettant de d'améliorer myanimelist.net</li>
 						<li>Approfondissement des différentes APIs du DOM</li>
@@ -380,13 +412,13 @@
 				<div>
 					<div class="period"><time>Janv. 2013</time> – <time>Janv. 2014</time></div>
 					<small>Rennes, France</small>
+					<div><b>Projet Personnel</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Projet Personnel</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Développement et gestion d'un site web catégorisant des animations japonaise.</div>
 					<ul>
-						<li>Site web catégorisant des animations japonaise</li>
-						<li>Forum avec Laravel</li>
+						<li>Création d'un forum avec Laravel</li>
 						<li>Approfondissement des différentes pile de protocoles</li>
 					</ul>
 				</div>
@@ -398,10 +430,11 @@
 				<div>
 					<div class="period"><time>Janv. 2012</time> – <time>Janv. 2013</time></div>
 					<small>Rennes, France</small>
+					<div><b>Projet Personnel</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Projet Personnel</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Divers développement de projets open-source centré autour de l'écosystème Java et celui de PHP.</div>
 					<ul>
 						<li>Implémentation protocôle HTTP en Java dans un mini serveur web</li>
 						<li>Reconnecteur automatique Wifi public (Java Swing)</li>
@@ -416,10 +449,11 @@
 				<div>
 					<div class="period"><time>Janv. 2011</time> – <time>Janv. 2012</time></div>
 					<small>Rennes, France</small>
+					<div><b>Projet Personnel</b></div>
+					<u>Développeur Full Stack</u>
 				</div>
 				<div>
-					<div><b>Projet Personnel</b></div>
-					<div>Développeur Full Stack</div>
+					<div>Gestion d'un serveur de jeu </div>
 					<ul>
 						<li>Analyse architecture packets (client-serveur)</li>
 						<li>Evolutions emulateurs (serveur)</li>
