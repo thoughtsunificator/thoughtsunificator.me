@@ -6,7 +6,7 @@ I hereby claim:
 
   * I am an admin of https://thoughtsunificator.me
   * I am thoughtsunificat (https://keybase.io/thoughtsunificat) on keybase.
-  * I have a public key with fingerprint D9CC 8358 6452 31E6 16E1  F3DA C11B 5CF0 A785 6B6D
+  * I have a public key ASDfxdcjR5QsL6vUObOr-IXqceFXwrkdspslAxEbR6O8TAo
 
 To do so, I am signing this object:
 
@@ -14,58 +14,39 @@ To do so, I am signing this object:
   "body": {
     "key": {
       "eldest_kid": "0120dfc5d72347942c2fabd439b3abf885ea71e157c2b91db29b2503111b47a3bc4c0a",
-      "fingerprint": "d9cc8358645231e616e1f3dac11b5cf0a7856b6d",
       "host": "keybase.io",
-      "key_id": "c11b5cf0a7856b6d",
-      "kid": "010162e149dd5549dd6b82832e7944d2bb1d02d6be0e1c8169a3204dbe64542b99f20a",
+      "kid": "0120dfc5d72347942c2fabd439b3abf885ea71e157c2b91db29b2503111b47a3bc4c0a",
       "uid": "f489236c0674399df4088f90131e6619",
       "username": "thoughtsunificat"
     },
+    "merkle_root": {
+      "ctime": 1659910262,
+      "hash": "b093e2537997681d74ee285450c663090dc6cc486393109be0eab8c062f8d8357849ad7abc0485e3197a152843376ec3ac5ead342140a34b1163ee954460cf17",
+      "hash_meta": "e09b60625f53237ae9a17108e1437c1c6f8789da382a643ce8cf8b7afa618358",
+      "seqno": 22983203
+    },
     "service": {
+      "entropy": "Wdh7yv8FKAUK43sUeZyLGYiz",
       "hostname": "thoughtsunificator.me",
       "protocol": "https:"
     },
     "type": "web_service_binding",
-    "version": 1
+    "version": 2
   },
-  "ctime": 1659908875,
-  "expire_in": 157680000,
-  "prev": "0a4d72b56e0f3e8349a53a3cbe6e7bbcd566943697605321762ec74e33e23aaf",
-  "seqno": 8,
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.2"
+  },
+  "ctime": 1659910281,
+  "expire_in": 504576000,
+  "prev": "f153abcf31403114abba7ed0537039840cb97532bffe95548657d8c683d31044",
+  "seqno": 16,
   "tag": "signature"
 }
 
 which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.1.13
-Comment: https://keybase.io/crypto
-
-yMNxAnicdVJ/UBRVHD+4oxlhIkViJJhBN0CuOWn37W8qjBhtcKIgsSGhrv3xltvh
-uDvu9oALRARjyhHUCgEbCwYLwWm6IaD4ocjZGAoTU4E22iQN5AzZ2KnpCU7aWyb/
-q/1jd973fT6f/Xw+733zqNEQGTaeUBzsfqe0LGxy/LjXIAbJqGpMdMo+LKMaK4Ur
-H2iXoUezlqoyloHhBMBlRaJlFpAUy1NAAoogyhTJi6QgKhxHQ4ElIEGzEhB5QhYB
-LwIaJwmCEClWIEWJknABs2CK6iiBbpdbdWhIVuYliSNpjqFoQBKQIRhIKKQsSIhG
-SwousBzNiIyMiDanR2cgc6LggemqE83Qwrpi7z/wD33jBAMgQfGyTNP6mxE5wJEA
-ohCUDESRkHGAhhCHhMQRDC+QAKdkESJLFIrCK2DFt3dFTqE4HpCMhDMsis7LCoVz
-nMLjhG6eIXgd6IFuh1AGEVqzOb0lNs3jdaiKKgkatsuCod0KVYJ6wXqi/0E63elo
-bsFcbqfmlJx2BLFpmsuToUtoPpfOqYSi9V81q6g6ZFQsYlRAt0d1OrAMAiElTdXl
-CYbmeWSUpS0YrHKpbmhVdQTNMhyOHv0/sEJvS6DQAYs0A3GFhBxJ8QJNCqSE2oCs
-KEoyzTA8RTI8y+A0CQgWVSuxFCRJCEhBUDA9X7nDiWVwyKZQgiQ9aolD0LxuiO0K
-jBebDGGRhkciwvULZ4hctfrhNWwJPfZAPXlxMoXO76q8c36kobzPsPUyWeVztUVu
-v7R0v7JnW7oxoT/zmPlU85bVUv2k21bg6/bcmRoIWRuxq4tslHPR9HhcafuwMWYu
-3pqonjaMtjTF7lm6uxy/+ev+3a252abw4/Pr7F1M6tHrt+aCodmCZ7G3gL9zKjHu
-3e45oXAt0/nJ9PhPOb7W58u3bDSanp7qy1p21KYl+t+LSBvcey/b1MSvG+j5Kysl
-FdTIbP/3rpMtlhPg2tT1sc7QM3XmD/Y/GSAPv197bP5uXvJrXd9Fn3gBmhPPmdPE
-jjZ/junBIC03/32osOi5HeELdQ03wn6QFhKPXF30m01hv28ZWQiWHXx9x76382ZS
-/whvCti+6thrqB6qz0xTm9vHmnemt7JPrc0+dHNoj7nYEzGclHtWrRqrMjXeuN20
-fmPb5IFgcsz0onFi4ehvWflv7FzM1NxJINgAbkXZZ/hN6jbjx5/ey1xzann3z7N5
-Z4ZjXim8EDeTPZeX0DpTHG4v2h7bU/fhwehQjX8wFF0RKOyo/Uy42duWtFA9f2Zo
-qK1565ubNMtYRIs08FJgzZGC3phfoi0T7Vb/2dEn1h+YTTX0/vhRTU5RyYuXnafP
-26ZHrzji998fuB059wXB113KfXkp2ftnSuyGfYWBvs6L9Y1wZOLbmgtZ+Ru+PHzu
-V+/nAfur1/LmN6/yFV35B/Y0xY0=
-=G/NV
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg38XXI0eULC+r1Dmzq/iF6nHhV8K5HbKbJQMRG0ejvEwKp3BheWxvYWTESpcCEMQg8VOrzzFAMRSrun7QU3A5hAy5dTK//pVUhlfYxoPTEETEIOaldShGsTCItx5mWWzAhGMJ5CUppE7rOEcMQPfYVcNUAgHCo3NpZ8RAKNegKd05sCPzupS806BNAwnaei/6s1b4ItDlHwBy97XZIV/aGbvrVN5ez42k56LMLnB/Jc9Gh1HXQ1i8knQsBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEcfZ2ywGA6t7dvVfrLinJaBT5lypd4K0CGOx3zy7bPVo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
@@ -73,4 +54,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/thoughtsunificat
 
 ==================================================================
-
