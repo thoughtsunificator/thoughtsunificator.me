@@ -17,24 +17,9 @@ exports.render = function(data) {
 	<p>My current focus is on making crystal clear and lightweight JavaScript libraries and tools for front-end developers to use.</p>
 	</section>
 	<section>
-		<h3>Areas of expertise</h3>
-		<ul class="areas-expertise">
-			<li>JavaScript Libraries</li>
-			<li>Web Applications</li>
-			<li>Node.js Applications</li>
-			<li>Parsers</li>
-			<li>Chrome Extensions</li>
-			<li>Code Reviews</li>
-			<li>Code fixes</li>
-			<li>Mockup to Template/CMS</li>
-			<li>Electron Applications</li>
-			<li>Android WebView</li>
-		</ul>
-	</section>
-	<section>
 		<h3>Links</h3>
 		<ul class="links">
-			<li><a target="_blank" href="/resume-en.html">Resume</a></li>
+			<li><a target="_blank" href="/resume-en.html"><b>Resume</b></a></li>
 			<li><a target="_blank" href="/timeline-en.html">Timeline</a></li>
 			<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
 			<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
@@ -47,9 +32,10 @@ exports.render = function(data) {
 	<section>
 	<h3>Contact</h3>
 	<p>
-		Job Inquiries: <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
-		<br>
-		OSS Inquiries: <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
+		<h4>Job Inquiries</h4>
+		<a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
+		<h4>OSS Inquiries</h4>
+		<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
 	</p>
 	</section>
 	</div>
