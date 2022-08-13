@@ -5,204 +5,205 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-	html {
-		background-color: rgba(42, 42, 46, 1);
-	}
-
-	body {
-		display: grid;
-		font-family: baskerville, bask, serif;
-		background-color: white;
-		margin: auto;
-		font-size: 14px;
-		max-width: 27cm;
-		padding-bottom: 15px;
-	}
-
-	p, ul {
-		margin: 8px;
-	}
-
-	p:first-child, ul:first-child {
-		margin-top: 0;
-	}
-
-	header {
-		margin-top: 10px;
-		margin-right: 10px;
-		display: grid;
-		place-items: center;
-	}
-
-	body > section {
-		display: grid;
-	}
-
-	.vcard {
-		grid-row: 1;
-		grid-column: 1;
-		justify-self: center;
-	}
-
-	.vcard h1, .vcard h3 {
-		padding: 0;
-		margin: 0;
-	}
-
-	.vcard h1 {
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-	}
-
-	.vcard h3 {
-		font-size: 1.3em;
-		font-weight: normal;
-		margin-top: 5px;
-	}
-
-	.vcard .contact {
-		font-family: Noto;
-		display: grid;
-		grid-template-columns: auto auto;
-		grid-gap: 2px;
-		margin-top: 15px;
-	}
-
-	.photo {
-		grid-row: 1;
-		grid-column: 1;
-		justify-self: end;
-		width: 150px;
-		object-fit: cover;
-		height: 150px;
-		border-radius: 100%;
-		align-self: baseline;
-		border: 6px solid #0000001c;
-	}
-
-	section h2 {
-		letter-spacing: 0.1em;
-		font-family: Noto;
-		padding: 2px;
-		text-indent: 50px;
-		border-bottom: 1px solid black;
-	}
-
-	.records {
-		justify-self: center;
-		width: 85%;
-	}
-
-	body > section:nth-of-type(1) > .records {
-		display: grid;
-		grid-template-columns: auto auto;
-		place-items: baseline;
-	}
-
-	.record + .record {
-		margin-top: 20px;
-	}
-
-	.record.columns {
-		display: grid;
-	  grid-row-gap: 10px;
-		grid-template-columns: auto 1fr;
-	}
-
-	.record.columns > div:first-child {
-		max-width: 250px;
-		min-width: 250px;
-	}
-
-	.note {
-		margin-top: 20px;
-	}
-
-	.hobbies {
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: max-content;
-		grid-gap: 10px;
-	}
-
-	#lang {
-		position:absolute;
-		padding:10px;
-		display:flex;
-		column-gap:10px;
-		top:25px
-	}
-
-	.links {
-		text-align: center;
-	}
-
-	.back {
-		position:absolute;
-		padding:10px
-	}
-
-	.skills {
-		display: flex;
-		place-items: center;
-		grid-column: span 2;
-		flex-wrap: wrap;
-		opacity: 0.8;
-	}
-
-	.skills > div {
-		border: 1px solid black;
-		padding: 1px 3px;
-		margin: 2px 6px;
-	}
-
-	@media (max-width: 600px) {
 		html {
-			background-color: initial;
+			background-color: rgba(42, 42, 46, 1);
 		}
-		#lang,
-		.back {
-			justify-self: center;
-			position: initial!important;
-		}
-	}
 
-	@media screen and (max-width: 650px) {
+		body {
+			display: grid;
+			font-family: baskerville, bask, serif;
+			background-color: white;
+			margin: auto;
+			font-size: 14px;
+			max-width: 27cm;
+			padding-bottom: 15px;
+		}
+
+		p, ul {
+			margin: 8px;
+		}
+
+		p:first-child, ul:first-child {
+			margin-top: 0;
+		}
+
 		header {
-			grid-gap: 20px;
-		}
-		.photo {
-			justify-self: center;
-			grid-row: 2;
+			margin-top: 10px;
+			margin-right: 10px;
+			display: grid;
+			place-items: center;
 		}
 
-		.records {
+		body > section {
 			display: grid;
 		}
 
-		.record.columns {
-			grid-auto-flow: row;
+		.vcard {
+			grid-row: 1;
+			grid-column: 1;
+			justify-self: center;
 		}
 
-		.record ul {
-			padding-left: 0;
-		}
-
-		.record li {
-			list-style: none;
-		}
-	}
-
-	@media print {
-		body {
+		.vcard h1, .vcard h2 {
+			padding: 0;
 			margin: 0;
-			font-size: 12.5px;
 		}
-		.skills .group > div:not(:first-child) {
-			margin-left: 5px;
+
+		.vcard h1 {
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
 		}
-	}
-</style>
+
+		.vcard h2 {
+			font-size: 1.3em;
+			font-weight: normal;
+			margin-top: 5px;
+		}
+
+		.vcard .contact {
+			font-family: Noto;
+			display: grid;
+			grid-template-columns: auto auto;
+			grid-gap: 2px;
+			margin-top: 15px;
+		}
+
+		.photo {
+			grid-row: 1;
+			grid-column: 1;
+			justify-self: end;
+			width: 150px;
+			object-fit: cover;
+			height: 150px;
+			border-radius: 100%;
+			align-self: baseline;
+			border: 6px solid #0000001c;
+		}
+
+		section h3 {
+			letter-spacing: 0.1em;
+			font-family: Noto;
+			padding: 2px;
+			text-transform: uppercase;
+			text-indent: 50px;
+			border-bottom: 1px solid black;
+		}
+
+		.records {
+			justify-self: center;
+			width: 85%;
+		}
+
+		body > section:nth-of-type(1) > .records {
+			display: grid;
+			grid-template-columns: auto auto;
+			place-items: baseline;
+		}
+
+		.record + .record {
+			margin-top: 20px;
+		}
+
+		.record.columns {
+			display: grid;
+			grid-row-gap: 10px;
+			grid-template-columns: auto 1fr;
+		}
+
+		.record.columns > div:first-child {
+			max-width: 250px;
+			min-width: 250px;
+		}
+
+		.note {
+			margin-top: 20px;
+		}
+
+		.hobbies {
+			display: grid;
+			grid-auto-flow: column;
+			grid-auto-columns: max-content;
+			grid-gap: 10px;
+		}
+
+		#lang {
+			position:absolute;
+			padding:10px;
+			display:flex;
+			column-gap:10px;
+			top:25px
+		}
+
+		.links {
+			text-align: center;
+		}
+
+		.back {
+			position:absolute;
+			padding:10px
+		}
+
+		.skills {
+			display: flex;
+			place-items: center;
+			grid-column: span 2;
+			flex-wrap: wrap;
+			opacity: 0.8;
+		}
+
+		.skills > div {
+			border: 1px solid black;
+			padding: 1px 3px;
+			margin: 2px 6px;
+		}
+
+		@media (max-width: 600px) {
+			html {
+				background-color: initial;
+			}
+			#lang,
+			.back {
+				justify-self: center;
+				position: initial!important;
+			}
+		}
+
+		@media screen and (max-width: 650px) {
+			header {
+				grid-gap: 20px;
+			}
+			.photo {
+				justify-self: center;
+				grid-row: 2;
+			}
+
+			.records {
+				display: grid;
+			}
+
+			.record.columns {
+				grid-auto-flow: row;
+			}
+
+			.record ul {
+				padding-left: 0;
+			}
+
+			.record li {
+				list-style: none;
+			}
+		}
+
+		@media print {
+			body {
+				margin: 0;
+				font-size: 12.5px;
+			}
+			.skills .group > div:not(:first-child) {
+				margin-left: 5px;
+			}
+		}
+	</style>
 </head>
 <body><a class="back" target="_blank" href="/">Homepage</a><nav id="lang"><b>EN</b>|<a href="resume.html">FR</a></nav>
 	<header>
@@ -227,10 +228,10 @@
 		</nav>
 		<address class="vcard">
 			<h1>Romain Lebesle</h1>
-			<h3>Full stack Developer</h3>
+			<h2>Full stack Developer</h2>
 			<dl class="contact">
 				<dt>Mail:</dt>
-				<dd><a href="mailto:job@thoughtsunificator.me" style="">job@thoughtsunificator.me</a></dd>
+				<dd><a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a></dd>
 				<dt>Homepage:</dt>
 				<dd><a target="_blank" href="https://thoughtsunificator.me">thoughtsunificator.me</a></dd>
 			</dl>
@@ -238,7 +239,13 @@
 		<img class="photo" src="https://en.gravatar.com/userimage/185825515/7a1fc08866f02fb2203473a3fe1a728a.jpg?size=1000" alt="My photo" />
 	</header>
 	<section>
-		<h2>Publications</h2>
+		<h3>Summary / Objective</h3>
+		<p class="records">
+			I'm a hardworking, results-driven software engineer looking for a full-stack technology role. Loocking for a challenging role in an organization that will offer me the opportunity to grow by delivering results.
+		</p>
+	</section>
+	<section>
+		<h3>Publications</h3>
 		<div class="records">
 			<div class="record">
 				<p><b>domodel</b> – JavaScript Library</p>
@@ -267,7 +274,7 @@
 		</div>
 	</section>
 	<section>
-		<h2>Experiences</h2>
+		<h3>Experiences</h3>
 		<div class="records">
 			<div class="record columns">
 				<div>
@@ -468,7 +475,7 @@
 		</div>
 	</section>
 	<section>
-		<h2>Education</h2>
+		<h3>Education</h3>
 		<div class="records">
 			<div class="record columns">
 				<div>
