@@ -193,6 +193,16 @@
 				list-style: none;
 			}
 		}
+
+		@media print {
+			body {
+				margin: 0;
+				font-size: 12.5px;
+			}
+			.skills .group > div:not(:first-child) {
+				margin-left: 5px;
+			}
+		}
 	</style>
 </head>
 <body><a class="back" target="_blank" href="/">Page daccueil</a><nav id="lang"><a href="resume-en.html">EN</a>|<b>FR</b></nav>
