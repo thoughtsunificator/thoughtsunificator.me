@@ -142,33 +142,22 @@
 			grid-gap: 10px;
 		}
 
-		#lang {
-			position:absolute;
-			padding:10px;
-			display:flex;
-			column-gap:10px;
-			top:25px
-		}
-
 		.profiles {
 			text-align: center;
 		}
 
+		.languages,
 		.profiles ul {
 			list-style: none;
-			display: grid;
-			grid-auto-flow: column;
+			display: flex;
+			flex-wrap: wrap;
 		}
 
+		.languages li:not(:last-child):after,
 		.profiles ul li:not(:last-child):after {
 			position: relative;
 			margin: 0 5px;
 			content: "|";
-		}
-
-		.back {
-			position:absolute;
-			padding:10px
 		}
 
 		.skills {
@@ -188,14 +177,16 @@
 			margin: 2px 6px;
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: 700px) {
 			html {
 				background-color: initial;
 			}
-			#lang,
-			.back {
-				justify-self: center;
+			#navigation {
 				position: initial!important;
+				justify-self: center;
+			}
+			#navigation ul {
+				margin: 10px 0 0 0 !important;
 			}
 		}
 
