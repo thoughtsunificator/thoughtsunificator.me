@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<title>Resume</title>
 	<meta charset="UTF-8">
@@ -83,8 +83,8 @@
 		section h3 {
 			letter-spacing: 0.1em;
 			font-family: Noto;
-			padding: 2px;
 			text-transform: uppercase;
+			padding: 2px;
 			text-indent: 50px;
 			border-bottom: 1px solid black;
 		}
@@ -140,6 +140,18 @@
 			grid-auto-flow: column;
 			grid-auto-columns: max-content;
 			grid-gap: 10px;
+		}
+
+		#navigation {
+			position:absolute;
+			column-gap:10px;
+			top:0;
+		}
+
+		#navigation ul {
+			margin: 10px;
+			padding: 0;
+			list-style: none;
 		}
 
 		.profiles {
@@ -221,19 +233,26 @@
 				margin: 0;
 				font-size: 12.5px;
 			}
-			body > section:nth-of-type(3) .record:nth-of-type(2) {
-				margin-bottom: 90px;
-			}
-			body > section:nth-of-type(3) .record:nth-of-type(8) {
-				margin-bottom: 60px;
-			}
 			.skills .group > div:not(:first-child) {
 				margin-left: 5px;
 			}
 		}
 	</style>
 </head>
-<body><a class="back" target="_blank" href="/">Homepage</a><nav id="lang"><b>EN</b>|<a href="resume.html">FR</a></nav>
+<body>
+	<nav id="navigation">
+		<ul>
+			<li><a target="_blank" href="/">Page d'accueil</a></li>
+		</ul>
+		<ul class="languages">
+			<li>
+				<b>EN</b>
+			</li>
+			<li>
+				<a href="resume.html">FR</a>
+			</li>
+		</ul>
+	</nav>
 	<header>
 		<nav class="profiles">
 			<ul>
@@ -288,17 +307,17 @@
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/how-to-build-a-grid-system-in-javascript-m5n">How to build a Grid system in JavaScript</a></p>
 			</div>
 			<div class="record">
-				<div><b class="title">bbcode-parser</b> – JavaScript Library</div>
+				<div><b class="title">bbcode-parser</b> – <span class="type">JavaScript Library</span></div>
 				<p class="description">Zero dependencies BBCode parser.</p>
 			</div>
 			<div class="record">
-				<div><b class="title">dev.to</b> – Web Article</div>
+				<div><b class="title">dev.to</b> – <span class="type">Web Article</span></div>
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/domodel-es6-modules-based-front-end-library-13dg">domodel - ES6 Modules based front-end library </a></p>
 			</div>
 		</div>
 	</section>
 	<section>
-		<h3>Experiences</h3>
+		<h3>Expériences</h3>
 		<div class="records">
 			<div class="record columns">
 				<div>
@@ -330,9 +349,9 @@
 					<li>Full Stack</li>
 					<li>Network Infrastructure</li>
 					<li>TDD</li>
+					<li>OpenAPI</li>
 					<li>Express</li>
 					<li>koa</li>
-					<li>OpenAPI</li>
 					<li>microservices</li>
 					<li>bash</li>
 				</div>
@@ -495,7 +514,7 @@
 				<ul class="skills">
 					<li>Actionscript</li> <li>CSS</li> <li>Développement</li> <li>Full stack</li> <li>Java</li> <li>MySQL</li> <li>PHP</li> <li>Symfony</li> <li>Reverse Engineering</li>
 				</ul>
-			</div>
+			</li>
 		</div>
 	</section>
 	<section>
