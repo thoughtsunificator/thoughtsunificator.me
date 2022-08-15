@@ -98,7 +98,6 @@
 			display: grid;
 			grid-template-columns: auto auto;
 			place-items: baseline;
-			grid-column-gap: 25px;
 		}
 
 		.record + .record {
@@ -141,6 +140,18 @@
 			grid-auto-flow: column;
 			grid-auto-columns: max-content;
 			grid-gap: 10px;
+		}
+
+		#navigation {
+			position:absolute;
+			column-gap:10px;
+			top:0;
+		}
+
+		#navigation ul {
+			margin: 10px;
+			padding: 0;
+			list-style: none;
 		}
 
 		.profiles {
@@ -222,19 +233,26 @@
 				margin: 0;
 				font-size: 12.5px;
 			}
-			body > section:nth-of-type(3) .record:nth-of-type(2) {
-				margin-bottom: 90px;
-			}
-			body > section:nth-of-type(3) .record:nth-of-type(8) {
-				margin-bottom: 60px;
-			}
 			.skills .group > div:not(:first-child) {
 				margin-left: 5px;
 			}
 		}
 	</style>
 </head>
-<body><a class="back" target="_blank" href="/">Page daccueil</a><nav id="lang"><a href="resume-en.html">EN</a>|<b>FR</b></nav>
+<body>
+	<nav id="navigation">
+		<ul>
+			<li><a target="_blank" href="/">Page d'accueil</a></li>
+		</ul>
+		<ul class="languages">
+			<li>
+				<a href="resume-en.html">EN</a>
+			</li>
+			<li>
+				<b>FR</b>
+			</li>
+		</ul>
+	</nav>
 	<header>
 		<nav class="profiles">
 			<ul>
@@ -277,27 +295,27 @@
 		<h3>Publications</h3>
 		<div class="records">
 			<div class="record">
-				<div><b class="title">domodel</b> – <span class="type">Librairie JavaScript</span></div>
+				<div><b class="title">domodel</b> – Librairie JavaScript</div>
 				<p class="description">Librairie front-end permettant d'organiser l'interface utilisateur en modèles (apparence) et binding (comportement), elle intègre également des patterns de la programmation observable.</p>
 			</div>
 			<div class="record">
-				<div><b class="title">dev.to</b> – <span class="type">Web Article</span></div>
+				<div><b class="title">dev.to</b> – Web Article</div>
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/userinterfacejs-small-front-end-library-2b8k">userinterface.js - Small front-end library </a></p>
 			</div>
 			<div class="record">
-				<div><b class="title">domodel-diary</b> – <span class="type">Application JavaScript</span></div>
+				<div><b class="title">domodel-diary</b> – Application JavaScript</div>
 				<p class="description">Application très légère permettant de tenir un journal de notes chifrées, protégées par un mot de passe.</p>
 			</div>
 			<div class="record">
-				<div><b class="title">dev.to</b> – <span class="type">Web Article</span></div>
+				<div><b class="title">dev.to</b> – Web Article</div>
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/how-to-build-a-grid-system-in-javascript-m5n">How to build a Grid system in JavaScript</a></p>
 			</div>
 			<div class="record">
-				<div><b class="title">bbcode-parser</b> – <span class="type">Librairie JavaScript</span></div>
+				<div><b class="title">bbcode-parser</b> – Librairie JavaScript</div>
 				<p class="description">Parser bbcode avec comme particularité un modèle de données basé sur le DOM.</p>
 			</div>
 			<div class="record">
-				<div><b class="title">dev.to</b> – <span class="type">Web Article</span></div>
+				<div><b class="title">dev.to</b> – Web Article</div>
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/domodel-es6-modules-based-front-end-library-13dg">domodel - ES6 Modules based front-end library </a></p>
 			</div>
 		</div>
@@ -334,10 +352,10 @@
 					<li>Spec Writing</li>
 					<li>Full Stack</li>
 					<li>Network Infrastructure</li>
-					<li>OpenAPI</li>
 					<li>TDD</li>
 					<li>Express</li>
 					<li>koa</li>
+					<li>OpenAPI</li>
 					<li>microservices</li>
 					<li>bash</li>
 				</ul>
@@ -346,7 +364,7 @@
 				<div>
 					<div class="period"><time>Mar. 2021</time> – <time>Nov. 2021</time></div>
 					<small class="location">Rennes, France</small>
-					<div><b>Freelance</b></div>
+					<div class="organization"><b>Freelance</b></div>
 					<u class="position">Développeur Full Stack</u>
 				</div>
 				<div>
@@ -360,7 +378,7 @@
 					</ul>
 				</div>
 				<ul class="skills">
-					<li>JavaScript</li> <li>HTML</li> <li>CSS</li> <li>React</li> <li>PHP</li> <li>MySQL</li> <li>Android</li> <li>WebView</li> <li>Symfony</li> <li>Code Review</li> <li>Full Stack</li> <li>Electron.JS</li> <li>JSDoc</li> <li>Open Source</li> <li>CI-CD</li> <li>TDD</li> <li>Express</li> <li>microservices</li>
+					<li>JavaScript</li> <li>HTML</li> <li>CSS</li> <li>React</li> <li>PHP</li> <li>MySQL</li> <li>Android</li> <li>WebView</li> <li>Symfony</li> <li>Code Review</li> <li>Full Stack</li> <li>Electron.JS</li> <li>JSDoc</li> <li>Open Source</li> <li>CI-CD</li> <li>TDD</li> <li>Express</li> <li>OpenAPI</li> <li>microservices</li>
 				</ul>
 			</div>
 			<div class="record columns">
@@ -383,7 +401,7 @@
 					</ul>
 				</div>
 				<ul class="skills">
-					<li>JavaScript</li> <li>OpenAPI</li> <li>Node.js</li> <li>Flil Stack</li> <li>Network</li> <li>Infrastructure</li> <li>SysAdmin</li> <li>Linux</li> <li>Proxmox</li> <li>FreePBX</li> <li>Architecture design</li> <li>Spec Writing</li> <li>CI-CD</li> <li>TDD</li> <li>Express</li>
+					<li>JavaScript</li> <li>Node.js</li> <li>Full Stack</li> <li>Network</li> <li>Infrastructure</li> <li>SysAdmin</li> <li>Linux</li> <li>Proxmox</li> <li>FreePBX</li> <li>Architecture design</li> <li>Spec Writing</li> <li>CI-CD</li> <li>TDD</li> <li>Express</li>
 				</ul>
 			</div>
 			<div class="record columns">
@@ -422,7 +440,7 @@
 					</ul>
 				</div>
 				<ul class="skills">
-					<li>JavaScript</li> <li>DOM</li> <li>Node.js</li> <li>React</li> <li>JS</li> <li>Design Patterns</li> <li>JSDoc</li> <li>Open Source</li> <li>CI-CD</li> <li>TDD</li> <li>Express</li><br>
+					<li>JavaScript</li> <li>DOM</li> <li>Node.js</li> <li>React</li> <li>JS</li> <li>Design Patterns</li> <li>JSDoc</li> <li>Open Source</li> <li>CI-CD</li> <li>TDD</li> <li>Express</li>
 				</ul>
 			</div>
 			<div class="record columns">
@@ -478,7 +496,7 @@
 					</ul>
 				</div>
 				<ul class="skills">
-					<li>HTML</li> <li>CSS</li> <li>Java</li> <li>Java Swing</li> <li>PHP</li> <li>OOP</li><br>
+					<li>HTML</li> <li>CSS</li> <li>Java</li> <li>Java Swing</li> <li>PHP</li> <li>OOP</li>
 				</ul>
 			</div>
 			<div class="record columns">
