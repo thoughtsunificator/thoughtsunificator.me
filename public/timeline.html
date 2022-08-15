@@ -5,30 +5,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-
-		#timeline {
-			display: grid;
-			grid-auto-columns: max-content;
-		}
-
 		#timeline > li:not(.separator) {
-			display: grid;
 			grid-gap: 5px;
 			position: relative;
-			grid-auto-columns: max-content;
+			display: grid;
 			list-style-type: none;
 		}
-
-		#timeline > li:not(.separator):before {
+		#timeline > li:not(.separator)::after {
 			content: "";
 			position: absolute;
 			width: 2px;
+			z-index: -1;
 			left: 0;
+			top: 0;
 			height: 100%;
 			background-color: black;
 		}
-
-		#timeline > li:not(.separator)::after {
+		#timeline > li:not(.separator)::before {
 			content: "";
 			position: absolute;
 			left: -10px;
@@ -37,7 +30,6 @@
 			background-color: gray;
 			border: 1px solid black;
 		}
-
 		#timeline .event-name,
 		#timeline .event-date,
 		#timeline .event-description,
@@ -45,20 +37,16 @@
 			margin-left: 15px;
 			align-self: flex-start;
 		}
-
 		#timeline .event-description,
 		#timeline .event-objectives {
 			font-size: 0.95em;
 		}
-
 		#timeline .event-objectives {
 			margin-bottom: 25px;
 		}
-
 		#timeline .event-date {
 			font-weight: bold;
 		}
-
 		.separator {
 			display: grid;
 			grid-auto-flow: column;
@@ -67,7 +55,6 @@
 			justify-self: center;
 			grid-gap: 30px;
 		}
-
 		.separator:before,
 		.separator:after {
 			width: 200px;
@@ -75,23 +62,29 @@
 			height: 1px;
 			background-color: #3c486b;
 		}
-
 		#lang {
 			padding: 10px;
 			display: flex;
 			column-gap: 10px;
 		}
-
 		.back {
 			padding: 10px;
 		}
-
+		.skills {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.skills li {
+			margin: 0 5px;
+			list-style: none;
+		}
 		.skill {
 			border: 1px solid #17141447;
 			padding: 1px 3px;
 			border-radius: 5px;
 		}
-
 	</style>
 </head>
 <body>
@@ -104,7 +97,9 @@
 			<div class="event-date">2021-2022</div>
 			<div class="event-name"><u>Icodia</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">JavaScript</span> <span class="skill">HTML</span> <span class="skill">PHP</span> <span class="skill">rollup</span> <span class="skill">mocha</span> <span class="skill">Linux</span> <span class="skill">Node.js</span> <span class="skill">Architecture design</span> <span class="skill">Spec Writing</span> <span class="skill">Full Stack</span> <span class="skill">Network Infrastructure</span> <span class="skill">TDD</span> <span class="skill">Express</span> <span class="skill">koa</span> <span class="skill">microservices</span> <span class="skill">OpenAPI</span> <span class="skill">bash</span><br>
+				<ul class="skills">
+					<li class="skill">JavaScript</li> <li class="skill">HTML</li> <li class="skill">PHP</li> <li class="skill">rollup</li> <li class="skill">mocha</li> <li class="skill">Linux</li> <li class="skill">Node.js</li> <li class="skill">Architecture design</li> <li class="skill">Spec Writing</li> <li class="skill">Full Stack</li> <li class="skill">Network Infrastructure</li> <li class="skill">TDD</li> <li class="skill">Express</li> <li class="skill">koa</li> <li class="skill">microservices</li> <li class="skill">OpenAPI</li> <li class="skill">bash</li>
+				</ul>
 				Architecture, design et développement d'interfaces utilisateur et APIs dans le context d'un data center.
 				<ul>
 					<li>Analyse des besoins clients.</li>
@@ -119,7 +114,7 @@
 			<div class="event-date">2021</div>
 			<div class="event-name"><u>Freelance</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">JavaScript</span> <span class="skill">HTML</span> <span class="skill">CSS</span> <span class="skill">React</span> <span class="skill">PHP</span> <span class="skill">MySQL</span> <span class="skill">Android</span> <span class="skill">WebView</span> <span class="skill">Symfony</span> <span class="skill">Code Review</span> <span class="skill">Full Stack</span> <span class="skill">Electron.JS</span> <span class="skill">JSDoc</span> <span class="skill">Open Source</span> <span class="skill">CI-CD</span> <span class="skill">TDD</span> <span class="skill">Express</span> <span class="skill">microservices</span> <span class="skill">OpenAPI</span><br>
+				 <ul class="skills"><li class="skill">JavaScript</li> <li class="skill">HTML</li> <li class="skill">CSS</li> <li class="skill">React</li> <li class="skill">PHP</li> <li class="skill">MySQL</li> <li class="skill">Android</li> <li class="skill">WebView</li> <li class="skill">Symfony</li> <li class="skill">Code Review</li> <li class="skill">Full Stack</li> <li class="skill">Electron.JS</li> <li class="skill">JSDoc</li> <li class="skill">Open Source</li> <li class="skill">CI-CD</li> <li class="skill">TDD</li> <li class="skill">Express</li> <li class="skill">microservices</li> <li class="skill">OpenAPI</li></ul>
 				Réalisation de projets web notamment sur upwork.com et freelancer.com.
 				<ul>
 					<li>Code reviews pour divers clients sur upwork.com et freelance.com</li>
@@ -131,7 +126,7 @@
 			<div class="event-date">2020</div>
 			<div class="event-name"><u>Etude SEGUR</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">JavaScript</span> <span class="skill">Node.js</span> <span class="skill">Full Stack</span> <span class="skill">Network</span> <span class="skill">Infrastructure</span> <span class="skill">SysAdmin</span> <span class="skill">Linux</span> <span class="skill">Proxmox</span> <span class="skill">FreePBX</span> <span class="skill">Architecture design</span> <span class="skill">Spec Writing</span> <span class="skill">CI-CD</span> <span class="skill">TDD</span> <span class="skill">Express</span><br>
+				 <ul class="skills"><li class="skill">JavaScript</li> <li class="skill">Node.js</li> <li class="skill">Full Stack</li> <li class="skill">Network</li> <li class="skill">Infrastructure</li> <li class="skill">SysAdmin</li> <li class="skill">Linux</li> <li class="skill">Proxmox</li> <li class="skill">FreePBX</li> <li class="skill">Architecture design</li> <li class="skill">Spec Writing</li> <li class="skill">CI-CD</li> <li class="skill">TDD</li> <li class="skill">Express</li></ul>
 				Développement d'une application web pour généalogistes et création et gestion d'un parc informatique
 			</div>
 			<ul class="event-objectives">
@@ -148,7 +143,7 @@
 			<div class="event-date">2019</div>
 			<div class="event-name"><u>Epitech (Web@cademie)</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">JavaScript</span> <span class="skill">HTML</span> <span class="skill">PHP</span> <span class="skill">API Platform</span> <span class="skill">Laravel</span> <span class="skill">Symfony</span> <span class="skill">React</span> <span class="skill">React Native</span> <span class="skill">Java</span> <span class="skill">Spring Framework</span> <span class="skill">Node.js</span> <span class="skill">JSDoc</span> <span class="skill">Express</span><br>
+				 <ul class="skills"><li class="skill">JavaScript</li> <li class="skill">HTML</li> <li class="skill">PHP</li> <li class="skill">API Platform</li> <li class="skill">Laravel</li> <li class="skill">Symfony</li> <li class="skill">React</li> <li class="skill">React Native</li> <li class="skill">Java</li> <li class="skill">Spring Framework</li> <li class="skill">Node.js</li> <li class="skill">JSDoc</li> <li class="skill">Express</li></ul>
 				Formation de 24 mois répartie sur 12 mois au sein du campus technologique de l’Epitech, puis 12 mois en contrat de professionnalisation en entreprise.
 			</div>
 			<ul class="event-objectives">
@@ -161,8 +156,8 @@
 			<div class="event-date">2016</div>
 			<div class="event-name"><u>Freelance</u></div>
 			<div class="event-description">
-			Skills: <span class="skill">JavaScript</span> <span class="skill">HTML</span> <span class="skill">React</span> <span class="skill">WordPress</span> <span class="skill">PHP</span> <span class="skill">Scraping</span> <span class="skill">Mongoose</span> <span class="skill">MongoDB</span> <span class="skill">Android</span> <span class="skill">Node.js</span> <span class="skill">PostgreSQL</span> <span class="skill">Symfony</span> <span class="skill">Code Review</span> <span class="skill">sequelize</span> <span class="skill">React</span> <span class="skill">JSDoc</span> <span class="skill">Open Source</span> <span class="skill">CI-CD</span> <span class="skill">TDD</span> <span class="skill">Express</span><br>
-			Réalisation de projets web notamment sur upwork.com et freelancer.com</div>
+			 <ul class="skills"><li class="skill">JavaScript</li> <li class="skill">HTML</li> <li class="skill">React</li> <li class="skill">WordPress</li> <li class="skill">PHP</li> <li class="skill">Scraping</li> <li class="skill">Mongoose</li> <li class="skill">MongoDB</li> <li class="skill">Android</li> <li class="skill">Node.js</li> <li class="skill">PostgreSQL</li> <li class="skill">Symfony</li> <li class="skill">Code Review</li> <li class="skill">sequelize</li> <li class="skill">React</li> <li class="skill">JSDoc</li> <li class="skill">Open Source</li> <li class="skill">CI-CD</li> <li class="skill">TDD</li> <li class="skill">Express</li></ul>
+			Développement full stack pour divers clients sur les sites upwork.com et freelancer.com.
 			<ul class="event-objectives">
 				<li>Plug-ins WordPress pour divers clients sur upwork.com</li>
 				<li>Bot & Scraper IMDB pour un client freelancer.com</li>
@@ -173,10 +168,10 @@
 		</li>
 		<li>
 			<div class="event-date">2015</div>
-			<div class="event-name"><u>Libraries</u></div>
+			<div class="event-name"><u>Projet personnel</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">JavaScript</span> <span class="skill">DOM</span> <span class="skill">Node.js</span> <span class="skill">React</span> <span class="skill">JS</span> <span class="skill">Design Patterns</span> <span class="skill">JSDoc</span> <span class="skill">Open Source</span> <span class="skill">CI-CD</span> <span class="skill">TDD</span> <span class="skill">Express</span><br>
-				Sujets: Librairie et outils front-end JavaScript
+				 <ul class="skills"><li class="skill">JavaScript</li> <li class="skill">DOM</li> <li class="skill">Node.js</li> <li class="skill">React</li> <li class="skill">JS</li> <li class="skill">Design Patterns</li> <li class="skill">JSDoc</li> <li class="skill">Open Source</li> <li class="skill">CI-CD</li> <li class="skill">TDD</li> <li class="skill">Express</li></ul>
+				Développement et maintenance de plusieurs projets open-source.
 			</div>
 			<ul class="event-objectives">
 				<li>Publié la version initiale de bbcode-parser, un parser BBCode avec comme particularité une API proche de celle du DOM</li>
@@ -185,10 +180,10 @@
 		</li>
 		<li>
 			<div class="event-date">2014</div>
-			<div class="event-name"><u>Web & Browser Extensions</u></div>
+			<div class="event-name"><u>Projet personnel</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">HTML</span> <span class="skill">CSS</span> <span class="skill">JavaScript</span> <span class="skill">grunt</span> <span class="skill">gulp</span> <span class="skill">DOM</span> <span class="skill">UX Design</span> <span class="skill">UserScripts</span> <span class="skill">Node.js</span> <span class="skill">Express</span><br>
-				Sujets: Extension de navigateur, Chrome Extension API, Firefox Addon API, Userscripts, UX
+				 <ul class="skills"><li class="skill">HTML</li> <li class="skill">CSS</li> <li class="skill">JavaScript</li> <li class="skill">grunt</li> <li class="skill">gulp</li> <li class="skill">DOM</li> <li class="skill">UX Design</li> <li class="skill">UserScripts</li> <li class="skill">Node.js</li> <li class="skill">Express</li></ul>
+				Développement d'userscripts et extension de navigateur pour divers sites web.
 			</div>
 			<ul class="event-objectives">
 				<li>Userscripts pour myanimelist.net</li>
@@ -199,10 +194,10 @@
 		</li>
 		<li>
 			<div class="event-date">2013</div>
-			<div class="event-name"><u>PHP</u></div>
+			<div class="event-name"><u>Projet personnel</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">HTML</span> <span class="skill">CSS</span> <span class="skill">PHP</span> <span class="skill">MVC</span> <span class="skill">Laravel</span> <span class="skill">OOP</span><br>
-				Sujets: Frameworks et CMS
+				 <ul class="skills"><li class="skill">HTML</li> <li class="skill">CSS</li> <li class="skill">PHP</li> <li class="skill">MVC</li> <li class="skill">Laravel</li> <li class="skill">OOP</li></ul>
+				Développement et gestion d'un site web catégorisant des animations japonaise.
 			</div>
 			<ul class="event-objectives">
 				<li>Site web catégorisant des animations japonaise</li>
@@ -212,10 +207,10 @@
 		</li>
 		<li>
 			<div class="event-date">2012</div>
-			<div class="event-name"><u>Trials and errors</u></div>
+			<div class="event-name"><u>Projet personnel</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">HTML</span> <span class="skill">CSS</span> <span class="skill">Java</span> <span class="skill">Java Swing</span> <span class="skill">PHP</span> <span class="skill">OOP</span><br>
-				Sujets: Applicatif bureau, OSI model, UX
+				 <ul class="skills"><li class="skill">HTML</li> <li class="skill">CSS</li> <li class="skill">Java</li> <li class="skill">Java Swing</li> <li class="skill">PHP</li> <li class="skill">OOP</li></ul>
+				Divers développement de projets open-source centré autour de l'écosystème Java et celui de PHP.
 			</div>
 			<ul class="event-objectives">
 				<li>Implémentation protocôle HTTP en Java dans un mini serveur web</li>
@@ -225,10 +220,10 @@
 		</li>
 		<li>
 			<div class="event-date">2011</div>
-			<div class="event-name"><u>Serveur de jeu privé</u></div>
+			<div class="event-name"><u>Projet personnel</u></div>
 			<div class="event-description">
-				Skills: <span class="skill">Actionscript</span> <span class="skill">CSS</span> <span class="skill">Développement</span> <span class="skill">Full stack</span> <span class="skill">Java</span> <span class="skill">MySQL</span> <span class="skill">PHP</span> <span class="skill">Symfony</span> <span class="skill">Reverse Engineering</span><br>
-				Sujets: Emulateur, CMS, Jeux Vidéo.
+				 <ul class="skills"><li class="skill">Actionscript</li> <li class="skill">CSS</li> <li class="skill">Développement</li> <li class="skill">Full stack</li> <li class="skill">Java</li> <li class="skill">MySQL</li> <li class="skill">PHP</li> <li class="skill">Symfony</li> <li class="skill">Reverse Engineering</li></ul>
+				Gestion d'un serveur de jeu
 			</div>
 			<ul class="event-objectives">
 				<li>Analyse architecture packets (client-serveur)</li>
