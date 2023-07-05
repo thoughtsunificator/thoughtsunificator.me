@@ -15,8 +15,8 @@ exports.render = function(data) {
 	<p>Self taught full stack developer with <b>5+ years experiences</b>.</p>
 	</section>
 	<section>
-		<h3>Links</h3>
-		<ul class="links">
+	<h3>Links</h3>
+	<ul class="links">
 			<li><a target="_blank" href="/resume-en.html"><b>Resume</b></a></li>
 			<li><a target="_blank" href="/timeline-en.html">Timeline</a></li>
 			<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
@@ -25,7 +25,13 @@ exports.render = function(data) {
 			<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
 			<li><a target="_blank" href="https://snapstats.org/publishers/thoughtsunificator">Snapcraft</a></li>
 			<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter	</a></li>
-		</ul>
+			</ul>
+			</section>
+	<section>
+	<h3>Hire me</h3>
+	<p>You can either direct-hire me by sending me a mail with your project requirements (see below) or through freelancer platforms such as <a target="_blank" href="https://www.freelancer.com/u/thoughtsunificat">freelancer.com</a> and <a target="_blank" href="https://www.upwork.com/freelancers/~014b14766baa32b655">upwork.com</a>.</p>
+	<p>My working hours are 7am to 3am (GMT+2).</p>
+	<p>English and French speaker.</p>
 	</section>
 	<section>
 	<h3>Contact</h3>
