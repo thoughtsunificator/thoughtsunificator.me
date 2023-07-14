@@ -29,7 +29,7 @@ exports.render = function(data) {
 			</section>
 	<section>
 	<h3>Hire me</h3>
-	<p>You can either direct-hire me by sending me a mail with your project requirements (see below) or through freelancer platforms such as <a target="_blank" href="https://www.freelancer.com/u/thoughtsunificat">freelancer.com</a> and <a target="_blank" href="https://www.upwork.com/freelancers/~014b14766baa32b655">upwork.com</a>.</p>
+	<p>You can either direct-hire me by sending me a mail with your project requirements (see below).</p>
 	<p>My working hours are 7am to 3am (GMT+2).</p>
 	<p>English and French speaker.</p>
 	</section>
