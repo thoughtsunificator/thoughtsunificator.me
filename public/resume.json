@@ -1,0 +1,382 @@
+{
+	"basics": {
+		"name": "Romain Lebesle",
+		"label": "Full Stack Developer",
+		"image": "https://en.gravatar.com/userimage/185825515/7a1fc08866f02fb2203473a3fe1a728a.jpg?size=1000",
+		"email": "job@thoughtsunificator.me",
+		"url": "http://thoughtsunificator.me",
+		"summary": "Self taught full stack developer with 5+ years experiences.",
+		"location": {
+			"city": "Rennes",
+			"countryCode": "FR",
+			"region": "Bretagne"
+		},
+		"profiles": [
+			{
+				"network": "Twitter",
+				"username": "thoughtsunifier",
+				"url": "https://twitter.com/thoughtsunifier"
+			},
+			{
+				"network": "Github",
+				"username": "thoughtsunificator",
+				"url": "https://github.com/thoughtsunificator"
+			},
+			{
+				"network": "Linkedin",
+				"username": "romain-lebesle",
+				"url": "https://www.linkedin.com/in/romain-lebesle"
+			},
+			{
+				"network": "AMO",
+				"url": "https://addons.mozilla.org/en-US/firefox/user/15968837"
+			},
+			{
+				"network": "Google Play",
+				"url": "https://play.google.com/store/apps/developer?id=thoughtsunificator&hl=en&gl=US"
+			},
+			{
+				"network": "Snapcraft",
+				"url": "https://snapstats.org/publishers/thoughtsunificator"
+			},
+			{
+				"network": "OpenUserJS",
+				"url": "https://openuserjs.org/users/thoughtsunificator"
+			},
+			{
+				"network": "codewars",
+				"url": "https://www.codewars.com/users/romain_lebesle"
+			}
+		]
+	},
+	"work": [
+		{
+			"name": "ICODIA",
+			"position": "Lead Developer",
+			"url": "https://icodia.com",
+			"startDate": "2021-11-11",
+			"summary": "Architecture, design and development of user interfaces and APIs in a data center environment.",
+			"highlights": [
+				"Analysis of customer needs",
+				"Writing of specifications",
+				"Writing of technical documentation",
+				"Setup tools and workflows for CI-CD",
+				"Setup of a microservices architecture"
+			],
+			"keywords": [
+				"JavaScript",
+				"PHP",
+				"rollup",
+				"mocha",
+				"Linux",
+				"Node.js",
+				"Architecture design",
+				"Spec Writing",
+				"Full Stack",
+				"Network Infrastructure",
+				"TDD",
+				"OpenAPI",
+				"Express",
+				"koa",
+				"microservices",
+				"bash"
+			]
+		},
+		{
+			"name": "Freelance",
+			"position": "Full stack Developer",
+			"url": "https://thoughtsunificator.me",
+			"startDate": "2021-03-11",
+			"summary": "Full stack development for several clients on upwork.com and freelancer.com.",
+			"highlights": [
+				"Code reviews",
+				"Bot & Scraping",
+				"IPB Modules",
+				"Development and publishing of Browser Extensions",
+				"Development and maintenance of open-source libraries"
+			],
+			"keywords": [
+				"JavaScript",
+				"CSS",
+				"React",
+				"PHP",
+				"MySQL",
+				"Android",
+				"WebView",
+				"Symfony",
+				"Code Review",
+				"Full Stack",
+				"Electron.JS",
+				"JSDoc",
+				"Open Source",
+				"CI-CD",
+				"TDD",
+				"Express",
+				"OpenAPI",
+				"microservices"
+			]
+		},
+		{
+			"name": "SEGUR",
+			"position": "Full stack Developer",
+			"url": "https://www.segur.eu",
+			"startDate": "2020-03-01",
+			"endDate": "2021-03-01",
+			"summary": "Developed of a web application allowing genealogists to create and manipulate family trees dedicated to notaries",
+			"highlights": [
+				"Planned and documented the transition of the IT infrastructure",
+				"Closed external access to the IT infrastructure and setup strict routing rules.",
+				"Installed a server rack",
+				"Set up of a network infrastructure with a remote access",
+				"Built a gedcom parser for the web application",
+				"Wrote technical documentation and improved existing documentation of internal processes"
+			],
+			"keywords": [
+				"JavaScript",
+				"Full Stack",
+				"Network",
+				"Infrastructure",
+				"SysAdmin",
+				"Linux",
+				"Proxmox",
+				"FreePBX",
+				"Architecture design",
+				"Spec Writing",
+				"CI-CD",
+				"TDD",
+				"Express"
+			]
+		},
+		{
+			"name": "Romain Lebesle",
+			"position": "Full stack Developer",
+			"url": "http://thoughtsunificator.me",
+			"startDate": "2016-02-01",
+			"endDate": "2016-03-01",
+			"summary": "Full stack development for several clients on upwork.com and freelancer.com.",
+			"highlights": [
+				"Plug-ins WordPres",
+				"Bot & Scraper IMDB",
+				"Code reviews",
+				"5000 installs on the Chrome Web Store for the browser extension BetterMyAnimeList",
+				"Published initial release of domodel, a front-end library"
+			],
+			"keywords": [
+				"JavaScript",
+				"React",
+				"WordPress",
+				"PHP",
+				"Scraping",
+				"Mongoose",
+				"MongoDB",
+				"Android",
+				"Node.js",
+				"PostgreSQL",
+				"Symfony",
+				"Code Review",
+				"sequelize",
+				"React",
+				"JSDoc",
+				"Open Source",
+				"CI-CD",
+				"TDD",
+				"Express"
+			]
+		},
+		{
+			"name": "Personal Project",
+			"position": "Full stack Developer",
+			"url": "http://thoughtsunificator.me",
+			"startDate": "2015-01-01",
+			"endDate": "2016-02-01",
+			"summary": "Development and maintenance of seval open-source projets.",
+			"highlights": [
+				"Published initial release of bbcode-parser, a zero dependencies BBCode parser with an API similitar to the DOM",
+				"Published initial release of userinterface.js, a front-end librarie"
+			],
+			"keywords": [
+				"JavaScript",
+				"Node.js",
+				"React",
+				"JS",
+				"Design Patterns",
+				"JSDoc",
+				"Open Source",
+				"CI-CD",
+				"TDD",
+				"Express"
+			]
+		},
+		{
+			"name": "Personal Project",
+			"position": "Full stack Developer",
+			"url": "http://thoughtsunificator.me",
+			"startDate": "2014-01-01",
+			"endDate": "2015-01-01",
+			"summary": "Development and publishing of several userscripts and browser extensions",
+			"highlights": [
+				"Published initial release of BetterHorribleSubs, a browser extension that adds many features to horriblesubs.info",
+				"Published initial release of BetterMyAnimeList, a browser extension that adds many features to myanimelist.net",
+				"Deepen understanding of various DOM APIs"
+			],
+			"keywords": [
+				"HTML",
+				"JavaScript",
+				"grunt",
+				"gulp",
+				"DOM",
+				"UX Design",
+				"UserScripts",
+				"Node.js",
+				"Express"
+			]
+		},
+		{
+			"name": "Personal Project",
+			"position": "Full stack Developer",
+			"url": "http://thoughtsunificator.me",
+			"startDate": "2013-01-01",
+			"endDate": "2014-01-01",
+			"summary": "Development and maintenance of an anime database webite",
+			"highlights": [
+				"Built a forum with Laravel",
+				"Deepened understanding of various protocol stacks"
+			],
+			"keywords": [
+				"HTML",
+				"PHP",
+				"MVC",
+				"Laravel",
+				"OOP"
+			]
+		},
+		{
+			"name": "Personal Project",
+			"position": "Full stack Developer",
+			"url": "http://thoughtsunificator.me",
+			"startDate": "2012-01-01",
+			"endDate": "2013-01-01",
+			"summary": "Various developments around the Java and PHP ecosystems.",
+			"highlights": [
+				"Made a tiny implementation of the HTTP protocol for a small web server",
+				"Built a desktop application that reconnects automatically to public wifi using given credentials (Java Swing)",
+				"Deepened understanding of various Java APIs"
+			],
+			"keywords": [
+				"HTML",
+				"Java",
+				"Java Swing",
+				"PHP",
+				"OOP"
+			]
+		},
+		{
+			"name": "Personal Project",
+			"position": "Full stack Developer",
+			"url": "http://thoughtsunificator.me",
+			"startDate": "2011-01-01",
+			"endDate": "2012-01-01",
+			"summary": "Development and management of a private game server",
+			"highlights": [
+				"Understanding of packet architectures (client-server)",
+				"Improvements and fixes for emulators (server)",
+				"Client improvements (ActionScript)",
+				"Automated shop via micropayments for in-game items and services",
+				"Managing and promoting of a top 10 private game server with +100 simultaneous players"
+			],
+			"keywords": [
+				"Actionscript",
+				"Développement Full stack",
+				"Java",
+				"MySQL",
+				"PHP",
+				"Symfony",
+				"Reverse Engineering"
+			]
+		}
+	],
+	"volunteer": [],
+	"education": [{
+		"institution": "Epitech",
+		"url": "https://www.epitech.eu/",
+		"area": "Software Development",
+		"studyType": "Bachelor",
+		"startDate": "2019-03-01",
+		"endDate": "2021-03-01"
+	}],
+	"awards": [],
+	"certificates": [],
+	"publications": [
+		{
+			"name": "userinterface.js - Small front-end library",
+			"publisher": "Self-Published",
+			"releaseDate": "2021-10-18",
+			"url": "https://dev.to/thoughtsunificator/userinterfacejs-small-front-end-library-2b8k",
+			"summary": "dev.to"
+		},
+		{
+			"name": "How to build a Grid system in JavaScript",
+			"publisher": "Self-Published",
+			"releaseDate": "2021-10-30",
+			"url": "https://dev.to/thoughtsunificator/how-to-build-a-grid-system-in-javascript-m5n",
+			"summary": "dev.to"
+		},
+		{
+			"name": "domodel - ES6 Modules based front-end library",
+			"publisher": "Self-Published",
+			"releaseDate": "2021-10-18",
+			"url": "https://dev.to/thoughtsunificator/domodel-es6-modules-based-front-end-library-13dg",
+			"summary": "dev.to"
+		}
+	],
+	"skills": [{
+		"name": "Full stack Development",
+		"keywords": [
+			"Actionscript",
+			"Android",
+			"Architecture design",
+			"bash",
+			"CI-CD",
+			"Code Review",
+			"Electron.JS",
+			"Express",
+			"FreePBX",
+			"Full Stack",
+			"HTML",
+			"JavaScript",
+			"JSDoc",
+			"koa",
+			"Linux",
+			"microservices",
+			"MongoDB",
+			"Mongoose",
+			"Network Infrastructure",
+			"Node.js",
+			"Open Source",
+			"OpenAPI",
+			"PostgreSQL",
+			"Proxmox",
+			"React",
+			"Reverse Engineering",
+			"sequelize",
+			"Spec Writing",
+			"Symfony",
+			"TDD",
+			"Team Lead",
+			"UserScripts",
+			"UX Design",
+			"WebView"
+		]
+	}],
+	"languages": [
+		{
+			"language": "English",
+			"fluency": "Professional"
+		},
+		{
+			"language": "French",
+			"fluency": "Native"
+		}
+	],
+	"projects": []
+}
