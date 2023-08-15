@@ -196,18 +196,21 @@
 			}
 		}
 		@media print {
+			.skills,
+			footer,
+			#navigation,
+			.profiles {
+				display: none;
+			}
+			.record {
+				break-inside: avoid;
+			}
 			body {
 				margin: 0;
-				font-size: 12.5px;
+				max-width: initial;
 			}
-			body > section:nth-of-type(3) .record:nth-of-type(2) {
-				margin-bottom: 90px;
-			}
-			body > section:nth-of-type(3) .record:nth-of-type(8) {
-				margin-bottom: 60px;
-			}
-			.skills .group > div:not(:first-child) {
-				margin-left: 5px;
+			section h3 {
+				border-bottom: 0;
 			}
 		}
 		footer {
@@ -247,7 +250,7 @@
 		</nav>
 		<address class="vcard">
 			<h1>Romain Lebesle</h1>
-			<h2>Software Engineer</h2>
+			<h2>Full stack Developer</h2>
 			<dl class="contact">
 				<dt>Mail:</dt>
 				<dd><a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a></dd>
