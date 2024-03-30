@@ -21,9 +21,8 @@ exports.render = function(data) {
 			<li><a target="_blank" href="/timeline-en.html">Timeline</a></li>
 			<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
 			<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
-			<li><a target="_blank" href="https://play.google.com/store/apps/developer?id=thoughtsunificator">Play Store</a></li>
 			<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
-			<li><a target="_blank" href="https://snapstats.org/publishers/thoughtsunificator">Snapcraft</a></li>
+			<li><a target="_blank" href="https://snapcraft.io/publisher/thoughtsunificator">Snapcraft</a></li>
 			<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter	</a></li>
 			</ul>
 			</section>
