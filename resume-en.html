@@ -196,27 +196,19 @@
 			}
 		}
 		@media print {
-			.skills,
-			footer,
-			#navigation,
-			.profiles {
-				display: none;
-			}
-			.record {
-				break-inside: avoid;
-			}
 			body {
 				margin: 0;
-				max-width: initial;
+				font-size: 12.5px;
 			}
-			section h3 {
-				border-bottom: 0;
+			body > section:nth-of-type(3) .record:nth-of-type(2) {
+				margin-bottom: 90px;
 			}
-		}
-		footer {
-			text-align: right;
-			padding-top: 20px;
-			padding-right: 20px;
+			body > section:nth-of-type(3) .record:nth-of-type(8) {
+				margin-bottom: 60px;
+			}
+			.skills .group > div:not(:first-child) {
+				margin-left: 5px;
+			}
 		}
 	</style>
 </head>
@@ -239,11 +231,9 @@
 			<ul>
 				<li><a href="https://github.com/thoughtsunificator" target="_blank">Github</a></li>
 				<li><a href="https://www.npmjs.com/~thoughtsunificator" target="_blank">npmjs</a></li>
-				<li><a href="https://www.linkedin.com/in/romain-lebesle" target="_blank">Linkedin</a></li>
 				<li><a href="https://twitter.com/thoughtsunifier" target="_blank">Twitter</a></li>
 				<li><a href="https://addons.mozilla.org/en-US/firefox/user/15968837" target="_blank">AMO</a></li>
-				<li><a href="https://play.google.com/store/apps/developer?id=thoughtsunificator&amp;hl=en&amp;gl=US" target="_blank">Google Play</a></li>
-				<li><a href="https://snapstats.org/publishers/thoughtsunificator" target="_blank">Snapcraft</a></li>
+				<li><a href="https://snapcraft.io/publisher/thoughtsunificator" target="_blank">Snapcraft</a></li>
 				<li><a href="https://openuserjs.org/users/thoughtsunificator" target="_blank">OpenUserJS</a></li>
 				<li><a href="https://www.codewars.com/users/romain_lebesle" target="_blank">codewars</a></li>
 			</ul>
@@ -302,7 +292,7 @@
 		<div class="records">
 			<div class="record columns">
 				<div>
-					<div class="period"><time>Nov. 2021</time> – <time>Présent</time></div>
+					<div class="period"><time>Nov. 2021</time> – <time>Present</time></div>
 					<small class="location">Rennes, France</small>
 					<div class="organization"><b>ICODIA</b></div>
 					<u class="position">Lead Developer</u>
@@ -425,7 +415,7 @@
 						<li>Bot & Scraper IMDB</li>
 						<li>Code reviews</li>
 						<li>5000 installs on the Chrome Web Store for the browser extension BetterMyAnimeList</li>
-						<li>Published initial release of domodel, a front-end librarie</li>
+						<li>Published initial release of domodel, a front-end library</li>
 					</ul>
 				</div>
 				<ul class="skills">
@@ -462,7 +452,7 @@
 					<div class="description">Development and maintenance of seval open-source projets.</div>
 					<ul class="highlights">
 						<li>Published initial release of bbcode-parser, a zero dependencies BBCode parser with an API similitar to the DOM</li>
-						<li>Published initial release of userinterface.js, a front-end librarie</li>
+						<li>Published initial release of userinterface.js, a front-end library</li>
 					</ul>
 				</div>
 				<ul class="skills">
@@ -599,6 +589,5 @@
 			</div>
 		</div>
 	</section>
-	<footer><a target="_blank" href="/resume.json">json</a></footer>
 </body>
 </html>

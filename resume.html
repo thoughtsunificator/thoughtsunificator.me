@@ -196,27 +196,19 @@
 			}
 		}
 		@media print {
-			.skills,
-			footer,
-			#navigation,
-			.profiles {
-				display: none;
-			}
-			.record {
-				break-inside: avoid;
-			}
 			body {
 				margin: 0;
-				max-width: initial;
+				font-size: 12.5px;
 			}
-			section h3 {
-				border-bottom: 0;
+			body > section:nth-of-type(3) .record:nth-of-type(2) {
+				margin-bottom: 90px;
 			}
-		}
-		footer {
-			text-align: right;
-			padding-top: 20px;
-			padding-right: 20px;
+			body > section:nth-of-type(3) .record:nth-of-type(8) {
+				margin-bottom: 60px;
+			}
+			.skills .group > div:not(:first-child) {
+				margin-left: 5px;
+			}
 		}
 	</style>
 </head>
@@ -239,11 +231,9 @@
 			<ul>
 				<li><a href="https://github.com/thoughtsunificator" target="_blank">Github</a></li>
 				<li><a href="https://www.npmjs.com/~thoughtsunificator" target="_blank">npmjs</a></li>
-				<li><a href="https://www.linkedin.com/in/romain-lebesle" target="_blank">Linkedin</a></li>
 				<li><a href="https://twitter.com/thoughtsunifier" target="_blank">Twitter</a></li>
 				<li><a href="https://addons.mozilla.org/en-US/firefox/user/15968837" target="_blank">AMO</a></li>
-				<li><a href="https://play.google.com/store/apps/developer?id=thoughtsunificator&amp;hl=en&amp;gl=US" target="_blank">Google Play</a></li>
-				<li><a href="https://snapstats.org/publishers/thoughtsunificator" target="_blank">Snapcraft</a></li>
+				<li><a href="https://snapcraft.io/publisher/thoughtsunificator" target="_blank">Snapcraft</a></li>
 				<li><a href="https://openuserjs.org/users/thoughtsunificator" target="_blank">OpenUserJS</a></li>
 				<li><a href="https://www.codewars.com/users/romain_lebesle" target="_blank">codewars</a></li>
 			</ul>
@@ -276,27 +266,27 @@
 		<h3>Publications</h3>
 		<div class="records">
 			<div class="record">
-				<div><b class="title">domodel</b> – Librairie JavaScript</div>
+				<div><b class="title">domodel</b> – <span class="type">Librairie JavaScript</span></div>
 				<p class="description">Librairie front-end permettant d'organiser l'interface utilisateur en modèles (apparence) et binding (comportement), elle intègre également des patterns de la programmation observable.</p>
 			</div>
 			<div class="record">
-				<div><b class="title">dev.to</b> – Web Article</div>
+				<div><b class="title">dev.to</b> – <span class="type">Web Article</span></div>
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/userinterfacejs-small-front-end-library-2b8k">userinterface.js - Small front-end library </a></p>
 			</div>
 			<div class="record">
-				<div><b class="title">domodel-diary</b> – Application JavaScript</div>
+				<div><b class="title">domodel-diary</b> – <span class="type">Application JavaScript</span></div>
 				<p class="description">Application très légère permettant de tenir un journal de notes chifrées, protégées par un mot de passe.</p>
 			</div>
 			<div class="record">
-				<div><b class="title">dev.to</b> – Web Article</div>
+				<div><b class="title">dev.to</b> – <span class="type">Web Article</span></div>
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/how-to-build-a-grid-system-in-javascript-m5n">How to build a Grid system in JavaScript</a></p>
 			</div>
 			<div class="record">
-				<div><b class="title">bbcode-parser</b> – Librairie JavaScript</div>
+				<div><b class="title">bbcode-parser</b> – <span class="type">Librairie JavaScript</span></div>
 				<p class="description">Parser bbcode avec comme particularité un modèle de données basé sur le DOM.</p>
 			</div>
 			<div class="record">
-				<div><b class="title">dev.to</b> – Web Article</div>
+				<div><b class="title">dev.to</b> – <span class="type">Web Article</span></div>
 				<p class="description"><a target="_blank" href="https://dev.to/thoughtsunificator/domodel-es6-modules-based-front-end-library-13dg">domodel - ES6 Modules based front-end library </a></p>
 			</div>
 		</div>
@@ -604,6 +594,5 @@
 			</div>
 		</div>
 	</section>
-	<footer><a target="_blank" href="/resume.json">json</a></footer>
 </body>
 </html>
