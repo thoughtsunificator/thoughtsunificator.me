@@ -27,12 +27,6 @@ exports.render = function(data) {
 			</ul>
 			</section>
 	<section>
-	<h3>Hire me</h3>
-	<p>You can either direct-hire me by sending me a mail with your project requirements (see below).</p>
-	<p>My working hours are 7am to 3am (GMT+2).</p>
-	<p>English and French speaker.</p>
-	</section>
-	<section>
 	<h3>Contact</h3>
 	<p>
 		<h4>Job Inquiries</h4>
