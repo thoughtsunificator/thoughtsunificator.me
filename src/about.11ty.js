@@ -12,7 +12,7 @@ exports.render = function(data) {
 	<div>
 	<section>
 	<h3>Profile</h3>
-	<p>Self taught full stack developer with <b>5+ years experiences</b>.</p>
+	<p>Open 🧙 at thoughtsunificator.me D2D and Web specs is all I care about.</p>
 	</section>
 	<section>
 	<h3>Links</h3>
