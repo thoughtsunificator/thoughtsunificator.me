@@ -2,8 +2,7 @@
 {
   title: "How to save and restore your programs when using i3",
   tags: ["tutorial", "i3", "dmenu", "i3-resurrect"],
-  date: "2024-04-06",
-  draft: true
+  date: "2024-04-06"
 }
 ---
 
@@ -29,7 +28,7 @@ So how would you go about achieving this? These are the solutions I was able to 
 
 That is what I will be writing about.
 
-## How to achieve workspace switching at the os-layer through scripting
+### How to achieve workspace switching at the os-layer through scripting
 
 The first thing I have to think about is the usage.
 
@@ -55,23 +54,23 @@ If I'm working on a Web application I would also need my browser opened up.
 
 ### Scripting
 
-#### prerequisites
+#### Prerequisites
 
 - i3
 - i3-resurrect
+- dmenu
 
+#### Scripts
 
-#### Let's script
-
-1. Ask the user which projects it wants to work on.
-2. Open main.sh of the selected project
-> This script might prompt the user for additional information such as the feature.
+1. Prompt the user for the project it wants to work on.
+2. Run the main.sh script for the selected project
+> The script might prompt the user for additional information such as the feature.
 
 ```workspace.sh```
 ```shell
 #!/usr/bin/env sh
 
-projects_path="$HOME/.i3/i3-resurrect/projects" # Where we store our layout projects
+projects_path="$HOME/.i3/i3-resurrect/projects"
 
 project_name=$(ls "$projects_path" | dmenu -p project  -i | xargs)
 
@@ -87,14 +86,14 @@ $project_path/main.sh "$project_path" "$temp_folder" "$workspace_number" && pipx
 rm -rf "$temp_folder"
 ```
 
-```prompt.sh```
+```main.sh```
 ```shell
 #!/usr/bin/env sh
 project_path="$1"
 temp_folder="$2"
 workspace_number="$3"
 echo $workspace_number
-feature_name=$(ls -t /my_project_path/.features | dmenu -p Feature -i | xargs)
+feature_name=$(ls -t /my_project_path/.features | dmenu -p Feature -i | xargs) # a feature is a folder
 if [[ "$feature_name" == "" ]]; then
   echo "Invalid feature_name"
   exit 1
@@ -103,3 +102,63 @@ mkdir $temp_folder/profiles
 sed -e "s/%{feature_name}/$feature_name/g" "$project_path/programs.json" > "$temp_folder/profiles/current_programs.json" && \ 
 sed -e "s/%{feature_name}/$feature_name/g" "$project_path/layout.json" > "$temp_folder/profiles/current_layout.json"
 ```
+
+```programs.json```
+> See https://github.com/JonnyHaystack/i3-resurrect
+- vscode
+- firefox
+- 2 xterm windows
+
+```json
+[
+  {
+    "command": [
+      "/opt/visual-studio-code/code",
+      "/my_project_path/.features/%{feature_name}/%{feature_name}.code-workspace"
+    ],
+    "working_directory": "/my_project_path/.features/%{feature_name}"
+  },
+  {
+    "command": [
+      "/usr/lib/firefox/firefox"
+    ],
+    "working_directory": "$HOME"
+  },
+  {
+    "command": [
+      "/usr/bin/xterm",
+			"-class",
+      "UXTerm",
+      "-u8",
+      "-bw",
+      "0",
+      "-e",
+      "bash --login -i <<< 'source /home/user/.venvs/project/%{feature_name}/bin/activate; exec </dev/tty'"
+    ],
+    "working_directory": "$HOME"
+  },
+  {
+    "command": [
+      "/usr/bin/xterm",
+			"-class",
+      "UXTerm",
+      "-u8",
+      "-bw",
+      "0",
+      "-e",
+      "bash --login -i <<< 'source /home/user/.venvs/project/%{feature_name}/bin/activate; exec </dev/tty'"
+    ],
+    "working_directory": "$HOME"
+  }
+]
+```
+
+```layout.json```
+See https://i3wm.org/docs/layout-saving.html
+
+---
+
+That's about it, now you can save and restore your workspaces.
+
+
+Thanks for reading.
