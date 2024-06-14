@@ -13,6 +13,7 @@ exports.render = function(data) {
 	<section>
 	<h3>Profile</h3>
 	<p>Open 🧙 at thoughtsunificator.me D2D and Web specs is all I care about.</p>
+	<p><a href="/pgp_key.asc">My PGP key.</a></p>
 	</section>
 	<section>
 	<h3>Links</h3>
