@@ -92,7 +92,7 @@ rm -rf "$temp_folder"
 project_path="$1"
 temp_folder="$2"
 workspace_number="$3"
-feature_name=$(ls -t /my_project_path/.features | dmenu -p Feature -i | xargs) # a feature is a folder
+feature_name=$(ls -t /my_project_path/.features | dmenu -p Feature -i | xargs)
 if [[ "$feature_name" == "" ]]; then
   echo "Invalid feature_name"
   exit 1
