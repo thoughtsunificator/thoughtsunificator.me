@@ -24,7 +24,8 @@ exports.render = function(data) {
 			<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
 			<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
 			<li><a target="_blank" href="https://snapcraft.io/publisher/thoughtsunificator">Snapcraft</a></li>
-			<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter	</a></li>
+			<li><a target="_blank" href="https://mastodon.social/@thoughtsunifcator">Mastodon</a></li>
+			<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter</a></li>
 			</ul>
 			</section>
 	<section>
