@@ -30,10 +30,10 @@ exports.render = function(data) {
 	<section>
 	<h3>Contact</h3>
 	<p>
-		<h4>Job Inquiries</h4>
-		<a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
-		<h4>OSS Inquiries</h4>
-		<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
+		<ul>
+			<li>For general questions or open source stuff drop me a message at <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</li>
+			<li>For job related inquiries you can contact me at <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>.</li>
+		</ul>
 	</p>
 	</section>
 	</div>
