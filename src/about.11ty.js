@@ -24,16 +24,17 @@ exports.render = function(data) {
 			<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
 			<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
 			<li><a target="_blank" href="https://snapcraft.io/publisher/thoughtsunificator">Snapcraft</a></li>
-			<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter	</a></li>
+			<li><a target="_blank" href="https://mastodon.social/@thoughtsunifcator">Mastodon</a></li>
+			<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter</a></li>
 			</ul>
 			</section>
 	<section>
 	<h3>Contact</h3>
 	<p>
-		<h4>Job Inquiries</h4>
-		<a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>
-		<h4>OSS Inquiries</h4>
-		<a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>
+		<ul>
+			<li>For general questions or open source stuff drop me a message at <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</li>
+			<li>For job related inquiries you can contact me at <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>.</li>
+		</ul>
 	</p>
 	</section>
 	</div>
