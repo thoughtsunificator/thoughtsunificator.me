@@ -154,7 +154,8 @@ sed -e "s/%{feature_name}/$feature_name/g" "$project_path/layout.json" > "$temp_
 ```
 
 ```layout.json```
-See https://i3wm.org/docs/layout-saving.html
+
+After setting up your layout manually you can save it using i3 (see https://i3wm.org/docs/layout-saving.html) or i3-ressurect (see https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage)
 
 ---
 
