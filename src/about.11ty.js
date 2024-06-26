@@ -16,18 +16,16 @@ exports.render = function(data) {
 	<p><a href="/pgp_key.asc">My PGP key.</a></p>
 	</section>
 	<section>
-	<h3>Links</h3>
-	<ul class="links">
-			<li><a target="_blank" href="/resume-en.html"><b>Resume</b></a></li>
-			<li><a target="_blank" href="/timeline-en.html">Timeline</a></li>
-			<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
-			<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
-			<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
-			<li><a target="_blank" href="https://snapcraft.io/publisher/thoughtsunificator">Snapcraft</a></li>
-			<li><a target="_blank" href="https://mastodon.social/@thoughtsunifcator">Mastodon</a></li>
-			<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter</a></li>
+			<h3>Links</h3>
+			<ul class="links">
+				<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
+				<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
+				<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
+				<li><a target="_blank" href="https://snapcraft.io/publisher/thoughtsunificator">Snapcraft</a></li>
+				<li><a target="_blank" href="https://mastodon.social/@thoughtsunifcator">Mastodon</a></li>
+				<li><a target="_blank" href="https://twitter.com/thoughtsunifier">Twitter</a></li>
 			</ul>
-			</section>
+	</section>
 	<section>
 	<h3>Contact</h3>
 	<p>
