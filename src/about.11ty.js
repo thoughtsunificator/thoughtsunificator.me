@@ -18,7 +18,6 @@ exports.render = function(data) {
 	<section>
 			<h3>Links</h3>
 			<ul class="links">
-				<li><a target="_blank" href="/resume.html"><b>Resume</b></a></li>
 				<li><a target="_blank" href="https://github.com/thoughtsunificator">Github</a></li>
 				<li><a target="_blank" href="https://www.npmjs.com/~thoughtsunificator">npm</a></li>
 				<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/user/15968837">AMO</a></li>
