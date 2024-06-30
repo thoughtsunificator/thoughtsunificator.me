@@ -11,11 +11,13 @@ Anime Twist Premium is a browser extension that adds a watch list to twist.moe m
 
 ### Adding an anime to your watchlist
 
-Navigate to the page of the anime of your choice.
+Navigate to the page of the anime of your choice. 
 
-There you will be able to see that a new "+" button appeared below the video player:
+A new "+" button appeared below the video player:
 
 ![atp-anime](/image/atp-anime.webp)
+
+Clicking the button will add the anime to your watchlist.
 
 ### Acessing your watch list
 

@@ -22,6 +22,7 @@ body {
 	background-color: #353f5b;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	padding: var(--SIZE_MEDIUM);
 	color: white;
 	font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 	display: grid;
@@ -58,13 +59,8 @@ textarea {
 	resize: vertical;
 }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-	background: #0000001f;
-}
-
 #header {
 	margin-top: var(--SIZE_MEDIUM);
-	justify-self: center;
 	grid-gap: var(--SIZE_MEDIUM);
 	display: grid;
 }
@@ -89,9 +85,9 @@ textarea {
 
 #header nav {
 	grid-gap: var(--SIZE_MEDIUM);
-	place-content: center;
 	display: grid;
 	grid-auto-flow: column;
+	text-align: center;
 	border-bottom: 2px solid #181f33;
 	padding-left: 50px;
 	padding-right: 50px;
@@ -140,7 +136,6 @@ textarea {
 
 #post-content {
 	margin-top: var(--SIZE_MEDIUM);
-	font-size: 1.2em;
 }
 
 #post-content ul {
