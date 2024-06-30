@@ -196,8 +196,6 @@ textarea {
 	column-gap: var(--SIZE_MEDIUM);
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	text-transform: uppercase;
 }
 
 
@@ -334,6 +332,7 @@ textarea {
 	padding: var(--SIZE_XXS) var(--SIZE_MEDIUM);
 }
 
+#posts h3 a,
 #archive h3 a,
 #tags h3 a {
 	color: #85add9;
