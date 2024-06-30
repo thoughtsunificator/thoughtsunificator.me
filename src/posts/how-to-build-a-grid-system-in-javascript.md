@@ -6,16 +6,17 @@
 }
 ---
 
+## Introduction
 
 While making my [connect four](https://github.com/thoughtsunificator/userinterface.js-puissance4) in JavaScript I thought it would be great to build a reusable and scalable grid system.
 
 That's what I will be sharing today.
 
-So first, let's go through the basics, exactly how can we define a grid system? We could say that a grid is made of cells that are organized into rows.
-
 ## Grid
 
-So let's start from here and make a ``Grid`` class that will hold our rows:
+First, let's go through the basics, exactly how can we define a grid system? We could say that a grid is made of cells that are organized into rows.
+
+Let's start from here and make a ``Grid`` class that will hold our rows:
 
 ``grid.js``
 ```javascript
