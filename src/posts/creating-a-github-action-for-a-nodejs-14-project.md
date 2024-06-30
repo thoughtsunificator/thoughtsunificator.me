@@ -5,9 +5,14 @@
 	date: "2021-09-25"
 }
 ---
+
+## Introduction
+
 Currently it is [not possible](https://github.com/actions/runner/issues/772) to create a [JavaScript action](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action) with a version of nodejs other than 12.
 
 This article attempt to provide a solution to this very issue.
+
+## Workaround
 
 First if you don't know the basics of Github Actions I recommend you go read the [Starting Guide](https://docs.github.com/en/actions/creating-actions/about-custom-actions). 
 

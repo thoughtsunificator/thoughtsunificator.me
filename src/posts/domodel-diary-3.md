@@ -5,6 +5,9 @@
 	date: "2020-05-30"
 }
 ---
+
+## Introduction
+
 domodel-diary is a password protected diary.
 
 It offers the following features:
