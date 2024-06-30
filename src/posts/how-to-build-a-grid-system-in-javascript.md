@@ -9,11 +9,9 @@
 
 While making my [connect four](https://github.com/thoughtsunificator/userinterface.js-puissance4) in JavaScript I thought it would be great to build a reusable and scalable grid system.
 
-That's what I'm sharing with you today.
+That's what I will be sharing today.
 
-So first, let's go through the basics, exactly how can we define a grid system?
-
-We could say that a grid is made of cells that are organized into rows.
+So first, let's go through the basics, exactly how can we define a grid system? We could say that a grid is made of cells that are organized into rows.
 
 ## Grid
 
@@ -75,7 +73,7 @@ class Row {
 }
 ```
 
-As you can see ``Row`` is in fact an abstraction of ``x`` in our grid. Just like the ``Grid`` class holds rows our ``Row`` class holds cells.
+As you can see ``Row`` is in fact an abstraction of ``x`` in our grid. Just like the ``Grid`` class holds rows our ``Row`` class holds cells. 
 
 From here the next step would be to add cells to the grid, so let's create a method inside our ``Grid`` class that'll do just that.
 

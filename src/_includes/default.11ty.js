@@ -8,7 +8,7 @@ exports.render = function(data) {
 		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
 		<link rel="manifest" href="/manifest.webmanifest">
 	</head>
-	<body class="wrap${data.class ? ` page-${data.class}` : ""}">
+	<body class="${data.class ? ` page-${data.class}` : ""}">
 		<header id="header">
 			<h1>${data.site.tagline}</h1>
 			<nav>
