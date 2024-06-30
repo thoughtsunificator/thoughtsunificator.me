@@ -94,9 +94,7 @@ textarea {
 }
 
 #header nav a {
-	background-color: var(--COLOR_CLOUDBURST);
-	padding-left: var(--SIZE_XL);
-	padding-right: var(--SIZE_XL);
+	background-color: #a8bbdf0d;
 	color: white;
 	cursor: pointer;
 	padding-top: var(--SIZE_XS);
@@ -114,9 +112,7 @@ textarea {
 }
 
 #main > div:not(#posts) {
-	background-color: var(--COLOR_CLOUDBURST3);
 	margin-top: var(--SIZE_MEDIUM);
-	padding: var(--SIZE_MEDIUM);
 }
 
 #posts {
@@ -130,8 +126,11 @@ textarea {
 }
 
 .post:not(.full) {
-	background-color: var(--COLOR_CLOUDBURST3);
 	padding-bottom: var(--SIZE_MEDIUM);
+}
+
+.post:not(.full):nth-child(even) {
+	background-color: #a8bbdf0d;
 }
 
 #post-content {
@@ -187,9 +186,7 @@ textarea {
 }
 
 .post.full {
-	background-color: var(--COLOR_CLOUDBURST3);
 	margin-top: var(--SIZE_MEDIUM);
-	padding: var(--SIZE_MEDIUM);
 	font-size: 1.10em;
 }
 
