@@ -8,7 +8,6 @@ exports.data = {
 
 exports.render = function(data) {
 	return `<div class="intro">
-	<img alt="me" src="/image/me.webp">
 	<div>
 	<section>
 	<h3>Profile</h3>
