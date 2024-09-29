@@ -10,7 +10,7 @@ exports.render = function(data) {
 	</head>
 	<body class="${data.class ? ` page-${data.class}` : ""}">
 		<header id="header">
-			<h1>${data.site.tagline}</h1>
+			<h2>${data.site.tagline}</h2>
 			<nav>
 				${data.site.menu.map(item => `<a ${ (item.url === data.page.url || item.title === "Home" && data.title === "Home") ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
 			</nav>

@@ -65,7 +65,7 @@ textarea {
 	display: grid;
 }
 
-#header h1 {
+#header h2 {
 	transform: rotate(3deg);
 	position: relative;
 	letter-spacing: 2px;
@@ -73,7 +73,7 @@ textarea {
 	margin-bottom: var(--SIZE_XXS);
 }
 
-#header h1:before {
+#header h2:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -87,22 +87,12 @@ textarea {
 	grid-gap: var(--SIZE_MEDIUM);
 	display: grid;
 	grid-auto-flow: column;
-	text-align: center;
-	border-bottom: 2px solid #181f33;
-}
-
-#header nav a {
-	background-color: #a8bbdf0d;
-	color: #bbbbbb;
-	cursor: pointer;
-	padding-top: var(--SIZE_XS);
-	padding-bottom: var(--SIZE_XS);
-	text-decoration: none;
-	word-break: keep-all;
+	grid-auto-columns: max-content;
+	justify-content: center;
 }
 
 #header nav a.active {
-	background-color: #141a2d94;
+	text-decoration: underline;
 }
 
 #header nav a:hover:not(.active) {
