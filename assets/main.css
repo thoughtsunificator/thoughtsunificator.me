@@ -11,7 +11,6 @@
 	--COLOR_SILVER: #c8c8c821;
 	--COLOR_BUNTING: #1b28512e;
 	--COLOR_POLOBLUE: #94a6ca;
-	--FONT_BODY: sans-serif;
 }
 
 html {
@@ -24,11 +23,11 @@ body {
 	background-attachment: fixed;
 	padding: var(--SIZE_MEDIUM);
 	color: white;
-	font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 	display: grid;
 	grid-gap: var(--SIZE_MEDIUM);
 	grid-template-rows: auto 1fr auto;
 	min-height: 100vh;
+	font-family: initial;
 }
 
 h1, h2, h3, h4, h5 {
