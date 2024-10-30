@@ -19,7 +19,7 @@ exports.render = function(data) {
 			${data.content}
 		</main>
 		<footer id="footer">
-			<small>Built using <a target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
+			<small>Built using <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
 			<small class="copyright">© <a rel="author" target="_blank" href="https://thoughtsunificator.me">Romain Lebesle</a></small>
 			<div class="icons">
 				<a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/thoughtsunifier"><img width="32" alt="Twitter Profile" src="/image/twitter.svg"></a>

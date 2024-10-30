@@ -59,9 +59,9 @@ You can logout, export or import your list using the settings menu:
 
 Also available on:
 
-<a target="_blank" href="https://www.microsoft.com/en-US/p/domodel-diary/9nhlt1hfb4t7"><img src="/image/English_get.webp" alt="English badge" width="200"></a>
+<a rel="noreferrer" target="_blank" href="https://www.microsoft.com/en-US/p/domodel-diary/9nhlt1hfb4t7"><img src="/image/English_get.webp" alt="English badge" width="200"></a>
 
-<a target="_blank" href="https://snapcraft.io/domodel-diary-electron"><img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"></a>
+<a rel="noreferrer" target="_blank" href="https://snapcraft.io/domodel-diary-electron"><img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"></a>
 
 ~~It will soon be available on F-Droid.~~ Please download the APK from the [release page](https://github.com/thoughtsunificator/domodel-diary-cordova/releases/) of the Github repository.
 
