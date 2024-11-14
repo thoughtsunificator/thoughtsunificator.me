@@ -85,9 +85,9 @@ textarea {
 #header nav {
 	grid-gap: var(--SIZE_MEDIUM);
 	display: grid;
-	grid-auto-flow: column;
 	grid-auto-columns: max-content;
-	justify-content: center;
+	grid-auto-flow: column;
+	font-size: 1.5em;
 }
 
 #header nav a.active {
@@ -244,7 +244,7 @@ textarea {
 	opacity: 1;
 }
 
-#footer > small {
+#footer > span {
 	grid-row: 1;
 	grid-column: 1;
 	justify-self: start;
