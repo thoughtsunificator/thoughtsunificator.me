@@ -19,8 +19,8 @@ exports.render = function(data) {
 			${data.content}
 		</main>
 		<footer id="footer">
-			<small>Built using <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a></small>
-			<small class="copyright">© <a rel="author" target="_blank" href="https://thoughtsunificator.me">Romain Lebesle</a></small>
+			<span>Built using <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a></span>
+			<span class="copyright">© <a rel="author" target="_blank" href="https://thoughtsunificator.me">Romain Lebesle</a></span>
 			<div class="icons">
 				<a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/thoughtsunifier"><img width="32" alt="Twitter Profile" src="/image/twitter.svg"></a>
 				<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator"><img width="32" alt="View source code on Github" src="/image/github.svg"></a>
