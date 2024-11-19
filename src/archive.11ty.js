@@ -34,7 +34,7 @@ exports.render = function(data) {
 			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h3>
 			<div class="posts">
 			${groups[key].map(post => `
-				<div><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></div>
+				<h3>- <a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h3>
 			`).join("")}
 			</div>
 		</section>
