@@ -7,7 +7,7 @@ exports.data = {
 
 exports.render = function(data) {
 	return `
-	<h2 class="title">${ data.title }</h2>
+	<h1 class="title">${ data.title }</h1>
 	<article class="post full">
 		${PostMeta.bind(this)({ site: data.site, post: data.page, tags: data.tags })}
 		<div id="post-content">${data.content}</div>
