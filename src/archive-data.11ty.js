@@ -13,12 +13,12 @@ exports.data = {
 exports.render = function(data) {
 	const posts = data.collections.posts.filter(post => new Intl.DateTimeFormat('en-GB', { month: "long", year: 'numeric',}).format(post.date) === data.archive)
 	return `
-	<h2>Archive "<u>${data.archive}</u>"</h2>
-	<article id="posts">
+	<h1>Archive "<u>${data.archive}</u>"</h1>
+	<div id="posts">
 	${posts.map((post, index) => `
-		<article id="post-${index}" class="post">
+		<div id="post-${index}" class="post">
 			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags }) }
-			<h3 class="title"><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h3>
+			<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }"><h1 class="title">${ post.data.title }</h1></a>
 		</article>
 	`).join("")}
 </article>`;

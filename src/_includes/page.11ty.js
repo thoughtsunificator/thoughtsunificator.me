@@ -4,7 +4,7 @@ exports.data = {
 
 exports.render = function(data) {
 	return `
-<h2>${data.title}</h2>
+<h1>${data.title}</h1>
 <div>
 	${ data.content }
 </div>
