@@ -31,10 +31,10 @@ exports.render = function(data) {
 	return `<div id="archive">
 	${keys.map((key, index) => `
 		<section id="archive-${index}" class="archive">
-			<h1 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h1>
+			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h1>
 			<div class="posts">
 			${groups[key].map(post => `
-				<h1>- <a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h1>
+				<h1><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h1>
 			`).join("")}
 			</div>
 		</section>
