@@ -17,6 +17,7 @@
 
 body {
 	margin: 0;
+	word-break: break-all;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	padding: var(--SIZE_MEDIUM);
