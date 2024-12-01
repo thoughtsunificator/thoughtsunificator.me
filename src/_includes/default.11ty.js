@@ -2,10 +2,17 @@ exports.render = function(data) {
 	return `<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- A real motherfucking head just like we planned, let see: -->
 		<title>${ data.title === "Home" ? data.site.name : `${data.headTitle || data.title} | ${data.site.name}` }</title>
-		<link rel="stylesheet" type="text/css" href="/main.bundle.css">
+		<!-- Used mostly for emojis -->
+		<meta charset="UTF-8">
+		<!-- Because it sucks to read as if you're reading from ten feets away when in reality your smartphone is glued to your face -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Just a few millions of lines, mostly useless and pathetic "aesthetics" black magick kind of stuff -->
+		<link rel="stylesheet" type="text/css" href="/main.css">
+		<!-- Used for syntax highlighting inside posts -->
+		<link rel="stylesheet" type="text/css" href="/okaida.css">
+		<!-- https://w3c.github.io/manifest/ -->
 		<link rel="manifest" href="/manifest.webmanifest">
 	</head>
 	<body class="${data.class ? ` page-${data.class}` : ""}">

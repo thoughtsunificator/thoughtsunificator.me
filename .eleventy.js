@@ -1,62 +1,10 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const htmlmin = require("html-minifier")
-const xmlmin = require("minify-xml")
 
 module.exports = config => {
 
-
 	config.addPlugin(syntaxHighlight)
 
-	const markdownIt = new require('markdown-it')({
-		typographer: true,
-		linkify: true,
-		html: true
-	})
-
-	markdownIt.linkify.set({ fuzzyLink: false })
-
-	const markdownItAnchor = require('markdown-it-anchor')
-	markdownIt.use(markdownItAnchor)
-	markdownIt.use(require("markdown-it-external-anchor"), {
-			domain: "thoughtsunificator.me",
-			class: "external"
-	});
-	config.setLibrary('md', markdownIt)
-
-	config.addPlugin(require('eleventy-plugin-nesting-toc'), {
-		tags: ['h3', 'h4', 'h5'],
-		ul: false
-	})
-
-	config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
-	config.addPlugin(require("@11ty/eleventy-plugin-rss"))
-
 	config.addPassthroughCopy({ public: './' })
-
-	config.addTransform("minifier", function(content, outputPath) {
-		if( outputPath && outputPath.endsWith(".html") ) {
-			const config = {
-				collapseBooleanAttributes: true,
-				collapseWhitespace: true,
-				decodeEntities: true,
-				html5: true,
-				minifyCSS: true,
-				minifyJS: true,
-				removeComments: true,
-				removeEmptyAttributes: true,
-				removeEmptyElements: false,
-				sortAttributes: true,
-				sortClassName: true,
-				useShortDoctype: true
-			}
-			return htmlmin.minify(content, config)
-		} else if (outputPath.endsWith(".json")) {
-			return JSON.stringify(JSON.parse(content))
-		} else if (outputPath && outputPath.endsWith(".xml")) {
-			return xmlmin.minify(content)
-		}
-		return content
- })
 
 	config.addCollection('tagsList', (collectionApi) => {
 		const tagsSet = new Set()
