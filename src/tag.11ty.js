@@ -20,6 +20,5 @@ exports.render = function(data) {
 		${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags }) }
 			<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }"><h1 class="title">${ post.data.title }</h1></a>
 		</article>
-	`).join("")}
-</article>`;
+	`).join("")}`;
 };
