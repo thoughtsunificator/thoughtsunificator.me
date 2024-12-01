@@ -14,7 +14,7 @@ exports.render = function(data) {
 	const posts = data.collections.posts.filter(post => post.data.tags && post.data.tags.includes(data.tag))
 	return `
 	<h1>Tag "<u>#${data.tag}</u>"</h1>
-	<div id="posts">
+	<section id="posts">
 	${posts.map((post, index) => `
 		<article id="post-${index}" class="post">
 		${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags }) }

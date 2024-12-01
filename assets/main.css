@@ -272,9 +272,6 @@ textarea {
 	body {
 		padding: var(--SIZE_MEDIUM);
 	}
-	#footer .tagline {
-		justify-self: flex-end;
-	}
 }
 
 @media screen and (max-width: 768px) {
@@ -286,18 +283,19 @@ textarea {
 		padding: 0;
 	}
 
-	.post .metas {
-		grid-row-gap: var(--SIZE_XS);
-	}
-
 	#footer {
 		display: grid;
 		grid-auto-flow: row;
 		justify-items: center;
 	}
+
 	#footer > * {
 		place-self: center !important;
 		grid-area: initial !important;
+	}
+
+	.post .metas {
+		grid-row-gap: var(--SIZE_XS);
 	}
 
 	.intro {
