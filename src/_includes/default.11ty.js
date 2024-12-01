@@ -14,13 +14,11 @@ exports.render = function(data) {
 		</main>
 		<footer id="footer">
 			<nav>
-			Menu:
 				${data.site.menu.map(item => `<a ${ (item.url === data.page.url || item.title === "Home" && data.title === "Home") ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
 			</nav>
 			<span>Built using <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a><br>Inspired by <a rel="noreferrer" target="_blank" href="http://motherfuckingwebsite.com">motherfuckingwebsite.com</a></span>
 			<span class="tagline">${data.site.tagline}</span>
 			<div class="icons">
-				<a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/thoughtsunifier"><img width="32" alt="Twitter Profile" src="/image/twitter.svg"></a>
 				<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator"><img width="32" alt="View source code on Github" src="/image/github.svg"></a>
 			</div>
 		</footer>

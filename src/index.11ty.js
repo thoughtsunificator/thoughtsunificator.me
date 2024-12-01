@@ -16,7 +16,7 @@ exports.render = function(data) {
 		<article id="post-${index}" class="post">
 		<a class="title" ${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }"><h1>${post.data.redirect_to ? "🔗" : ""} ${ post.data.title }</h1></a>
 		<div class="metas">
-			<small><time datetime="${new Date(post.date).toISOString()}">${new Intl.DateTimeFormat('en-GB', { month: "long", day: 'numeric' , year: 'numeric',}).format(post.date)}</time></small>
+			<h3><time datetime="${new Date(post.date).toISOString()}">${new Intl.DateTimeFormat('en-GB', { month: "long", day: 'numeric' , year: 'numeric',}).format(post.date)}</time></h3>
 		</div>
 		</article>
 	`).join("")}
