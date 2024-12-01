@@ -13,7 +13,7 @@ exports.render = function(data) {
 	<h1>Profile</h1>
 	<p>Open 🧙 at thoughtsunificator.me D2D and Web specs is all I care about.</p>
 	<p>And if you ever happen to like my sorcery I kindly ask that you consider <a target="_blank" rel="noreferrer" href="https://github.com/sponsors/thoughtsunificator">becoming a sponsor</a>.</p>
-	<p><a href="/pgp_key.asc">My PGP key.</a></p>
+	<p>Digital fingerprint (OpenPGP): D9CC8358645231E616E1F3DAC11B5CF0A7856B6D</p>
 	</section>
 	<section>
 			<h1>Links</h1>
