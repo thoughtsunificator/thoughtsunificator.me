@@ -31,7 +31,7 @@ exports.render = function(data) {
 			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/tags/${key.replace(" ", "-").toLowerCase()}/">#${key}</a></h1>
 			<div class="posts">
 			${groups[key].map(post => `
-				<h1><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></h1>
+				<article><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }"><h1>${ post.data.title }</h1></a></article>
 			`).join("")}
 			</div>
 		</section>
