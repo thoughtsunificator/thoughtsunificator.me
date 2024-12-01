@@ -31,7 +31,7 @@ exports.render = function(data) {
 	return `<div id="archive">
 	${keys.map((key, index) => `
 		<section id="archive-${index}" class="archive">
-			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h1>
+			<h3 id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></h3>
 			<div class="posts">
 			${groups[key].map(post => `
 				<article><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }"><h1>${ post.data.title }</h1></a></article>
