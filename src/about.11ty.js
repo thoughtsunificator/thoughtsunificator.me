@@ -11,7 +11,7 @@ exports.render = function(data) {
 	<div>
 	<section>
 	<h1>Profile</h1>
-	<p>I am <a href="/pgp_key.asc">D9CC8358645231E616E1F3DA<b>C11B5CF0A7856B6D</b></a>.<br>An Open 🧙 at thoughtsunificator.me who lives aspiring to master D2D, DX, UX mostly within the Web and its ecosystems</p>
+	<p>I am <a href="/pgp_key.asc">D9CC8358645231E616E1F3DA<b>C11B5CF0A7856B6D</b></a>.<br>An Open 🧙 at thoughtsunificator.me who lives aspiring to master D2D, DX and UX mostly within the Web and its ecosystems</p>
 	</section>
 	<section>
 			<h1>Links</h1>
