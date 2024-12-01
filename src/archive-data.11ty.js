@@ -16,10 +16,9 @@ exports.render = function(data) {
 	<h1>Archive "<u>${data.archive}</u>"</h1>
 	<div id="posts">
 	${posts.map((post, index) => `
-		<div id="post-${index}" class="post">
+		<article id="post-${index}" class="post">
 			${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags }) }
 			<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }"><h1 class="title">${ post.data.title }</h1></a>
 		</article>
-	`).join("")}
-</article>`;
+	`).join("")}`;
 };
