@@ -1,7 +1,7 @@
 ---js
 {
 	title: "Version pinning does not mean what we think it means",
-	tags: ["revision-control-system"],
+	tags: ["revision-control-system", "perspective"],
 	date: "2024-11-04"
 }
 ---
