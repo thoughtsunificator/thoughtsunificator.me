@@ -1,11 +1,11 @@
-exports.data = {
+export const data = {
 	layout: "page",
 	title: "Archive",
 	permalink: "/archive/",
 	description: "Post archives"
 };
 
-exports.render = function(data) {
+export function render(data) {
 
 	const groups = {}
 

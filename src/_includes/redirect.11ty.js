@@ -1,4 +1,4 @@
-exports.render = function(data) {
+export function render(data) {
 	return `<meta charset="utf-8">
 <title>Redirecting…</title>
 <link rel="canonical" href="${data.redirect_to}">

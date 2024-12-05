@@ -1,6 +1,6 @@
-const PostMeta  = require("./_includes/post/meta.11ty.js")
+import PostMeta from "./_includes/post/meta.11ty.js"
 
-exports.data = {
+export const data = {
 	layout: "default",
 	pagination: {
 		data: "collections.archiveList",
@@ -10,7 +10,7 @@ exports.data = {
 	permalink: data => `/archive/${data.archive.replace(" ", "-").toLowerCase()}/index.html`,
 };
 
-exports.render = function(data) {
+export function render(data) {
 	const posts = data.collections.posts.filter(post => new Intl.DateTimeFormat('en-GB', { month: "long", year: 'numeric',}).format(post.date) === data.archive)
 	return `
 	<h1>Archive "<u>${data.archive}</u>"</h1>

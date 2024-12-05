@@ -1,12 +1,12 @@
-const PostMeta  = require("./_includes/post/meta.11ty.js")
+import PostMeta from "./_includes/post/meta.11ty.js"
 
-exports.data = {
+export const data = {
 	layout: "default",
 	title: "Home",
 	permalink: "index.html"
-};
+}
 
-exports.render = function(data) {
+export function render(data) {
 	const posts = data.collections.posts
 	posts.reverse()
 	return `

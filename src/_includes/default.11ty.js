@@ -1,4 +1,4 @@
-exports.render = function(data) {
+export function render(data) {
 	return `<!doctype html>
 <html lang="en">
 	<head>

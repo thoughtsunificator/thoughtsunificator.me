@@ -1,6 +1,6 @@
-const humans = require('humans-generator');
+import humans from 'humans-generator'
 
-exports.data = {
+export const data = {
 	permalink: 'humans.txt',
 	sitemap: {
 		ignore: true
@@ -10,7 +10,7 @@ exports.data = {
 	}
 }
 
-exports.render = async function(data) {
+export async function render(data) {
 	return await new Promise((resolve, reject) => {
 		humans(data.other.human, (error, humans) => {
 			if (error) {
