@@ -17,18 +17,18 @@
 	<body class="">
 		<main id="main">
 			
-	<h1 class="title">How to save and restore your programs when using i3</h1>
+	<h1 class="title" id="how-to-save-and-restore-your-programs-when-using-i3">How to save and restore your programs when using i3</h1>
 	<article class="post full">
 		
-<div class="metas">
-	
-	<time datetime="2024-04-06T00:00:00.000Z">6 April 2024</time>
-	<div class="tags">
-		<a class="tag" href="/tags/tutorial/">#tutorial</a><a class="tag" href="/tags/i3/">#i3</a><a class="tag" href="/tags/dmenu/">#dmenu</a><a class="tag" href="/tags/i3-resurrect/">#i3-resurrect</a>
-	</div>
-</div>
-
-		<div id="post-content"><h2>Introduction</h2>
+		<div class="metas">
+			
+			<time datetime="2024-04-06T00:00:00.000Z">6 April 2024</time>
+			<div class="tags">
+				<a class="tag" href="/tags/tutorial/">#tutorial</a><a class="tag" href="/tags/i3/">#i3</a><a class="tag" href="/tags/dmenu/">#dmenu</a><a class="tag" href="/tags/i3-resurrect/">#i3-resurrect</a>
+			</div>
+		</div>
+		
+		<div id="post-content"><h2 id="introduction">Introduction</h2>
 <p>One of the oldest problems I run into with Operating Systems in general, the lower layer of my development environment, is saving/managing my workspace.<br>
 But what does &quot;workspace saving&quot; mean exactly, what am I trying to achieve here?</p>
 <p>I don't want my OS to be able to restore my windows when I restart, it's not about that, I can deal with this problem by not rebooting. What I want is the ability to to close apps and programs in order to have a clean workspace that contains only what I need at the moment. I also want to be able to reopen group of windows at will, to me, these group of windows basically mean the same as a projet. That's right, a group of windows and their states is a project.</p>
@@ -40,22 +40,22 @@ But what does &quot;workspace saving&quot; mean exactly, what am I trying to ach
 </ul>
 <p><strong>Scripting</strong></p>
 <p>That is what I will be writing about.</p>
-<h3>How to achieve workspace switching at the os-layer through scripting</h3>
+<h3 id="how-to-achieve-workspace-switching-at-the-os-layer-through-scripting">How to achieve workspace switching at the os-layer through scripting</h3>
 <p>The first thing I have to think about is the usage.
 I want, through a script, command or whatever, be able to open a specific workspace.
 Something like <code>workspace.sh [project] [feature]</code> for example.</p>
 <p>I have to make a clear distinction between the project and the feature.</p>
 <p>The project is in this case would represent the framework, the basis : the i3 layout, the setup scripts and the programs/scripts themselves. The feature could be a specific branch in a git repository for example, or it could be as simple as a parameter that you give to your programs/scripts.</p>
-<h3>Use case</h3>
+<h3 id="use-case">Use case</h3>
 <p>Let's say I want to work on a project called <code>foo</code>, on very this project I work simultaneously on 3 separate features. The first thing would be that I want to have one terminal, right where the project lives. I also want the shell session to start some init. scripts, that could be something like a Python venv for example. If I'm working on a Web application I would also need my browser opened up.</p>
-<h3>Scripting</h3>
-<h4>Prerequisites</h4>
+<h3 id="scripting">Scripting</h3>
+<h4 id="prerequisites">Prerequisites</h4>
 <ul>
 <li>i3</li>
 <li>i3-resurrect</li>
 <li>dmenu</li>
 </ul>
-<h4>Scripts</h4>
+<h4 id="scripts">Scripts</h4>
 <ol>
 <li>Prompt the user for the project it wants to work on.</li>
 <li>Run the main.sh script for the selected project</li>
