@@ -163,7 +163,6 @@ textarea {
 	display: grid;
 	grid-template-columns: 1fr;
 	align-items: center;
-	border-top: 1px solid #8a92ac66;
 	padding: 15px;
 	grid-auto-rows: max-content;
 	row-gap: 50px;
