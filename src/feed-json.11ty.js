@@ -1,6 +1,6 @@
-const removeMarkdown = require("markdown-to-text").default
+import removeMarkdown from "markdown-to-text"
 
-exports.data = {
+export const data = {
 	eleventyExcludeFromCollections: true,
 	permalink: "/feed.json",
 	robots: {
@@ -8,7 +8,7 @@ exports.data = {
 	}
 }
 
-exports.render = function(data) {
+export function render(data) {
 	return JSON.stringify({
 		"version": "https://jsonfeed.org/version/1",
 		"title": data.site.name,

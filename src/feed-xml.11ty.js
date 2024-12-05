@@ -1,6 +1,6 @@
-const removeMarkdown = require("markdown-to-text").default
+import removeMarkdown from "markdown-to-text"
 
-exports.data = {
+export const data = {
 	eleventyExcludeFromCollections: true,
 	permalink: "/feed.xml",
 	robots: {
@@ -8,7 +8,7 @@ exports.data = {
 	}
 }
 
-exports.render = function(data) {
+export function render(data) {
 	return `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>${ data.site.name }</title>

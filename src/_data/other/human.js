@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 		team: {
 			"Author": "Romain Lebesle",
 			"twitter": "@thoughtsunifier",

@@ -1,8 +1,8 @@
 // C/P from https://thefrugaldeveloper.life/posts/building-an-eleventy-boilerplate-pt-2
 
-const xml = require("xml");
+import xml from "xml"
 
-exports.data = {
+export const data = {
 	permalink: 'opensearch.xml',
 	sitemap: {
 		ignore: true
@@ -12,7 +12,7 @@ exports.data = {
 	}
 }
 
-exports.render = function (data) {
+export function render(data) {
 		const search = [
 			{
 				OpenSearchDescription: [

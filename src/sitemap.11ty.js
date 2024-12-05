@@ -1,6 +1,6 @@
 // Source: https://thefrugaldeveloper.life/posts/building-an-eleventy-boilerplate-pt-2
 
-exports.data = {
+export const data = {
 	permalink: "/sitemap.xml",
 	eleventyExcludeFromCollections: true,
 	robots: {
@@ -8,7 +8,7 @@ exports.data = {
 	}
 };
 
-exports.render = function(data) {
+export function render(data) {
 	let all = data.collections.all.filter(page => !page.data.sitemap || !page.data.sitemap.ignore)
 	all = all.concat(data.collections.tagsList.filter(tag => !all.find(page => page.url === `/tags/${tag.replace(" ", "-").toLowerCase()}/`)).map(tag => ({ date: new Date(), url: `/tags/${tag.replace(" ", "-").toLowerCase()}` })))
 	all = all.concat(data.collections.archiveList.filter(archive => !all.find(page => page.url === `/archive/${archive.replace(" ", "-").toLowerCase()}/`)).map(archive => ({ date: new Date(), url: `/archive/${archive.replace(" ", "-").toLowerCase()}` })))

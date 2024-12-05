@@ -1,6 +1,6 @@
-const PostMeta  = require("./_includes/post/meta.11ty.js")
+import PostMeta from "./_includes/post/meta.11ty.js"
 
-exports.data = {
+export const data = {
 	layout: "default",
 	pagination: {
 		data: "collections.tagsList",
@@ -10,7 +10,7 @@ exports.data = {
 	permalink: data => `/tags/${data.tag.replace(" ", "-").toLowerCase()}/index.html`,
 };
 
-exports.render = function(data) {
+export function render(data) {
 	const posts = data.collections.posts.filter(post => post.data.tags && post.data.tags.includes(data.tag))
 	return `
 	<h1>Tag "<u>#${data.tag}</u>"</h1>

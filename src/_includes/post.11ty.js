@@ -1,11 +1,11 @@
-const PostMeta  = require("./post/meta.11ty.js")
-const Image = require("@11ty/eleventy-img")
+import PostMeta from "./post/meta.11ty.js"
+import Image from "@11ty/eleventy-img"
 
-exports.data = {
+export const data = {
 	layout: "default"
 };
 
-exports.render = function(data) {
+export function render(data) {
 	return `
 	<h1 class="title">${ data.title }</h1>
 	<article class="post full">

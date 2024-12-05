@@ -1,6 +1,8 @@
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
+import { IdAttributePlugin } from "@11ty/eleventy"
+import siteData from "./src/_data/site.js"
 
-module.exports = config => {
+export default function(config) {
 
 	config.addPlugin(syntaxHighlight)
 
@@ -48,7 +50,7 @@ module.exports = config => {
 	config.setDataDeepMerge(true)
 
 	return {
-		pathPrefix: require('./src/_data/site.json').baseUrl,
+		pathPrefix: siteData.baseUrl,
 		dir: {
 			input: 'src',
 			output: 'dist',

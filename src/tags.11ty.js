@@ -1,11 +1,11 @@
-exports.data = {
+export const data = {
 	layout: "page",
 	permalink: "/tags/",
 	title: "Tags",
 	description: "Tags"
 };
 
-exports.render = function(data) {
+export function render(data) {
 
 	const groups = {}
 	const posts = data.collections.posts.filter(post => post.data.tags)

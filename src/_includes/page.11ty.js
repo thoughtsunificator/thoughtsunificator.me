@@ -1,8 +1,8 @@
-exports.data = {
+export const data = {
 	layout: "default",
 };
 
-exports.render = function(data) {
+export function render(data) {
 	return `
 <h1>${data.title}</h1>
 <div>

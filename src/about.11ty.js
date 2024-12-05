@@ -1,4 +1,4 @@
-exports.data = {
+export const data = {
 	layout: "page",
 	title: "About Romain Lebesle",
 	headTitle: "About",
@@ -6,7 +6,7 @@ exports.data = {
 	description: "About"
 }
 
-exports.render = function(data) {
+export function render(data) {
 	return `<div class="intro">
 	<div>
 	<section>
