@@ -2,9 +2,11 @@ import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
 import { IdAttributePlugin } from "@11ty/eleventy"
 import siteData from "./src/_data/site.js"
 
+
 export default function(config) {
 
 	config.addPlugin(syntaxHighlight)
+	config.addPlugin(IdAttributePlugin)
 
 	config.addPassthroughCopy({ public: './' })
 
