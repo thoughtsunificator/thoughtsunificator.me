@@ -13,12 +13,11 @@ export const data = {
 export function render(data) {
 	const posts = data.collections.posts.filter(post => post.data.tags && post.data.tags.includes(data.tag))
 	return `
-	<h1>Tag "<u>#${data.tag}</u>"</h1>
 	<section id="posts">
 	${posts.map((post, index) => `
 		<article id="post-${index}" class="post">
 		${PostMeta.bind(this)({ site: data.site, post, tags: post.data.tags }) }
-			<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }"><h1 class="title">${ post.data.title }</h1></a>
+			<a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a>
 		</article>
 	`).join("")}`;
 };
