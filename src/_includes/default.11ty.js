@@ -22,12 +22,14 @@ export function render(data) {
 		<footer id="footer">
 			<nav>
 				${data.site.menu.map(item => `<a ${ (item.url === data.page.url || item.title === "Home" && data.title === "Home") ? `class="active" ` : ""}href="${ item.url }">${ item.title }</a>`).join("")}
-			</nav>
-			<span>Built using <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a><br>Inspired by <a rel="noreferrer" target="_blank" href="http://motherfuckingwebsite.com">motherfuckingwebsite.com</a></span>
+				<div class="icons" style="filter: invert(1)">
+					<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator">
+						<img width="32" alt="View source code on Github" src="/image/github.svg">
+					</a>
+				</div>
+		</nav>
 			<span class="tagline">${data.site.tagline}</span>
-			<div class="icons">
-				<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator"><img width="32" alt="View source code on Github" src="/image/github.svg"></a>
-			</div>
+			<span>Built with <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a><br>Inspired by <a rel="noreferrer" target="_blank" href="http://motherfuckingwebsite.com">a certain website...</a></span>
 		</footer>
 	</body>
 </html>`
