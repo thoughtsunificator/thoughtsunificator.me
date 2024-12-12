@@ -1,7 +1,7 @@
 ---js
 {
 	title: "Creating a Github action for a Node.js 14+ project",
-	tags: ["github", "CI/CD"],
+	tags: ["developer-experience"],
 	date: "2021-09-25"
 }
 ---
