@@ -34,11 +34,6 @@
 			<title>Creating a Github action for a Node.js 14+ project</title>
 			<updated>2021-09-25T00:00:00.000Z</updated>
 		</entry><entry>
-			<id>https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/</id>
-			<link href="https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/"/>
-			<title>bbcode-parser - A JavaScript BBCode implementation</title>
-			<updated>2021-09-28T00:00:00.000Z</updated>
-		</entry><entry>
 			<id>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</id>
 			<link href="https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/"/>
 			<title>How to build a Grid system in JavaScript</title>
@@ -58,5 +53,10 @@
 			<link href="https://thoughtsunificator.me/open-source-protestware-harms-open-source/"/>
 			<title>Open source ‘protestware’ harms Open Source</title>
 			<updated>2024-12-06T00:00:00.000Z</updated>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/</id>
+			<link href="https://thoughtsunificator.me/bbcode-parser-a-javascript-bbcode-implementation/"/>
+			<title>Are you sure you want to copy paste</title>
+			<updated>2024-12-21T00:00:00.000Z</updated>
 		</entry>
 </feed>
