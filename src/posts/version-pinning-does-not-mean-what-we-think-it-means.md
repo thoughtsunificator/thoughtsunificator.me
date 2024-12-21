@@ -23,6 +23,8 @@ When we, as developers,  are writing our manifests for our software to build and
 
 All of this essentially boils down to fighting the true nature of semver which is evil. Any software attempting to "solve" a problem bigger than himself should never be trusted in the first place.
 
+And while we're at it, if we're talking about a human representation of how up-to-date the software in question is we might benefit from using a date instead of random digits that have absolutely no meaning. 
+
 We cannot possibly only trust that our optimism that the world of tomorrow surely will be a better place as a condition, a requirement for our software to be able to run in the best possible conditions, and even more, we should not expect users to accommodate our failures to produce reproducible builds.
 
 The time of praying for software to build and run properly are long gone, I pray that we stop praying and start producing true reproducible builds.
