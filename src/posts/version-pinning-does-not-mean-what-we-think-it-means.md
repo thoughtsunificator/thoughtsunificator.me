@@ -24,9 +24,9 @@ Manifests are great tools, they are not about drawing ascii on a text document, 
 
 [Most][1] RVS backends insist on abusing [semver][2] as if it ever could possibly achieve its intended goal. A version number says nothing about a software integrity which is all anyone should care for, it's not a date (which would actually means something) and it's not a checksum either (which would say a lot about its integrity).
 
-Do not fool yourself, dependencies do not auto-manage themselves and never will, all the elements that make up the stacks shoul dbe interoperable which can only be the result of careful testings.
+Do not fool yourself, dependencies do not auto-manage themselves and never will, all the elements that make up the stacks should be interoperable which can only be the result of careful testings.
 
-Manifests are not just a meant to create automated builds, they are a mean for softwares to be platform-agnostic because no end user should ever be expected to reverse-engineer a stack in order to make things interoperable (again).
+Manifests are not just a mean to create automated builds, they are a mean for softwares to be platform-agnostic because no end user should ever be expected to reverse-engineer a stack in order to make things interoperable (again).
 
 ## The (obvious) solution
 
