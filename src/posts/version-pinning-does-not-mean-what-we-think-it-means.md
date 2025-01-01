@@ -6,6 +6,15 @@
 }
 ---
 
+## Why this article
+
+Mostly because of:
+
+- (Unmaintained) Docker images breaking because of unpinned dependencies
+- npm, pip, or almost any package manager that allows native code bundling. The fun part is when you have a library that's either incompatible (not meant to run with a certain version of Node.js for example) with the runtime or your system. This is also true for non-native requirements that are not interoperable.
+
+**Why would you ever expect people to guess the requirements of your software?**
+
 ## Introduction
 
 I'll start by stating the obvious, being:
@@ -27,7 +36,15 @@ And while we're at it, if we're talking about a human representation of how up-t
 
 We cannot possibly only trust that our optimism that the world of tomorrow surely will be a better place as a condition, a requirement for our software to be able to run in the best possible conditions, and even more, we should not expect users to accommodate our failures to produce reproducible builds.
 
+## The (obvious) solution
+
+Freeze/Pin all the dependencies and make your requirements clear however you can.
+
+## The ending theme
+
 The time of praying for software to build and run properly are long gone, I pray that we stop praying and start producing true reproducible builds.
+
+Thank you.
 
 [1]: https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json
 [2]: https://semver.org
