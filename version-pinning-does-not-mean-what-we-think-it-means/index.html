@@ -27,32 +27,26 @@
 			</div>
 		</div>
 		
-		<div id="post-content"><h2 id="why-this-article">Why this article</h2>
-<p>Mostly because of:</p>
+		<div id="post-content"><h2 id="introduction">Introduction</h2>
+<p>I made this article mostly because of:</p>
 <ul>
 <li>(Unmaintained) Docker images breaking because of unpinned dependencies</li>
-<li>npm, pip, or almost any package manager that allows native code bundling. The fun part is when you have a library that's either incompatible (not meant to run with a certain version of Node.js for example) with the runtime or your system. This is also true for non-native requirements that are not interoperable.</li>
+<li>npm, pip, or almost any package manager that allows native code bundling where you can have a system library that's either incompatible with the runtime or your system. This also holds true for non-native code.</li>
 </ul>
 <p><strong>Why would you ever expect people to guess the requirements of your software?</strong></p>
-<h2 id="introduction">Introduction</h2>
-<p>I'll start by stating the obvious, being:</p>
 <ul>
 <li>Version pinning is no Whac-A-Mole game, it's about giving real meaning to our versioning.</li>
 <li>Version pinning is not the product of a carefully planned decision, it is the only possible real technical choice in terms of versioning.</li>
 </ul>
 <p>Manifests are great tools, they are not about drawing ascii on a text document, they are about giving as many guarantees as possible to the people that will be building and running our software.</p>
 <h2 id="the-problem">The problem</h2>
-<p>The thing that bothers me most is that <a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json">some</a> RVS backends stubbornly persist on using <a href="https://semver.org">semver</a> as if it ever could possibly achieve its intended goal.</p>
-<p>In an ideal galaxy, in an ideal world, in an ideal city, things would work out for semver because people who do the versioning would never, ever make any mistakes, but that's not the case. While semver is good at abstracting the complexity of versioning when we, as users, are managing our dependencies, but the thing is, once we have &quot;managed them&quot;, which essentially mean we, saying &quot;as a result of careful testing I proclaim this version compatible&quot;, which in itself is already hard enough (try to imagine doing this for a stack that keeps moving forward at a great pace) then there is no longer any use to keep tracking them using versions or tags, and still, a lot of effort is put into trying to fight an invisible enemy, which is the inevitable moment where things break because they are no longer interoperable.</p>
-<p>When we, as developers,  are writing our manifests for our software to build and run from, what we want really is, all the security that can be offered to make sure we have as much control over the environment our software will be running on as possible, nothing should have to be guessed because we already took care of that.
-That's what manifest are for: reproducible builds. The more &quot;extra spaces&quot; we leave for our toolchain to guess anything on, the more are the chances that when (they will) something goes wrong, none of the indicators will be obvious enough not to waste days trying to get on top of it.</p>
-<p>All of this essentially boils down to fighting the true nature of semver which is evil. Any software attempting to &quot;solve&quot; a problem bigger than himself should never be trusted in the first place.</p>
-<p>While we're at it, if we're talking about a human representation of how up-to-date the software in question is we might benefit from using a date instead of random digits that have absolutely no meaning.</p>
+<p><a href="https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json">Most</a> RVS backends insist on abusing <a href="https://semver.org">semver</a> as if it ever could possibly achieve its intended goal. A version number says nothing about a software integrity which is all anyone should care for, it's not a date (which would actually means something) and it's not a checksum either (which would say a lot about its integrity).</p>
+<p>Do not fool yourself, dependencies do not auto-manage themselves and never will, all the elements that make up the stacks shoul dbe interoperable which can only be the result of careful testings.</p>
+<p>Manifests are not just a meant to create automated builds, they are a mean for softwares to be platform-agnostic because no end user should ever be expected to reverse-engineer a stack in order to make things interoperable (again).</p>
 <h2 id="the-obvious-solution">The (obvious) solution</h2>
-<p>Freeze/Pin all the dependencies and make your requirements clear however you can.</p>
+<p>Hard pin all your dependencies and make your requirements clear however you can.</p>
 <h2 id="the-ending-theme">The ending theme</h2>
 <p>The time of praying for software to build and run properly are long gone, I pray that we stop praying and start producing true reproducible builds.</p>
-<p>Thank you.</p>
 </div>
 	</article>
 		</main>
