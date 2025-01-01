@@ -27,7 +27,14 @@
 			</div>
 		</div>
 		
-		<div id="post-content"><h2 id="introduction">Introduction</h2>
+		<div id="post-content"><h2 id="why-this-article">Why this article</h2>
+<p>Mostly because of:</p>
+<ul>
+<li>(Unmaintained) Docker images breaking because of unpinned dependencies</li>
+<li>npm, pip, or almost any package manager that allows native code bundling. The fun part is when you have a library that's either incompatible (not meant to run with a certain version of Node.js for example) with the runtime or your system. This is also true for non-native requirements that are not interoperable.</li>
+</ul>
+<p><strong>Why would you ever expect people to guess the requirements of your software?</strong></p>
+<h2 id="introduction">Introduction</h2>
 <p>I'll start by stating the obvious, being:</p>
 <ul>
 <li>Version pinning is no Whac-A-Mole game, it's about giving real meaning to our versioning.</li>
@@ -40,7 +47,11 @@
 <p>All of this essentially boils down to fighting the true nature of semver which is evil. Any software attempting to &quot;solve&quot; a problem bigger than himself should never be trusted in the first place.</p>
 <p>And while we're at it, if we're talking about a human representation of how up-to-date the software in question is we might benefit from using a date instead of random digits that have absolutely no meaning.</p>
 <p>We cannot possibly only trust that our optimism that the world of tomorrow surely will be a better place as a condition, a requirement for our software to be able to run in the best possible conditions, and even more, we should not expect users to accommodate our failures to produce reproducible builds.</p>
+<h2 id="the-obvious-solution">The (obvious) solution</h2>
+<p>Freeze/Pin all the dependencies and make your requirements clear however you can.</p>
+<h2 id="the-ending-theme">The ending theme</h2>
 <p>The time of praying for software to build and run properly are long gone, I pray that we stop praying and start producing true reproducible builds.</p>
+<p>Thank you.</p>
 </div>
 	</article>
 		</main>
