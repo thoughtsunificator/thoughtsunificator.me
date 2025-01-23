@@ -49,14 +49,9 @@ textarea {
 	resize: vertical;
 }
 
-#main > div:not(#posts) {
-	margin-top: var(--SIZE_MEDIUM);
-}
-
 #posts {
 	display: grid;
 	grid-gap: var(--SIZE_MEDIUM);
-	margin-top: var(--SIZE_MEDIUM);
 }
 
 .posts h1, h2, h3,
@@ -67,10 +62,6 @@ textarea {
 
 .post {
 	display: grid;
-}
-
-#post-content {
-	margin-top: var(--SIZE_MEDIUM);
 }
 
 #post-content ul {
@@ -100,10 +91,6 @@ textarea {
 
 .post:not(.full) .title {
 	grid-row: 2;
-}
-
-.post.full {
-	margin-top: var(--SIZE_MEDIUM);
 }
 
 .post .metas {
