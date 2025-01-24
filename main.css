@@ -18,11 +18,9 @@
 body {
 	box-sizing: border-box;
 	margin: 0;
-	padding: var(--SIZE_MEDIUM);
 	display: grid;
-	grid-gap: var(--SIZE_MEDIUM);
-	grid-template-rows: 1fr auto;
-	min-height: 100vh;
+	grid-auto-columns: max-content;
+	padding: var(--SIZE_MEDIUM);
 	font-family: system-ui;
   word-break: break-word;
 }
@@ -60,8 +58,9 @@ textarea {
 	padding: 0;
 }
 
-.post {
-	display: grid;
+.post:not(.full) {
+  display: grid;
+  grid-template-columns: minmax(160px, auto) 1fr;
 }
 
 #post-content ul {
@@ -141,11 +140,12 @@ textarea {
 }
 
 #footer {
-	display: grid;
-	grid-template-columns: 1fr;
-	padding: 15px;
-	grid-auto-rows: max-content;
-	row-gap: 15px;
+  display: grid;
+  padding-top: 15px;
+  row-gap: 15px;
+  grid-auto-columns: max-content;
+  border-top: 1px solid black;
+  margin-top: 15px;
 }
 
 #footer > nav {
