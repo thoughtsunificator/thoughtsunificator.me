@@ -18,9 +18,11 @@
 body {
 	box-sizing: border-box;
 	margin: 0;
-	display: grid;
-	grid-auto-columns: max-content;
 	padding: var(--SIZE_MEDIUM);
+	display: grid;
+	grid-gap: var(--SIZE_MEDIUM);
+	grid-template-rows: 1fr auto;
+	min-height: 100vh;
 	font-family: system-ui;
   word-break: break-word;
 }
@@ -47,6 +49,10 @@ textarea {
 	resize: vertical;
 }
 
+.posts {
+	margin: 6px;
+}
+
 #posts {
 	display: grid;
 	grid-gap: var(--SIZE_MEDIUM);
@@ -58,9 +64,8 @@ textarea {
 	padding: 0;
 }
 
-.post:not(.full) {
-  display: grid;
-  grid-template-columns: minmax(160px, auto) 1fr;
+.post {
+	display: grid;
 }
 
 #post-content ul {
