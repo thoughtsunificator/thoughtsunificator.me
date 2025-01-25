@@ -49,6 +49,10 @@ textarea {
 	resize: vertical;
 }
 
+.posts {
+	margin: 6px;
+}
+
 #posts {
 	display: grid;
 	grid-gap: var(--SIZE_MEDIUM);

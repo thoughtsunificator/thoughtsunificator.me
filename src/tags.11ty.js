@@ -28,7 +28,7 @@ export function render(data) {
 	return `<div id="tags">
 	${keys.map((key, index) => `
 		<section id="tag-${index}" class="tag">
-			<b id="${key.replace(" ", "-").toLowerCase()}"><a href="/tags/${key.replace(" ", "-").toLowerCase()}/">#${key}</a></b>
+			<a id="${key.replace(" ", "-").toLowerCase()}" href="/tags/${key.replace(" ", "-").toLowerCase()}/">#${key}</a>
 			<div class="posts">
 			${groups[key].map(post => `
 				<article><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></article>

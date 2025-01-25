@@ -29,16 +29,16 @@ export function render(data) {
 	keys.reverse()
 
 	return `<div id="archive">
-	${keys.map((key, index) => `
-		<section id="archive-${index}" class="archive">
-			<b id="${key.replace(" ", "-").toLowerCase()}"><a href="/archive/${key.replace(" ", "-").toLowerCase()}/">${key}</a></b>
-			<div class="posts">
-			${groups[key].map(post => `
-				<article><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></article>
-			`).join("")}
-			</div>
-		</section>
-	`).join("")}
-</div>
-`;
+	${keys.map((key, index) => {
+		const keySlug = key.replace(" ", "-").toLowerCase()
+		return `<section id="archive-${index}" class="archive">
+				<a id="${keySlug}" href="/archive/${keySlug}/">${key}</a>
+				<div class="posts">
+				${groups[key].map(post => `
+					<article><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></article>
+				`).join("")}
+				</div>
+			</section>`
+		}).join("")}
+	</div>`
 };
