@@ -8,7 +8,7 @@ export const data = {
 export function render(data) {
 
 	const groups = {}
-	const posts = data.collections.posts.filter(post => post.data.tags)
+	const posts = data.collections.posts.filter(post => post.data.tags && post.data.type !== "idea")
 	for(const post of posts) {
 		for(const tag of post.data.tags) {
 			if(!groups[tag]) {

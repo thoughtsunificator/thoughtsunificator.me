@@ -11,7 +11,7 @@ export const data = {
 };
 
 export function render(data) {
-	const posts = data.collections.posts.filter(post => new Intl.DateTimeFormat('en-GB', { month: "long", year: 'numeric',}).format(post.date) === data.archive)
+	const posts = data.collections.posts.filter(post => post.data.type !== "idea" && new Intl.DateTimeFormat('en-GB', { month: "long", year: 'numeric',}).format(post.date) === data.archive)
 	return `
 	<section id="posts">
 	${posts.map((post, index) => `

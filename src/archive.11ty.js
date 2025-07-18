@@ -9,7 +9,7 @@ export function render(data) {
 
 	const groups = {}
 
-	const posts = data.collections.posts.filter(post => post.data.tags)
+	const posts = data.collections.posts.filter(post => post.data.tags && post.data.type !== "idea")
 
 	for(const post of posts) {
 		const date = new Intl.DateTimeFormat('en-GB', { month: "long", year: 'numeric',}).format(post.date)

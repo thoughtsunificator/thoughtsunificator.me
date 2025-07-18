@@ -11,7 +11,7 @@ export const data = {
 };
 
 export function render(data) {
-	const posts = data.collections.posts.filter(post => post.data.tags && post.data.tags.includes(data.tag))
+	const posts = data.collections.posts.filter(post => post.data.tags && post.data.tags.includes(data.tag) && post.data.type !== "idea")
 	return `
 	<section id="posts">
 	${posts.map((post, index) => `
