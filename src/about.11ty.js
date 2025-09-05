@@ -33,11 +33,5 @@ export function render(data) {
 	<b>Note</b>
 	<p>Should you ever happen to like my sorcery I kindly ask that you consider <a target="_blank" rel="noreferrer" href="https://github.com/sponsors/thoughtsunificator">becoming a sponsor</a>.</p>
 	</section>
-	<section>
-	<b>What I might be working on</b>
-	<ul>
-	<li>Free, self-hosted, minimalist and fast bookmark manager</li>
-	</ul>
-	</section>
 	`
 }

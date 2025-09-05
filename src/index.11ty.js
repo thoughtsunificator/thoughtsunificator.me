@@ -9,24 +9,13 @@ export const data = {
 export function render(data) {
 	const posts = data.collections.posts
 	posts.reverse()
-	const ideas = posts.filter(post => post.data.type === "idea")
-	ideas.sort((a, b) => new Date(b.date) - new Date(a.date))
 	return `
 	<section id="posts">
-	${posts.filter(post => post.data.type !== "idea").map((post, index) => `
+	${posts.map((post, index) => `
 		<section id="post-${index}" class="post">
 		<div><a class="title" ${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${post.data.redirect_to ? "#" : ""} ${ post.data.title }</a></div>
 		</section>
 	`).join("")}
 </section>
-	<br>
-	<section id="ideas">
-<h3>Coming soon</h3>
-<ul>
-	${ideas.map((post, index) => `
-	<li>${post.data.title}</li>
-	`).join("")}
-		</ul>
-	</section>
 `;
 };
