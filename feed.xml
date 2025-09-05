@@ -9,94 +9,76 @@
 		<name>Romain Lebesle</name>
 	</author>
 	<entry>
-			<id>https://thoughtsunificator.me/starting-line-1/</id>
-			<link href="https://thoughtsunificator.me/starting-line-1/"/>
-			<title>The starting line</title>
-			<updated>2020-05-16T00:00:00.000Z</updated>
-		</entry><entry>
 			<id>https://thoughtsunificator.me/anime-twist-premium-2/</id>
 			<link href="https://thoughtsunificator.me/anime-twist-premium-2/"/>
 			<title>Anime Twist Premium</title>
-			<updated>2020-05-27T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/domodel-diary-3/</id>
-			<link href="https://thoughtsunificator.me/domodel-diary-3/"/>
-			<title>domodel-diary: A modest password protected diary application</title>
-			<updated>2020-05-30T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</id>
-			<link href="https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/"/>
-			<title>Userinterface.js – A small library to build front-end JavaScript applications</title>
-			<updated>2020-11-01T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</id>
-			<link href="https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/"/>
-			<title>Creating a Github action for a Node.js 14+ project</title>
-			<updated>2021-09-25T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/domodel/</id>
-			<link href="https://thoughtsunificator.me/domodel/"/>
-			<title>ES6 Modules based front-end library</title>
-			<updated>2021-10-18T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</id>
-			<link href="https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/"/>
-			<title>How to build a Grid system in JavaScript</title>
-			<updated>2021-10-29T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/saving-my-workspace-with-i3/</id>
-			<link href="https://thoughtsunificator.me/saving-my-workspace-with-i3/"/>
-			<title>How to save and restore your programs when using i3</title>
-			<updated>2024-04-06T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/version-pinning-does-not-mean-what-we-think-it-means/</id>
-			<link href="https://thoughtsunificator.me/version-pinning-does-not-mean-what-we-think-it-means/"/>
-			<title>Version pinning does not mean what we think it means</title>
-			<updated>2024-11-04T00:00:00.000Z</updated>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/open-source-protestware-harms-open-source/</id>
-			<link href="https://thoughtsunificator.me/open-source-protestware-harms-open-source/"/>
-			<title>Open source ‘protestware’ harms Open Source</title>
-			<updated>2024-12-06T00:00:00.000Z</updated>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/are-you-sure-you-want-to-copy-paste/</id>
 			<link href="https://thoughtsunificator.me/are-you-sure-you-want-to-copy-paste/"/>
 			<title>Are you sure you want to copy paste?</title>
-			<updated>2024-12-21T00:00:00.000Z</updated>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/component-based-and-eda/</id>
 			<link href="https://thoughtsunificator.me/component-based-and-eda/"/>
 			<title>Component based and event-driven architecture</title>
-			<updated>2025-07-18T00:00:00.000Z</updated>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</id>
+			<link href="https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/"/>
+			<title>Creating a Github action for a Node.js 14+ project</title>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/domodel-diary-3/</id>
+			<link href="https://thoughtsunificator.me/domodel-diary-3/"/>
+			<title>domodel-diary: A modest password protected diary application</title>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/domodel/</id>
+			<link href="https://thoughtsunificator.me/domodel/"/>
+			<title>ES6 Modules based front-end library</title>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/dx-and-core-developer-experience/</id>
 			<link href="https://thoughtsunificator.me/dx-and-core-developer-experience/"/>
 			<title>DX and Core Developer Experience</title>
-			<updated>2025-07-18T00:00:00.000Z</updated>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/dx-dev-cycle/</id>
 			<link href="https://thoughtsunificator.me/dx-dev-cycle/"/>
 			<title>Dev cycle and DX</title>
-			<updated>2025-07-18T00:00:00.000Z</updated>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/from-scratch-docker/</id>
 			<link href="https://thoughtsunificator.me/from-scratch-docker/"/>
 			<title>FROM scratch (Docker)</title>
-			<updated>2025-07-18T00:00:00.000Z</updated>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</id>
+			<link href="https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/"/>
+			<title>How to build a Grid system in JavaScript</title>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/how-to-self-host-your-own-feed-app/</id>
 			<link href="https://thoughtsunificator.me/how-to-self-host-your-own-feed-app/"/>
 			<title>How to self host your own static feed site</title>
-			<updated>2025-07-18T00:00:00.000Z</updated>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/migrate-to-vim/</id>
 			<link href="https://thoughtsunificator.me/migrate-to-vim/"/>
-			<title>Using vim as an atheist</title>
-			<updated>2025-07-18T00:00:00.000Z</updated>
+			<title>vim and the mouseless utopia</title>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/open-source-protestware-harms-open-source/</id>
+			<link href="https://thoughtsunificator.me/open-source-protestware-harms-open-source/"/>
+			<title>Open source ‘protestware’ harms Open Source</title>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/saving-my-workspace-with-i3/</id>
+			<link href="https://thoughtsunificator.me/saving-my-workspace-with-i3/"/>
+			<title>How to save and restore your programs when using i3</title>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/starting-line-1/</id>
+			<link href="https://thoughtsunificator.me/starting-line-1/"/>
+			<title>The starting line</title>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/the-devtools-debugging-monopoly/</id>
 			<link href="https://thoughtsunificator.me/the-devtools-debugging-monopoly/"/>
 			<title>The devtools debugging monopoly</title>
-			<updated>2025-07-21T00:00:00.000Z</updated>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</id>
+			<link href="https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/"/>
+			<title>Userinterface.js – A small library to build front-end JavaScript applications</title>
+		</entry><entry>
+			<id>https://thoughtsunificator.me/version-pinning-does-not-mean-what-we-think-it-means/</id>
+			<link href="https://thoughtsunificator.me/version-pinning-does-not-mean-what-we-think-it-means/"/>
+			<title>Version pinning does not mean what we think it means</title>
 		</entry>
 </feed>
