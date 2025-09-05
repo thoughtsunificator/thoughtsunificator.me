@@ -24,7 +24,6 @@ export function render(data) {
 			<id>${data.site.url}${post.url}</id>
 			<link href="${data.site.url}${post.url}"/>
 			<title>${ post.data.title }</title>
-			<updated>${post.date.toISOString()}</updated>
 		</entry>`
 	}).join("")}
 </feed>`

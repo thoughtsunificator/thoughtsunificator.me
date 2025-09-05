@@ -2,7 +2,6 @@
 {
 	title: "Creating a Github action for a Node.js 14+ project",
 	tags: ["developer-experience"],
-	date: "2021-09-25"
 }
 ---
 

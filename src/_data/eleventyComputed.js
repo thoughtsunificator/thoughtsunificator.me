@@ -3,8 +3,6 @@ export default {
 	title: data => {
 		if(data.page.url.startsWith("/tags/") && data.page.url.length > "/tags/".length) {
 			return `Tag #${data.tag}`
-		} else if(data.page.url.startsWith("/archive/") && data.page.url.length > "/archive/".length) {
-			return `Archive ${data.archive}`
 		} else {
 			return data.title
 		}

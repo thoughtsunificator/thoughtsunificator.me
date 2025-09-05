@@ -24,7 +24,6 @@ export function render(data) {
 				"id": post.id,
 				"url": `${data.site.url}${post.url}`,
 				"title": post.data.title,
-				"updated": post.date.toISOString()
 			}
 			return item
 		})

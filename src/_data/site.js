@@ -18,10 +18,6 @@ export default {
 			"url": "/"
 		},
 		{
-			"title": "Archive",
-			"url": "/archive/"
-		},
-		{
 			"title": "Tags",
 			"url": "/tags/"
 		},

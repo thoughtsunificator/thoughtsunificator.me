@@ -122,8 +122,7 @@ textarea {
 	margin-bottom: var(--SIZE_XS);
 }
 
-#tags h3:target,
-#archive h3:target {
+#tags h3:target {
 	text-decoration: underline;
 }
 
@@ -132,14 +131,7 @@ textarea {
 	grid-gap: var(--SIZE_MEDIUM);
 }
 
-#archive {
-	display: grid;
-	grid-gap: var(--SIZE_MEDIUM);
-}
-
-
-#tags .tag > h1,
-#archive .archive > h1 {
+#tags .tag > h1 {
 	padding-bottom: 10px;
 }
 

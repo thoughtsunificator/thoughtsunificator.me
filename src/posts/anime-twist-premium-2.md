@@ -2,7 +2,6 @@
 {
 	title: "Anime Twist Premium",
 	tags: ["browser-extension"],
-	date: "2020-05-27"
 }
 ---
 Anime Twist Premium is a browser extension that adds a watch list to twist.moe making it possible to track the shows you're currently watching.

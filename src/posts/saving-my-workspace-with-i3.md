@@ -2,7 +2,6 @@
 {
   title: "How to save and restore your programs when using i3",
   tags: ["tutorial", "desktop-window-manager"],
-  date: "2024-04-06"
 }
 ---
 

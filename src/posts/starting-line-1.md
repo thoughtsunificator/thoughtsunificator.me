@@ -1,7 +1,6 @@
 ---js
 {
 	title: "The starting line",
-	date: "2020-05-16"
 }
 ---
 Salutations web traveler!

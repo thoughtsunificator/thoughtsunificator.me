@@ -2,7 +2,6 @@
 {
   title: "How to build a Grid system in JavaScript",
   tags: ["tutorial"],
-  date: "2021-10-29"
 }
 ---
 
