@@ -17,10 +17,6 @@
 			<link href="https://thoughtsunificator.me/are-you-sure-you-want-to-copy-paste/"/>
 			<title>Are you sure you want to copy paste?</title>
 		</entry><entry>
-			<id>https://thoughtsunificator.me/component-based-and-eda/</id>
-			<link href="https://thoughtsunificator.me/component-based-and-eda/"/>
-			<title>Component based and event-driven architecture</title>
-		</entry><entry>
 			<id>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</id>
 			<link href="https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/"/>
 			<title>Creating a Github action for a Node.js 14+ project</title>
@@ -33,29 +29,9 @@
 			<link href="https://thoughtsunificator.me/domodel/"/>
 			<title>ES6 Modules based front-end library</title>
 		</entry><entry>
-			<id>https://thoughtsunificator.me/dx-and-core-developer-experience/</id>
-			<link href="https://thoughtsunificator.me/dx-and-core-developer-experience/"/>
-			<title>DX and Core Developer Experience</title>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/dx-dev-cycle/</id>
-			<link href="https://thoughtsunificator.me/dx-dev-cycle/"/>
-			<title>Dev cycle and DX</title>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/from-scratch-docker/</id>
-			<link href="https://thoughtsunificator.me/from-scratch-docker/"/>
-			<title>FROM scratch (Docker)</title>
-		</entry><entry>
 			<id>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</id>
 			<link href="https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/"/>
 			<title>How to build a Grid system in JavaScript</title>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/how-to-self-host-your-own-feed-app/</id>
-			<link href="https://thoughtsunificator.me/how-to-self-host-your-own-feed-app/"/>
-			<title>How to self host your own static feed site</title>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/migrate-to-vim/</id>
-			<link href="https://thoughtsunificator.me/migrate-to-vim/"/>
-			<title>vim and the mouseless utopia</title>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/open-source-protestware-harms-open-source/</id>
 			<link href="https://thoughtsunificator.me/open-source-protestware-harms-open-source/"/>
@@ -68,10 +44,6 @@
 			<id>https://thoughtsunificator.me/starting-line-1/</id>
 			<link href="https://thoughtsunificator.me/starting-line-1/"/>
 			<title>The starting line</title>
-		</entry><entry>
-			<id>https://thoughtsunificator.me/the-devtools-debugging-monopoly/</id>
-			<link href="https://thoughtsunificator.me/the-devtools-debugging-monopoly/"/>
-			<title>The devtools debugging monopoly</title>
 		</entry><entry>
 			<id>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</id>
 			<link href="https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/"/>
