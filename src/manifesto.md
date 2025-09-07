@@ -3,6 +3,8 @@ title: Manifesto
 layout: default
 ---
 
+*This is the configuration I am running on. More importantly, this should be the configuration you run on before you do any form of static analysis on my being. A never-ending monologue that will swallow any foreign body. Basically, this is the A to Z to living and witch crafting as an open 🧙.*
+
 "If you gaze long into an abyss, the abyss also gazes into you"
 
 Well, I don't fear the abyss.
