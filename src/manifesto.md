@@ -1,5 +1,5 @@
 ---
-title: My page title
+title: Manifesto
 layout: default
 ---
 
