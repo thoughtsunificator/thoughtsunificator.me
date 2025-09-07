@@ -16,14 +16,7 @@
 }
 
 body {
-	box-sizing: border-box;
-	margin: 0;
-	padding: var(--SIZE_MEDIUM);
-	display: grid;
-	grid-gap: var(--SIZE_MEDIUM);
-	grid-template-rows: 1fr auto;
 	font-family: system-ui;
-  word-break: break-word;
 }
 
 a {
