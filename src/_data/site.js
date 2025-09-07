@@ -24,6 +24,10 @@ export default {
 		{
 			"title": "About",
 			"url": "/about/"
+		},
+		{
+			"title": "Manifesto",
+			"url": "/manifesto/"
 		}
 	]
 }
