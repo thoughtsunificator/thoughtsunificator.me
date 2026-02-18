@@ -39,8 +39,8 @@ But what does &quot;workspace saving&quot; mean exactly, what am I trying to ach
 <p><strong>Scripting</strong></p>
 <p>That is what I will be writing about.</p>
 <h3 id="how-to-achieve-workspace-switching-at-the-os-layer-through-scripting">How to achieve workspace switching at the os-layer through scripting</h3>
-<p>The first thing I have to think about is the usage.
-I want, through a script, command or whatever, be able to open a specific workspace.
+<p>The first thing I have to think about is the usage.<br>
+I want, through a script, command or whatever, be able to open a specific workspace.<br>
 Something like <code>workspace.sh [project] [feature]</code> for example.</p>
 <p>I have to make a clear distinction between the project and the feature.</p>
 <p>The project is in this case would represent the framework, the basis : the i3 layout, the setup scripts and the programs/scripts themselves. The feature could be a specific branch in a git repository for example, or it could be as simple as a parameter that you give to your programs/scripts.</p>
@@ -56,7 +56,7 @@ Something like <code>workspace.sh [project] [feature]</code> for example.</p>
 <h4 id="scripts">Scripts</h4>
 <ol>
 <li>Prompt the user for the project it wants to work on.</li>
-<li>Run the main.sh script for the selected project</li>
+<li>Run the <a href="http://main.sh">main.sh</a> script for the selected project</li>
 </ol>
 <blockquote>
 <p>The script might prompt the user for additional information such as the feature.</p>
@@ -93,7 +93,7 @@ Something like <code>workspace.sh [project] [feature]</code> for example.</p>
 <span class="token function">sed</span> <span class="token parameter variable">-e</span> <span class="token string">"s/%{feature_name}/<span class="token variable">$feature_name</span>/g"</span> <span class="token string">"<span class="token variable">$project_path</span>/layout.json"</span> <span class="token operator">></span> <span class="token string">"<span class="token variable">$temp_folder</span>/profiles/current_layout.json"</span></code></pre>
 <p><code>programs.json</code></p>
 <blockquote>
-<p>See https://github.com/JonnyHaystack/i3-resurrect</p>
+<p>See <a href="https://github.com/JonnyHaystack/i3-resurrect">https://github.com/JonnyHaystack/i3-resurrect</a></p>
 </blockquote>
 <ul>
 <li>vscode</li>
@@ -142,7 +142,7 @@ Something like <code>workspace.sh [project] [feature]</code> for example.</p>
   <span class="token punctuation">}</span>
 <span class="token punctuation">]</span></code></pre>
 <p><code>layout.json</code></p>
-<p>After setting up your layout manually you can save it using i3 (see https://i3wm.org/docs/layout-saving.html) or i3-ressurect (see https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage)</p>
+<p>After setting up your layout manually you can save it using i3 (see <a href="https://i3wm.org/docs/layout-saving.html">https://i3wm.org/docs/layout-saving.html</a>) or i3-ressurect (see <a href="https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage">https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage</a>)</p>
 <hr>
 <p>That's about it, now you can save and restore your workspaces.</p>
 <p>Thanks for reading.</p>

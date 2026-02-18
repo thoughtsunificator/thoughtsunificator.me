@@ -51,7 +51,7 @@ FROM node<span class="token punctuation">:</span>16<span class="token punctuatio
 COPY github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src /github/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src <span class="token comment"># we need our Github action source files to be available inside the container so let's copy them to "/github/github-action-src" for now.</span>
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT <span class="token punctuation">[</span><span class="token string">"/entrypoint.sh"</span><span class="token punctuation">]</span></code></pre>
-<h3 id="entrypoint-sh">entrypoint.sh</h3>
+<h3 id="entrypoint-sh"><a href="http://entrypoint.sh">entrypoint.sh</a></h3>
 <pre class="language-yaml"><code class="language-yaml"><span class="token comment">#!/bin/sh -l</span>
 
 <span class="token comment"># let's create a specific folder for the source files of our github action</span>
@@ -66,7 +66,7 @@ cd github<span class="token punctuation">-</span>action<span class="token punctu
 
 npm install
 node index.js</code></pre>
-<p>If you have any question please send me a mail at oss@thoughtsunificator.me.</p>
+<p>If you have any question please send me a mail at <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</p>
 </div>
 	</article>
 		</main>
