@@ -1,6 +1,6 @@
 ---js
 {
-	title: "Why is there still no standard way to express external program as dependencies?"
+	title: "Why is there still no standard way to express external programs as dependencies?"
 }
 ---
 
