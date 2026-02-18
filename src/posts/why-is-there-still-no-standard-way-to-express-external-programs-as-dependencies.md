@@ -16,10 +16,11 @@ So, as you can see lots of wrong from lots of people, that makes for a poor UX/D
 
 We need two things: 
 
-1. A standard, common way, to express external program as dependencies, a manifest of some sort, 
-2. A intermediate program that is able to lookup dependencies, in this case external program mostly 
+1. A standard, common way, to express external program as dependencies, a manifest 
+2. A intermediate program that is able to lookup dependencies on any given system
 
-This way this give both the user, maintainers and developers more freedom while keeping us sane. I should be clear that it is not the program's job to install anything, that is part of the build process, its job is only to tell the build process about the dependency that it can actually use. In contrast to the current state of things where a path means a dependency, the program would look at the user intents from previously installed packages and match a hash, that is, the clearest form of a dependency, against a registry.
+This way this gives both the final user, maintainers and developers more freedom while keeping us sane. 
+It is not the program's job to install anything, that is part of the build process, its job to tell the build process about the dependency, what exactly it is and how it can use it. In contrast to the current state of things where a path means a dependency, the program would look at the user intents from previously installed packages and test their hashes, that is, the clearest form to express a dependency.
 
 Another more present option would be to create that said program yourself, through a POSIX compliant shell script, make sure that the program exists and in the exact version that you need it. Needless to say that it's not as simple as `find_program("python_module")` huge shout-out to the dumbest of all: meson.
 
