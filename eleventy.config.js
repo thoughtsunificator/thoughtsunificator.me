@@ -1,4 +1,6 @@
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
+// For some reason one cannot override/supplement options that are passed to markdown-it by eleventy, one needs to re-import the module and override the default markdown library entirely.
+import markdownIt from "markdown-it"
 import { IdAttributePlugin } from "@11ty/eleventy"
 import siteData from "./src/_data/site.js"
 
@@ -6,9 +8,17 @@ import siteData from "./src/_data/site.js"
 export default function(config) {
 
 	config.addPlugin(syntaxHighlight)
+	// Add Id attribute to markdown tags
 	config.addPlugin(IdAttributePlugin)
 
 	config.addPassthroughCopy({ public: './' })
+	let options = {
+		html: true,
+		breaks: true,
+		linkify: true,
+	};
+
+	config.setLibrary("md", markdownIt(options));
 
 	config.addCollection('tagsList', (collectionApi) => {
 		const tagsSet = new Set()
