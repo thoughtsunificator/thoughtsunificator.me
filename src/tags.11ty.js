@@ -6,9 +6,8 @@ export const data = {
 };
 
 export function render(data) {
-
 	const groups = {}
-	const posts = data.collections.posts.filter(post => post.data.tags && post.data.type !== "idea")
+	const posts = data.collections.posts.filter(post => post.data.tags)
 	for(const post of posts) {
 		for(const tag of post.data.tags) {
 			if(!groups[tag]) {
@@ -17,16 +16,8 @@ export function render(data) {
 			groups[tag].push(post)
 		}
 	}
-	delete groups["posts"]
-	const keys = Object.keys(groups)
-	for(const key of keys) {
-		groups[key].sort((a, b) => new Date(a.date) - new Date(b.date))
-		groups[key].reverse()
-	}
-	keys.sort()
-
 	return `<div id="tags">
-	${keys.map((key, index) => `
+	${data.collections.tagsList.map((key, index) => `
 		<section id="tag-${index}" class="tag">
 			<a id="${key.replace(" ", "-").toLowerCase()}" href="/tags/${key.replace(" ", "-").toLowerCase()}/">#${key}</a>
 			<div class="posts">

@@ -38,7 +38,12 @@ export default function(config) {
 			item.data.tags
 				.forEach((tag) => tagsSet.add(tag))
 		})
-		return [...tagsSet].sort((a, b) => b.localeCompare(a))
+		tagsSet.delete("posts")
+		return [...tagsSet].sort(() => {
+			const pseudoRandom = Math.random
+			const pseudoRandomNumber = Math.round(-1 + pseudoRandom() * 1)
+			return pseudoRandomNumber
+		})
 	})
 
 	config.setBrowserSyncConfig({
