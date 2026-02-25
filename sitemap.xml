@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-			<loc>https://thoughtsunificator.me/about-me/</loc>
-			<lastmod>2026-02-24T13:28:15.384Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/about/</loc>
-			<lastmod>2026-02-24T13:28:15.384Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/</loc>
-			<lastmod>2026-02-24T13:28:15.384Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/manifesto/</loc>
-			<lastmod>2026-02-24T13:28:15.384Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/CVE-2025-43496/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/anime-twist-premium-2/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/domodel-diary-3/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/domodel/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/open-source-protestware-harms-open-source/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
 			<loc>https://thoughtsunificator.me/saving-my-workspace-with-i3/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/see-what-you-have-done-with-your-damn-copy-pasting/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/starting-line-1/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/text-plain-emails/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</loc>
-			<lastmod>2026-02-24T13:28:15.385Z</lastmod>
+			<lastmod>2169-03-19T21:48:10.331Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/version-pinning-does-not-mean-what-we-think-it-means/</loc>
-			<lastmod>2026-02-24T13:28:15.386Z</lastmod>
+			<lastmod>2623-02-05T15:20:50.336Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/text-plain-emails/</loc>
+			<lastmod>3301-03-09T17:53:39.962Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/starting-line-1/</loc>
+			<lastmod>3861-01-22T06:46:04.278Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</loc>
+			<lastmod>3950-09-25T06:02:32.756Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/why-is-there-still-no-standard-way-to-express-external-programs-as-dependencies/</loc>
-			<lastmod>2026-02-24T13:28:15.386Z</lastmod>
+			<lastmod>4352-08-21T16:46:57.978Z</lastmod>
 		</url><url>
-			<loc>https://thoughtsunificator.me/tags/tutorial/</loc>
-			<lastmod>2026-02-24T13:28:15.386Z</lastmod>
+			<loc>https://thoughtsunificator.me/open-source-protestware-harms-open-source/</loc>
+			<lastmod>4471-11-06T08:31:03.786Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/about/</loc>
+			<lastmod>5360-05-04T07:37:39.216Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/</loc>
-			<lastmod>2026-02-24T13:28:15.386Z</lastmod>
+			<lastmod>5873-07-13T17:34:33.267Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/anime-twist-premium-2/</loc>
+			<lastmod>6189-05-28T21:13:51.244Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</loc>
+			<lastmod>6228-12-23T10:40:20.532Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/</loc>
+			<lastmod>6542-11-13T10:41:53.191Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</loc>
+			<lastmod>7269-03-11T08:10:14.434Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/domodel-diary-3/</loc>
+			<lastmod>7349-05-19T16:02:36.674Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/CVE-2025-43496/</loc>
+			<lastmod>7573-06-12T12:19:08.882Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/manifesto/</loc>
+			<lastmod>8579-03-18T12:02:04.355Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/domodel/</loc>
+			<lastmod>9016-10-30T12:09:22.590Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/about-me/</loc>
+			<lastmod>9180-11-06T03:11:09.223Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/see-what-you-have-done-with-your-damn-copy-pasting/</loc>
+			<lastmod>9183-01-07T07:22:41.652Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/tags/tutorial/</loc>
+			<lastmod>9206-07-10T15:29:16.548Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/revision-control-system</loc>
-			<lastmod>2026-02-24T13:28:24.225Z</lastmod>
+			<lastmod>2026-02-25T03:42:22.126Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/posts</loc>
-			<lastmod>2026-02-24T13:28:24.225Z</lastmod>
+			<lastmod>2026-02-25T03:42:22.126Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/perspective</loc>
-			<lastmod>2026-02-24T13:28:24.225Z</lastmod>
+			<lastmod>2026-02-25T03:42:22.126Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/developer-experience</loc>
-			<lastmod>2026-02-24T13:28:24.225Z</lastmod>
+			<lastmod>2026-02-25T03:42:22.126Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/desktop-window-manager</loc>
-			<lastmod>2026-02-24T13:28:24.225Z</lastmod>
+			<lastmod>2026-02-25T03:42:22.126Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/browser-extension</loc>
-			<lastmod>2026-02-24T13:28:24.225Z</lastmod>
+			<lastmod>2026-02-25T03:42:22.126Z</lastmod>
 		</url>
 </urlset>
