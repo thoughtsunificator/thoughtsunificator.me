@@ -8,7 +8,6 @@ export const data = {
 
 export function render(data) {
 	const posts = data.collections.posts
-	posts.reverse()
 	return `
 	<section id="posts">
 	${posts.map((post, index) => `

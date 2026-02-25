@@ -20,6 +20,17 @@ export default function(config) {
 
 	config.setLibrary("md", markdownIt(options));
 
+	// Shuffle everything that has a date
+	// The intent is to erase the concept of date
+	config.addDateParsing(function(dateValue) {
+		const hypotheticalDate = new Date("10000/01/01")
+		const hypotheticalDateTime = hypotheticalDate.getTime()
+		const pseudoRandom = Math.random
+		const pseudoRandomNumber = Math.round(pseudoRandom() * hypotheticalDateTime)
+		return new Date(pseudoRandomNumber)
+	});
+
+	// Create a tag collections from all the posts
 	config.addCollection('tagsList', (collectionApi) => {
 		const tagsSet = new Set()
 		collectionApi.getAll().forEach((item) => {
