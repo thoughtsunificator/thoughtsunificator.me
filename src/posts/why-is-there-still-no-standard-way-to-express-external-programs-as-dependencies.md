@@ -10,7 +10,7 @@ What's the point of #! constructs anyway? According to the POSIX spec:
 
 It tells us that we should prefer /usr/bin/env sh over /usr/bin/sh, the spec argues that env does not directly point to a path, instead, it looks for the sh binary in your existing PATH variable using getconf. Truth to be told, no one cares, they both fail at the very basic thing at which they aim for.
 
-That is, expressing an external program as a dependency, one who writes a shell script and want to share it, better make make as little assumptions as possible, this starts with expressing dependencies.
+That is, expressing an external program as a dependency, one who writes a shell script and want to share it, better make as little assumptions as possible, this starts with expressing dependencies.
 
 When we think of dependencies, more than often we think of pkgconf, autotool, cmake, C libraries and such, leaving out the important fact that there might be need for x/y external program, however, for some reason, it is never explicitly expressed. It's as if it would already be magically installed in the exact version that is needed for the task at hand.
 
