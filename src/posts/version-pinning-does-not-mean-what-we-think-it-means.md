@@ -15,7 +15,7 @@ There is for sure something wrong going on with how dependencies are managed, an
 
 Version pinning is no Whac-A-Mole game, it's about giving real meaning to versioning.
 
-[Most][1] version control softwares insist on allowing [semver][2] as if it ever could possibly achieve its intended goal. A version number says nothing about a software integrity which is all anyone should care for, it's not a date (which would actually means something) and it's not a checksum either (which would say a lot about its integrity).
+[Most][1] version control softwares insist on promoting [semver][2] as if it ever could possibly achieve its intended goal. A version number says nothing about a software integrity which is all anyone should care for, it's not a date (which would actually means something) and it's not a checksum either (which would say a lot about its integrity).
 
 Do not fool yourself, dependencies do not auto-manage themselves and never will, all the elements that make up the stacks should be interoperable which can only be the result of careful testings.
 
