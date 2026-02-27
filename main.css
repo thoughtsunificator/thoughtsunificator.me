@@ -16,7 +16,8 @@
 }
 
 body {
-	font-family: system-ui;
+	font-family: monospace;
+	width: 80ch;
 }
 
 a {
