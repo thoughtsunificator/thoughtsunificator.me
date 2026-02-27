@@ -8,7 +8,7 @@ What's the point of #! constructs anyway? According to the POSIX spec:
 
 > Applications should note that the standard PATH to the shell cannot be assumed to be either /bin/sh or /usr/bin/sh, and should be determined by interrogation of the PATH returned by getconf PATH, ensuring that the returned path name is an absolute path name and not a shell built in.
 
-It tells us that we should prefer /usr/bin/env bash over /usr/bin/bash, the spec argues that env does not directly point to a path, instead, it looks for the bash binary in your existing PATH variable using getconf. Truth to be told, no one cares, they both fail at the very basic thing at which they aim for.
+It tells us that we should prefer /usr/bin/env sh over /usr/bin/sh, the spec argues that env does not directly point to a path, instead, it looks for the sh binary in your existing PATH variable using getconf. Truth to be told, no one cares, they both fail at the very basic thing at which they aim for.
 
 That is, expressing an external program as a dependency, one who writes a shell script and want to share it, better make make as little assumptions as possible, this starts with expressing dependencies.
 
