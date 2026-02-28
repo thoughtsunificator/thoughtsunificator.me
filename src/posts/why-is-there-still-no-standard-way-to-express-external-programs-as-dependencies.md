@@ -1,6 +1,7 @@
 ---js
 {
 	title: "Why is there still no standard way to express external programs as dependencies?"
+	tags: ["perspective"],
 }
 ---
 
