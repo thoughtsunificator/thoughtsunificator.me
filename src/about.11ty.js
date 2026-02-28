@@ -10,7 +10,7 @@ export function render(data) {
 	return `<div class="intro">
 	<div>
 	<section>
-	<div>I am <a href="/pgp_key.txt">D9CC8358645231E616E1F3DA<b>C11B5CF0A7856B6D</b></a>.<br>An open 🧙 who lives aspiring to master D2D, DX and UX mostly within the Web and its ecosystems.</div><p>I love Unix and OSS and have released and maintain <a href="https://www.npmjs.com/~thoughtsunificator">several Node.js packages</a> and work on <a href="https://github.com/thoughtsunificator?tab=repositories&q=&type=source&language=&sort=">various OSS projects</a>.</p>
+	<div>I am <a href="/pgp_key.txt">D9CC8358645231E616E1F3DA<b>C11B5CF0A7856B6D</b></a>.<br>An open 🧙 who lives aspiring to master D2D, DX and UX mostly within the Web and its ecosystems. <p>I also happen to enjoy everything that sounds like freedom especially generic operating systems.
 	</section>
 	<section>
 			<b>Links</b>
