@@ -15,8 +15,8 @@ export function render(data) {
 	<section>
 	<b>Contact</b>
 	<p>
-	<div>OSS: <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</div>
-	<div>Job: <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a>.</div>
+	<div>OSS: <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a></div>
+	<div>Job: <a href="mailto:job@thoughtsunificator.me">job@thoughtsunificator.me</a></div>
 	</p>
 	`
 }
