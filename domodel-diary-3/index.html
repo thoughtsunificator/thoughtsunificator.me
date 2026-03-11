@@ -3,13 +3,12 @@
 	<head>
 	<!-- A real motherfucking head just like we planned, let see: -->
 		<title>domodel-diary: A modest password protected diary application | thoughtsunificator.me</title>
-		<!-- Used mostly for emojis -->
+		<!-- Used mostly for non-ascii characters -->
 		<meta charset="UTF-8">
 		<!-- Because it sucks to read as if you're reading from ten feets away when in reality your smartphone is glued to your face -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Just a few millions of lines, mostly useless and pathetic "aesthetics" black magick kind of stuff -->
 		<link rel="stylesheet" type="text/css" href="/main.css">
-		<!-- Used for syntax highlighting inside posts -->
 		<!-- https://w3c.github.io/manifest/ -->
 		<link rel="manifest" href="/manifest.webmanifest">
 	</head>
@@ -20,12 +19,11 @@
 		
 		<div class="metas">
 			
-			<div class="tags">
-				<a class="tag" href="/tags/browser-extension/">#browser-extension</a>
-			</div>
+				<div><a class="tag" href="/tags/browser-extension/">#browser-extension</a></div>
+			
 		</div>
 		
-		<div id="post-content"><h2 id="introduction">Introduction</h2>
+		<div id="post-content"><p><strong>Introduction</strong></p>
 <p>domodel-diary is a password protected diary.</p>
 <p>It offers the following features:</p>
 <ul>
@@ -33,19 +31,19 @@
 <li>Daily notes encrypted using AES</li>
 <li>Password Protected</li>
 </ul>
-<h2 id="how-it-works">How it works</h2>
-<h3 id="login-page">Login page</h3>
+<p><strong>How it works</strong></p>
+<p><strong>Login page</strong></p>
 <p>Pick a password and hit enter. It will be used to encrypt your notes and will be<br>
 asked whenever the application launches.</p>
 <p><img src="/image/screenshot-auth.webp" alt="authentication screenshot"></p>
-<h3 id="calendar">Calendar</h3>
+<p><strong>Calendar</strong></p>
 <p>You can add any note for any days of any years. It does not have to be in the pr<br>
 esent, they can be added both in the past, present and future.</p>
-<p>Clicking the left and right arrow icon will cycle the month forward and backward<br>
-.<br>
+<p>Clicking the left and right arrow icon will cycle the month forward and<br>
+backward.<br>
 You can also change the year to any number you would like.</p>
 <p><img src="/image/screenshot-calendar.webp" alt="calendar screenshot"></p>
-<h3 id="editor">Editor</h3>
+<p><strong>Editor</strong></p>
 <p>You can post your note by clicking the disk icon or exit by clicking the red cro<br>
 ss icon.<br>
 If you decide to exit the editor, what you wrote will be saved an available next<br>
@@ -53,36 +51,28 @@ time your re-open the editor.</p>
 <p><img src="/image/screenshot-editor.webp" alt="editor screenshot"></p>
 <p>Your note will then appear just below the calendar.</p>
 <p><img src="/image/screenshot-notes.webp" alt="notes screenshot"></p>
-<h3 id="settings">Settings</h3>
+<p><strong>Settings</strong></p>
 <p>You can logout, export or import your list using the settings menu:</p>
 <p><img src="/image/screenshot-settings.webp" alt="settings screenshot"></p>
-<h2 id="install-it">Install it</h2>
+<p><strong>Install it</strong></p>
 <ul>
-<li>[Chrome](<a href="https://chrome.google.com/webstore/detail/domodel-diary/hncoaagegcdna">https://chrome.google.com/webstore/detail/domodel-diary/hncoaagegcdna</a><br>
-jffjpkldhfceipfgnnf?hl=en)</li>
+<li><a href="https://chrome.google.com/webstore/detail/domodel-diary/hncoaagegcdnajffjpkldhfceipfgnnf?hl=en">Chrome</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/domodel-diary/">Firefox</a></li>
-<li>[Android](<a href="https://play.google.com/store/apps/details?id=com.thoughtsunificator">https://play.google.com/store/apps/details?id=com.thoughtsunificator</a><br>
-.domodeldiary)</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.thoughtsunificator.domodeldiary">Android</a></li>
 <li><a href="https://www.electronjs.org/apps/domodel-diary">Windows/Linux/MacOS</a></li>
 </ul>
 <p>Also available on:</p>
-<p><a rel="noreferrer" target="_blank" href="https://www.microsoft.com/en-US/p/domo
-del-diary/9nhlt1hfb4t7"><img src="/image/English_get.webp" alt="English badge" w="" idth="200"></a></p>
-<p><a rel="noreferrer" target="_blank" href="https://snapcraft.io/domodel-diary-ele
-ctron"><img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" w="" idth="200"></a></p>
-<p><s>It will soon be available on F-Droid.</s> Please download the APK from the <a href="https://github.com/thoughtsunificator/domodel-diary-cordova/releases/">rele<br>
-ase page</a><br>
+<p><a rel="noreferrer" target="_blank" href="https://www.microsoft.com/en-US/p/domodel-diary/9nhlt1hfb4t7"><img src="/image/English_get.webp" alt="English badge" width="200"></a><br>
+<a rel="noreferrer" target="_blank" href="https://snapcraft.io/domodel-diary-electron"><img src="/image/snap-store-black.svg" alt="Get it from the Snap Store" width="200"></a><br>
+<s>It will soon be available on F-Droid.</s> Please download the APK from the<br>
+<a href="https://github.com/thoughtsunificator/domodel-diary-cordova/releases/">release page</a><br>
 of the Github repository.</p>
-<h2 id="source-code">Source code</h2>
+<p><strong>Source code</strong></p>
 <ul>
-<li>[thoughtsunificator/domodel-diary](<a href="https://github.com/thoughtsunificator/domod">https://github.com/thoughtsunificator/domod</a><br>
-el-diary)</li>
-<li>[thoughtsunificator/domodel-diary-cordova](<a href="https://github.com/thoughtsunificat">https://github.com/thoughtsunificat</a><br>
-or/domodel-diary-cordova)</li>
-<li>[thoughtsunificator/domodel-diary-electron](<a href="https://github.com/thoughtsunifica">https://github.com/thoughtsunifica</a><br>
-tor/domodel-diary-electron)</li>
-<li>[thoughtsunificator/domodel-diary-extension](<a href="https://github.com/thoughtsunific">https://github.com/thoughtsunific</a><br>
-ator/domodel-diary-extension)</li>
+<li><a href="https://github.com/thoughtsunificator/domodel-diary">thoughtsunificator/domodel-diary</a></li>
+<li><a href="https://github.com/thoughtsunificator/domodel-diary-cordova">thoughtsunificator/domodel-diary-cordova</a></li>
+<li><a href="https://github.com/thoughtsunificator/domodel-diary-electron">thoughtsunificator/domodel-diary-electron</a></li>
+<li><a href="https://github.com/thoughtsunificator/domodel-diary-extension">thoughtsunificator/domodel-diary-extension</a></li>
 </ul>
 <p>So...</p>
 <p>Don't snuff it out, yet!</p>
@@ -92,16 +82,20 @@ ator/domodel-diary-extension)</li>
 	</article>
 		</main>
 		<footer id="footer">
+			<hr>
 			<nav>
-				<a href="/">Home</a><a href="/tags/">Tags</a><a href="/about/">About</a><a href="/manifesto/">Manifesto</a>
-				<div class="icons" style="filter: invert(1)">
-					<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator">
-						<img width="32" alt="View source code on Github" src="/image/github.svg">
-					</a>
-				</div>
-		</nav>
-			<span class="tagline">a boundless expression of thoughts</span>
-			<span>Built with <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a><br>Inspired by <a rel="noreferrer" target="_blank" href="http://motherfuckingwebsite.com">a certain website...</a></span>
+				
+					<a href="/">Home</a>
+					 | 
+					<a href="/tags/">Tags</a>
+					 | 
+					<a href="/about/">About</a>
+					 | 
+					<a href="/manifesto/">Manifesto</a>
+					
+			</nav>
+			<p class="tagline">a boundless expression of thoughts</p>
+			<div>Built with <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a><br>Inspired by <a rel="noreferrer" target="_blank" href="http://motherfuckingwebsite.com">a certain website...</a></div>
 		</footer>
 	</body>
 </html>

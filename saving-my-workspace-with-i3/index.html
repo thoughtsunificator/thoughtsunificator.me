@@ -3,13 +3,12 @@
 	<head>
 	<!-- A real motherfucking head just like we planned, let see: -->
 		<title>How to save and restore your programs when using i3 | thoughtsunificator.me</title>
-		<!-- Used mostly for emojis -->
+		<!-- Used mostly for non-ascii characters -->
 		<meta charset="UTF-8">
 		<!-- Because it sucks to read as if you're reading from ten feets away when in reality your smartphone is glued to your face -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Just a few millions of lines, mostly useless and pathetic "aesthetics" black magick kind of stuff -->
 		<link rel="stylesheet" type="text/css" href="/main.css">
-		<!-- Used for syntax highlighting inside posts -->
 		<!-- https://w3c.github.io/manifest/ -->
 		<link rel="manifest" href="/manifest.webmanifest">
 	</head>
@@ -20,13 +19,11 @@
 		
 		<div class="metas">
 			
-			<div class="tags">
-				<a class="tag" href="/tags/tutorial/">#tutorial</a><a class="tag" href="/tags/desktop-window-manager/">#desktop-window-manager</a>
-			</div>
+				<div><a class="tag" href="/tags/tutorial/">#tutorial</a></div><div><a class="tag" href="/tags/desktop-window-manager/">#desktop-window-manager</a></div>
+			
 		</div>
 		
-		<div id="post-content"><h2 id="introduction">Introduction</h2>
-<p>One of the oldest problems I run into with Operating Systems in general, the low<br>
+		<div id="post-content"><p>One of the oldest problems I run into with Operating Systems in general, the low<br>
 er layer of my development environment, is saving/managing my workspace.<br>
 But what does &quot;workspace saving&quot; mean exactly, what am I trying to achieve here?</p>
 <p>I don't want my OS to be able to restore my windows when I restart, it's not abo<br>
@@ -35,7 +32,7 @@ ty to to close apps and programs in order to have a clean workspace that contain
 s only what I need at the moment. I also want to be able to reopen group of wind<br>
 ows at will, to me, these group of windows basically mean the same as a projet.<br>
 That's right, a group of windows and their states is a project.</p>
-<h3 id="how-to-achieve-workspace-switching-at-the-os-layer-through-shell-scripting">How to achieve workspace switching at the os-layer through shell scripting</h3>
+<p><strong>Achieving workspace switching at the os-layer through shell scripting</strong></p>
 <p>The first thing I have to think about is the usage.<br>
 I want, through a script, command or whatever, be able to open a specific worksp<br>
 ace.<br>
@@ -45,21 +42,21 @@ Something like <code>workspace.sh [project] [feature]</code> for example.</p>
 yout, the setup scripts and the programs/scripts themselves. The feature could b<br>
 e a specific branch in a git repository for example, or it could be as simple as<br>
 a parameter that you give to your programs/scripts.</p>
-<h3 id="use-case">Use case</h3>
+<p><strong>Use case</strong></p>
 <p>I want to work on a project called <code>foo</code>, on very this project I wor<br>
 k simultaneously on 3 separate features. The first thing would be that I want to<br>
 have one terminal, right where the project lives. I also want the shell session<br>
 to start some init. scripts, that could be something like a Python venv for exa<br>
 mple. If I'm working on a Web application I would also need my browser opened up<br>
 .</p>
-<h3 id="scripting">Scripting</h3>
-<h4 id="prerequisites">Prerequisites</h4>
+<p><strong>Scripting</strong></p>
+<p><u>Prerequisites</u></p>
 <ul>
 <li>i3</li>
 <li>i3-resurrect</li>
 <li>dmenu</li>
 </ul>
-<h4 id="scripts">Scripts</h4>
+<p><u>Goals</u></p>
 <ol>
 <li>Prompt the user for the project it wants to work on.</li>
 <li>Run the <a href="http://main.sh">main.sh</a> script for the selected project<br>
@@ -128,7 +125,7 @@ folder/profiles/current_layout.json&quot;
   {
     &quot;command&quot;: [
       &quot;/usr/bin/xterm&quot;,
-			&quot;-class&quot;,
+      &quot;-class&quot;,
       &quot;UXTerm&quot;,
       &quot;-u8&quot;,
       &quot;-bw&quot;,
@@ -156,23 +153,30 @@ folder/profiles/current_layout.json&quot;
 ]
 </code></pre>
 <p><code>layout.json</code></p>
-<p>After setting up your layout manually you can save it using i3 (see<br>
-<a href="https://i3wm.org/docs/layout-saving.html">https://i3wm.org/docs/layout-saving.html</a>) or i3-ressurect<br>
-(see <a href="https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage">https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage</a>)</p>
+<p>After setting up your layout manually you can save it using i3.</p>
+<p><strong>Refences</strong>:</p>
+<ul>
+<li><a href="https://i3wm.org/docs/layout-saving.html">https://i3wm.org/docs/layout-saving.html</a></li>
+<li><a href="https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage">https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage</a></li>
+</ul>
 </div>
 	</article>
 		</main>
 		<footer id="footer">
+			<hr>
 			<nav>
-				<a href="/">Home</a><a href="/tags/">Tags</a><a href="/about/">About</a><a href="/manifesto/">Manifesto</a>
-				<div class="icons" style="filter: invert(1)">
-					<a title="Github" target="_blank" rel="noopener" href="https://github.com/thoughtsunificator">
-						<img width="32" alt="View source code on Github" src="/image/github.svg">
-					</a>
-				</div>
-		</nav>
-			<span class="tagline">a boundless expression of thoughts</span>
-			<span>Built with <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a><br>Inspired by <a rel="noreferrer" target="_blank" href="http://motherfuckingwebsite.com">a certain website...</a></span>
+				
+					<a href="/">Home</a>
+					 | 
+					<a href="/tags/">Tags</a>
+					 | 
+					<a href="/about/">About</a>
+					 | 
+					<a href="/manifesto/">Manifesto</a>
+					
+			</nav>
+			<p class="tagline">a boundless expression of thoughts</p>
+			<div>Built with <a rel="noreferrer" target="_blank" href="https://www.11ty.dev/">Eleventy</a><br>Inspired by <a rel="noreferrer" target="_blank" href="http://motherfuckingwebsite.com">a certain website...</a></div>
 		</footer>
 	</body>
 </html>
