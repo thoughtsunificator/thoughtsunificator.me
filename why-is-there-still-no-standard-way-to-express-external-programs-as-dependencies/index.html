@@ -30,9 +30,9 @@ to be either /bin/sh or /usr/bin/sh, and should be determined by interrogation<b
 of the PATH returned by getconf PATH, ensuring that the returned path name is an<br>
 absolute path name and not a shell built in.</p>
 </blockquote>
-<p>It tells us that we should prefer /usr/bin/env sh over /usr/bin/sh, the spec arg<br>
-ues that env does not directly point to a path, instead, it looks for the sh bin<br>
-ary in your existing PATH variable using getconf. Truth to be told, no one<br>
+<p>It tells us that we should prefer <code>/usr/bin/env sh</code> over <code>/usr/bin/sh</code>, the spec arg<br>
+ues that <code>env</code> does not directly point to a path, instead, it looks for the sh<br>
+binary in your existing <code>PATH</code> variable using <code>getconf</code>. Truth to be told, no one<br>
 cares, they both fail at the very basic thing at which they aim for.</p>
 <p>That is, expressing an external program as a dependency, one who writes a shell<br>
 script and want to share it, better make as little assumptions as possible, this<br>
@@ -85,10 +85,10 @@ between programs that the user himself compiled and installed programs, unless a
 gain, it expressed its intent to compile a precise version as-is without chainin<br>
 g its behavior. It's all about what the user want.</p>
 <p>Needless to say that it is not as simple as providing an API that calls itself<br>
-<a href="https://mesonbuild.com/Reference-manual_functions.html#find_program">find_program</a> huge shout-out to the dumbest of all: [meson] which by the way<br>
+<a href="https://mesonbuild.com/Reference-manual_functions.html#find_program">find_program</a> huge shout-out to the dumbest of all: meson which by the way<br>
 looks like another attempt at world wide domination through softwares enslaving<br>
 its users.</p>
-<p>That's it I will no longer be fooled by semver, paths and /usr/bin/env, suffixes<br>
+<p>That's it I will no longer be fooled by semver, paths and <code>/usr/bin/env</code>, suffixes<br>
 or anything of the sort.</p>
 </div>
 	</article>
