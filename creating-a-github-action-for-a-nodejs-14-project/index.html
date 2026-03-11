@@ -10,7 +10,6 @@
 		<!-- Just a few millions of lines, mostly useless and pathetic "aesthetics" black magick kind of stuff -->
 		<link rel="stylesheet" type="text/css" href="/main.css">
 		<!-- Used for syntax highlighting inside posts -->
-		<link rel="stylesheet" type="text/css" href="/okaida.css">
 		<!-- https://w3c.github.io/manifest/ -->
 		<link rel="manifest" href="/manifest.webmanifest">
 	</head>
@@ -27,46 +26,59 @@
 		</div>
 		
 		<div id="post-content"><h2 id="introduction">Introduction</h2>
-<p>Currently it is <a href="https://github.com/actions/runner/issues/772">not possible</a> to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action">JavaScript action</a> with a version of nodejs other than 12.</p>
-<p>This article attempt to provide a solution to this very issue.</p>
+<p>Currently it is <a href="https://github.com/actions/runner/issues/772">not possible</a> to create a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action">JavaScript action</a><br>
+with a version of nodejs other than 12.<br>
+This article attempt to provide a solution to this very issue.</p>
 <h2 id="workaround">Workaround</h2>
-<p>First if you don't know the basics of Github Actions I recommend you go read the <a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions">Starting Guide</a>.</p>
-<p>So how do I use a version of nodejs &gt; 12? You can do so by creating a <a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">Docker container action</a> with the <a href="https://hub.docker.com/_/node">node:16-alpine</a> image.</p>
+<p>First if you don't know the basics of Github Actions I recommend you go read the<br>
+<a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions">Starting Guide</a>.</p>
+<p>So how do I use a version of nodejs &gt; 12? You can do so by creating a<br>
+<a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">Docker container action</a> with the <a href="https://hub.docker.com/_/node">node:16-alpine</a> image.</p>
 <h3 id="action-yml">action.yml</h3>
-<pre class="language-yaml"><code class="language-yaml"><span class="token comment"># See https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions for more information about the action.yml syntax</span>
-<span class="token punctuation">---</span>
-<span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'My Action'</span>
-<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'What it does..'</span>
-<span class="token key atrule">inputs</span><span class="token punctuation">:</span>
-	<span class="token key atrule">your-name</span><span class="token punctuation">:</span>
-		<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'Your name'</span>
-		<span class="token key atrule">required</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-<span class="token key atrule">runs</span><span class="token punctuation">:</span>
-	<span class="token key atrule">using</span><span class="token punctuation">:</span> <span class="token string">'docker'</span>
-	<span class="token key atrule">image</span><span class="token punctuation">:</span> <span class="token string">'Dockerfile'</span>
+<pre><code class="language-yaml"># See https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-gi
+thub-actions for more information about the action.yml syntax
+---
+name: 'My Action'
+description: 'What it does..'
+inputs:
+	your-name:
+		description: 'Your name'
+		required: true
+runs:
+	using: 'docker'
+	image: 'Dockerfile'
+
 </code></pre>
 <h3 id="dockerfile">Dockerfile</h3>
-<pre class="language-yaml"><code class="language-yaml"><span class="token comment"># This Dockerfile is inspired from the official document see https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action</span>
-FROM node<span class="token punctuation">:</span>16<span class="token punctuation">-</span>alpine <span class="token comment"># you can the version of your liking see https://hub.docker.com/_/node for more information</span>
-COPY github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src /github/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src <span class="token comment"># we need our Github action source files to be available inside the container so let's copy them to "/github/github-action-src" for now.</span>
+<pre><code class="language-yaml"># This Dockerfile is inspired from the official document see https://docs.github
+.com/en/actions/creating-actions/creating-a-docker-container-action
+FROM node:16-alpine # you can the version of your liking see https://hub.docker.
+com/_/node for more information
+COPY github-action-src /github/github-action-src # we need our Github action sou
+rce files to be available inside the container so let's copy them to &quot;/github/gi
+thub-action-src&quot; for now.
 COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT <span class="token punctuation">[</span><span class="token string">"/entrypoint.sh"</span><span class="token punctuation">]</span></code></pre>
+ENTRYPOINT [&quot;/entrypoint.sh&quot;]
+</code></pre>
 <h3 id="entrypoint-sh"><a href="http://entrypoint.sh">entrypoint.sh</a></h3>
-<pre class="language-yaml"><code class="language-yaml"><span class="token comment">#!/bin/sh -l</span>
+<pre><code class="language-yaml">#!/bin/sh -l
 
-<span class="token comment"># let's create a specific folder for the source files of our github action</span>
+# let's create a specific folder for the source files of our github action
 
-mkdir github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src <span class="token comment"># "github/github-action-src" is the folder we put our Github Action source files into using our Dockerfile</span>
-cp <span class="token punctuation">-</span>r /github/github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src . <span class="token comment"># now let's copy that folder into the folder for the entire repository "/github/workspace"</span>
+mkdir github-action-src # &quot;github/github-action-src&quot; is the folder we put our Gi
+thub Action source files into using our Dockerfile
+cp -r /github/github-action-src . # now let's copy that folder into the folder f
+or the entire repository &quot;/github/workspace&quot;
 
-<span class="token comment"># as we are currently inside the github workspace (/github/workspace) containing the source files of the entire repository</span>
-<span class="token comment"># we will need to cd into the folder we previously created "github-action-src"</span>
-<span class="token comment"># you could also copy build files and such to "github-action-src" if you need to</span>
-cd github<span class="token punctuation">-</span>action<span class="token punctuation">-</span>src
+# as we are currently inside the github workspace (/github/workspace) containing
+ the source files of the entire repository
+# we will need to cd into the folder we previously created &quot;github-action-src&quot;
+# you could also copy build files and such to &quot;github-action-src&quot; if you need to
+cd github-action-src
 
 npm install
-node index.js</code></pre>
-<p>If you have any question please send me a mail at <a href="mailto:oss@thoughtsunificator.me">oss@thoughtsunificator.me</a>.</p>
+node index.js
+</code></pre>
 </div>
 	</article>
 		</main>

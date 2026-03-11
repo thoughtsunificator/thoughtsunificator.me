@@ -10,7 +10,6 @@
 		<!-- Just a few millions of lines, mostly useless and pathetic "aesthetics" black magick kind of stuff -->
 		<link rel="stylesheet" type="text/css" href="/main.css">
 		<!-- Used for syntax highlighting inside posts -->
-		<link rel="stylesheet" type="text/css" href="/okaida.css">
 		<!-- https://w3c.github.io/manifest/ -->
 		<link rel="manifest" href="/manifest.webmanifest">
 	</head>
@@ -27,25 +26,32 @@
 		</div>
 		
 		<div id="post-content"><h2 id="introduction">Introduction</h2>
-<p>One of the oldest problems I run into with Operating Systems in general, the lower layer of my development environment, is saving/managing my workspace.<br>
+<p>One of the oldest problems I run into with Operating Systems in general, the low<br>
+er layer of my development environment, is saving/managing my workspace.<br>
 But what does &quot;workspace saving&quot; mean exactly, what am I trying to achieve here?</p>
-<p>I don't want my OS to be able to restore my windows when I restart, it's not about that, I can deal with this problem by not rebooting. What I want is the ability to to close apps and programs in order to have a clean workspace that contains only what I need at the moment. I also want to be able to reopen group of windows at will, to me, these group of windows basically mean the same as a projet. That's right, a group of windows and their states is a project.</p>
-<p>So how would you go about achieving this? These are the solutions I was able to find :</p>
-<p><strong>Using a (autonomous) solution that means :</strong></p>
-<ul>
-<li>A full-fledged IDE (other than VSCode)</li>
-<li>Paid software at the OS-level (on Windows for the most part)</li>
-</ul>
-<p><strong>Scripting</strong></p>
-<p>That is what I will be writing about.</p>
-<h3 id="how-to-achieve-workspace-switching-at-the-os-layer-through-scripting">How to achieve workspace switching at the os-layer through scripting</h3>
+<p>I don't want my OS to be able to restore my windows when I restart, it's not abo<br>
+ut that, I can deal with this problem by not rebooting. What I want is the abili<br>
+ty to to close apps and programs in order to have a clean workspace that contain<br>
+s only what I need at the moment. I also want to be able to reopen group of wind<br>
+ows at will, to me, these group of windows basically mean the same as a projet.<br>
+That's right, a group of windows and their states is a project.</p>
+<h3 id="how-to-achieve-workspace-switching-at-the-os-layer-through-shell-scripting">How to achieve workspace switching at the os-layer through shell scripting</h3>
 <p>The first thing I have to think about is the usage.<br>
-I want, through a script, command or whatever, be able to open a specific workspace.<br>
+I want, through a script, command or whatever, be able to open a specific worksp<br>
+ace.<br>
 Something like <code>workspace.sh [project] [feature]</code> for example.</p>
 <p>I have to make a clear distinction between the project and the feature.</p>
-<p>The project is in this case would represent the framework, the basis : the i3 layout, the setup scripts and the programs/scripts themselves. The feature could be a specific branch in a git repository for example, or it could be as simple as a parameter that you give to your programs/scripts.</p>
+<p>The project is in this case would represent the framework, the basis : the i3 la<br>
+yout, the setup scripts and the programs/scripts themselves. The feature could b<br>
+e a specific branch in a git repository for example, or it could be as simple as<br>
+a parameter that you give to your programs/scripts.</p>
 <h3 id="use-case">Use case</h3>
-<p>Let's say I want to work on a project called <code>foo</code>, on very this project I work simultaneously on 3 separate features. The first thing would be that I want to have one terminal, right where the project lives. I also want the shell session to start some init. scripts, that could be something like a Python venv for example. If I'm working on a Web application I would also need my browser opened up.</p>
+<p>I want to work on a project called <code>foo</code>, on very this project I wor<br>
+k simultaneously on 3 separate features. The first thing would be that I want to<br>
+have one terminal, right where the project lives. I also want the shell session<br>
+to start some init. scripts, that could be something like a Python venv for exa<br>
+mple. If I'm working on a Web application I would also need my browser opened up<br>
+.</p>
 <h3 id="scripting">Scripting</h3>
 <h4 id="prerequisites">Prerequisites</h4>
 <ul>
@@ -56,96 +62,103 @@ Something like <code>workspace.sh [project] [feature]</code> for example.</p>
 <h4 id="scripts">Scripts</h4>
 <ol>
 <li>Prompt the user for the project it wants to work on.</li>
-<li>Run the <a href="http://main.sh">main.sh</a> script for the selected project</li>
+<li>Run the <a href="http://main.sh">main.sh</a> script for the selected project<br>
+The script might prompt the user for additional information such as the<br>
+feature name etc..</li>
 </ol>
-<blockquote>
-<p>The script might prompt the user for additional information such as the feature.</p>
-</blockquote>
 <p><code>workspace.sh</code></p>
-<pre class="language-shell"><code class="language-shell"><span class="token shebang important">#!/usr/bin/env sh</span>
+<pre><code class="language-shell">#!/usr/bin/env sh
 
-<span class="token assign-left variable">projects_path</span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$HOME</span>/.i3/i3-resurrect/projects"</span>
+projects_path=&quot;$HOME/.i3/i3-resurrect/projects&quot;
 
-<span class="token assign-left variable">project_name</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">ls</span> <span class="token string">"<span class="token variable">$projects_path</span>"</span> <span class="token operator">|</span> dmenu <span class="token parameter variable">-p</span> project  <span class="token parameter variable">-i</span> <span class="token operator">|</span> <span class="token function">xargs</span><span class="token variable">)</span></span>
+project_name=$(ls &quot;$projects_path&quot; | dmenu -p project  -i | xargs)
 
-<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$project_name</span>"</span> <span class="token operator">==</span> <span class="token string">""</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-  <span class="token builtin class-name">echo</span> <span class="token string">"Invalid project"</span>
-  <span class="token builtin class-name">exit</span> <span class="token number">1</span>
-<span class="token keyword">fi</span>
+if [[ &quot;$project_name&quot; == &quot;&quot; ]]; then
+  echo &quot;Invalid project&quot;
+  exit 1
+fi
 
-<span class="token assign-left variable">project_path</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$projects_path</span>/<span class="token variable">$project_name</span>"</span>
-<span class="token assign-left variable">temp_folder</span><span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span>mktemp <span class="token parameter variable">-d</span><span class="token variable">)</span></span>"</span>
-<span class="token assign-left variable">workspace_number</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>i3-msg <span class="token parameter variable">-t</span> get_workspaces   <span class="token operator">|</span> jq <span class="token string">'.[] | select(.focused==true).name'</span>   <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">"<span class="token entity" title="\&quot;">\"</span>"</span> <span class="token parameter variable">-f2</span><span class="token variable">)</span></span>
-<span class="token variable">$project_path</span>/main.sh <span class="token string">"<span class="token variable">$project_path</span>"</span> <span class="token string">"<span class="token variable">$temp_folder</span>"</span> <span class="token string">"<span class="token variable">$workspace_number</span>"</span> <span class="token operator">&amp;&amp;</span> pipx run i3-resurrect restore <span class="token parameter variable">-d</span> <span class="token string">"<span class="token variable">$temp_folder</span>"</span> <span class="token parameter variable">-p</span> current
-<span class="token function">rm</span> <span class="token parameter variable">-rf</span> <span class="token string">"<span class="token variable">$temp_folder</span>"</span></code></pre>
+project_path=&quot;$projects_path/$project_name&quot;
+temp_folder=&quot;$(mktemp -d)&quot;
+workspace_number=$(i3-msg -t get_workspaces   | jq '.[] | select(.focused==true)
+.name'   | cut -d&quot;\&quot;&quot; -f2)
+$project_path/main.sh &quot;$project_path&quot; &quot;$temp_folder&quot; &quot;$workspace_number&quot; &amp;&amp; pipx
+ run i3-resurrect restore -d &quot;$temp_folder&quot; -p current
+rm -rf &quot;$temp_folder&quot;
+</code></pre>
 <p><code>main.sh</code></p>
-<pre class="language-shell"><code class="language-shell"><span class="token shebang important">#!/usr/bin/env sh</span>
-<span class="token assign-left variable">project_path</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$1</span>"</span>
-<span class="token assign-left variable">temp_folder</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$2</span>"</span>
-<span class="token assign-left variable">workspace_number</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$3</span>"</span>
-<span class="token assign-left variable">feature_name</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">ls</span> <span class="token parameter variable">-t</span> /my_project_path/.features <span class="token operator">|</span> dmenu <span class="token parameter variable">-p</span> Feature <span class="token parameter variable">-i</span> <span class="token operator">|</span> <span class="token function">xargs</span><span class="token variable">)</span></span>
-<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$feature_name</span>"</span> <span class="token operator">==</span> <span class="token string">""</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-  <span class="token builtin class-name">echo</span> <span class="token string">"Invalid feature_name"</span>
-  <span class="token builtin class-name">exit</span> <span class="token number">1</span>
-<span class="token keyword">fi</span>
-<span class="token function">mkdir</span> <span class="token variable">$temp_folder</span>/profiles
-<span class="token function">sed</span> <span class="token parameter variable">-e</span> <span class="token string">"s/%{feature_name}/<span class="token variable">$feature_name</span>/g"</span> <span class="token string">"<span class="token variable">$project_path</span>/programs.json"</span> <span class="token operator">></span> <span class="token string">"<span class="token variable">$temp_folder</span>/profiles/current_programs.json"</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span> 
-<span class="token function">sed</span> <span class="token parameter variable">-e</span> <span class="token string">"s/%{feature_name}/<span class="token variable">$feature_name</span>/g"</span> <span class="token string">"<span class="token variable">$project_path</span>/layout.json"</span> <span class="token operator">></span> <span class="token string">"<span class="token variable">$temp_folder</span>/profiles/current_layout.json"</span></code></pre>
+<pre><code class="language-shell">#!/usr/bin/env sh
+
+project_path=&quot;$1&quot;
+temp_folder=&quot;$2&quot;
+workspace_number=&quot;$3&quot;
+feature_name=$(ls -t /my_project_path/.features | dmenu -p Feature -i | xargs)
+
+if [[ &quot;$feature_name&quot; == &quot;&quot; ]]; then
+  echo &quot;Invalid feature_name&quot;
+  exit 1
+fi
+
+mkdir $temp_folder/profiles
+
+sed -e &quot;s/%{feature_name}/$feature_name/g&quot; &quot;$project_path/programs.json&quot; &gt; &quot;$tem
+p_folder/profiles/current_programs.json&quot; &amp;&amp; \ 
+sed -e &quot;s/%{feature_name}/$feature_name/g&quot; &quot;$project_path/layout.json&quot; &gt; &quot;$temp_
+folder/profiles/current_layout.json&quot;
+</code></pre>
 <p><code>programs.json</code></p>
 <blockquote>
 <p>See <a href="https://github.com/JonnyHaystack/i3-resurrect">https://github.com/JonnyHaystack/i3-resurrect</a></p>
 </blockquote>
-<ul>
-<li>vscode</li>
-<li>firefox</li>
-<li>2 xterm windows</li>
-</ul>
-<pre class="language-json"><code class="language-json"><span class="token punctuation">[</span>
-  <span class="token punctuation">{</span>
-    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"/opt/visual-studio-code/code"</span><span class="token punctuation">,</span>
-      <span class="token string">"/my_project_path/.features/%{feature_name}/%{feature_name}.code-workspace"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"working_directory"</span><span class="token operator">:</span> <span class="token string">"/my_project_path/.features/%{feature_name}"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"/usr/lib/firefox/firefox"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"working_directory"</span><span class="token operator">:</span> <span class="token string">"$HOME"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"/usr/bin/xterm"</span><span class="token punctuation">,</span>
-			<span class="token string">"-class"</span><span class="token punctuation">,</span>
-      <span class="token string">"UXTerm"</span><span class="token punctuation">,</span>
-      <span class="token string">"-u8"</span><span class="token punctuation">,</span>
-      <span class="token string">"-bw"</span><span class="token punctuation">,</span>
-      <span class="token string">"0"</span><span class="token punctuation">,</span>
-      <span class="token string">"-e"</span><span class="token punctuation">,</span>
-      <span class="token string">"bash --login -i &lt;&lt;&lt; 'source /home/user/.venvs/project/%{feature_name}/bin/activate; exec &lt;/dev/tty'"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"working_directory"</span><span class="token operator">:</span> <span class="token string">"$HOME"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"/usr/bin/xterm"</span><span class="token punctuation">,</span>
-			<span class="token string">"-class"</span><span class="token punctuation">,</span>
-      <span class="token string">"UXTerm"</span><span class="token punctuation">,</span>
-      <span class="token string">"-u8"</span><span class="token punctuation">,</span>
-      <span class="token string">"-bw"</span><span class="token punctuation">,</span>
-      <span class="token string">"0"</span><span class="token punctuation">,</span>
-      <span class="token string">"-e"</span><span class="token punctuation">,</span>
-      <span class="token string">"bash --login -i &lt;&lt;&lt; 'source /home/user/.venvs/project/%{feature_name}/bin/activate; exec &lt;/dev/tty'"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"working_directory"</span><span class="token operator">:</span> <span class="token string">"$HOME"</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">]</span></code></pre>
+<pre><code class="language-json">[
+  {
+    &quot;command&quot;: [
+      &quot;/opt/visual-studio-code/code&quot;,
+      &quot;/my_project_path/.features/%{feature_name}/%{feature_name}.code-workspace
+&quot;
+    ],
+    &quot;working_directory&quot;: &quot;/my_project_path/.features/%{feature_name}&quot;
+  },
+  {
+    &quot;command&quot;: [
+      &quot;/usr/lib/firefox/firefox&quot;
+    ],
+    &quot;working_directory&quot;: &quot;$HOME&quot;
+  },
+  {
+    &quot;command&quot;: [
+      &quot;/usr/bin/xterm&quot;,
+			&quot;-class&quot;,
+      &quot;UXTerm&quot;,
+      &quot;-u8&quot;,
+      &quot;-bw&quot;,
+      &quot;0&quot;,
+      &quot;-e&quot;,
+      &quot;bash --login -i &lt;&lt;&lt; 'source /home/user/.venvs/project/%{feature_name}/bin
+/activate; exec &lt;/dev/tty'&quot;
+    ],
+    &quot;working_directory&quot;: &quot;$HOME&quot;
+  },
+  {
+    &quot;command&quot;: [
+      &quot;/usr/bin/xterm&quot;,
+			&quot;-class&quot;,
+      &quot;UXTerm&quot;,
+      &quot;-u8&quot;,
+      &quot;-bw&quot;,
+      &quot;0&quot;,
+      &quot;-e&quot;,
+      &quot;bash --login -i &lt;&lt;&lt; 'source /home/user/.venvs/project/%{feature_name}/bin
+/activate; exec &lt;/dev/tty'&quot;
+    ],
+    &quot;working_directory&quot;: &quot;$HOME&quot;
+  }
+]
+</code></pre>
 <p><code>layout.json</code></p>
-<p>After setting up your layout manually you can save it using i3 (see <a href="https://i3wm.org/docs/layout-saving.html">https://i3wm.org/docs/layout-saving.html</a>) or i3-ressurect (see <a href="https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage">https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage</a>)</p>
-<hr>
-<p>That's about it, now you can save and restore your workspaces.</p>
-<p>Thanks for reading.</p>
+<p>After setting up your layout manually you can save it using i3 (see<br>
+<a href="https://i3wm.org/docs/layout-saving.html">https://i3wm.org/docs/layout-saving.html</a>) or i3-ressurect<br>
+(see <a href="https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage">https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage</a>)</p>
 </div>
 	</article>
 		</main>
