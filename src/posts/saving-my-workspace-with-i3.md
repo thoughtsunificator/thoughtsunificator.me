@@ -1,54 +1,56 @@
 ---js
 {
-  title: "How to save and restore your programs when using i3",
-  tags: ["tutorial", "desktop-window-manager"],
+  title: "How to save and restore programs with i3wm",
+  tags: ["window-manager"],
 }
 ---
 
-## Introduction
+One of the oldest and unresolved issue I often run into with Operating Systems 
+in general, is saving and restoring the state of my work. 
 
-One of the oldest problems I run into with Operating Systems in general, the lower layer of my development environment, is saving/managing my workspace.  
-But what does "workspace saving" mean exactly, what am I trying to achieve here?
+But what does "saving" mean exactly? 
 
-I don't want my OS to be able to restore my windows when I restart, it's not about that, I can deal with this problem by not rebooting. What I want is the ability to to close apps and programs in order to have a clean workspace that contains only what I need at the moment. I also want to be able to reopen group of windows at will, to me, these group of windows basically mean the same as a projet. That's right, a group of windows and their states is a project.
+It's not about restoring windows and programs it is about the ability to to 
+defining dynamic workflows that can be parameterized easily. To be able to open 
+group of windows and programs at will, to me, these group of windows often  
+mount to a project. That's right, a group of windows and their states is a 
+project.
 
-So how would you go about achieving this? These are the solutions I was able to find :
+**Achieving decent workspace state management through shell scripting**
 
-**Using a (autonomous) solution that means :**
-  * A full-fledged IDE (other than VSCode)
-  * Paid software at the OS-level (on Windows for the most part)
+First thing to think about is the usage, it is often overlooked but it's the
+most important thing, it should be easy to achieve saving and restoring.
+Something like ``workspace.sh [project] [feature]`` for example.
+
+A clear distinction between projects features should be made though.
+
+The project is in this case would represent the framework, the basis : the i3 la
+yout, the setup scripts and the programs/scripts themselves. The feature could b
+e a specific branch in a git repository for example, or it could be as simple as
+ a parameter that you give to your programs/scripts.
+
+**Use case**
+
+One might want to start working on a project called ``foo``, on very this 
+project there is need to work simultaneously on 3 different features. 
+One terminal that cd into the project directly, the shell session should be able
+to source scripts for initiatilization purposes that could be something like a 
+Python venv for example. 
 
 **Scripting**
 
-That is what I will be writing about.
+<u>Prerequisites</u>
 
-### How to achieve workspace switching at the os-layer through scripting
-
-The first thing I have to think about is the usage.
-I want, through a script, command or whatever, be able to open a specific workspace.
-Something like ``workspace.sh [project] [feature]`` for example.
-
-I have to make a clear distinction between the project and the feature.
-
-The project is in this case would represent the framework, the basis : the i3 layout, the setup scripts and the programs/scripts themselves. The feature could be a specific branch in a git repository for example, or it could be as simple as a parameter that you give to your programs/scripts.
-
-### Use case
-
-Let's say I want to work on a project called ``foo``, on very this project I work simultaneously on 3 separate features. The first thing would be that I want to have one terminal, right where the project lives. I also want the shell session to start some init. scripts, that could be something like a Python venv for example. If I'm working on a Web application I would also need my browser opened up.
-
-### Scripting
-
-#### Prerequisites
-
-- i3
+- i3wm
 - i3-resurrect
 - dmenu
 
-#### Scripts
+<u>Goals</u>
 
 1. Prompt the user for the project it wants to work on.
 2. Run the main.sh script for the selected project
-> The script might prompt the user for additional information such as the feature.
+  The script might prompt the user for additional information such as the 
+  feature name etc..
 
 ```workspace.sh```
 ```shell
@@ -65,39 +67,45 @@ fi
 
 project_path="$projects_path/$project_name"
 temp_folder="$(mktemp -d)"
-workspace_number=$(i3-msg -t get_workspaces   | jq '.[] | select(.focused==true).name'   | cut -d"\"" -f2)
-$project_path/main.sh "$project_path" "$temp_folder" "$workspace_number" && pipx run i3-resurrect restore -d "$temp_folder" -p current
+workspace_number=$(i3-msg -t get_workspaces   | jq '.[] | select(.focused==true)
+.name'   | cut -d"\"" -f2)
+$project_path/main.sh "$project_path" "$temp_folder" "$workspace_number" && pipx
+ run i3-resurrect restore -d "$temp_folder" -p current
 rm -rf "$temp_folder"
 ```
 
 ```main.sh```
 ```shell
 #!/usr/bin/env sh
+
 project_path="$1"
 temp_folder="$2"
 workspace_number="$3"
 feature_name=$(ls -t /my_project_path/.features | dmenu -p Feature -i | xargs)
+
 if [[ "$feature_name" == "" ]]; then
   echo "Invalid feature_name"
   exit 1
 fi
+
 mkdir $temp_folder/profiles
-sed -e "s/%{feature_name}/$feature_name/g" "$project_path/programs.json" > "$temp_folder/profiles/current_programs.json" && \ 
-sed -e "s/%{feature_name}/$feature_name/g" "$project_path/layout.json" > "$temp_folder/profiles/current_layout.json"
+
+sed -e "s/%{feature_name}/$feature_name/g" "$project_path/programs.json" > "$tem
+p_folder/profiles/current_programs.json" && \ 
+sed -e "s/%{feature_name}/$feature_name/g" "$project_path/layout.json" > "$temp_
+folder/profiles/current_layout.json"
 ```
 
 ```programs.json```
 > See https://github.com/JonnyHaystack/i3-resurrect
-- vscode
-- firefox
-- 2 xterm windows
 
 ```json
 [
   {
     "command": [
       "/opt/visual-studio-code/code",
-      "/my_project_path/.features/%{feature_name}/%{feature_name}.code-workspace"
+      "/my_project_path/.features/%{feature_name}/%{feature_name}.code-workspace
+"
     ],
     "working_directory": "/my_project_path/.features/%{feature_name}"
   },
@@ -110,13 +118,14 @@ sed -e "s/%{feature_name}/$feature_name/g" "$project_path/layout.json" > "$temp_
   {
     "command": [
       "/usr/bin/xterm",
-			"-class",
+      "-class",
       "UXTerm",
       "-u8",
       "-bw",
       "0",
       "-e",
-      "bash --login -i <<< 'source /home/user/.venvs/project/%{feature_name}/bin/activate; exec </dev/tty'"
+      "bash --login -i <<< 'source /home/user/.venvs/project/%{feature_name}/bin
+/activate; exec </dev/tty'"
     ],
     "working_directory": "$HOME"
   },
@@ -129,7 +138,8 @@ sed -e "s/%{feature_name}/$feature_name/g" "$project_path/layout.json" > "$temp_
       "-bw",
       "0",
       "-e",
-      "bash --login -i <<< 'source /home/user/.venvs/project/%{feature_name}/bin/activate; exec </dev/tty'"
+      "bash --login -i <<< 'source /home/user/.venvs/project/%{feature_name}/bin
+/activate; exec </dev/tty'"
     ],
     "working_directory": "$HOME"
   }
@@ -138,11 +148,8 @@ sed -e "s/%{feature_name}/$feature_name/g" "$project_path/layout.json" > "$temp_
 
 ```layout.json```
 
-After setting up your layout manually you can save it using i3 (see https://i3wm.org/docs/layout-saving.html) or i3-ressurect (see https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage)
+After setting up your layout manually you can save it using i3.
 
----
-
-That's about it, now you can save and restore your workspaces.
-
-
-Thanks for reading.
+**Refences**:
+- https://i3wm.org/docs/layout-saving.html
+- https://github.com/JonnyHaystack/i3-resurrect?tab=readme-ov-file#usage

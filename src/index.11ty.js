@@ -9,12 +9,10 @@ export const data = {
 export function render(data) {
 	const posts = data.collections.posts
 	return `
-	<section id="posts">
+	<div id="posts">
 	${posts.map((post, index) => `
-		<section id="post-${index}" class="post">
-		<div><a class="title" ${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${post.data.redirect_to ? "#" : ""} ${ post.data.title }</a></div>
-		</section>
+		<div><a class="title" ${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${post.data.redirect_to ? post.data.redirect_to : post.url}">${post.data.redirect_to ? post.data.redirect_to : post.data.title}</a></div>
 	`).join("")}
-</section>
+</div>
 `;
 };
