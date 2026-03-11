@@ -4,11 +4,12 @@
 	tags: ["browser-extension"],
 }
 ---
-Anime Twist Premium is a browser extension that adds a watch list to twist.moe making it possible to track the shows you're currently watching.
+Anime Twist Premium is a browser extension that adds a watch list to twist.moe m
+aking it possible to track the shows you're currently watching.
 
-## How it works
+**How it works**
 
-### Adding an anime to your watchlist
+**Adding an anime to your watchlist**
 
 Navigate to the page of the anime of your choice. 
 
@@ -18,7 +19,7 @@ A new "+" button appeared below the video player:
 
 Clicking the button will add the anime to your watchlist.
 
-### Acessing your watch list
+**Acessing your watch list**
 
 Next to the settings button or chat button you will see a new button:
 
@@ -32,13 +33,14 @@ You can also look up your entries:
 
 ![atp-lookup](/image/atp-lookup.webp)
 
-That's it, you now have easy access to the shows you're watching and can look them up.
+That's it, you now have easy access to the shows you're watching and can look th
+em up.
 
-### Bonus (v1.4)
+**Bonus (v1.4)**
 
 ![atp-random](/image/atp-random.webp)
 
-## Install it
+**Install it**
 
 It's available on Chrome and Firefox:
 - [Chrome](https://chrome.google.com/webstore/detail/anime-twist-premium/nkojcnopablpombnbfadmhbhdlepgcdo)

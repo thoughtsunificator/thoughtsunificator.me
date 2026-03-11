@@ -18,14 +18,14 @@ export function render(data) {
 	}
 	return `<div id="tags">
 	${data.collections.tagsList.map((key, index) => `
-		<section id="tag-${index}" class="tag">
-			<a id="${key.replace(" ", "-").toLowerCase()}" href="/tags/${key.replace(" ", "-").toLowerCase()}/">#${key}</a>
+		<p id="tag-${index}" class="tag">
+			<a id="${key.replace(" ", "-").toLowerCase()}" href="/tags/${key.replace(" ", "-").toLowerCase()}/"><b>#${key}</b></a>
 			<div class="posts">
 			${groups[key].map(post => `
-				<article><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</a></article>
+				<div><a${post.data.redirect_to ? ` target="_blank" rel="noopener"` : ""} href="${ post.url }">${ post.data.title }</div></a>
 			`).join("")}
 			</div>
-		</section>
+		</p>
 	`).join("")}
 </div>`;
 };

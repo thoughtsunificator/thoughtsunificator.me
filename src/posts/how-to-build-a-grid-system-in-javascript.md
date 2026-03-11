@@ -1,21 +1,19 @@
 ---js
 {
   title: "How to build a Grid system in JavaScript",
-  tags: ["tutorial"],
+  tags: ["design"],
 }
 ---
 
-## Introduction
+While making a [connect four] in JavaScript I thought it would be great to build 
+a two-dimensional grid system that could easily be reused.
 
-While making my [connect four](https://github.com/thoughtsunificator/userinterface.js-puissance4) in JavaScript I thought it would be great to build a reusable and scalable grid system.
+**Definition of a grid**
 
-That's what I will be sharing today.
+One could simply say that it is made of cells that are organized into rows where
+each each cells holds information about its location on a coordinate plane.
 
-## Grid
-
-First, let's go through the basics, exactly how can we define a grid system? We could say that a grid is made of cells that are organized into rows.
-
-Let's start from here and make a ``Grid`` class that will hold our rows:
+Here is a basic ``Grid`` class that can hold rows:
 
 ``grid.js``
 ```javascript
@@ -36,11 +34,8 @@ class Grid {
 }
 ```
 
-Here, my ``rows`` variable type is an ``object`` but you could also use an ``array``.
-
-## Row
-
-Now that we have our grid class ready, let's create a ``Row`` class:
+The `Row` in question which itself is made of a location relative to the
+coordinate plane that is the `Grid`.
 
 ``row.js``
 ```javascript
@@ -73,11 +68,13 @@ class Row {
 }
 ```
 
-As you can see ``Row`` is in fact an abstraction of ``x`` in our grid. Just like the ``Grid`` class holds rows our ``Row`` class holds cells. 
+As you can see ``Row`` is in fact an abstraction of ``x`` in our grid. Just like
+ the ``Grid`` class holds rows our ``Row`` class holds cells. 
 
-From here the next step would be to add cells to the grid, so let's create a method inside our ``Grid`` class that'll do just that.
+From here the next step would be to add cells to the grid, so let's create a met
+hod inside our ``Grid`` class that'll do just that.
 
-## Adding cells to our grid
+**Adding cells to our grid**
 
 ``grid.js``
 ```javascript
@@ -103,9 +100,9 @@ const grid = new Grid()
 grid.addCell(0, 0)
 ```
 
-Now that we're good with the row part let's dive into the cell part.
+How about the cells?
 
-## Cell
+**Cell**
 
 ``cell.js``
 ```javascript
@@ -139,15 +136,17 @@ class Cell {
 }
 ```
 
+Usage:
+
 ``demo.js``
 ```javascript
 const grid = new Grid()
 grid.addCell(0, 0)
 ```
 
-Let's build a 4x4 grid then.
+And finally, a 4x4 grid:
 
-## 4x4 grid
+**4x4 grid**
 
 ``demo.js``
 ```javascript
@@ -160,6 +159,7 @@ for(let x = 0; x < size; x++) {
 }
 ```
 
-There are lots more that we could do but let's save it for later...
+Here's the library made out of this grid system: 
+https://github.com/thoughtsunificator/grid.
 
-Also, check out the library I made out of this grid system: https://github.com/thoughtsunificator/grid.
+[connect four]: https://github.com/thoughtsunificator/userinterface.js-puissance4 

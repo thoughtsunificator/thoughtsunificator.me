@@ -1,4 +1,3 @@
-import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
 // For some reason one cannot override/supplement options that are passed to markdown-it by eleventy, one needs to re-import the module and override the default markdown library entirely.
 import markdownIt from "markdown-it"
 import { IdAttributePlugin } from "@11ty/eleventy"
@@ -7,7 +6,6 @@ import siteData from "./src/_data/site.js"
 
 export default function(config) {
 
-	config.addPlugin(syntaxHighlight)
 	// Add Id attribute to markdown tags
 	config.addPlugin(IdAttributePlugin)
 
@@ -38,6 +36,8 @@ export default function(config) {
 			item.data.tags
 				.forEach((tag) => tagsSet.add(tag))
 		})
+		// posted are tagged with "posts" tag by src/posts/posts.json
+		// generic "posts" tag should not appear here
 		tagsSet.delete("posts")
 		return [...tagsSet].sort(() => {
 			const pseudoRandom = Math.random
