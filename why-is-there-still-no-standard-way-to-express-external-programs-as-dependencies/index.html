@@ -46,44 +46,38 @@ exact version that is needed for the task at hand.</p>
 up to someone else, probably at at lower level of stack<br>
 (hello evil packagers), ultimately condemning the user to face a software<br>
 failure sometime even as soon as the <a href="https://github.com/mesonbuild/meson/issues/15539">building process</a> Yes, you read that<br>
-right, a build system that expects its users to have alreadyasse mbled the<br>
-pieces of the software they're building.  Meson is not the only one wro ng in<br>
-this case, Python is too, for it is well-known for its poor dependencies<br>
-management, I won't get too deep into that part here but let's say that they<br>
-cannot decide on a common way to do things and their package manager,<br>
-furthermore pip, is known to introduce breaking changes every single update.</p>
-<p>Who did not once try to run a Python script only to have to reverse engineer its<br>
+right, a build system that expects its users to have already assembled the<br>
+pieces of the software they're building.</p>
+<p>And there's Python too, well-known for its poor dependencies management,<br>
+I won't get too deep into that part here but let's say that they cannot decide<br>
+on a common way to do things and their package manager, furthermore pip, is<br>
+known to introduce breaking changes every single update.<br>
+Who did not once try to run a Python script only to have to reverse engineer its<br>
 entire dependencies tree just to be able to run the damn thing?<br>
 This kind of poor DX does not happen &quot;simply because&quot;, it happens because Python<br>
 developers do not care the least about expressing dependencies, they will keep<br>
-overlooking dependencies for as long as they can.<br>
-And that's not all! Distribution packagers also seem to be under<br>
-the false pretense that suffixing a Python binary using its major and minor<br>
-version should be enough.</p>
-<p>Expressing dependencies is not easy and we need more than just a<br>
-single unified symbol to express dependencies, we need the at the very least:</p>
+overlooking dependencies for as long as they can.  Distribution packagers also<br>
+seem to be under the false pretense that suffixing a Python binary using its<br>
+major and minor version should be enough. All of this inevitably leads to<br>
+software failures at a rather early stage.</p>
+<p>Expressing dependencies is not easy as they are making it to be.</p>
+<p>We need more than a symbolic path to express dependencies:</p>
 <ol>
-<li>A very brief and standardized way to express external programs as dependencie<br>
-s through a manifest</li>
-<li>An (neutral) intermediate program that is able to lookup dependencies through<br>
-some sort of universal registry that records user intents on any given system</li>
+<li>A very brief and standardized way to express external programs as<br>
+dependencies through a manifest</li>
+<li>A program agnostic that is able to lookup those dependencies using records<br>
+from user intended to do with said package installed on its system.</li>
 </ol>
-<p>This way this gives both the final user, maintainers and developers more freedom<br>
-while keeping us sane.</p>
-<p>When external programs are required at any steps of that building process then i<br>
-t should be able to be lookup the information whether a given program is availab<br>
-le, what exactly it is and how it can use it. In contrast to the current state o<br>
-f things where a path, symbolically, means a dependency, the program would look<br>
-at the user intents from previously installed packages and test their hashes, th<br>
-at is, the clearest form to express a dependency. The hash would be made ouf of<br>
-their name, their exact and precise version. A clear distinction should be made<br>
-between programs that the user himself compiled and installed programs, unless a<br>
-gain, it expressed its intent to compile a precise version as-is without chainin<br>
-g its behavior. It's all about what the user want.</p>
+<p>It's about the system having more information about what the user needs instead<br>
+of shoving packages down its mouth and hoping for the best.</p>
+<p>When external programs are required at any steps of that building process then<br>
+the mechanism should be able to be read the manifest and match each dependencies<br>
+against the record system. Each dependency would amount to a checksum computed<br>
+from unique data instead of just name. It could be any form of fingerprint<br>
+computed from the binaries and a few metadata.</p>
 <p>Needless to say that it is not as simple as providing an API that calls itself<br>
-<a href="https://mesonbuild.com/Reference-manual_functions.html#find_program">find_program</a> huge shout-out to the dumbest of all: meson which by the way<br>
-looks like another attempt at world wide domination through softwares enslaving<br>
-its users.</p>
+<a href="https://mesonbuild.com/Reference-manual_functions.html#find_program">find_program</a> according to meson and its best attempt at world wide domination<br>
+through softwares enslaving its users.</p>
 <p>That's it I will no longer be fooled by semver, paths and <code>/usr/bin/env</code>, suffixes<br>
 or anything of the sort.</p>
 </div>
