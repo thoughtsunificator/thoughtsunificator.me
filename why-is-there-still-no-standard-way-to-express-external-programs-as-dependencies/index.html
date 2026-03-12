@@ -55,17 +55,13 @@ furthermore pip, is known to introduce breaking changes every single update.</p>
 <p>Who did not once try to run a Python script only to have to reverse engineer its<br>
 entire dependencies tree just to be able to run the damn thing?<br>
 This kind of poor DX does not happen &quot;simply because&quot;, it happens because Python<br>
-developers are very bad at expressing their scripts dependencies, they more<br>
-than often overlook the <a href="/version-pinning-does-not-mean-what-we-think-it-means">managing my dependencies versions</a> part of having<br>
-dependencies at all. And that's not all! Python packagers also seem to be under<br>
-the false pretense that suffixing any Python binary with its major and minor<br>
-version is enough.</p>
-<p>Somewhere, though, there might be a tiny ray of hope for <a href="https://peps.python.org/pep-0723">Python's packaging<br>
-ecosystem</a></p>
-<p>So, as you can see lots of wrong from lots of people, that makes for a poor UX/D<br>
-X, so what can be done about that?</p>
-<p>We need more than just a single unified symbol to express dependencies, we need<br>
-the at the very least:</p>
+developers do not care the least about expressing dependencies, they will keep<br>
+overlooking dependencies for as long as they can.<br>
+And that's not all! Distribution packagers also seem to be under<br>
+the false pretense that suffixing a Python binary using its major and minor<br>
+version should be enough.</p>
+<p>Expressing dependencies is not easy and we need more than just a<br>
+single unified symbol to express dependencies, we need the at the very least:</p>
 <ol>
 <li>A very brief and standardized way to express external programs as dependencie<br>
 s through a manifest</li>
