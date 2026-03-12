@@ -15,13 +15,6 @@ body {
 	font-family: monospace;
 }
 
-pre, img {
-	display: inline-block;
-}
-
-#post-content {
-}
-
 code:not([class]) {
 	background-color: #eee;
 }
@@ -35,12 +28,12 @@ ul li {
 	list-style: "- ";
 }
 
-#post-content hr {
-	border-color: #020b0d;
+pre,hr,img {
+	max-width:80ch;
 }
 
-img {
-	max-width: 70ch;
+hr {
+	margin: 10px 0;
 }
 
 #footer .tagline {
@@ -57,4 +50,8 @@ img {
 	height: 100%;
 	left: 0;
 	transform: rotate(-5deg);
+}
+
+#footer hr {
+	border-style: dotted;
 }

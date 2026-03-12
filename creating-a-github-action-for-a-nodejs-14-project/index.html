@@ -32,7 +32,7 @@ This article attempt to provide a solution to this very issue.</p>
 <a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions">Starting Guide</a>.</p>
 <p>So how do I use a version of nodejs &gt; 12? You can do so by creating a<br>
 <a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">Docker container action</a> with the <a href="https://hub.docker.com/_/node">node:16-alpine</a> image.</p>
-<p><strong>action.yml</strong></p>
+<p><code>action.yml</code></p>
 <pre><code class="language-yaml"># See https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-gi
 thub-actions for more information about the action.yml syntax
 ---
@@ -47,7 +47,7 @@ runs:
 	image: 'Dockerfile'
 
 </code></pre>
-<p><strong>Dockerfile</strong></p>
+<p><code>Dockerfile</code></p>
 <pre><code class="language-yaml"># This Dockerfile is inspired from the official document see https://docs.github
 .com/en/actions/creating-actions/creating-a-docker-container-action
 FROM node:16-alpine # you can the version of your liking see https://hub.docker.
@@ -58,7 +58,7 @@ thub-action-src&quot; for now.
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [&quot;/entrypoint.sh&quot;]
 </code></pre>
-<p><strong><a href="http://entrypoint.sh">entrypoint.sh</a></strong></p>
+<p><code>entrypoint.sh</code></p>
 <pre><code class="language-yaml">#!/bin/sh -l
 
 # let's create a specific folder for the source files of our github action
