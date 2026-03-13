@@ -11,6 +11,11 @@
 	}
 }
 
+#posts div:nth-child(even),
+.posts div:nth-child(even) {
+	margin:10px 0;
+}
+
 body {
 	font-family: monospace;
 }
