@@ -15,7 +15,9 @@ the A to Z to living and witch crafting as an open 🧙.*
 
 > If you gaze long into an abyss, the abyss also gazes into you
 
-Well, I don't fear the abyss.
+How about not making yet another abyssware then? Here's my take on it, in no
+particular order. It is about the attempt at making softwares that people can 
+enjoy using and making. 
 
 - A developer is also a user.
 - Be users/developers centric, not trends centric.
@@ -24,7 +26,7 @@ curity no, burdening users with useless actions no.
 - Less configuration means less complication. Provide a very basic workflow that
  can be extended and is composable and interoperable instead of burderning user 
 with unwanted features that requires unconfiguration.
-- Use ([wisely][1]) principles such as the Separation Of Concerns as a mean to 
+- Use ([wisely][2]) principles such as the Separation Of Concerns as a mean to 
 establish a clear definition of what each part of the software's job is. 
 The cutting corners mindset should be antagonized. Own these hard to grasp 
 concepts.  
@@ -32,7 +34,7 @@ concepts.
 Once the stack has left it up to the software, it's its job to maintain that goo
 d experience until it itself passes the torch.
 - While experimenting is most certainly always a good idea, 
-[try not to fall for the overcomplicate things mindset trap][2]
+[try not to fall for the overcomplicate things mindset trap][1]
 - Programming can be seen as a way for us to dematerialize by conceptualizing th
 e complexities of the world around us, which is why it should be as verbose as o
 ne can take.
