@@ -15,7 +15,9 @@ the A to Z to living and witch crafting as an open 🧙.*
 
 > If you gaze long into an abyss, the abyss also gazes into you
 
-Well, I don't fear the abyss.
+How about not making yet another abyssware then? Here's my take on it, in no
+particular order. It is about the attempt at making softwares that people can 
+enjoy using and making. 
 
 - A developer is also a user.
 - Be users/developers centric, not trends centric.
