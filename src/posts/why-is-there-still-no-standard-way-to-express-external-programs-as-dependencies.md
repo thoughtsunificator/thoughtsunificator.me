@@ -54,8 +54,7 @@ We need more than a symbolic path to express dependencies:
 1. A very brief and standardized way to express external programs as 
 dependencies through a manifest 
 2. An application agnostic program that is able to lookup those dependencies 
-using records from user intended to do with said package installed on its 
-system. 
+using records from what the user installed on its system
 
 It's about the system getting more information about what the user wants instead
 of shoving packages down its mouth and hoping for the best. 
