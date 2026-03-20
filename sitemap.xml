@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-			<loc>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</loc>
-			<lastmod>2319-06-18T04:31:00.797Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/starting-line-1/</loc>
-			<lastmod>2342-05-14T13:40:47.116Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/saving-my-workspace-with-i3/</loc>
-			<lastmod>2365-03-26T19:31:34.970Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/text-plain-emails/</loc>
-			<lastmod>2951-06-15T14:37:18.895Z</lastmod>
+			<loc>https://thoughtsunificator.me/tags/design/</loc>
+			<lastmod>2082-11-30T00:18:24.318Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/domodel-diary-3/</loc>
-			<lastmod>3090-05-09T19:17:58.009Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</loc>
-			<lastmod>3370-11-19T20:52:35.999Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/the-horrible-ever-never-changing-state-of-python-packaging/</loc>
-			<lastmod>3693-12-25T08:33:36.230Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/anime-twist-premium-2/</loc>
-			<lastmod>3818-05-11T22:48:04.606Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/domodel/</loc>
-			<lastmod>4781-09-30T12:21:13.901Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/tags/</loc>
-			<lastmod>5082-12-16T20:23:25.198Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/</loc>
-			<lastmod>5169-07-23T14:19:57.851Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/about-me/</loc>
-			<lastmod>5564-07-20T12:31:50.455Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</loc>
-			<lastmod>5678-01-14T23:19:34.159Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/see-what-you-have-done-with-your-damn-copy-pasting/</loc>
-			<lastmod>6277-09-09T00:48:24.667Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/open-source-protestware-harms-open-source/</loc>
-			<lastmod>6856-10-02T08:57:01.151Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/tags/perspective/</loc>
-			<lastmod>6865-06-11T03:06:30.532Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/about/</loc>
-			<lastmod>8988-08-17T00:10:31.495Z</lastmod>
+			<lastmod>4237-01-22T18:08:38.052Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/CVE-2025-43496/</loc>
-			<lastmod>9496-02-04T18:07:09.787Z</lastmod>
+			<lastmod>4264-10-03T14:58:37.762Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/starting-line-1/</loc>
+			<lastmod>5175-11-26T04:46:03.243Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/</loc>
+			<lastmod>5632-12-21T18:59:45.282Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/how-to-build-a-grid-system-in-javascript/</loc>
+			<lastmod>5831-09-04T10:18:54.313Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/about/</loc>
+			<lastmod>6012-09-24T10:37:02.498Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/anime-twist-premium-2/</loc>
+			<lastmod>6049-07-17T11:31:41.660Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/open-source-protestware-harms-open-source/</loc>
+			<lastmod>6059-11-19T17:43:50.710Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/text-plain-emails/</loc>
+			<lastmod>6069-09-26T00:30:50.356Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/the-horrible-ever-never-changing-state-of-python-packaging/</loc>
+			<lastmod>6362-03-18T21:03:44.783Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/why-is-there-still-no-standard-way-to-express-external-programs-as-dependencies/</loc>
-			<lastmod>9789-01-17T08:52:42.116Z</lastmod>
+			<lastmod>6457-07-05T16:13:48.265Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/about-me/</loc>
+			<lastmod>7790-11-14T07:10:46.761Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/saving-my-workspace-with-i3/</loc>
+			<lastmod>8049-11-19T23:08:33.224Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/creating-a-github-action-for-a-nodejs-14-project/</loc>
+			<lastmod>8160-11-25T03:02:22.573Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/domodel/</loc>
+			<lastmod>8167-10-22T03:03:00.484Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/manifesto/</loc>
-			<lastmod>9917-02-02T10:36:35.531Z</lastmod>
+			<lastmod>8311-12-31T14:36:48.598Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/see-what-you-have-done-with-your-damn-copy-pasting/</loc>
+			<lastmod>8500-08-31T18:41:22.653Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/tags/</loc>
+			<lastmod>8566-06-18T03:35:34.314Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/version-pinning-does-not-mean-what-we-think-it-means/</loc>
-			<lastmod>9975-06-23T19:25:07.051Z</lastmod>
+			<lastmod>9279-01-06T08:56:31.430Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/userinterfacejs-a-small-library-to-build-front-end-javascript-applications/</loc>
+			<lastmod>9576-05-06T08:31:47.992Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/window-manager</loc>
-			<lastmod>2026-03-18T01:31:10.677Z</lastmod>
+			<lastmod>2026-03-20T01:33:49.123Z</lastmod>
 		</url><url>
-			<loc>https://thoughtsunificator.me/tags/design</loc>
-			<lastmod>2026-03-18T01:31:10.677Z</lastmod>
-		</url><url>
-			<loc>https://thoughtsunificator.me/tags/browser-extension</loc>
-			<lastmod>2026-03-18T01:31:10.677Z</lastmod>
+			<loc>https://thoughtsunificator.me/tags/perspective</loc>
+			<lastmod>2026-03-20T01:33:49.123Z</lastmod>
 		</url><url>
 			<loc>https://thoughtsunificator.me/tags/revision-control-system</loc>
-			<lastmod>2026-03-18T01:31:10.677Z</lastmod>
+			<lastmod>2026-03-20T01:33:49.123Z</lastmod>
+		</url><url>
+			<loc>https://thoughtsunificator.me/tags/browser-extension</loc>
+			<lastmod>2026-03-20T01:33:49.123Z</lastmod>
 		</url>
 </urlset>
