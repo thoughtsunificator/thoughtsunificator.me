@@ -19,4 +19,4 @@ erating systems.
 \- oss@thoughtsunificator.me
 \- job@thoughtsunificator.me
 
-[1]: /pgp_key.txt
+[1]: /thoughtsunificator.gpg
